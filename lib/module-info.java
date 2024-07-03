@@ -1,0 +1,2 @@
+module ava.airline {
+}
