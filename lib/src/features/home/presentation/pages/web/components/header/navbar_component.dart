@@ -7,15 +7,16 @@ class NavbarComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     const height = AppSize.s100;
-    return Align(
+    return (width > 1024) ? Align(
       alignment: Alignment.topCenter,
       child: SizedBox(
-        width: width * 0.6,
+        width: (width <= 1530 && width > 1312) ? width * 0.7 : (width <= 1312 && width > 1150) ? width * 0.8 : (width <= 1150) ? width * 0.9 : width * 0.6,
         height: height,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(AppPadding.p12),
@@ -25,6 +26,7 @@ class NavbarComponent extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 AvaInkwellButton(
                   buttonPadding: AppPadding.p12,
@@ -58,6 +60,6 @@ class NavbarComponent extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ) : const SizedBox.shrink();
   }
 }
