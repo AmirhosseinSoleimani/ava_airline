@@ -1,0 +1,1 @@
+export 'package:ava_airline/src/features/splash/presentation/pages/splash_page.dart';

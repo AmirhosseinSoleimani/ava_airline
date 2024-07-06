@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class ColorLightThemeManager {
   static Color primary = HexColor.fromHex('#176E6E');
   static Color purple = HexColor.fromHex('#6463D6');
-
   static Color backGroundColor = HexColor.fromHex('#f2f2f2');
   static Color redColor = HexColor.fromHex('#e0001e');
+  static Color redLight = HexColor.fromHex('#f52743');
 
   static Color grey = HexColor.fromHex('#ebeff0');
   static Color greyStrong = HexColor.fromHex('#272625');
@@ -19,7 +19,7 @@ class ColorLightThemeManager {
   static Color colorBlack = HexColor.fromHex('#1E1B18');
   static Color colorGreyBox = HexColor.fromHex('#F0F2F5');
   static Color colorHoloGreyPrimary = HexColor.fromHex('#2E3D3D');
-  static Color redLight = HexColor.fromHex('#ffa67c');
+
   static Color redLight2 = HexColor.fromHex('#fdf6f8');
 
   static Color green = HexColor.fromHex('#1c8139');

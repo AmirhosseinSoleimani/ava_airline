@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-
-import '../features/home_page/presentation/pages/home_page.dart';
+import 'package:ava_airline/src/features/features.dart';
 
 class Routes {
   static final parentNavigatorKey = GlobalKey<NavigatorState>();
@@ -9,124 +6,105 @@ class Routes {
   GlobalKey<NavigatorState>(debugLabel: 'homeTabNavigatorKey');
   static final profileTabNavigatorKey =
   GlobalKey<NavigatorState>(debugLabel: 'profileTabNavigatorKey');
-  static final uploadTabNavigatorKey =
-  GlobalKey<NavigatorState>(debugLabel: 'uploadTabNavigatorKey');
-  static final userManagerTabNavigatorKey =
-  GlobalKey<NavigatorState>(debugLabel: 'userManagerTabNavigatorKey');
+  static final bookTabNavigatorKey =
+  GlobalKey<NavigatorState>(debugLabel: 'bookTabNavigatorKey');
+  static final myTripsTabNavigatorKey =
+  GlobalKey<NavigatorState>(debugLabel: 'myTripsTabNavigatorKey');
 
   static final routes = GoRouter(
       navigatorKey: parentNavigatorKey,
-      initialLocation: '/',
+      initialLocation: SplashPage.splashPagePath,
       debugLogDiagnostics: true,
       routes: [
-        // GoRoute(
-        //     path: '/upload-video',
-        //     name: '/upload-video',
-        //     pageBuilder: (BuildContext context, GoRouterState state) {
-        //       return CustomTransitionPage(
-        //         key: state.pageKey,
-        //         transitionDuration: Duration.zero,
-        //         transitionsBuilder:
-        //             (context, animation, secondaryAnimation, child) => child,
-        //         child: const NewContentFormWidget(),
-        //       );
-        //     }),
         GoRoute(
-            path: '/',
-            name: '/',
-            pageBuilder: (BuildContext context, GoRouterState state) {
-              return CustomTransitionPage(
-                key: state.pageKey,
-                transitionDuration: Duration.zero,
-                transitionsBuilder:
-                    (context, animation, secondaryAnimation, child) => child,
-                child: const HomePage(),
-              );
-            }),
-        // StatefulShellRoute.indexedStack(
-        //   builder: (context, state, navigationShell) {
-        //     return BottomNavigationBarPage(navigationShell: navigationShell);
-        //   },
-        //   parentNavigatorKey: parentNavigatorKey,
-        //   branches: [
-        //     StatefulShellBranch(
-        //       navigatorKey: homeTabNavigatorKey,
-        //       routes: [
-        //         GoRoute(
-        //           path: DashboardPage.dashboardPageName,
-        //           name: DashboardPage.dashboardPageName,
-        //           pageBuilder: (context, state) {
-        //             return CustomTransitionPage(
-        //               key: state.pageKey,
-        //               transitionDuration: Duration.zero,
-        //               transitionsBuilder:
-        //                   (context, animation, secondaryAnimation, child) =>
-        //               child,
-        //               child: const DashboardPage(),
-        //             );
-        //           },
-        //         ),
-        //       ],
-        //     ),
-        //     StatefulShellBranch(
-        //       navigatorKey: uploadTabNavigatorKey,
-        //       routes: [
-        //         GoRoute(
-        //           path: ContentManagementPage.uploadPageName,
-        //           name: ContentManagementPage.uploadPageName,
-        //           pageBuilder: (context, state) {
-        //             return CustomTransitionPage(
-        //               key: state.pageKey,
-        //               transitionDuration: Duration.zero,
-        //               transitionsBuilder:
-        //                   (context, animation, secondaryAnimation, child) =>
-        //               child,
-        //               child: const ContentManagementPage(),
-        //             );
-        //           },
-        //         ),
-        //       ],
-        //     ),
-        //     StatefulShellBranch(
-        //       navigatorKey: userManagerTabNavigatorKey,
-        //       routes: [
-        //         GoRoute(
-        //           path: UserManagerPage.userManagerPageName,
-        //           name: UserManagerPage.userManagerPageName,
-        //           pageBuilder: (context, state) {
-        //             return CustomTransitionPage(
-        //               key: state.pageKey,
-        //               transitionDuration: Duration.zero,
-        //               transitionsBuilder:
-        //                   (context, animation, secondaryAnimation, child) =>
-        //               child,
-        //               child: const UserManagerPage(),
-        //             );
-        //           },
-        //         ),
-        //       ],
-        //     ),
-        //     StatefulShellBranch(
-        //       navigatorKey: profileTabNavigatorKey,
-        //       routes: [
-        //         GoRoute(
-        //           path: ProfilePage.profilePageName,
-        //           name: ProfilePage.profilePageName,
-        //           pageBuilder: (context, state) {
-        //             return CustomTransitionPage(
-        //               key: state.pageKey,
-        //               transitionDuration: Duration.zero,
-        //               transitionsBuilder:
-        //                   (context, animation, secondaryAnimation, child) =>
-        //               child,
-        //               child: const ProfilePage(),
-        //             );
-        //           },
-        //         ),
-        //       ],
-        //     ),
-        //   ],
-        // )
+          path: SplashPage.splashPagePath,
+          name: SplashPage.splashPageName,
+          builder: (context, state) => const SplashPage(),
+        ),
+        StatefulShellRoute.indexedStack(
+          builder: (context, state, navigationShell) {
+            return BottomNavigationBarPage(navigationShell: navigationShell);
+          },
+          parentNavigatorKey: parentNavigatorKey,
+          branches: [
+            StatefulShellBranch(
+              navigatorKey: homeTabNavigatorKey,
+              routes: [
+                GoRoute(
+                  path: HomePage.homePagePath,
+                  name: HomePage.homePageName,
+                  pageBuilder: (context, state) {
+                    return CustomTransitionPage(
+                      key: state.pageKey,
+                      transitionDuration: Duration.zero,
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) =>
+                      child,
+                      child: const HomePage(),
+                    );
+                  },
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              navigatorKey: bookTabNavigatorKey,
+              routes: [
+                GoRoute(
+                  path: BookPage.bookPagePath,
+                  name: BookPage.bookPageName,
+                  pageBuilder: (context, state) {
+                    return CustomTransitionPage(
+                      key: state.pageKey,
+                      transitionDuration: Duration.zero,
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) =>
+                      child,
+                      child: const BookPage(),
+                    );
+                  },
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              navigatorKey: myTripsTabNavigatorKey,
+              routes: [
+                GoRoute(
+                  path: MyTripsPage.myTripsPagePath,
+                  name: MyTripsPage.myTripsPageName,
+                  pageBuilder: (context, state) {
+                    return CustomTransitionPage(
+                      key: state.pageKey,
+                      transitionDuration: Duration.zero,
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) =>
+                      child,
+                      child: const MyTripsPage(),
+                    );
+                  },
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              navigatorKey: profileTabNavigatorKey,
+              routes: [
+                GoRoute(
+                  path: ProfilePage.profilePagePath,
+                  name: ProfilePage.profilePageName,
+                  pageBuilder: (context, state) {
+                    return CustomTransitionPage(
+                      key: state.pageKey,
+                      transitionDuration: Duration.zero,
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) =>
+                      child,
+                      child: const ProfilePage(),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ],
+        )
       ]);
 
   static Page getPage({

@@ -2,20 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ImageManager {
-  static const String homePageImage = 'image/home_page/home_page_photo.png';
+  static const String homePageImage = 'image/home_page/home_page.png';
 }
 
 
 class IconManager {
+
   // Cupertino Icons
-  static const IconData home = CupertinoIcons.home;
-  static const IconData homeFill = CupertinoIcons.house_fill;
-  static const IconData book = CupertinoIcons.book;
-  static const IconData bookFill = CupertinoIcons.book_fill;
-  static const IconData pen = CupertinoIcons.pencil;
-  static const IconData penFill = CupertinoIcons.pencil;
+  static const IconData home = CupertinoIcons.house_fill;
+  static const IconData book = CupertinoIcons.search;
+  static const IconData airplane = CupertinoIcons.airplane;
   static const IconData person = CupertinoIcons.person;
-  static const IconData personFill = CupertinoIcons.person_fill;
+
+
   static const IconData errorPhoto = CupertinoIcons.photo_fill;
   static const IconData clock = CupertinoIcons.clock;
   static const IconData personAdd = CupertinoIcons.person_add;
@@ -25,9 +24,6 @@ class IconManager {
   static const IconData add = CupertinoIcons.add;
   static const IconData notification = CupertinoIcons.bell_fill;
   static const IconData video = CupertinoIcons.play_rectangle_fill;
-
-
-
 
   // Material Icons
   static const IconData subscription = Icons.shopping_bag;

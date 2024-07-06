@@ -17,7 +17,7 @@ class LightAppThemeData extends AppThemeData {
       indicatorColor: ColorLightThemeManager.primary,
 
       colorScheme: ColorScheme(
-        primary: ColorLightThemeManager.blue,
+        primary: ColorLightThemeManager.redColor,
         onPrimary: ColorLightThemeManager.lightBlue,
 
         secondary: ColorLightThemeManager.whiteColor,

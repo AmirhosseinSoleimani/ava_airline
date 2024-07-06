@@ -4,7 +4,7 @@ import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -20,23 +20,18 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (BuildContext context, ThemeState state) {
           return MaterialApp.router(
-            title: 'Panel Admin',
+            title: 'Ava Airline',
             theme: _lightTheme.materialThemeData,
             darkTheme: _darkTheme.materialThemeData,
             themeMode: context.watch<ThemeCubit>().isDark? ThemeMode.dark : ThemeMode.light,
             localizationsDelegates: const [
-              // AppLocalizations.delegate,
+              AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            // locale: provider.locale,
-            supportedLocales: const [
-              Locale('en'), // English
-              Locale('fa'), // Persian
-            ],
-            locale: const Locale('fa'),
-            // routerConfig: Routes.routes,
+            supportedLocales: AppLocalizations.supportedLocales,
+            locale: const Locale('en'),
             debugShowCheckedModeBanner: false,
             routerConfig: Routes.routes,
           );
