@@ -16,26 +16,7 @@ class LightAppThemeData extends AppThemeData {
       cardColor: ColorLightThemeManager.lightBlue,
       indicatorColor: ColorLightThemeManager.primary,
 
-      colorScheme: ColorScheme(
-        primary: ColorLightThemeManager.redColor,
-        onPrimary: ColorLightThemeManager.lightBlue,
-
-        secondary: ColorLightThemeManager.whiteColor,
-        onSecondary: ColorLightThemeManager.greyMedium,
-
-        error: ColorLightThemeManager.redColor,
-        onError: ColorLightThemeManager.redLight,
-
-        surface: ColorLightThemeManager.backGroundColor,
-        onSurface: ColorLightThemeManager.colorHoloGreyPrimary,
-
-        tertiary: ColorLightThemeManager.colorBlack,
-
-        surfaceContainer: ColorLightThemeManager.lightBlue2,
-        secondaryContainer: ColorLightThemeManager.grey,
-
-        brightness: Brightness.light,
-      ),
+      colorScheme:ColorScheme.fromSeed(seedColor: Colors.red),
 
       textTheme: TextTheme(
         headlineLarge: getBoldStyle(fontSize: AppSize.s24, color: ColorLightThemeManager.colorBlack),
