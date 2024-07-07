@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ColorLightThemeManager {
   static Color primary = HexColor.fromHex('#e0001e');
   static Color secondary = HexColor.fromHex('#08103e');
-  static Color backGroundColor = Colors.grey.shade50;
+  static Color backGroundColor = Colors.grey.shade100;
   static Color red = Colors.red;
   static Color white = Colors.white;
   static Color black = Colors.black;
