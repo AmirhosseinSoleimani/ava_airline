@@ -1,4 +1,5 @@
 import 'package:ava_airline/src/features/features.dart';
+import 'package:flutter/foundation.dart';
 
 class Routes {
   static final parentNavigatorKey = GlobalKey<NavigatorState>();
@@ -13,7 +14,7 @@ class Routes {
 
   static final routes = GoRouter(
       navigatorKey: parentNavigatorKey,
-      initialLocation: SplashPage.splashPagePath,
+      initialLocation: kIsWeb? HomePage.homePagePath : SplashPage.splashPagePath,
       debugLogDiagnostics: true,
       routes: [
         GoRoute(

@@ -24,37 +24,37 @@ class BottomNavigationBarMobilePage extends StatelessWidget {
           NavigationDestination(
             label: textLocalization.home,
             icon: const Icon(IconManager.home, size: AppSize.s24),
-            selectedIcon: const Icon(
+            selectedIcon:  Icon(
               IconManager.home,
               size: AppSize.s24,
-              // color: Theme.of(context).colorScheme.onSecondaryContainer,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
           NavigationDestination(
             label: textLocalization.book,
             icon: const Icon(IconManager.book, size: AppSize.s24),
-            selectedIcon: const Icon(
+            selectedIcon:  Icon(
               IconManager.book,
               size: AppSize.s24,
-              // color: Theme.of(context).colorScheme.onSecondaryContainer,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
           NavigationDestination(
             label: textLocalization.myTrips,
             icon: const Icon(IconManager.airplane, size: AppSize.s24),
-            selectedIcon: const Icon(
+            selectedIcon:  Icon(
               IconManager.airplane,
               size: AppSize.s24,
-              // color: Theme.of(context).colorScheme.onSecondaryContainer,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
           NavigationDestination(
             label: textLocalization.profile,
             icon: const Icon(IconManager.person, size: AppSize.s24),
-            selectedIcon: const Icon(
+            selectedIcon:  Icon(
               IconManager.person,
               size: AppSize.s24,
-              // color: Theme.of(context).colorScheme.onSecondaryContainer,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
         ],
