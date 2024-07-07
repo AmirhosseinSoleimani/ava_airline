@@ -16,7 +16,8 @@ class LightAppThemeData extends AppThemeData {
       cardColor: ColorLightThemeManager.lightBlue,
       indicatorColor: ColorLightThemeManager.primary,
 
-      colorScheme:ColorScheme.fromSeed(seedColor: Colors.red),
+      colorScheme:ColorScheme.fromSeed(seedColor: ColorLightThemeManager.redColor),
+
 
       textTheme: TextTheme(
         headlineLarge: getBoldStyle(fontSize: AppSize.s24, color: ColorLightThemeManager.colorBlack),

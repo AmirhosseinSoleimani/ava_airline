@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class ImageManager {
   static const String homePageImage = 'image/home_page/home_page.png';
+  static const String homePagePortraitImage = 'image/home_page/home_page_portrait.jpg';
 }
 
 
