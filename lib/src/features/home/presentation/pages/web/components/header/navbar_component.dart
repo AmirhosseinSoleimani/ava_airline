@@ -40,7 +40,7 @@ class NavbarComponent extends StatelessWidget {
                 ),
                 Space.w8,
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: AppPadding.p16),
+                  padding: const EdgeInsets.symmetric(vertical: AppPadding.p32),
                   child: VerticalDivider(
                     thickness: AppSize.s1,
                     color: Theme.of(context).colorScheme.onPrimary,

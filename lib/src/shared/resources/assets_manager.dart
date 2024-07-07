@@ -27,10 +27,10 @@ class IconManager {
   static const IconData video = CupertinoIcons.play_rectangle_fill;
 
   // Material Icons
-  static const IconData subscription = Icons.shopping_bag;
-  static const IconData relief = Icons.miscellaneous_services;
-  static const IconData survey = Icons.fact_check_rounded;
-  static const IconData profile = Icons.person;
+  static const IconData seat = Icons.airline_seat_recline_extra;
+  static const IconData travel = Icons.travel_explore;
+  static const IconData swap = Icons.swap_horiz_outlined;
+  static const IconData dropDown = Icons.arrow_drop_down;
   static const IconData chevronLeft = Icons.chevron_left_rounded;
   static const IconData chevronRight = Icons.chevron_right_rounded;
   static const IconData previous = Icons.arrow_back_rounded;
@@ -46,7 +46,7 @@ class IconManager {
   static const IconData density = Icons.density_small_rounded;
   static const IconData download = Icons.download_rounded;
   static const IconData reply = Icons.reply;
-  static const IconData error = Icons.error_outline_outlined;
+  static const IconData date = Icons.calendar_month_outlined;
 
 }
 

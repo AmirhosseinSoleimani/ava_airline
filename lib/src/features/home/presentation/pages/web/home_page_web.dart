@@ -1,3 +1,4 @@
+import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 
 class HomePageWeb extends StatefulWidget {
@@ -171,51 +172,64 @@ class _HomePageWebState extends State<HomePageWeb> {
           ),
         ),
       ),
-      body: SizedBox(
-      width: double.infinity,
-      height: width * 0.4,
-      child: Stack(
-        children: [
-          Image.asset(ImageManager.homePageImage,fit: BoxFit.cover,),
-          (width > 1024) ? const NavbarComponent() :
-          Align(
-            alignment: Alignment.topCenter,
-            child: Padding(
-              padding: const EdgeInsets.all(AppPadding.p16),
-              child: Row(
-                mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              color: Theme.of(context).colorScheme.surface,
+              width: double.infinity,
+              height: width * 0.4,
+              child: Stack(
                 children: [
-                  if (locale == 'en')
-                    InkWell(
-                      onTap: () {
-                        scaffoldKey.currentState?.openDrawer();
-                      },
-                      child: Icon(
-                        IconManager.density,
-                        size: AppSize.s24,
-                        color: Theme.of(context).colorScheme.onSecondary,
-                      ),
+                  Image.asset(ImageManager.homePageImage,fit: BoxFit.cover,width: double.infinity, height: width * 0.3,),
+                  (width > 1024) ?
+                  const NavbarComponent() :
+                  Align(
+                  alignment: Alignment.topCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.all(AppPadding.p16),
+                    child: Row(
+                      mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
+                      children: [
+                        if (locale == 'en')
+                          InkWell(
+                            onTap: () {
+                              scaffoldKey.currentState?.openDrawer();
+                            },
+                            child: Icon(
+                              IconManager.density,
+                              size: AppSize.s24,
+                              color: Theme.of(context).colorScheme.onSecondary,
+                            ),
+                          ),
+                        SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
+                        Space.w16,
+                        if (locale != 'en')
+                          InkWell(
+                            onTap: () {
+                              scaffoldKey.currentState?.openDrawer();
+                            },
+                            child: Icon(
+                              IconManager.density,
+                              size: AppSize.s24,
+                              color: Theme.of(context).colorScheme.onSecondary,
+                            ),
+                          ),
+                      ],
                     ),
-                  SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
-                  Space.w16,
-                  if (locale != 'en')
-                    InkWell(
-                      onTap: () {
-                        scaffoldKey.currentState?.openDrawer();
-                      },
-                      child: Icon(
-                        IconManager.density,
-                        size: AppSize.s24,
-                        color: Theme.of(context).colorScheme.onSecondary,
-                      ),
-                    ),
-                ],
-              ),
+                  ),
+                ),
+                  const Align(
+                    alignment: Alignment.bottomCenter,
+                    child: BookFlightPage(),
+                  )
+              ],
             ),
-          )
-        ],
-      ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
