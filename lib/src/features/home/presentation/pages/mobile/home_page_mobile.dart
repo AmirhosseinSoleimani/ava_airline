@@ -1,3 +1,4 @@
+import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomePageMobile extends StatelessWidget {
@@ -7,8 +8,12 @@ class HomePageMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.pink,
-      ),
+        child: Column(
+          children: [
+
+          ],
+        ),
+      )
     );
   }
 }
