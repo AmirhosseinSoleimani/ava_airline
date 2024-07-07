@@ -1,6 +1,6 @@
 {
-    "name": "ava_airline",
-    "short_name": "ava_airline",
+    "name": "AVA Airline",
+    "short_name": "هواپیمایی آوا",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

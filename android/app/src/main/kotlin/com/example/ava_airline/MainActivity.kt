@@ -1,4 +1,4 @@
-package com.example.ava_airline
+package net.behpardaz.ava_airline
 
 import io.flutter.embedding.android.FlutterActivity
 

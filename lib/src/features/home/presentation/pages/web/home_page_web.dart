@@ -82,7 +82,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(AppPadding.p12),
-                    child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'Ava Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
+                    child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
                         Theme.of(context).colorScheme.error,
                         BlendMode.srcIn)),
                   ),
@@ -149,7 +149,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                           colorFilter: ColorFilter.mode(
                               Theme.of(context).colorScheme.onSurface,
                               BlendMode.srcIn),
-                          semanticsLabel: 'Ava Airlines',
+                          semanticsLabel: 'AVA Airline',
                           width: AppSize.s42,
                         ),
                         Space.w8,
