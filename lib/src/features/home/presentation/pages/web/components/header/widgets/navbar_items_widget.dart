@@ -42,7 +42,7 @@ class NavbarItemsState extends State<NavbarItems> {
             style: Theme.of(context)
                 .textTheme
                 .titleMedium
-                ?.copyWith(color: Theme.of(context).colorScheme.secondary)),
+                ?.copyWith(color: Theme.of(context).colorScheme.onPrimary)),
       ),
     );
   }
@@ -117,7 +117,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
               color: ColorLightThemeManager.transparent,
               height: AppSize.s300,
               child: Material(
-                color: ColorLightThemeManager.whiteColor,
+                color: Theme.of(context).colorScheme.onPrimary,
                 child: Padding(
                   padding: const EdgeInsets.all(AppPadding.p16),
                   child: Column(
@@ -139,7 +139,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                       semanticsLabel: 'Ava Airlines',
                                       width: AppSize.s100,
                                       colorFilter: ColorFilter.mode(
-                                          Theme.of(context).colorScheme.error,
+                                          Theme.of(context).colorScheme.primary,
                                           BlendMode.srcIn)),
                                 ),
                                 Row(
@@ -170,9 +170,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                               Container(
                                                 height: AppSize.s2,
                                                 width: AppSize.s60,
-                                                color: Theme.of(context)
-                                                    .colorScheme
-                                                    .error,
+                                                color: Theme.of(context).colorScheme.primary,
                                               ),
                                           ],
                                         ),
@@ -224,7 +222,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                       ?.copyWith(
                                           color: Theme.of(context)
                                               .colorScheme
-                                              .secondary),
+                                              .onSurface),
                                 )
                               ],
                             ),

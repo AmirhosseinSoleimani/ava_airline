@@ -33,26 +33,26 @@ class NavbarComponent extends StatelessWidget {
                   onTap: () {
                   },
                   title: 'ورود/ثبت نام',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.secondary),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                   borderRadius: AppSize.s8,
                   backgroundColor: ColorDarkThemeManager.transparent,
-                  borderColor: Theme.of(context).colorScheme.secondary,
+                  borderColor: Theme.of(context).colorScheme.onPrimary,
                 ),
                 Space.w8,
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: AppPadding.p16),
                   child: VerticalDivider(
                     thickness: AppSize.s1,
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     width: AppSize.s1,
                   ),
                 ),
                 Space.w8,
-                SvgPicture.asset(SvgManager.earthSvg,colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.secondary, BlendMode.srcIn), semanticsLabel: 'Ava Airlines', width: AppSize.s42,),
+                SvgPicture.asset(SvgManager.earthSvg,colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onPrimary, BlendMode.srcIn), semanticsLabel: 'Ava Airlines', width: AppSize.s42,),
                 Space.w4,
                 Text(
                   'فا',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.secondary),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                 )
               ],
             ),

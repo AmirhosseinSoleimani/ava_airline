@@ -73,7 +73,7 @@ class _HomePageWebState extends State<HomePageWeb> {
     return Scaffold(
       key: scaffoldKey,
       drawer: Drawer(
-        backgroundColor: Theme.of(context).colorScheme.secondary,
+        backgroundColor: Theme.of(context).colorScheme.onSecondary,
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -109,7 +109,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                       String key = entry.value.keys.first;
                       List<String> values = entry.value.values.first;
                       return ExpansionPanel(
-                        backgroundColor: Theme.of(context).colorScheme.secondary,
+                        backgroundColor: Theme.of(context).colorScheme.onSecondary,
                         headerBuilder: (BuildContext context, bool isExpanded) {
                           return ListTile(
                             title: Text(key),
@@ -183,7 +183,7 @@ class _HomePageWebState extends State<HomePageWeb> {
             child: Padding(
               padding: const EdgeInsets.all(AppPadding.p16),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
                 children: [
                   if (locale == 'en')
                     InkWell(
@@ -193,10 +193,11 @@ class _HomePageWebState extends State<HomePageWeb> {
                       child: Icon(
                         IconManager.density,
                         size: AppSize.s24,
-                        color: Theme.of(context).colorScheme.secondary,
+                        color: Theme.of(context).colorScheme.onSecondary,
                       ),
                     ),
                   SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
+                  Space.w16,
                   if (locale != 'en')
                     InkWell(
                       onTap: () {
@@ -205,7 +206,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                       child: Icon(
                         IconManager.density,
                         size: AppSize.s24,
-                        color: Theme.of(context).colorScheme.secondary,
+                        color: Theme.of(context).colorScheme.onSecondary,
                       ),
                     ),
                 ],
