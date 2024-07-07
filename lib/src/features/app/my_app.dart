@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (BuildContext context, ThemeState state) {
           return MaterialApp.router(
-            title: 'Ava Airline',
+            title: 'AVA Airline',
             theme: _lightTheme.materialThemeData,
             darkTheme: _darkTheme.materialThemeData,
             themeMode: context.watch<ThemeCubit>().isDark? ThemeMode.dark : ThemeMode.light,

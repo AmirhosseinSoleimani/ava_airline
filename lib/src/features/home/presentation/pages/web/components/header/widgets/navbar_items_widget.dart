@@ -136,7 +136,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                   padding: const EdgeInsets.all(AppPadding.p8),
                                   child: SvgPicture.asset(
                                       SvgManager.avaAirLineLogoSvg,
-                                      semanticsLabel: 'Ava Airlines',
+                                      semanticsLabel: 'AVA Airline',
                                       width: AppSize.s100,
                                       colorFilter: ColorFilter.mode(
                                           Theme.of(context).colorScheme.primary,
@@ -210,7 +210,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                   colorFilter: ColorFilter.mode(
                                       Theme.of(context).colorScheme.onSurface,
                                       BlendMode.srcIn),
-                                  semanticsLabel: 'Ava Airlines',
+                                  semanticsLabel: 'AVA Airline',
                                   width: AppSize.s42,
                                 ),
                                 Space.w4,
