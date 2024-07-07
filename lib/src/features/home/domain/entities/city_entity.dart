@@ -1,6 +1,6 @@
 class City{
   final String name;
   final String description;
-  final String asset;
-  const City({required this.name, required this.description,required this.asset});
+  final String assetPath;
+  const City({required this.name, required this.description,required this.assetPath});
 }

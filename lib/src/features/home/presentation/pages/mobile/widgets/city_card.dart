@@ -1,10 +1,10 @@
 import 'package:ava_airline/src/features/home/domain/entities/city_entity.dart';
 import 'package:flutter/material.dart';
 
-class CarouselCard extends StatelessWidget {
+class CityCard extends StatelessWidget {
   final City city;
 
-  const CarouselCard({required this.city, super.key});
+  const CityCard({required this.city, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CarouselCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: Image.asset(
-                    city.asset,
+                    city.assetPath,
                     height: 250,
                     fit: BoxFit.fitWidth,
                   ),

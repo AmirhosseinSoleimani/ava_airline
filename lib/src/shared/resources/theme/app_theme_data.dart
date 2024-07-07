@@ -24,6 +24,7 @@ class LightAppThemeData extends AppThemeData {
           ),
 
           navigationBarTheme: NavigationBarThemeData(
+            
             indicatorColor: Colors.grey[300],
               backgroundColor: Colors.white,
               iconTheme:
