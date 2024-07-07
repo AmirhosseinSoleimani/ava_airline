@@ -27,18 +27,26 @@ class _HomePageMobileState extends State<HomePageMobile> {
 
   final carousels = [
     const Carousel(
-        title: 'خرید بلیط',
-        assetPath: 'assets/image/home_page/home_page.png',
-        description:
-            'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.'),
+      id: 1,
+      title: 'خرید بلیط',
+      assetPath: 'assets/image/home_page/home_page.png',
+      description:
+          'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.',
+    ),
     const Carousel(
-        title: '',
-        assetPath: 'assets/image/home_page/home_page.png',
-        description: ''),
+      id: 2,
+      title: 'خرید بلیط',
+      assetPath: 'assets/image/home_page/home_page.png',
+      description:
+          'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.',
+    ),
     const Carousel(
-        title: '',
-        assetPath: 'assets/image/home_page/home_page.png',
-        description: ''),
+      id: 3,
+      title: 'خرید بلیط',
+      assetPath: 'assets/image/home_page/home_page.png',
+      description:
+          'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.',
+    ),
   ];
 
   @override
@@ -50,15 +58,18 @@ class _HomePageMobileState extends State<HomePageMobile> {
         body: Column(
           children: [
             CarouselSlider(
+              carouselController: _controller,
               items: carousels
                   .map(
-                    (e) => CarouselCard(carousel: e),
+                    (e) => CarouselCard(
+                      carousel: e,
+                    ),
                   )
                   .toList(),
               options: CarouselOptions(
                   autoPlay: true,
                   viewportFraction: 1,
-                  height: 150,
+                  height: 200,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _current = index;
@@ -73,13 +84,12 @@ class _HomePageMobileState extends State<HomePageMobile> {
                   child: Container(
                     width: 12,
                     height: 12,
-                    margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: (Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black)
-                            .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+                        color: (Theme.of(context).colorScheme.primary)
+                            .withOpacity(_current == entry.key ? 1 : 0.4)),
                   ),
                 );
               }).toList(),

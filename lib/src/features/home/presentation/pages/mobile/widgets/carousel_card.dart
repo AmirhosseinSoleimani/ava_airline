@@ -15,7 +15,8 @@ class CarouselCard extends StatelessWidget {
             Expanded(
               child: Image.asset(
                 carousel.assetPath,
-                fit: BoxFit.fill,
+                height: 200,
+                fit: BoxFit.fitHeight,
               ),
             ),
           ],
@@ -30,18 +31,25 @@ class CarouselCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  carousel.title,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineMedium!
-                      .copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                Container(
+                  decoration:carousel.id==1? BoxDecoration(color: Theme.of(context).colorScheme.primary,
+                  borderRadius: BorderRadius.circular(12),
+                  ) : null,
+                  padding: carousel.id==1? const EdgeInsets.symmetric(vertical:8,horizontal: 16): EdgeInsets.zero,
+                  child: Text(
+                    carousel.title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .displayLarge!
+                        .copyWith(color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w900),
+                  ),
                 ),
+                 const SizedBox(height: 8,),
                  Text(
                     carousel.description,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: Theme.of(context).colorScheme.onPrimary),
                   ),
 
