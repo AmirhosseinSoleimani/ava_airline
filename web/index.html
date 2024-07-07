@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="AVA Airline" content="AVA Airline">
 
   <!-- iOS meta tags & icons -->
@@ -19,8 +19,19 @@
 
   <title>AVA Airline</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles/loading.css">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<div id="loading">
+  <img src="assets/images/ava_logo.png" alt="App Logo">
+  <h1>Welcome to AVA Airline</h1>
+  <div class="loader"></div>
+</div>
+
+<div id="flutterApp">
+<!--  <script src="flutter_bootstrap.js" async></script>-->
+</div>
+
+<script src="scripts/loading.js"></script>
 </body>
 </html>
