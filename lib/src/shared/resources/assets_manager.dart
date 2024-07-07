@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ImageManager {
-  static const String homePageImage = 'image/home_page/home_page.png';
-  static const String homePagePortraitImage = 'image/home_page/home_page_portrait.jpg';
+  static const String homePageImage = 'assets/image/home_page/home_page.png';
+  static const String homePagePortraitImage = 'assets/image/home_page/home_page_portrait.jpg';
 }
 
 
@@ -51,7 +51,7 @@ class IconManager {
 }
 
 class SvgManager {
-  static const String avaAirLineLogoSvg = "svg/home_page/ava_logo.svg";
-  static const String earthSvg = "svg/home_page/earth.svg";
+  static const String avaAirLineLogoSvg = "assets/svg/home_page/ava_logo.svg";
+  static const String earthSvg = "assets/svg/home_page/earth.svg";
   static const String wordSvg = "assets/svg/content_management/word.svg";
 }
