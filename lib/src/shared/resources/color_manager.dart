@@ -2,7 +2,7 @@ import 'package:ava_airline/src/shared/extensions/color_extensions.dart';
 import 'package:flutter/material.dart';
 
 class ColorLightThemeManager {
-  static Color primary = HexColor.fromHex('#e0001e');
+  static Color primary = const Color(0xffe0001e);
   static Color secondary = HexColor.fromHex('#08103e');
   static Color backGroundColor = Colors.grey.shade50;
   static Color red = Colors.red;

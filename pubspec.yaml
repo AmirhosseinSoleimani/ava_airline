@@ -17,6 +17,7 @@ dependencies:
   flutter_spinkit: ^5.2.1
   flutter_svg: ^2.0.10+1
   equatable: ^2.0.5
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +29,7 @@ flutter:
   assets:
     - assets/svg/home_page/
     - assets/image/home_page/
+    - assets/image/
 
   fonts:
     - family: "iransans_fa"

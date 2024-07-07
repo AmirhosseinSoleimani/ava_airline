@@ -8,9 +8,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AvaResponsiveWidget(
+    return AvaResponsiveWidget(
       smallScreen: HomePageMobile(),
-      largeScreen: HomePageWeb(),
+      largeScreen: const HomePageWeb(),
     );
   }
 }
