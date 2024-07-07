@@ -23,6 +23,7 @@ class IconManager {
   static const IconData delete = CupertinoIcons.delete;
   static const IconData check = CupertinoIcons.check_mark;
   static const IconData add = CupertinoIcons.add;
+  static const IconData minus = CupertinoIcons.minus;
   static const IconData notification = CupertinoIcons.bell_fill;
   static const IconData video = CupertinoIcons.play_rectangle_fill;
 
@@ -45,7 +46,7 @@ class IconManager {
   static const IconData addPhoto = Icons.add_a_photo_outlined;
   static const IconData density = Icons.density_small_rounded;
   static const IconData download = Icons.download_rounded;
-  static const IconData reply = Icons.reply;
+  static const IconData people = Icons.people;
   static const IconData date = Icons.calendar_month_outlined;
 
 }
