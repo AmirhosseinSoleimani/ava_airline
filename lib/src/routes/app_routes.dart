@@ -51,8 +51,8 @@ class Routes {
               navigatorKey: bookTabNavigatorKey,
               routes: [
                 GoRoute(
-                  path: BookPage.bookPagePath,
-                  name: BookPage.bookPageName,
+                  path: BookFlightPage.bookPagePath,
+                  name: BookFlightPage.bookPageName,
                   pageBuilder: (context, state) {
                     return CustomTransitionPage(
                       key: state.pageKey,
@@ -60,7 +60,7 @@ class Routes {
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) =>
                       child,
-                      child: const BookPage(),
+                      child: const BookFlightPage(),
                     );
                   },
                 ),
