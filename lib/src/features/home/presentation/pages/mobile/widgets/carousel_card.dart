@@ -24,7 +24,11 @@ class CarouselCard extends StatelessWidget {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            padding: const EdgeInsets.only(top: 8, right: 16, bottom: 8,),
+            padding: const EdgeInsets.only(
+              top: 8,
+              right: 16,
+              bottom: 8,
+            ),
             width: MediaQuery.of(context).size.width,
             color: Colors.black.withOpacity(0.4),
             child: Column(
@@ -32,27 +36,35 @@ class CarouselCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
-                  decoration:carousel.id==1? BoxDecoration(color: Theme.of(context).colorScheme.primary,
-                  borderRadius: BorderRadius.circular(12),
-                  ) : null,
-                  padding: carousel.id==1? const EdgeInsets.symmetric(vertical:8,horizontal: 16): EdgeInsets.zero,
+                  decoration: carousel.id == 1
+                      ? BoxDecoration(
+                          color: Theme.of(context).colorScheme.primary,
+                          borderRadius: BorderRadius.circular(12),
+                        )
+                      : null,
+                  padding: carousel.id == 1
+                      ? const EdgeInsets.symmetric(vertical: 8, horizontal: 16)
+                      : EdgeInsets.zero,
                   child: Text(
                     carousel.title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .displayLarge!
-                        .copyWith(color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w900),
+                    style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                        color: Theme.of(context).colorScheme.onPrimary,
+                        fontWeight: FontWeight.w900),
                   ),
                 ),
-                 const SizedBox(height: 8,),
-                 Text(
-                    carousel.description,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Theme.of(context).colorScheme.onPrimary),
-                  ),
-
+                const SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  carousel.description,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.end,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                ),
               ],
             ),
           ),
