@@ -18,7 +18,7 @@ class CarouselCard extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Image.asset(
+                child:carousel.assetPath==''? Container(height: 200,):Image.asset(
                   carousel.assetPath,
                   height: 200,
                   fit: BoxFit.fitHeight,
@@ -36,7 +36,7 @@ class CarouselCard extends StatelessWidget {
                 left: 8,
               ),
               width: MediaQuery.of(context).size.width,
-              color: Colors.black.withOpacity(0.4),
+              color: Colors.black.withOpacity(carousel.assetPath==''?1:0.4 ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
