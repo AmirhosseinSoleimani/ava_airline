@@ -20,6 +20,12 @@ dependencies:
   flutter_typeahead: ^5.2.0
   persian_datetime_picker: ^2.7.0
   carousel_slider: ^4.2.1
+  provider: ^6.1.2
+  injectable: ^2.4.2
+  shared_preferences: ^2.2.3
+  injectable_generator: ^2.6.1
+  build_runner: ^2.4.11
+  get_it: ^7.7.0
 
 dev_dependencies:
   flutter_test:
