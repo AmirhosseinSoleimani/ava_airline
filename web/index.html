@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <base href="$FLUTTER_BASE_HREF">
 
@@ -23,13 +23,21 @@
 </head>
 <body>
 <div id="loading">
-  <img src="assets/images/ava_logo.png" alt="App Logo">
+  <img src="assets/images/ava_logo.png" alt="App Logo" class="logo">
   <h1>Welcome to AVA Airline</h1>
-  <div class="loader"></div>
+  <div class="plane-loader">
+    <svg viewBox="0 0 100 100" width="80" height="80">
+      <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="4" fill="none" />
+      <path d="M50,5 L60,15 L55,20 L50,15 L45,20 L40,15 L50,5" fill="#3498db">
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
+      </path>
+    </svg>
+  </div>
 </div>
 
+
 <div id="flutterApp">
-<!--  <script src="flutter_bootstrap.js" async></script>-->
+  <script src="flutter_bootstrap.js" async></script>
 </div>
 
 <script src="scripts/loading.js"></script>

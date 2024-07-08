@@ -18,5 +18,5 @@ document.addEventListener('DOMContentLoaded', function () {
       flutterApp.style.display = 'block';
       flutterApp.style.animation = 'fadeIn 1s ease-in-out';
     }
-  }, 5000); // 5-second delay
+  }, 10000); // 5-second delay
 });
