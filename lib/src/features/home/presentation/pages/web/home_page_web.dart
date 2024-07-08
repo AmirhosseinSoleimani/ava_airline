@@ -226,6 +226,52 @@ class _HomePageWebState extends State<HomePageWeb> {
               ],
             ),
             ),
+            Space.h16,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      width: AppSize.s80,
+                      height: AppSize.s80,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s12))
+                      ),
+                      child: Icon(IconManager.airplane, size: AppSize.s48, color: Theme.of(context).colorScheme.secondary,),
+                    ),
+                    Space.h12,
+                    Text('ناوگان آوا', style: Theme.of(context).textTheme.titleMedium,)
+                  ],
+                ),
+                Space.w32,
+                Column(
+                  children: [
+                    Container(
+                      width: AppSize.s80,
+                      height: AppSize.s80,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).colorScheme.onSecondary,
+                          borderRadius: const BorderRadius.all(Radius.circular(AppSize.s12))
+                      ),
+                      child: Icon(IconManager.seat, size: AppSize.s48, color: Theme.of(context).colorScheme.secondary,),
+                    ),
+                    Space.h12,
+                    Text('وضعیت صندلی ها', style: Theme.of(context).textTheme.titleMedium,)
+                  ],
+                ),
+                SizedBox(
+                  width: width * 0.6,
+                  height: AppSize.s320,
+                  child: Column(
+                    children: [
+                      Text('')
+                    ],
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

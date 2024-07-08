@@ -115,7 +115,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
             alignment: Alignment.topCenter,
             child: Container(
               color: ColorLightThemeManager.transparent,
-              height: AppSize.s300,
+              height: AppSize.s320,
               child: Material(
                 color: Theme.of(context).colorScheme.onPrimary,
                 child: Padding(
