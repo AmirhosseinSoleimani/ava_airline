@@ -91,7 +91,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(localization.home),
+        title: Image.asset('assets/image/ava.png',height: AppBar().preferredSize.height-16,),
       ),
       drawer: Drawer(
         child: ListView(
