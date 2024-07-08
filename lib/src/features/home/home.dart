@@ -5,3 +5,5 @@ export 'package:ava_airline/src/features/home/presentation/pages/web/home_page_w
 export 'package:ava_airline/src/features/home/presentation/pages/mobile/home_page_mobile.dart';
 export 'package:ava_airline/src/features/home/presentation/pages/web/components/header/navbar_component.dart';
 export 'package:ava_airline/src/features/home/presentation/pages/web/components/header/widgets/navbar_items_widget.dart';
+export 'package:ava_airline/src/features/home/presentation/pages/web/components/introduce_widget/introduce_widget.dart';
+export 'package:ava_airline/src/features/home/presentation/pages/web/components/about_us/about_us_home_page.dart';

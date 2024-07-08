@@ -20,6 +20,8 @@ dependencies:
   flutter_typeahead: ^5.2.0
   persian_datetime_picker: ^2.7.0
   carousel_slider: ^4.2.1
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:
@@ -31,7 +33,9 @@ flutter:
   assets:
     - assets/svg/home_page/
     - assets/image/home_page/
+    - assets/image/special_trips/
     - assets/image/
+    - assets/svg/footer/
 
   fonts:
     - family: "iransans_fa"

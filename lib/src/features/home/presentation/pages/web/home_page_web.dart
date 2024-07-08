@@ -1,5 +1,11 @@
 import 'package:ava_airline/src/features/book_flight/book_flight.dart';
+import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/home/home.dart';
+import 'package:ava_airline/src/shared/footer/footer_widget.dart';
+
+import 'components/special_trips/special_trips_container.dart';
+
+
 
 class HomePageWeb extends StatefulWidget {
   const HomePageWeb({super.key});
@@ -59,6 +65,16 @@ class _HomePageWebState extends State<HomePageWeb> {
       ]
     }
   ];
+  List<HoverImageCardEntity> hoverImageCardEntity = [
+    HoverImageCardEntity(title: 'Montréal', date: '04 Sep 2024 - 09 Sep 2024', price: 'Economy from IRR 1440354050', imageUrl: ImageManager.montreal, isHover: false),
+    HoverImageCardEntity(title: 'Paris', date: '09 Nov 2024 - 15 Nov 2024', price: 'Economy from IRR 707678980', imageUrl: ImageManager.paris, isHover: false),
+    HoverImageCardEntity(title: 'Los Angeles', date: '02 Oct 2024 - 16 Oct 2024', price: 'Economy from IRR 617219010', imageUrl: ImageManager.losAngeles, isHover: false),
+    HoverImageCardEntity(title: 'Frankfurt', date: '17 Oct 2024 - 05 Nov 2024', price: 'Economy from IRR 314096992', imageUrl: ImageManager.frankfurt, isHover: false),
+    HoverImageCardEntity(title: 'Bangkok', date: '08 Jul 2024 - 15 Jul 2024', price: 'Economy from IRR 604017980', imageUrl: ImageManager.bangkok, isHover: false),
+    HoverImageCardEntity(title: 'Milan', date: '03 Aug 2024 - 08 Aug 2024', price: 'Economy from IRR 570211010', imageUrl: ImageManager.milan, isHover: false),
+    HoverImageCardEntity(title: 'Rome', date: '03 Aug 2024 - 08 Aug 2024', price: 'Economy from IRR 583790980', imageUrl: ImageManager.rome, isHover: false),
+
+  ];
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   late List<bool> expanded;
 
@@ -70,7 +86,6 @@ class _HomePageWebState extends State<HomePageWeb> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
       key: scaffoldKey,
@@ -226,53 +241,67 @@ class _HomePageWebState extends State<HomePageWeb> {
                   )
               ],
             ),
+
             ),
-            Space.h16,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      width: AppSize.s80,
-                      height: AppSize.s80,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.onSecondary,
-                        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s12))
-                      ),
-                      child: Icon(IconManager.airplane, size: AppSize.s48, color: Theme.of(context).colorScheme.secondary,),
-                    ),
-                    Space.h12,
-                    Text('ناوگان آوا', style: Theme.of(context).textTheme.titleMedium,)
-                  ],
-                ),
-                Space.w32,
-                Column(
-                  children: [
-                    Container(
-                      width: AppSize.s80,
-                      height: AppSize.s80,
-                      decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.onSecondary,
-                          borderRadius: const BorderRadius.all(Radius.circular(AppSize.s12))
-                      ),
-                      child: Icon(IconManager.seat, size: AppSize.s48, color: Theme.of(context).colorScheme.secondary,),
-                    ),
-                    Space.h12,
-                    Text('وضعیت صندلی ها', style: Theme.of(context).textTheme.titleMedium,)
-                  ],
-                ),
-                SizedBox(
-                  width: width * 0.6,
-                  height: AppSize.s320,
-                  child: Column(
+            Space.h64,
+            const IntroduceWidget(),
+            Space.h64,
+            SizedBox(
+              width: width * 0.6,
+              height: 1300,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('مقصد های ویژه شما', style: Theme.of(context).textTheme.displayLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
+                  Space.h16,
+                  Row(
                     children: [
-                      Text('')
+                      Expanded(
+                        child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[0],),
+                      ),
+                      Space.w16,
+                      Expanded(
+                        child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[1],),
+                      ),
                     ],
                   ),
-                )
-              ],
-            )
+                  Space.h16,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[2],),
+                      ),
+                      Space.w16,
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[3], isSmall: true,)),
+                            Expanded(child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[4], isSmall: true,)),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Space.h16,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[5],),
+                      ),
+                      Space.w16,
+                      Expanded(
+                        child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[6],),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Space.h64,
+            const AboutUsHomePage(),
+            Space.h64,
+            const FooterWidget(),
           ],
         ),
       ),
