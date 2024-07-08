@@ -30,5 +30,19 @@
   "rulesAndNotices": "قوانین و اطلاعیه‌ها",
   "economyFrom": "اکونومی از",
   "buyTicket": "خرید بلیط",
-  "bookYourFlight": "آوای آسمان شما را فرا می\u200Cخواند؛ همین\u200Cحالا پروازتان را رزرو کنید."
+  "bookYourFlight": "آوای آسمان شما را فرا می\u200Cخواند؛ همین\u200Cحالا پروازتان را رزرو کنید.",
+  "returnS": "بازگشت",
+  "oneWay": "یک طرفه",
+  "multiCity": "چند شهر",
+  "searchFlights": "جستجوی پروازها",
+  "from": "از",
+  "to": "به",
+  "selectOrigin": "انتخاب مبدا",
+  "selectDestination": "انتخاب مقصد",
+  "travelDates": "تاریخ‌های سفر",
+  "selectDates": "تاریخ‌ها را انتخاب کنید",
+  "passengerAndCabinClass": "مسافر و کلاس کابین",
+  "adultEconomyClass1": "بزرگسال اکونومی 1",
+  "search": "جستجو",
+  "flight": "پرواز"
 }

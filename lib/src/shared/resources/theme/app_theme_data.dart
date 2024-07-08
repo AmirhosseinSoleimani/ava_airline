@@ -20,6 +20,7 @@ class LightAppThemeData extends AppThemeData {
             onError: ColorLightThemeManager.white,
             surface: ColorLightThemeManager.backGroundColor,
             onSurface: ColorLightThemeManager.black,
+            surfaceContainer: Colors.white,
             brightness: Brightness.light,
           ),
 
