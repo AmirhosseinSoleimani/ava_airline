@@ -1,0 +1,41 @@
+/* web/styles/loading.css */
+
+/* Reset and basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e74c3c; /* Red background color */
+  font-family: 'Arial', sans-serif;
+}
+
+#loading {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#loading .logo {
+  width: 120px;
+  height: 120px;
+}
+
+#loading h1 {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #ecf0f1; /* Light text color for visibility */
+}
+
+.plane-loader {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
