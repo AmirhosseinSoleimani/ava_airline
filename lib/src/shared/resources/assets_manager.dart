@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class ImageManager {
   static const String homePageImage = 'assets/image/home_page/home_page.png';
   static const String homePagePortraitImage = 'assets/image/home_page/home_page_portrait.jpg';
+
+  static const String footerBackgroundImage = 'assets/image/footer_background.png';
 }
 
 
