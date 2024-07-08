@@ -91,6 +91,91 @@ class _HomePageMobileState extends State<HomePageMobile> {
       appBar: AppBar(
         title: const Text('Home'),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            Container(
+              height: 150,
+              padding: const EdgeInsets.all(16),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/image/gold.jpg',
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/image/avatar.png'),
+                        maxRadius: 30,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(' Jonathan Davis',
+                        style: Theme.of(context).textTheme.titleMedium),
+                  ]),
+            ),
+            ListTile(
+              title: const Text('Airport maps'),
+              leading: const Icon(Icons.connecting_airports_rounded),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Flight status'),
+              leading: const Icon(Icons.access_time_rounded),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Baggage tracker'),
+              leading: const Icon(Icons.shopping_bag_outlined),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Travel updates'),
+              leading: const Icon(Icons.info),
+              onTap: () {},
+            ),
+            const Divider(
+              color: Colors.grey,
+              thickness: 0.5,
+            ),
+            ListTile(
+              title: const Text('FAQ'),
+              leading: const Icon(Icons.question_mark),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Contact us'),
+              leading: const Icon(Icons.call),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Send feedback'),
+              leading: const Icon(Icons.feedback),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Legal'),
+              leading: const Icon(Icons.newspaper_outlined),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text('Rules and notices'),
+              leading: const Icon(Icons.rule),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -133,16 +218,18 @@ class _HomePageMobileState extends State<HomePageMobile> {
               }).toList(),
             ),
             const SizedBox(height: 16),
-
             Padding(
               padding: EdgeInsets.only(
                   left: (MediaQuery.of(context).size.width * 0.025)),
-              child: Text('Destinations from\nTehran, Iran',style: Theme.of(context).textTheme.displayMedium,),
+              child: Text(
+                'Destinations from\nTehran, Iran',
+                style: Theme.of(context).textTheme.displayMedium,
+              ),
             ),
             const SizedBox(height: 4),
             Center(
               child: SizedBox(
-                width: MediaQuery.of(context).size.width*0.95,
+                width: MediaQuery.of(context).size.width * 0.95,
                 child: CarouselSlider(
                   items: destinations
                       .map((e) => DestinationCard(destination: e))
@@ -156,7 +243,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
             Padding(
               padding: EdgeInsets.only(
                   left: (MediaQuery.of(context).size.width * 0.025)),
-              child: Text('AVA FLIGHT EXPERINCE',style: Theme.of(context).textTheme.displayMedium,),
+              child: Text(
+                'AVA FLIGHT EXPERINCE',
+                style: Theme.of(context).textTheme.displayMedium,
+              ),
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
@@ -168,12 +258,15 @@ class _HomePageMobileState extends State<HomePageMobile> {
             Padding(
               padding: EdgeInsets.only(
                   left: (MediaQuery.of(context).size.width * 0.025)),
-              child: Text('Popular destinations',style: Theme.of(context).textTheme.displayMedium,),
+              child: Text(
+                'Popular destinations',
+                style: Theme.of(context).textTheme.displayMedium,
+              ),
             ),
             const SizedBox(height: 4),
             Center(
               child: SizedBox(
-                width: MediaQuery.of(context).size.width*0.95,
+                width: MediaQuery.of(context).size.width * 0.95,
                 child: CarouselSlider(
                   items: cities.map((e) => CityCard(city: e)).toList(),
                   options: CarouselOptions(
@@ -185,9 +278,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 100,
-            )
+            const SizedBox(height: 100)
           ],
         ),
       ),
