@@ -45,9 +45,7 @@ class CityCard extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .displaySmall!
-                              .copyWith(
-                                  color:
-                                      Colors.white)),
+                              .copyWith(color: Colors.white)),
                     ),
                   ),
                 ))
