@@ -221,8 +221,8 @@ class _HomePageMobileState extends State<HomePageMobile> {
             ),
             const SizedBox(height: 16),
             Padding(
-              padding: EdgeInsets.only(
-                  left: (MediaQuery.of(context).size.width * 0.025)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: (MediaQuery.of(context).size.width * 0.025)),
               child: Text(
                 '${localization.destinationsFrom}\n${localization.tehran}${localization.comma} ${localization.iran}',
                 style: Theme.of(context).textTheme.displayMedium,
@@ -243,8 +243,8 @@ class _HomePageMobileState extends State<HomePageMobile> {
             ),
             const SizedBox(height: 16),
             Padding(
-              padding: EdgeInsets.only(
-                  left: (MediaQuery.of(context).size.width * 0.025)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: (MediaQuery.of(context).size.width * 0.025)),
               child: Text(
                 localization.avaFlightExperience,
                 style: Theme.of(context).textTheme.displayMedium,
@@ -258,8 +258,8 @@ class _HomePageMobileState extends State<HomePageMobile> {
             ),
             const SizedBox(height: 16),
             Padding(
-              padding: EdgeInsets.only(
-                  left: (MediaQuery.of(context).size.width * 0.025)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: (MediaQuery.of(context).size.width * 0.025)),
               child: Text(
                 localization.popularDestinations,
                 style: Theme.of(context).textTheme.displayMedium,

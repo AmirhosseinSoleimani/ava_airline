@@ -1,6 +1,6 @@
-import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/home/domain/entities/carousel_entity.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CarouselCard extends StatelessWidget {
   final Carousel carousel;
@@ -33,11 +33,12 @@ class CarouselCard extends StatelessWidget {
                 top: 8,
                 right: 16,
                 bottom: 8,
+                left: 8,
               ),
               width: MediaQuery.of(context).size.width,
               color: Colors.black.withOpacity(0.4),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
