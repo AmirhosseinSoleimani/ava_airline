@@ -25,26 +25,26 @@ class _HomePageMobileState extends State<HomePageMobile> {
   Widget build(BuildContext context) {
     final localization = AppLocalizations.of(context)!;
     final carousels = [
-      const Carousel(
+       Carousel(
         id: 1,
-        title: 'خرید بلیط',
+        title: localization.buyTicket,
         assetPath: 'assets/image/home_page/home_page.png',
         description:
-            'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.',
+            localization.bookYourFlight,
       ),
-      const Carousel(
+       Carousel(
         id: 2,
-        title: 'خرید بلیط',
+        title: localization.buyTicket,
         assetPath: 'assets/image/home_page/home_page.png',
         description:
-            'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.',
+        localization.bookYourFlight,
       ),
-      const Carousel(
+       Carousel(
         id: 3,
-        title: 'خرید بلیط',
+        title: localization.buyTicket,
         assetPath: 'assets/image/home_page/home_page.png',
         description:
-            'آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید.',
+        localization.bookYourFlight,
       ),
     ];
 
