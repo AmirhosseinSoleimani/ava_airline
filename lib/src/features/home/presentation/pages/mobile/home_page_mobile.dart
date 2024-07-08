@@ -185,8 +185,8 @@ class _HomePageMobileState extends State<HomePageMobile> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 100,
+            const SizedBox(
+              height: 100
             )
           ],
         ),
