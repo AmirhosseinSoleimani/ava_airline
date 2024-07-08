@@ -70,6 +70,7 @@ class _HomePageWebState extends State<HomePageWeb> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
       key: scaffoldKey,
