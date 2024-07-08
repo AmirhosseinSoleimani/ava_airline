@@ -17,7 +17,7 @@ class NavbarItemsState extends State<NavbarItems> {
     "اطلاعات سفر",
     "در طول پرواز",
     "مقاصد پروازی",
-    "باشگاه مسافران ویژه"
+    "باشگاه آوای آسمان"
   ];
 
   @override
@@ -92,7 +92,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
       ]
     },
     {
-      "باشگاه مسافران ویژه": [
+      "باشگاه آوای آسمان": [
         'خرید بلیط',
         'پذیرش آنلاین',
         'استرداد بلیط',
