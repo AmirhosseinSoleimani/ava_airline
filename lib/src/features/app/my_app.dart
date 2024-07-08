@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
               GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: AppLocalizations.supportedLocales,
-            locale: const Locale('fa'),
+            locale: const Locale('en'),
             debugShowCheckedModeBanner: false,
             routerConfig: Routes.routes,
           );

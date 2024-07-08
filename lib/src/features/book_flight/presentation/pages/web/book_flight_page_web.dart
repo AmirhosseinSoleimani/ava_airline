@@ -5,7 +5,6 @@ import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation
 import 'package:ava_airline/src/features/features.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
-
 class BookFlightPageWeb extends StatefulWidget {
   const BookFlightPageWeb({super.key});
 
@@ -13,7 +12,8 @@ class BookFlightPageWeb extends StatefulWidget {
   State<BookFlightPageWeb> createState() => _BookFlightPageWebState();
 }
 
-class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTickerProviderStateMixin{
+class _BookFlightPageWebState extends State<BookFlightPageWeb>
+    with SingleTickerProviderStateMixin {
   late TabController tabController;
   int _selectedValue = 0;
   final List<String> cities = ['تهران', 'مشهد', 'اصفهان', 'شیراز', 'تبریز'];
@@ -32,7 +32,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
 
   void _updatePassengerController() {
     passengerController.text =
-    'بزرگسال: $adults, خردسال: $children, نوزاد: $infants';
+        'بزرگسال: $adults, خردسال: $children, نوزاد: $infants';
   }
 
   Widget _buildCounter(String label, int count, ValueChanged<int> onChanged) {
@@ -44,12 +44,12 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
           children: [
             IconButton(
               onPressed: count > 0 ? () => onChanged(count - 1) : null,
-              icon: Icon(Icons.remove),
+              icon: const Icon(Icons.remove),
             ),
             Text('$count'),
             IconButton(
               onPressed: () => onChanged(count + 1),
-              icon: Icon(Icons.add),
+              icon: const Icon(Icons.add),
             ),
           ],
         ),
@@ -69,7 +69,6 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
       destinationController.text = destination ?? '';
     });
   }
-
 
   @override
   void initState() {
@@ -94,7 +93,10 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
           },
         ),
         Space.w8,
-        Text(text, style: Theme.of(context).textTheme.bodyMedium,),
+        Text(
+          text,
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
       ],
     );
   }
@@ -125,46 +127,46 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
           ),
           Expanded(
             flex: 3,
-            child: TabBarView(
-                controller: tabController,
+            child: TabBarView(controller: tabController, children: [
+              Column(
                 children: [
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(AppPadding.p12),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            _buildRadioButton(0, 'یک طرفه'),
-                            Space.w12,
-                            _buildRadioButton(1, 'رفت و برگشت'),
-                            Space.w12,
-                            _buildRadioButton(2, 'چند مسیره'),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Center(
-                          child: AnimatedSwitcher(
-                            duration: const Duration(milliseconds: DurationConstant.d500),
-                            child: _buildSelectedWidget(),
-                          ),
-                        ),
-                      ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(AppPadding.p12),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        _buildRadioButton(0, 'یک طرفه'),
+                        Space.w12,
+                        _buildRadioButton(1, 'رفت و برگشت'),
+                        Space.w12,
+                        _buildRadioButton(2, 'چند مسیره'),
+                      ],
+                    ),
                   ),
-                  Container(
-                    color: Colors.blue,
+                  Expanded(
+                    child: Center(
+                      child: AnimatedSwitcher(
+                        duration:
+                            const Duration(milliseconds: DurationConstant.d500),
+                        child: _buildSelectedWidget(),
+                      ),
+                    ),
                   ),
-                  Container(
-                    color: Colors.yellow,
-                  )
-                ]),
+                ],
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.yellow,
+              )
+            ]),
           )
         ],
       ),
     );
   }
+
   Widget _buildSelectedWidget() {
     switch (_selectedValue) {
       case 0:
@@ -182,31 +184,38 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
                       Row(
                         children: [
                           Expanded(
-                            child: _buildCityTextField('مبدا', originController, true),
+                            child: _buildCityTextField(
+                                'مبدا', originController, true),
                           ),
                           Expanded(
-                            child: _buildCityTextField('مقصد', destinationController, false),)
+                            child: _buildCityTextField(
+                                'مقصد', destinationController, false),
+                          )
                         ],
                       ),
                       Align(
                         alignment: Alignment.center,
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: AppPadding.p12),
+                          padding:
+                              const EdgeInsets.only(bottom: AppPadding.p12),
                           child: InkWell(
                             onTap: () {
                               String temp = originController.text;
-                              originController.text = destinationController.text;
+                              originController.text =
+                                  destinationController.text;
                               destinationController.text = temp;
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.onSecondary,
-                                borderRadius: BorderRadius.circular(AppSize.s60),
-                                border: Border.all(
-                                  width: AppSize.s1,
-                                  color: Theme.of(context).colorScheme.secondary
-                                )
-                              ),
+                                  color:
+                                      Theme.of(context).colorScheme.onSecondary,
+                                  borderRadius:
+                                      BorderRadius.circular(AppSize.s60),
+                                  border: Border.all(
+                                      width: AppSize.s1,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary)),
                               child: Icon(
                                 IconManager.swap,
                                 size: AppSize.s24,
@@ -223,19 +232,24 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
                 Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: AppPadding.p12),
                     child: TextFormField(
                       controller: dateController,
                       decoration: InputDecoration(
-                        border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(AppSize.s8)),
-                        ),
-                        label: Text(
-                          'تاریخ پرواز',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        prefixIcon: Icon(IconManager.date, size: AppSize.s28, color: Theme.of(context).colorScheme.secondary,)
-                      ),
+                          border: const OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(AppSize.s8)),
+                          ),
+                          label: Text(
+                            'تاریخ پرواز',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          prefixIcon: Icon(
+                            IconManager.date,
+                            size: AppSize.s28,
+                            color: Theme.of(context).colorScheme.secondary,
+                          )),
                     ),
                   ),
                 ),
@@ -246,32 +260,34 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
                     children: [
                       TypeAheadField(
                         builder: (context, controller, focusNode) {
-                        return TextFormField(
-                          controller: searchController,
-                          decoration: const InputDecoration(
-                            labelText: 'انتخاب مسافران',
-                            border: OutlineInputBorder(),
-                          ),
-                        );
-                      },
+                          return TextFormField(
+                            controller: searchController,
+                            decoration: const InputDecoration(
+                              labelText: 'انتخاب مسافران',
+                              border: OutlineInputBorder(),
+                            ),
+                          );
+                        },
                         suggestionsCallback: (pattern) async {
-                          return ['بزرگسال', 'خردسال', 'نوزاد'].where((item) => item.contains(pattern)).toList();
-                      },
-                      itemBuilder: (context, suggestion) {
-                        return ListTile(
-                          title: Text(suggestion.toString()),
-                        );
-                      },
+                          return ['بزرگسال', 'خردسال', 'نوزاد']
+                              .where((item) => item.contains(pattern))
+                              .toList();
+                        },
+                        itemBuilder: (context, suggestion) {
+                          return ListTile(
+                            title: Text(suggestion.toString()),
+                          );
+                        },
                         onSelected: (suggestion) {
-                        if (suggestion == 'بزرگسال') {
-                          adults++;
-                        } else if (suggestion == 'خردسال') {
-                          children++;
-                        } else if (suggestion == 'نوزاد') {
-                          infants++;
-                        }
-                        _updatePassengerController();
-                      },
+                          if (suggestion == 'بزرگسال') {
+                            adults++;
+                          } else if (suggestion == 'خردسال') {
+                            children++;
+                          } else if (suggestion == 'نوزاد') {
+                            infants++;
+                          }
+                          _updatePassengerController();
+                        },
                       ),
                     ],
                   ),
@@ -283,7 +299,8 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
                     child: AvaElevatedButton(
                       onTap: () {},
                       title: 'جستجو',
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Theme.of(context).colorScheme.onSecondary),
                     ),
                   ),
                 )
@@ -311,7 +328,9 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
         return Container();
     }
   }
-  Widget _buildCityTextField(String label, TextEditingController controller, bool? isRight) {
+
+  Widget _buildCityTextField(
+      String label, TextEditingController controller, bool? isRight) {
     return TypeAheadField<String>(
       controller: controller,
       builder: (context, controller, focusNode) {
@@ -319,18 +338,21 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb> with SingleTicker
             controller: controller,
             focusNode: focusNode,
             decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(horizontal: AppPadding.p24),
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: AppPadding.p24),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular((isRight ?? false) ? AppSize.s0 : AppSize.s8),
-                    topLeft: Radius.circular((isRight ?? false) ? AppSize.s0 : AppSize.s8),
-                    bottomRight: Radius.circular((isRight ?? false) ? AppSize.s8 : AppSize.s0),
-                    topRight: Radius.circular((isRight ?? false) ? AppSize.s8 : AppSize.s0),
-                )
-              ),
+                  borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(
+                    (isRight ?? false) ? AppSize.s0 : AppSize.s8),
+                topLeft: Radius.circular(
+                    (isRight ?? false) ? AppSize.s0 : AppSize.s8),
+                bottomRight: Radius.circular(
+                    (isRight ?? false) ? AppSize.s8 : AppSize.s0),
+                topRight: Radius.circular(
+                    (isRight ?? false) ? AppSize.s8 : AppSize.s0),
+              )),
               labelText: label,
-            )
-        );
+            ));
       },
       itemBuilder: (BuildContext context, String value) {
         return ListTile(
@@ -352,15 +374,13 @@ Widget _buildTab(IconData icon, String text, BuildContext context) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, color: Theme
-            .of(context)
-            .colorScheme
-            .secondary, size: AppSize.s24,),
+        Icon(
+          icon,
+          color: Theme.of(context).colorScheme.secondary,
+          size: AppSize.s24,
+        ),
         Space.w8,
-        Text(text, style: Theme
-            .of(context)
-            .textTheme
-            .titleMedium),
+        Text(text, style: Theme.of(context).textTheme.titleMedium),
       ],
     ),
   );
