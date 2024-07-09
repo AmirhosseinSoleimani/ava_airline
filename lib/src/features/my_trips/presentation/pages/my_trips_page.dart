@@ -29,10 +29,10 @@ class MyTripsPage extends StatelessWidget {
             Column(
               children: [
                 Text(localization.noTrips,
-                    style: Theme.of(context).textTheme.titleLarge),
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.grey[600])),
                 const SizedBox(height: 16),
                 Text(localization.noTripsDescription,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: Theme.of(context).textTheme.displaySmall!.copyWith(fontWeight: FontWeight.w500,color: Colors.grey[600]),
                 textAlign: TextAlign.center,),
               ],
             ),
@@ -50,7 +50,7 @@ class MyTripsPage extends StatelessWidget {
                     child: Text(
                       localization.addBooking,
                       style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: Theme.of(context).colorScheme.onPrimary),
+                          color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w500),
                     ),
                     onPressed: () {},
                   ),
@@ -75,7 +75,7 @@ class MyTripsPage extends StatelessWidget {
                   child: Text(
                     localization.bookFlight,
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface),
+                        color: Theme.of(context).colorScheme.onSurface,fontWeight: FontWeight.w500),
                   ),
                   onPressed: () => context.go('/book-page'),
                 ),

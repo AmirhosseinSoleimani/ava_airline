@@ -75,7 +75,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                       child: Text(
                         localization.search,
                         style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color: Theme.of(context).colorScheme.onPrimary),
+                            color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w500),
                       ),
                       onPressed: () {},
                     ),
