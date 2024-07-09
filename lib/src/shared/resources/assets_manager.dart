@@ -78,4 +78,5 @@ class SvgManager {
   static const String telegramSvg = "assets/svg/footer/telegram-svgrepo-com.svg";
   static const String whatsAppSvg = "assets/svg/footer/whatsapp-svgrepo-com.svg";
   static const String instagramSvg = "assets/svg/footer/instagram-svgrepo-com.svg";
+  static const String xSvg = "assets/svg/footer/x-social-media-black-icon.svg";
 }

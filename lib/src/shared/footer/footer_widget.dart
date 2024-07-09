@@ -62,26 +62,63 @@ class FooterWidget extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  SvgPicture.asset(SvgManager.telegramSvg, colorFilter: ColorFilter.mode(
-                                      Theme.of(context).colorScheme.onSecondary,
-                                      BlendMode.srcIn),
-                                    width: AppSize.s28,
-                                    height: AppSize.s28,
+                                  ///X
+                                  InkWell(
+                                    onTap: (){
+                                      _launchUrl('https://twitter.com/ava_airlines');
+                                    },
+                                    child: SvgPicture.asset(
+                                      SvgManager.xSvg, colorFilter: ColorFilter.mode(
+                                        Theme.of(context).colorScheme.onSecondary,
+                                        BlendMode.srcIn),
+                                      width: AppSize.s20,
+                                      height: AppSize.s20,
+                                    ),
                                   ),
                                   Space.w12,
-                                  SvgPicture.asset(SvgManager.whatsAppSvg, colorFilter: ColorFilter.mode(
-                                      Theme.of(context).colorScheme.onSecondary,
-                                      BlendMode.srcIn),
-                                    width: AppSize.s28,
-                                    height: AppSize.s28,
+
+                                  ///telegram
+                                  InkWell(
+                                    onTap:(){
+                                      _launchUrl('https://t.me/ava_airlines');
+                                    },
+                                    child: SvgPicture.asset(
+                                      SvgManager.telegramSvg, colorFilter: ColorFilter.mode(
+                                        Theme.of(context).colorScheme.onSecondary,
+                                        BlendMode.srcIn),
+                                      width: AppSize.s20,
+                                      height: AppSize.s20,
+                                    ),
                                   ),
                                   Space.w12,
-                                  SvgPicture.asset(SvgManager.instagramSvg, colorFilter: ColorFilter.mode(
-                                      Theme.of(context).colorScheme.onSecondary,
-                                      BlendMode.srcIn),
-                                    width: AppSize.s28,
-                                    height: AppSize.s28,
+                                  ///whatsapp
+                                  InkWell(
+                                    onTap: (){
+                                      _launchUrl('https://whatsapp.com/channel/0029VaXwBHd0lwgorPi0bk1h');
+                                    },
+                                    child: SvgPicture.asset(
+                                      SvgManager.whatsAppSvg, colorFilter: ColorFilter.mode(
+                                        Theme.of(context).colorScheme.onSecondary,
+                                        BlendMode.srcIn),
+                                      width: AppSize.s20,
+                                      height: AppSize.s20,
+                                    ),
                                   ),
+                                  Space.w12,
+                                  ///instagram
+                                  InkWell(
+                                    onTap: (){
+                                      _launchUrl('https://instagram.com/ava_airlines');
+                                    },
+                                    child: SvgPicture.asset(
+                                      SvgManager.instagramSvg, colorFilter: ColorFilter.mode(
+                                        Theme.of(context).colorScheme.onSecondary,
+                                        BlendMode.srcIn),
+                                      width: AppSize.s20,
+                                      height: AppSize.s20,
+                                    ),
+                                  ),
+
                                 ],
                               )
                             ],
