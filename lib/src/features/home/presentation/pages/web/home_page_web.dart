@@ -166,7 +166,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                           colorFilter: ColorFilter.mode(
                               Theme.of(context).colorScheme.onSurface,
                               BlendMode.srcIn),
-                          semanticsLabel: 'AVA Airline',
+                          semanticsLabel: 'AVA Airlines',
                           width: AppSize.s42,
                         ),
                         Space.w8,
