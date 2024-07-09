@@ -8,12 +8,16 @@ class AboutUsHomePage extends StatelessWidget {
     final localization = AppLocalizations.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: width * 0.6,
+      // width: width * 0.6,
       height: 400,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
+          Spacer(),
+          ///Texts
           Expanded(
+            flex: 5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -44,41 +48,51 @@ class AboutUsHomePage extends StatelessWidget {
               ],
             ),
           ),
+
+          Spacer(),
+
+          ///Images
           Expanded(
-            child: Stack(
-              children: [
-                Align(
-                    alignment: Alignment.centerLeft,
-                    child: Image.asset(ImageManager.backgroundAboutUs)),
-                Align(
-                    alignment: Alignment.topCenter,
-                    child: Image.asset(ImageManager.airplane3)),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Container(
-                    height: AppSize.s120,
-                    width: 392,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(AppPadding.p8),
-                      child: Row(
-                        children: [
-                          Expanded(child: Image.asset(ImageManager.perfume, fit: BoxFit.cover,)),
-                          Space.w8,
-                          Expanded(child: Image.asset(ImageManager.seat, fit: BoxFit.cover)),
-                          Space.w8,
-                          Expanded(child: Image.asset(ImageManager.personnel, fit: BoxFit.cover)),
-                        ],
+            flex: 5,
+            child: Container(
+              child: Stack(
+                children: [
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Image.asset(ImageManager.backgroundAboutUs)),
+                  Align(
+                      alignment: Alignment.center,
+                      child: Image.asset(ImageManager.airplane3)),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Container(
+                      height: AppSize.s120,
+                      width: 392,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppPadding.p8),
+                        child: Row(
+                          children: [
+                            Expanded(child: Image.asset(ImageManager.perfume, fit: BoxFit.cover,)),
+                            Space.w8,
+                            Expanded(child: Image.asset(ImageManager.seat, fit: BoxFit.cover)),
+                            Space.w8,
+                            Expanded(child: Image.asset(ImageManager.personnel, fit: BoxFit.cover)),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
+
+          Spacer(),
+
         ],
       ),
     );

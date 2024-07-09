@@ -253,33 +253,41 @@ class _HomePageWebState extends State<HomePageWeb> {
             const IntroduceWidget(),
             Space.h64,
             SizedBox(
-              width: width * 0.6,
+              // width: width * 0.6,
               height: 1300,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(localization.special_fares, style: Theme.of(context).textTheme.displayLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
                   Space.h16,
                   Row(
                     children: [
+                      Spacer(),
                       Expanded(
+                        flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[0],),
                       ),
+                      // Spacer(),
                       Space.w16,
                       Expanded(
+                        flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[1],),
                       ),
+                      Spacer(),
                     ],
                   ),
                   Space.h16,
                   Row(
                     children: [
+                      Spacer(),
                       Expanded(
+                        flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[2],),
                       ),
                       Space.w16,
                       Expanded(
+                        flex: 5,
                         child: Row(
                           children: [
                             Expanded(child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[3], isSmall: true,)),
@@ -287,24 +295,30 @@ class _HomePageWebState extends State<HomePageWeb> {
                           ],
                         ),
                       ),
+                      Spacer()
                     ],
                   ),
                   Space.h16,
                   Row(
                     children: [
+                      Spacer(),
                       Expanded(
+                        flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[5],),
                       ),
                       Space.w16,
                       Expanded(
+                        flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[6],),
                       ),
+                      Spacer()
                     ],
                   ),
                 ],
               ),
             ),
             Space.h64,
+            ///special offers
             const AboutUsHomePage(),
             Space.h64,
             const FooterWidget(),

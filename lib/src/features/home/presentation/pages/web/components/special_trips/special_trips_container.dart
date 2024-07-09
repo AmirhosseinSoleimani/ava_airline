@@ -29,14 +29,14 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
         child: Stack(
           children: [
             AnimatedContainer(
-              duration: const Duration(milliseconds: DurationConstant.d500),
+              duration: const Duration(milliseconds: DurationConstant.d3000),
               height: 400,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(AppSize.s12),
                 child: Stack(
                   children: [
                     Transform.scale(
-                      scale: (widget.hoverImageCardEntity.isHover ?? false) ? 1.1 : 1.0,
+                      scale: (widget.hoverImageCardEntity.isHover ?? false) ? 1.18 : 1.0,
                       child: Container(
                         height: 400,
                         decoration: BoxDecoration(
@@ -85,13 +85,17 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                   ) : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        widget.hoverImageCardEntity.date,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                      Flexible(
+                        child: Text(
+                          widget.hoverImageCardEntity.date,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                        ),
                       ),
-                      Text(
-                        widget.hoverImageCardEntity.price,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                      Flexible(
+                        child: Text(
+                          widget.hoverImageCardEntity.price,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                        ),
                       ),
                     ],
                   ),
