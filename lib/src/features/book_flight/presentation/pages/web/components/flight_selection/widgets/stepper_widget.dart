@@ -1,5 +1,4 @@
 import 'package:ava_airline/src/features/book_flight/book_flight.dart';
-import 'package:flutter/material.dart';
 
 class StepperWidget extends StatelessWidget {
   const StepperWidget(
@@ -17,7 +16,7 @@ class StepperWidget extends StatelessWidget {
         if (i != (stepperList.length - 1)) {
           list.add(const Expanded(
               child: Padding(
-                padding: EdgeInsets.only(top: 12.0),
+                padding: EdgeInsets.only(top: AppPadding.p20),
                 child: Divider(
                   thickness: 3,
                   color: Colors.green,
@@ -30,7 +29,7 @@ class StepperWidget extends StatelessWidget {
         if (i != (stepperList.length - 1)) {
           list.add(Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(top: 12.0),
+                padding: const EdgeInsets.only(top: AppPadding.p20),
                 child: Divider(
                   thickness: 3,
                   color: ColorLightThemeManager.grey,
@@ -43,7 +42,7 @@ class StepperWidget extends StatelessWidget {
         if (i != (stepperList.length - 1)) {
           list.add(Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(top: 12.0),
+                padding: const EdgeInsets.only(top: AppPadding.p20),
                 child: Divider(
                   thickness: 3,
                   color: ColorLightThemeManager.grey,
@@ -54,7 +53,7 @@ class StepperWidget extends StatelessWidget {
     }
     return SizedBox(
       width: double.infinity,
-      height: 80,
+      height: 120,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,10 +68,11 @@ Widget stepper(BuildContext context, String title, IconData icon, bool isActive,
   return Column(
     mainAxisAlignment: MainAxisAlignment.start,
     crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisSize: MainAxisSize.min,
     children: [
       Container(
-        width: MediaQuery.of(context).size.width * 0.1,
-        height: MediaQuery.of(context).size.width * 0.1,
+        width: AppSize.s60,
+        height: AppSize.s60,
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: isActive ? Colors.green : Colors.white,
@@ -82,21 +82,19 @@ Widget stepper(BuildContext context, String title, IconData icon, bool isActive,
                     ? Colors.green
                     : isProgressive
                     ? Colors.green
-                    : Colors.grey)),
+                    : ColorLightThemeManager.grey)),
         child: Icon(
+          size: AppSize.s28,
           icon,
           color: isActive
               ? Colors.white
-              : Colors.grey,
+              : ColorLightThemeManager.grey,
         ),
       ),
       Space.h4,
       Text(
         title,
-        style: Theme.of(context).textTheme.bodySmall!.copyWith(
-            color: Colors.grey,
-            fontSize: 10,
-            fontWeight: FontWeight.bold),
+        style: Theme.of(context).textTheme.bodyMedium,
       )
     ],
   );
