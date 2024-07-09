@@ -57,4 +57,5 @@ class SvgManager {
   static const String avaAirLineLogoSvg = "assets/svg/home_page/ava_logo.svg";
   static const String earthSvg = "assets/svg/home_page/earth.svg";
   static const String wordSvg = "assets/svg/content_management/word.svg";
+  static const String planeSvg = "assets/svg/plane.svg";
 }
