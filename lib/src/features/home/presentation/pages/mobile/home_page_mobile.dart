@@ -1,3 +1,4 @@
+import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/domain/entities/carousel_entity.dart';
 import 'package:ava_airline/src/features/home/domain/entities/city_entity.dart';
 import 'package:ava_airline/src/features/home/domain/entities/destination_entity.dart';
@@ -5,6 +6,7 @@ import 'package:ava_airline/src/features/home/domain/entities/feature_entity.dar
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/carousel_card.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/city_card.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/destination_card.dart';
+import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/feature_card.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -117,7 +119,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           children: [
             Container(
               height: 150,
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.only(top: 36, right: 16, left: 16),
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -130,12 +132,9 @@ class _HomePageMobileState extends State<HomePageMobile> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/image/avatar.png'),
-                        maxRadius: 30,
-                      ),
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/image/avatar.png'),
+                      maxRadius: 30,
                     ),
                     const SizedBox(
                       height: 8,
@@ -143,6 +142,13 @@ class _HomePageMobileState extends State<HomePageMobile> {
                     Text('Soroush Beigi',
                         style: Theme.of(context).textTheme.titleMedium),
                   ]),
+            ),
+            ListTile(
+              title: Text(localization.notifications),
+              leading: const Icon(Icons.notifications),
+              onTap: () {
+                context.go(NotificationsPage.notificationsPagePath);
+              },
             ),
             ListTile(
               title: Text(localization.airportMaps),

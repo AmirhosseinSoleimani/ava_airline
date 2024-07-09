@@ -20,6 +20,8 @@ dependencies:
   flutter_typeahead: ^5.2.0
   persian_datetime_picker: ^2.7.0
   carousel_slider: ^4.2.1
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
   provider: ^6.1.2
   injectable: ^2.4.2
   shared_preferences: ^2.2.3
@@ -27,8 +29,8 @@ dependencies:
   build_runner: ^2.4.11
   get_it: ^7.7.0
   shimmer: ^3.0.0
-  flutter_map: ^7.0.2
-  latlong2: ^0.9.1
+  url_launcher: ^6.3.0
+
 
 dev_dependencies:
   flutter_launcher_icons: "^0.13.1"

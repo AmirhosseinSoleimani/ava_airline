@@ -1,5 +1,6 @@
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:ava_airline/src/features/features.dart';
+import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
 import 'package:flutter/foundation.dart';
 
 class Routes {
@@ -18,11 +19,21 @@ class Routes {
       initialLocation: kIsWeb? HomePage.homePagePath : SplashPage.splashPagePath,
       debugLogDiagnostics: true,
       routes: [
+        ///splash
         GoRoute(
           path: SplashPage.splashPagePath,
           name: SplashPage.splashPageName,
           builder: (context, state) => const SplashPage(),
         ),
+
+        ///notificdations
+        GoRoute(
+          path: NotificationsPage.notificationsPagePath,
+          name: NotificationsPage.notificationsPageName,
+          builder: (context, state) =>  NotificationsPage(),
+        ),
+
+        ///TABs
         GoRoute(
           path: FlightSelectionPage.flightSelectionPagePath,
           name: FlightSelectionPage.flightSelectionPageName,

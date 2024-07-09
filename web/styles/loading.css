@@ -9,7 +9,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e74c3c; /* Red background color */
+  background-color: #e74c3c;
   font-family: 'Arial', sans-serif;
 }
 
