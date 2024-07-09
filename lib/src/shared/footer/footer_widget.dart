@@ -3,10 +3,17 @@ import 'package:ava_airline/src/shared/resources/resources.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:latlong2/latlong.dart' as flutter_map_lat_lng;
+import 'package:url_launcher/url_launcher.dart';
 
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
+
+  Future<void> _launchUrl(String url) async {
+    if (!await launchUrl(Uri.parse(url))) {
+      throw Exception('Could not launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -107,9 +114,12 @@ class FooterWidget extends StatelessWidget {
                                     ),
                                   ),
                                   Space.w8,
-                                  Text(
-                                    'ثبت شکایت',
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                  InkWell(
+                                    onTap: (){},
+                                    child: Text(
+                                      'ثبت شکایت',
+                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -127,9 +137,12 @@ class FooterWidget extends StatelessWidget {
                                     ),
                                   ),
                                   Space.w8,
-                                  Text(
-                                    'فرصت های شغلی',
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                  InkWell(
+                                    onTap: (){},
+                                    child: Text(
+                                      'فرصت های شغلی',
+                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -147,9 +160,12 @@ class FooterWidget extends StatelessWidget {
                                     ),
                                   ),
                                   Space.w8,
-                                  Text(
-                                    'قوانین و مقررات',
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                  InkWell(
+                                    onTap: (){},
+                                    child: Text(
+                                      'قوانین و مقررات',
+                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -167,9 +183,12 @@ class FooterWidget extends StatelessWidget {
                                     ),
                                   ),
                                   Space.w8,
-                                  Text(
-                                    'گزارش ایمنی و پیگیری',
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                  InkWell(
+                                    onTap: (){},
+                                    child: Text(
+                                      'گزارش ایمنی و پیگیری',
+                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                    ),
                                   ),
                                 ],
                               )
@@ -193,47 +212,65 @@ class FooterWidget extends StatelessWidget {
                                 ),
                               ),
                               Space.h16,
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Icon(IconManager.phone, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
-                                  Space.w8,
-                                  Text(
-                                    '021-9200-1100',
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
-                                  ),
-                                ],
-                              ),
-                              Space.h16,
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Icon(IconManager.mail, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
-                                  Space.w8,
-                                  Text(
-                                    'info@avaair.ir',
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
-                                  ),
-                                ],
-                              ),
-                              Space.h16,
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(IconManager.location, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
-                                  Space.w8,
-                                  Expanded(
-                                    child: Text(
-                                      'دفتر مرکزی: تهران، فردوس، بلوار آیت الله کاشانی،تقاطع سلیمی جهرمی، پلاک 186 طبقه 5',
-                                      textAlign: TextAlign.start,
+                              ///telephone
+                              InkWell(
+                                onTap: (){
+                                  _launchUrl('tel:02192001100');
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(IconManager.phone, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
+                                    Space.w8,
+                                    Text(
+                                      '021-9200-1100',
                                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
+                              ),
+                              Space.h16,
+                              ///email
+                              InkWell(
+                                onTap: (){
+                                  _launchUrl('info@avaair.ir');
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(IconManager.mail, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
+                                    Space.w8,
+                                    Text(
+                                      'info@avaair.ir',
+                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Space.h16,
+                              ///Address
+                              InkWell(
+                                onTap: (){
+                                  _launchUrl('https://maps.app.goo.gl/n7asDpDVih8wQpB76');
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Icon(IconManager.location, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
+                                    Space.w8,
+                                    Expanded(
+                                      child: Text(
+                                        'دفتر مرکزی: تهران، فردوس، بلوار آیت الله کاشانی،تقاطع سلیمی جهرمی، پلاک 186 طبقه 5',
+                                        textAlign: TextAlign.start,
+                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                               Space.h16,
                             ],
@@ -268,7 +305,7 @@ class FooterWidget extends StatelessWidget {
                                         height: AppSize.s60,
                                         child: Center(
                                           child: Icon(
-                                            Icons.location_on_outlined,
+                                            Icons.location_city_rounded,
                                             size: 35,
                                             color: Theme.of(context).colorScheme.primary,
                                           ),
