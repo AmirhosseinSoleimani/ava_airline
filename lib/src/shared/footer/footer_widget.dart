@@ -36,7 +36,9 @@ class FooterWidget extends StatelessWidget {
                   // width: width * 0.8,
                   height: 380,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: AppPadding.p24),
+                    // padding: const EdgeInsets.symmetric(vertical: AppPadding.p24),
+                    padding: const EdgeInsets.only(top: AppPadding.p32, bottom: AppPadding.p16),
+
                     child: Row(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -297,43 +299,40 @@ class FooterWidget extends StatelessWidget {
                         ),
                         Expanded(
                           flex: 3,
-                          child: Padding(
-                            padding: const EdgeInsets.all(AppPadding.p16),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(AppPadding.p12),
-                              child: FlutterMap(
-                                options: MapOptions(
-                                  keepAlive: true,
-                                  initialZoom: 12,
-                                  initialCenter: location,
-                                  onMapReady: () {},
-                                  onMapEvent: (event) {},
-                                  onPositionChanged: (position, status) {
-                                  },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(AppPadding.p12),
+                            child: FlutterMap(
+                              options: MapOptions(
+                                keepAlive: true,
+                                initialZoom: 12,
+                                initialCenter: location,
+                                onMapReady: () {},
+                                onMapEvent: (event) {},
+                                onPositionChanged: (position, status) {
+                                },
+                              ),
+                              mapController: mapController,
+                              children: [
+                                TileLayer(
+                                  urlTemplate: 'https://api.parsimap.ir/tile/parsimap-streets-v11-raster/{z}/{x}/{y}?key=p133a42ed78f324f7787c67c45de3d44a363398b54',
                                 ),
-                                mapController: mapController,
-                                children: [
-                                  TileLayer(
-                                    urlTemplate: 'https://api.parsimap.ir/tile/parsimap-streets-v11-raster/{z}/{x}/{y}?key=p133a42ed78f324f7787c67c45de3d44a363398b54',
-                                  ),
-                                  MarkerLayer(
-                                    markers: [
-                                      Marker(
-                                        point: location,
-                                        width: AppSize.s60,
-                                        height: AppSize.s60,
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.location_city_rounded,
-                                            size: 16,
-                                            color: Theme.of(context).colorScheme.primary,
-                                          ),
+                                MarkerLayer(
+                                  markers: [
+                                    Marker(
+                                      point: location,
+                                      width: AppSize.s60,
+                                      height: AppSize.s60,
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.location_city_rounded,
+                                          size: 16,
+                                          color: Theme.of(context).colorScheme.primary,
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ),
