@@ -8,15 +8,16 @@ class IntroduceWidget extends StatelessWidget {
     final localization = AppLocalizations.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: (width < 1415 && width > 1215) ? width * 0.7 : (width <= 1215 && width > 1070) ? width * 0.8 : (width <= 1070 && width > 945) ? width * 0.9 : (width < 945) ? width : width * 0.6,
+      // width: (width < 1415 && width > 1215) ? width * 0.7 : (width <= 1215 && width > 1070) ? width * 0.8 : (width <= 1070 && width > 945) ? width * 0.9 : (width < 945) ? width : width * 0.6,
       height: 380,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Spacer(),
             Expanded(
-              flex: 2,
+              flex: 8,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -116,21 +117,25 @@ class IntroduceWidget extends StatelessWidget {
                 ],
               ),
             ),
+            Space.w16,
             Expanded(
+              flex: 5,
               child: Stack(
                 children: [
+
                   Align(
                       alignment: Alignment.topRight,
-                      child: Image.asset(ImageManager.airplaneIntroduceAva2, scale: 0.8,)),
-                  Padding(
-                    padding: const EdgeInsets.only(top: AppPadding.p32),
-                    child: Align(
-                        alignment: Alignment.bottomLeft,
-                        child: Image.asset(ImageManager.airplaneIntroduceAva1, scale: 6,)),
-                  ),
+                      child: Image.asset(ImageManager.airplaneIntroduceAva2, )),
+
+                  Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Image.asset(ImageManager.airplaneIntroduceAva1,)),
+
                 ],
               ),
             ),
+            Spacer(),
+
           ],
         ),
       ),
