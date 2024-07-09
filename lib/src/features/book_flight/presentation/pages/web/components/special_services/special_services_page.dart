@@ -1,3 +1,4 @@
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/confirm/confirm_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../shared/footer/footer_widget.dart';
@@ -243,7 +244,17 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                       ),
                     ),
                   ),
-                  AvaElevatedButton()
+                  Space.h16,
+                  Align(
+                    alignment: locale.contains('en') ? Alignment.topRight : Alignment.topLeft,
+                    child: AvaElevatedButton(
+                      onTap: () {
+                        context.go(ConfirmPage.confirmPagePath);
+                      },
+                      title: 'ادامه',
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+                    ),
+                  )
                 ],
               ),
             ),
