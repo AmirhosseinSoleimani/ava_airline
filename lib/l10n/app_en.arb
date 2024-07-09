@@ -3,7 +3,7 @@
   "comma": ",",
   "home": "Home",
   "book": "Book",
-  "myTrips": "AVA-e-Aseman",
+  "myTrips": "Hamava",
   "profile": "Profile",
   "destinationsFrom" : "Destinations from",
   "iran" : "Iran",
@@ -37,12 +37,16 @@
   "searchFlights": "Search flights",
   "from": "FROM",
   "to": "TO",
-  "select": "Select\norigin",
+  "selectOrigin": "Select\norigin",
   "selectDestination": "Select\ndestination",
   "travelDates": "Travel dates",
   "selectDates": "Select dates",
   "passengerAndCabinClass": "Passenger and cabin class",
   "adultEconomyClass1": "Adult economy class 1",
   "search": "Search",
-  "flight": "Flight"
+  "flight": "Flight",
+  "noTrips": "No upcoming trips",
+  "noTripsDescription": "If you have an upcoming trip booked with us, you can add it to your My trips list.",
+  "bookFlight": "Book a flight",
+  "addBooking": "Add booking"
 }

@@ -21,7 +21,7 @@ class DestinationCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-            child: Image.asset(destination.assetPath,
+            child: destination.assetPath==''? Container(height: 125, width: MediaQuery.of(context).size.width): Image.asset(destination.assetPath,
                 height: 125,
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width),

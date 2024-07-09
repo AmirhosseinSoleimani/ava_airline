@@ -3,7 +3,7 @@
   "comma": "،",
   "home": "المنزل",
   "book": "حجز",
-  "myTrips": "رحلاتي",
+  "myTrips": "هم\u200Cآوا",
   "profile": "الملف الشخصي",
   "destinationsFrom": "وجهات من",
   "iran": "إيران",
@@ -42,7 +42,11 @@
   "travelDates": "تواريخ السفر",
   "selectDates": "اختر التواريخ",
   "passengerAndCabinClass": "الركاب وفئة المقصورة",
-  "adultEconomyClass1": "بالغ إكونومي 1",
+  "adultEconomyClass1": "بالغ إكونومي کلاس 1",
   "search": "بحث",
-  "flight": "رحلة"
+  "flight": "رحلة",
+  "noTrips": "لا توجد رحلات قادمة",
+  "noTripsDescription": "إذا كان لديك رحلة قادمة محجوزة معنا، يمكنك إضافتها إلى قائمة رحلاتي.",
+  "bookFlight": "إحجز رحلة طيران",
+  "addBooking": "أضف الحجز"
 }

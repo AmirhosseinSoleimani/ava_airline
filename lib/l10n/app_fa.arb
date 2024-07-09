@@ -3,7 +3,7 @@
   "comma": "،",
   "home": "خانه",
   "book": "رزرو",
-  "myTrips": "آوای آسمان",
+  "myTrips": "هم\u200Cآوا",
   "profile": "پروفایل",
   "destinationsFrom": "مقصدها از",
   "iran": "ایران",
@@ -42,7 +42,11 @@
   "travelDates": "تاریخ‌های سفر",
   "selectDates": "تاریخ‌ها را انتخاب کنید",
   "passengerAndCabinClass": "مسافر و کلاس کابین",
-  "adultEconomyClass1": "بزرگسال اکونومی 1",
+  "adultEconomyClass1": "بزرگسال اکونومی کلاس 1",
   "search": "جستجو",
-  "flight": "پرواز"
+  "flight": "پرواز",
+  "noTrips": "سفری یافت نشد",
+  "noTripsDescription": "اگر سفری در پیش دارید که با ما رزرو کرده\u200Cاید، می\u200Cتوانید آن را به فهرست سفرهای من اضافه کنید.",
+  "bookFlight": "رزرو پرواز",
+  "addBooking": "افزودن رزرو"
 }
