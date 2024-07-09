@@ -37,7 +37,7 @@
   "searchFlights": "Search flights",
   "from": "FROM",
   "to": "TO",
-  "select": "Select\norigin",
+  "selectOrigin": "Select\norigin",
   "selectDestination": "Select\ndestination",
   "travelDates": "Travel dates",
   "selectDates": "Select dates",
