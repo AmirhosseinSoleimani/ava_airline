@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext context, ThemeState state) {
             final provider = context.watch<LocaleProvider>();
             return MaterialApp.router(
-              title: 'AVA Airline',
+              title: 'AVA Airlines',
               theme: _lightTheme.materialThemeData,
               darkTheme: _darkTheme.materialThemeData,
               themeMode: context.watch<ThemeCubit>().isDark
