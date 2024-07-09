@@ -85,13 +85,17 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                   ) : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        widget.hoverImageCardEntity.date,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                      Flexible(
+                        child: Text(
+                          widget.hoverImageCardEntity.date,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                        ),
                       ),
-                      Text(
-                        widget.hoverImageCardEntity.price,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                      Flexible(
+                        child: Text(
+                          widget.hoverImageCardEntity.price,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                        ),
                       ),
                     ],
                   ),

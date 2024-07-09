@@ -336,40 +336,48 @@ class FooterWidget extends StatelessWidget {
                         ),
                         Expanded(
                           flex: 3,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(AppPadding.p12),
-                            child: FlutterMap(
-                              options: MapOptions(
-                                keepAlive: true,
-                                initialZoom: 12,
-                                initialCenter: location,
-                                onMapReady: () {},
-                                onMapEvent: (event) {},
-                                onPositionChanged: (position, status) {
-                                },
-                              ),
-                              mapController: mapController,
-                              children: [
-                                TileLayer(
-                                  urlTemplate: 'https://api.parsimap.ir/tile/parsimap-streets-v11-raster/{z}/{x}/{y}?key=p133a42ed78f324f7787c67c45de3d44a363398b54',
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(AppPadding.p12),
+                              child: FlutterMap(
+                                options: MapOptions(
+                                  keepAlive: false,
+                                  initialZoom: 12,
+
+                                  // interactionOptions: InteractionOptions(cursorKeyboardRotationOptions: CursorKeyboardRotationOptions()),
+                                  initialCenter: location,
+                                  // onMapReady: () {},
+                                  // onMapEvent: (event) {},
+                                  // onPositionChanged: (position, status) {
+                                  // },
+                                  onTap: (position, latlng){
+                                    _launchUrl('https://maps.app.goo.gl/n7asDpDVih8wQpB76');
+                                  }
                                 ),
-                                MarkerLayer(
-                                  markers: [
-                                    Marker(
-                                      point: location,
-                                      width: AppSize.s60,
-                                      height: AppSize.s60,
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.location_city_rounded,
-                                          size: 16,
-                                          color: Theme.of(context).colorScheme.primary,
+                                mapController: mapController,
+                                children: [
+                                  TileLayer(
+                                    urlTemplate: 'https://api.parsimap.ir/tile/parsimap-streets-v11-raster/{z}/{x}/{y}?key=p133a42ed78f324f7787c67c45de3d44a363398b54',
+                                  ),
+                                  MarkerLayer(
+                                    markers: [
+                                      Marker(
+                                        point: location,
+                                        width: AppSize.s60,
+                                        height: AppSize.s60,
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.location_city_rounded,
+                                            size: 16,
+                                            color: Theme.of(context).colorScheme.primary,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

@@ -305,6 +305,7 @@ class _HomePageWebState extends State<HomePageWeb> {
               ),
             ),
             Space.h64,
+            ///special offers
             const AboutUsHomePage(),
             Space.h64,
             const FooterWidget(),
