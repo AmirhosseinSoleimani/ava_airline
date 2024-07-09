@@ -1,4 +1,6 @@
-import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
+
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
@@ -73,7 +75,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                       child: Text(
                         localization.search,
                         style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color: Theme.of(context).colorScheme.onPrimary),
+                            color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w500),
                       ),
                       onPressed: () {},
                     ),
@@ -107,7 +109,6 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                           child: Container(
                             decoration: BoxDecoration(
                               border: Border(
-                                right: BorderSide(color: Colors.grey.shade300),
                                 bottom: BorderSide(color: Colors.grey.shade300),
                               ),
                             ),
@@ -118,7 +119,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                                   Text(localization.from),
                                   const SizedBox(height: 8),
                                   Text(
-                                    'Select\n origin',
+                                    localization.selectOrigin,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(color: Colors.grey[700]),
                                   )
@@ -127,6 +128,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             ),
                           ),
                         ),
+                        VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
@@ -138,10 +140,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text('TO'),
+                                   Text(localization.to),
                                   const SizedBox(height: 8),
                                   Text(
-                                    'Select\ndestination',
+                                    localization.selectDestination,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(color: Colors.grey[700]),
                                   )
@@ -154,7 +156,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                     ),
                     Center(
                       child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey.shade300),
                             color:
@@ -182,11 +184,11 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 8),
-                         Text('Travel Dates',style: Theme.of(context).textTheme.bodyLarge,),
+                        const SizedBox(height: 8),
+                         Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
                         const SizedBox(height: 4),
                         Text(
-                          'Select dates',
+                          localization.selectDates,
                           style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
                           ),
                         ),
@@ -199,10 +201,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Passenger and cabin class'),
+                     Text(localization.passengerAndCabinClass),
                     const SizedBox(height: 16),
                     Text(
-                      '1 Adult economy class',
+                      localization.adultEconomyClass1,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ],
@@ -216,9 +218,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   oneWayTab(context) {
+    final localization = AppLocalizations.of(context)!;
     return Column(
       children: [
-        const SizedBox(height:16),
+        const SizedBox(height: 16),
         Container(
           decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.surfaceContainer,
@@ -236,7 +239,6 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                           child: Container(
                             decoration: BoxDecoration(
                               border: Border(
-                                right: BorderSide(color: Colors.grey.shade300),
                                 bottom: BorderSide(color: Colors.grey.shade300),
                               ),
                             ),
@@ -244,10 +246,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text('FROM'),
+                                  Text(localization.from),
                                   const SizedBox(height: 8),
                                   Text(
-                                    'Select\n origin',
+                                    localization.selectOrigin,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(color: Colors.grey[700]),
                                   )
@@ -256,6 +258,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             ),
                           ),
                         ),
+                        VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
@@ -267,10 +270,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text('TO'),
+                                  Text(localization.to),
                                   const SizedBox(height: 8),
                                   Text(
-                                    'Select\ndestination',
+                                    localization.selectDestination,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(color: Colors.grey[700]),
                                   )
@@ -283,7 +286,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                     ),
                     Center(
                       child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey.shade300),
                             color:
@@ -311,11 +314,11 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SizedBox(height: 8),
-                            Text('Travel Dates',style: Theme.of(context).textTheme.bodyLarge,),
+                            const SizedBox(height: 8),
+                            Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
                             const SizedBox(height: 4),
                             Text(
-                              'Select dates',
+                              localization.selectDates,
                               style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
                               ),
                             ),
@@ -328,10 +331,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Passenger and cabin class'),
+                    Text(localization.passengerAndCabinClass),
                     const SizedBox(height: 16),
                     Text(
-                      '1 Adult economy class',
+                      localization.adultEconomyClass1,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ],
@@ -345,13 +348,14 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   multiCityTab(context) {
+    final localization = AppLocalizations.of(context)!;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 16),
         Padding(
           padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width * 0.1),
-          child: Text('Flight 1'),
+          child: Text('${localization.flight} 1'),
         ),
         const SizedBox(height: 8),
         Center(
@@ -372,7 +376,6 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border(
-                                  right: BorderSide(color: Colors.grey.shade300),
                                   bottom: BorderSide(color: Colors.grey.shade300),
                                 ),
                               ),
@@ -380,10 +383,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Text('FROM'),
+                                     Text(localization.from),
                                     const SizedBox(height: 8),
                                     Text(
-                                      'Select\n origin',
+                                      localization.selectOrigin,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(color: Colors.grey[700]),
                                     )
@@ -392,6 +395,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                               ),
                             ),
                           ),
+                          VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
                           Expanded(
                             child: Container(
                               decoration: BoxDecoration(
@@ -403,10 +407,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Text('TO'),
+                                     Text(localization.to),
                                     const SizedBox(height: 8),
                                     Text(
-                                      'Select\ndestination',
+                                      localization.selectDestination,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(color: Colors.grey[700]),
                                     )
@@ -419,7 +423,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                       ),
                       Center(
                         child: Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey.shade300),
                               color:
@@ -447,11 +451,11 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(height: 8),
-                              Text('Travel Dates',style: Theme.of(context).textTheme.bodyLarge,),
+                              const SizedBox(height: 8),
+                              Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
                               const SizedBox(height: 4),
                               Text(
-                                'Select dates',
+                                localization.selectDates,
                                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
                                 ),
                               ),
@@ -468,7 +472,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
         const SizedBox(height: 32),
         Padding(
           padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width * 0.1),
-          child: Text('Flight 2'),
+          child: Text('${localization.flight} 2'),
         ),
         const SizedBox(height: 8),
         Center(
@@ -489,7 +493,6 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border(
-                                  right: BorderSide(color: Colors.grey.shade300),
                                   bottom: BorderSide(color: Colors.grey.shade300),
                                 ),
                               ),
@@ -497,10 +500,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Text('FROM'),
+                                    Text(localization.from),
                                     const SizedBox(height: 8),
                                     Text(
-                                      'Select\n origin',
+                                      localization.selectOrigin,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(color: Colors.grey[700]),
                                     )
@@ -509,6 +512,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                               ),
                             ),
                           ),
+                          VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
                           Expanded(
                             child: Container(
                               decoration: BoxDecoration(
@@ -520,10 +524,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Text('TO'),
+                                    Text(localization.to),
                                     const SizedBox(height: 8),
                                     Text(
-                                      'Select\ndestination',
+                                      localization.selectDestination,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(color: Colors.grey[700]),
                                     )
@@ -536,7 +540,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                       ),
                       Center(
                         child: Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey.shade300),
                               color:
@@ -564,11 +568,11 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(height: 8),
-                              Text('Travel Dates',style: Theme.of(context).textTheme.bodyLarge,),
+                              const SizedBox(height: 8),
+                              Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
                               const SizedBox(height: 4),
                               Text(
-                                'Select dates',
+                                localization.selectDates,
                                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
                                 ),
                               ),
