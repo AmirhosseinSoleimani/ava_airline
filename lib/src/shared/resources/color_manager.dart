@@ -8,6 +8,7 @@ class ColorLightThemeManager {
   static Color red = Colors.red;
   static Color white = Colors.white;
   static Color black = Colors.black;
+  static Color grey = HexColor.fromHex('#949494');
   static Color transparent = Colors.transparent;
 }
 

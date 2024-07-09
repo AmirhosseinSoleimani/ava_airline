@@ -132,7 +132,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       backgroundImage: AssetImage('assets/image/avatar.png'),
                       maxRadius: 30,
                     ),

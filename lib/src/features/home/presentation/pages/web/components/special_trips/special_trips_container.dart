@@ -1,4 +1,5 @@
 import 'package:ava_airline/src/features/book_flight/book_flight.dart';
+import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 
 
@@ -15,6 +16,7 @@ class SpecialTripsContainer extends StatefulWidget {
 class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
       child: MouseRegion(
@@ -118,7 +120,7 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                             borderRadius: BorderRadius.circular(AppSize.s8),
                           ),
                         ),
-                        child: Text('رزور', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),),
+                        child: Text(localization.reserve, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),),
                       ),
                     ),
                     Space.h16,
@@ -137,7 +139,7 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                               )
                           ),
                           child: Center(
-                            child: Text('جزئیات', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary,),
+                            child: Text(localization.details, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary,),
                             ),
                           ),
                         ),

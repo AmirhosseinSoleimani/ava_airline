@@ -5,6 +5,7 @@ class IntroduceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
       width: (width < 1415 && width > 1215) ? width * 0.7 : (width <= 1215 && width > 1070) ? width * 0.8 : (width <= 1070 && width > 945) ? width * 0.9 : (width < 945) ? width : width * 0.6,
@@ -34,11 +35,11 @@ class IntroduceWidget extends StatelessWidget {
                         ),
                       ),
                       Space.w8,
-                      Text('آوا همراه آرامش شمــــــــا', style: Theme.of(context).textTheme.displayLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
+                      Text(localization.ava_with_you, style: Theme.of(context).textTheme.displayLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
                     ],
                   ),
                   Space.h16,
-                  Text('تخصص و تعهد تمام کارکنان شرکت هواپیمایی آوا؛ تجربه یک پرواز آرام را برای شما فراهم کرده‌است', style: Theme.of(context).textTheme.bodyMedium,),
+                  Text(localization.special_trip, style: Theme.of(context).textTheme.bodyMedium,),
                   Space.h16,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -55,11 +56,11 @@ class IntroduceWidget extends StatelessWidget {
                         ),
                       ),
                       Space.w8,
-                      Text('عدم تاخیر', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),),
+                      Text(localization.no_delay, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),),
                     ],
                   ),
                   Space.h8,
-                  Text('تلاش شرکت هواپیمایی آوا، حداقل رساندن زمان تاخیر پروازهاست', style: Theme.of(context).textTheme.bodyMedium,),
+                  Text(localization.minimize_delay, style: Theme.of(context).textTheme.bodyMedium,),
                   Space.h8,
                   const Padding(
                     padding: EdgeInsets.only(left: AppSize.s80),
@@ -81,11 +82,11 @@ class IntroduceWidget extends StatelessWidget {
                         ),
                       ),
                       Space.w8,
-                      Text('پرسنل حرفه ای', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),),
+                      Text(localization.professional_staff, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),),
                     ],
                   ),
                   Space.h8,
-                  Text('تعهد و تخصص پرسنل شرکت هواپیمایی آوا، تکیه‌گاه مطمئن پروازهای شماست', style: Theme.of(context).textTheme.bodyMedium),
+                  Text(localization.reliable_flight, style: Theme.of(context).textTheme.bodyMedium),
                   Space.h8,
                   const Padding(
                     padding: EdgeInsets.only(left: AppSize.s80),
@@ -107,11 +108,11 @@ class IntroduceWidget extends StatelessWidget {
                         ),
                       ),
                       Space.w8,
-                      Text('خدمات ویژه', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),),
+                      Text(localization.special_services, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),),
                     ],
                   ),
                   Space.h8,
-                  Text('با خدمات ویژه شرکت هواپیمایی آوا، حسی متفاوت از پرواز را تجربه خواهیدکرد', style: Theme.of(context).textTheme.bodyMedium)
+                  Text(localization.different_experience, style: Theme.of(context).textTheme.bodyMedium)
                 ],
               ),
             ),

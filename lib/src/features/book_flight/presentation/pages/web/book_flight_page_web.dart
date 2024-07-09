@@ -1,5 +1,6 @@
+import 'package:ava_airline/src/features/app/my_app.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
-import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/features.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
@@ -65,6 +66,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
 
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return Container(
       width: width * 0.6,
@@ -81,9 +83,9 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
             child: TabBar(
               controller: tabController,
               tabs: [
-                _buildTab(IconManager.airplane, 'خرید بلیط', context),
-                _buildTab(IconManager.seat, 'پذیرش آنلاین', context),
-                _buildTab(IconManager.travel, 'سفرهای من', context),
+                _buildTab(IconManager.airplane, localization.buyTicket, context),
+                _buildTab(IconManager.seat, localization.online_check_in, context),
+                _buildTab(IconManager.travel, localization.myTrips, context),
               ],
             ),
           ),
@@ -97,11 +99,11 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        _buildRadioButton(0, 'یک طرفه'),
+                        _buildRadioButton(0, localization.oneWay),
                         Space.w12,
-                        _buildRadioButton(1, 'رفت و برگشت'),
+                        _buildRadioButton(1, localization.roundTrip),
                         Space.w12,
-                        _buildRadioButton(2, 'چند مسیره'),
+                        _buildRadioButton(2, localization.multiCity),
                       ],
                     ),
                   ),
@@ -122,35 +124,35 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('پذیرش آنلاین (24 ساعت قبل از پرواز)', style: Theme.of(context).textTheme.bodyMedium,),
+                    Text(localization.onlineCheckIn, style: Theme.of(context).textTheme.bodyMedium,),
                     Space.h16,
                     Row(
                       children: [
                         Expanded(
                             child: TextFormField(
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: AppPadding.p24),
-                                  border: OutlineInputBorder(
+                                  const EdgeInsets.symmetric(horizontal: AppPadding.p24),
+                                  border: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))),
-                                  labelText: 'شماره رزرو یا شماره بلیط',
+                                  labelText: localization.reservationOrTicketNumber,
                                 )
                         )),
                         Space.w12,
                         Expanded(
                             child: TextFormField(
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: AppPadding.p24),
-                                  border: OutlineInputBorder(
+                                  const EdgeInsets.symmetric(horizontal: AppPadding.p24),
+                                  border: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))),
-                                  labelText: 'شماره پرواز',
+                                  labelText: localization.flightNumber,
                                 )
                             )),
                         Space.w12,
                         Expanded(child: AvaElevatedButton(
                           onTap: () {},
-                          title: 'جستجو',
+                          title: localization.search,
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                         ),
                         )
@@ -165,29 +167,29 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('لطفا جهت مشاهده سفرهای پیش رو ابتدا ثبت نام کنید.', style: Theme.of(context).textTheme.bodyMedium,),
+                    Text(localization.registerToViewTrips, style: Theme.of(context).textTheme.bodyMedium,),
                     Space.h16,
                     Row(
                       children: [
                         Expanded(
                             child: TextFormField(
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: AppPadding.p24),
-                                  border: OutlineInputBorder(
+                                  const EdgeInsets.symmetric(horizontal: AppPadding.p24),
+                                  border: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))),
-                                  labelText: 'شماره رزرو',
+                                  labelText: localization.reservationNumber,
                                 )
                             )),
                         Space.w12,
                         Expanded(
                             child: TextFormField(
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: AppPadding.p24),
-                                  border: OutlineInputBorder(
+                                  const EdgeInsets.symmetric(horizontal: AppPadding.p24),
+                                  border: const OutlineInputBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))),
-                                  labelText: 'نام خانوادگی مسافر',
+                                  labelText: localization.passengerLastName,
                                 )
                             )),
                         Space.w12,
@@ -211,7 +213,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                     BorderRadius.all(Radius.circular(AppSize.s8)),
                                   ),
                                   label: Text(
-                                    'تاریخ پرواز',
+                                    localization.flightDate,
                                     style: Theme.of(context).textTheme.bodyMedium,
                                   ),
                                   prefixIcon: Icon(
@@ -223,7 +225,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                         Space.w12,
                         Expanded(child: AvaElevatedButton(
                           onTap: () {},
-                          title: 'جستجو',
+                          title: localization.search,
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                         ),
                         )
@@ -240,6 +242,8 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
   }
 
   Widget _buildSelectedWidget() {
+    final localization = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context).languageCode;
     switch (_selectedValue) {
       case 0:
         return SizedBox(
@@ -257,11 +261,11 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                         children: [
                           Expanded(
                             child: _buildCityTextField(
-                                'مبدا', originController, true),
+                                localization.origin, originController, locale.contains('en') ? false : true),
                           ),
                           Expanded(
                             child: _buildCityTextField(
-                                'مقصد', destinationController, false),
+                                localization.destination, destinationController, locale.contains('en') ? true : false),
                           )
                         ],
                       ),
@@ -325,7 +329,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                 BorderRadius.all(Radius.circular(AppSize.s8)),
                           ),
                           label: Text(
-                            'تاریخ پرواز',
+                            localization.flightDate,
                             style: Theme.of(context).textTheme.bodyMedium,
                           ),
                           prefixIcon: Icon(
@@ -348,7 +352,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                           border: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                   Radius.circular(AppSize.s8))),
-                          hintText: '1 مسافر',
+                          hintText: localization.hintTextPassenger,
                           prefixIcon: Icon(IconManager.people, size: AppSize.s24, color: Theme.of(context).colorScheme.secondary,),
                           suffixIcon: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -360,7 +364,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                     adults--;
                                     setState(() {});
                                     passengerController.text =
-                                    'مسافران $adults';
+                                        localization.passengersCount(adults);
                                   }
                                 },
                                 child: const Icon(IconManager.minus, size: AppSize.s24, color: Colors.red,),
@@ -369,76 +373,23 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                 onTap: () {
                                   adults++;
                                   setState(() {});
-                                  passengerController.text = 'مسافران $adults';
+                                  passengerController.text = localization.passengersCount(adults);
                                 },
                                 child: const Icon(IconManager.add, size: AppSize.s24, color: Colors.green,),
                               )
                             ],
                           )
                       )),
-                  // TypeAheadField<String>(
-                  //   controller: passengerController,
-                  //   builder: (context, controller, focusNode) {
-                  //     return TextFormField(
-                  //         controller: controller,
-                  //         focusNode: focusNode,
-                  //         decoration: InputDecoration(
-                  //           contentPadding: const EdgeInsets.symmetric(
-                  //               horizontal: AppPadding.p24),
-                  //           border: const OutlineInputBorder(
-                  //               borderRadius: BorderRadius.all(
-                  //                   Radius.circular(AppSize.s8))),
-                  //           hintText: '1 مسافر',
-                  //           prefixIcon: Icon(IconManager.people, size: AppSize.s24, color: Theme.of(context).colorScheme.secondary,)
-                  //         ));
-                  //   },
-                  //   itemBuilder: (BuildContext context, String value) {
-                  //     return Padding(
-                  //       padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
-                  //       child: Row(
-                  //         children: [
-                  //           Text(value),
-                  //           const Spacer(),
-                  //           InkWell(
-                  //               onTap: () {
-                  //                 int sum = adults + children + infants;
-                  //                 adults++;
-                  //                 setState(() {});
-                  //                 passengerController.text = '$sumمسافران';
-                  //               },
-                  //               child: const Icon(IconManager.add, size: AppSize.s24, color: Colors.green,),
-                  //           ),
-                  //           Space.w12,
-                  //           Text('$adults', style: Theme.of(context).textTheme.bodyMedium,),
-                  //           Space.w12,
-                  //           InkWell(
-                  //               onTap: () {
-                  //                 int sum = adults + children + infants;
-                  //                 if(adults > 1) {
-                  //                   adults--;
-                  //                   setState(() {});
-                  //                   passengerController.text = '$sumمسافران';
-                  //                 }
-                  //               },
-                  //               child: const Icon(IconManager.minus, size: AppSize.s24, color: Colors.red,))
-                  //         ],
-                  //       ),
-                  //     );
-                  //   },
-                  //   onSelected: (String value) {
-                  //   },
-                  //   suggestionsCallback: (String search) {
-                  //     return ['بزرگسال', 'خردسال', 'نوزاد'].where((city) => city.contains(search)).toList();
-                  //   },
-                  // ),
                 ),
                 Space.w8,
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: AppPadding.p12),
                     child: AvaElevatedButton(
-                      onTap: () {},
-                      title: 'جستجو',
+                      onTap: () {
+                        context.go(FlightSelectionPage.flightSelectionPagePath);
+                      },
+                      title: localization.search,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Theme.of(context).colorScheme.onSecondary),
                     ),
@@ -464,11 +415,11 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                         children: [
                           Expanded(
                             child: _buildCityTextField(
-                                'مبدا', originController, true),
+                                localization.origin, originController, locale.contains('en') ? false : true),
                           ),
                           Expanded(
                             child: _buildCityTextField(
-                                'مقصد', destinationController, false),
+                                localization.destination, destinationController, locale.contains('en') ? true : false),
                           )
                         ],
                       ),
@@ -530,15 +481,17 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                             },
                             controller: dateController,
                             decoration: InputDecoration(
-                                border: const OutlineInputBorder(
+                                border: OutlineInputBorder(
                                   borderRadius:
                                   BorderRadius.only(
-                                    topRight: Radius.circular(AppSize.s8),
-                                    bottomRight: Radius.circular(AppSize.s8)
+                                    topRight: Radius.circular(locale.contains('en') ? AppSize.s0 : AppSize.s8),
+                                    bottomRight: Radius.circular(locale.contains('en') ? AppSize.s0 : AppSize.s8),
+                                    topLeft: Radius.circular(locale.contains('en') ? AppSize.s8 : AppSize.s0),
+                                    bottomLeft: Radius.circular(locale.contains('en') ? AppSize.s8 : AppSize.s0)
                                   ),
                                 ),
                                 label: Text(
-                                  'تاریخ رفت',
+                                  localization.departureDate,
                                   style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                                 prefixIcon: Icon(
@@ -563,15 +516,17 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                             },
                             controller: dateController,
                             decoration: InputDecoration(
-                                border: const OutlineInputBorder(
+                                border: OutlineInputBorder(
                                   borderRadius:
                                   BorderRadius.only(
-                                      topLeft: Radius.circular(AppSize.s8),
-                                      bottomLeft: Radius.circular(AppSize.s8)
+                                      topLeft: Radius.circular(locale.contains('en') ? AppSize.s0 : AppSize.s8),
+                                      bottomLeft: Radius.circular(locale.contains('en') ? AppSize.s0 : AppSize.s8),
+                                      topRight: Radius.circular(locale.contains('en') ? AppSize.s8 : AppSize.s0),
+                                      bottomRight: Radius.circular(locale.contains('en') ? AppSize.s8 : AppSize.s0),
                                   ),
                                 ),
                                 label: Text(
-                                  'تاریخ برگشت',
+                                  localization.returnDate,
                                   style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                                 prefixIcon: Icon(
@@ -597,7 +552,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                           border: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                   Radius.circular(AppSize.s8))),
-                          hintText: '1 مسافر',
+                          hintText: localization.hintTextPassenger,
                           prefixIcon: Icon(IconManager.people, size: AppSize.s24, color: Theme.of(context).colorScheme.secondary,),
                           suffixIcon: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -609,7 +564,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                     adults--;
                                     setState(() {});
                                     passengerController.text =
-                                    'مسافران $adults';
+                                        localization.passengersCount(adults);
                                   }
                                 },
                                 child: const Icon(IconManager.minus, size: AppSize.s24, color: Colors.red,),
@@ -618,68 +573,13 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                 onTap: () {
                                   adults++;
                                   setState(() {});
-                                  passengerController.text = 'مسافران $adults';
+                                  passengerController.text = localization.passengersCount(adults);
                                 },
                                 child: const Icon(IconManager.add, size: AppSize.s24, color: Colors.green,),
                               )
                             ],
                           )
                       )),
-                  // TypeAheadField<String>(
-                  //   controller: passengerController,
-                  //   builder: (context, controller, focusNode) {
-                  //     return TextFormField(
-                  //         controller: controller,
-                  //         focusNode: focusNode,
-                  //         decoration: InputDecoration(
-                  //           contentPadding: const EdgeInsets.symmetric(
-                  //               horizontal: AppPadding.p24),
-                  //           border: const OutlineInputBorder(
-                  //               borderRadius: BorderRadius.all(
-                  //                   Radius.circular(AppSize.s8))),
-                  //           hintText: '1 مسافر',
-                  //           prefixIcon: Icon(IconManager.people, size: AppSize.s24, color: Theme.of(context).colorScheme.secondary,)
-                  //         ));
-                  //   },
-                  //   itemBuilder: (BuildContext context, String value) {
-                  //     return Padding(
-                  //       padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
-                  //       child: Row(
-                  //         children: [
-                  //           Text(value),
-                  //           const Spacer(),
-                  //           InkWell(
-                  //               onTap: () {
-                  //                 int sum = adults + children + infants;
-                  //                 adults++;
-                  //                 setState(() {});
-                  //                 passengerController.text = '$sumمسافران';
-                  //               },
-                  //               child: const Icon(IconManager.add, size: AppSize.s24, color: Colors.green,),
-                  //           ),
-                  //           Space.w12,
-                  //           Text('$adults', style: Theme.of(context).textTheme.bodyMedium,),
-                  //           Space.w12,
-                  //           InkWell(
-                  //               onTap: () {
-                  //                 int sum = adults + children + infants;
-                  //                 if(adults > 1) {
-                  //                   adults--;
-                  //                   setState(() {});
-                  //                   passengerController.text = '$sumمسافران';
-                  //                 }
-                  //               },
-                  //               child: const Icon(IconManager.minus, size: AppSize.s24, color: Colors.red,))
-                  //         ],
-                  //       ),
-                  //     );
-                  //   },
-                  //   onSelected: (String value) {
-                  //   },
-                  //   suggestionsCallback: (String search) {
-                  //     return ['بزرگسال', 'خردسال', 'نوزاد'].where((city) => city.contains(search)).toList();
-                  //   },
-                  // ),
                 ),
                 Space.w8,
                 Expanded(
@@ -687,7 +587,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                     padding: const EdgeInsets.only(bottom: AppPadding.p12),
                     child: AvaElevatedButton(
                       onTap: () {},
-                      title: 'جستجو',
+                      title: localization.search,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Theme.of(context).colorScheme.onSecondary),
                     ),
@@ -715,11 +615,11 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                             children: [
                               Expanded(
                                 child: _buildCityTextField(
-                                    'مبدا', originController, true),
+                                    localization.origin, originController, locale.contains('en') ? false : true),
                               ),
                               Expanded(
                                 child: _buildCityTextField(
-                                    'مقصد', destinationController, false),
+                                    localization.destination, destinationController, locale.contains('en') ? true : false),
                               )
                             ],
                           ),
@@ -783,7 +683,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                 BorderRadius.all(Radius.circular(AppSize.s8)),
                               ),
                               label: Text(
-                                'تاریخ پرواز',
+                                localization.flightDate,
                                 style: Theme.of(context).textTheme.bodyMedium,
                               ),
                               prefixIcon: Icon(
@@ -813,11 +713,11 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                             children: [
                               Expanded(
                                 child: _buildCityTextField(
-                                    'مبدا', originController, true),
+                                    localization.origin, originController, locale.contains('en') ? false : true),
                               ),
                               Expanded(
                                 child: _buildCityTextField(
-                                    'مقصد', destinationController, false),
+                                    localization.destination, destinationController, locale.contains('en') ? true : false),
                               )
                             ],
                           ),
@@ -881,7 +781,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                 BorderRadius.all(Radius.circular(AppSize.s8)),
                               ),
                               label: Text(
-                                'تاریخ پرواز',
+                                localization.flightDate,
                                 style: Theme.of(context).textTheme.bodyMedium,
                               ),
                               prefixIcon: Icon(
@@ -924,7 +824,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                         adults--;
                                         setState(() {});
                                         passengerController.text =
-                                        'مسافران $adults';
+                                            localization.passengersCount(adults);
                                       }
                                     },
                                     child: const Icon(IconManager.minus, size: AppSize.s24, color: Colors.red,),
@@ -933,7 +833,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                     onTap: () {
                                       adults++;
                                       setState(() {});
-                                      passengerController.text = 'مسافران $adults';
+                                      passengerController.text = localization.passengersCount(adults);
                                     },
                                     child: const Icon(IconManager.add, size: AppSize.s24, color: Colors.green,),
                                   )
@@ -944,7 +844,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                     Space.w8,
                     AvaElevatedButton(
                       onTap: () {},
-                      title: 'جستجو',
+                      title: localization.search,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Theme.of(context).colorScheme.onSecondary),
                     )
