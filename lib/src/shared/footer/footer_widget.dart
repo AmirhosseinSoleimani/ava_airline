@@ -33,15 +33,16 @@ class FooterWidget extends StatelessWidget {
               Image.asset(ImageManager.footerBackgroundImage, fit: BoxFit.cover, width: double.infinity, height: 380,),
               Center(
                 child: SizedBox(
-                  width: width * 0.8,
+                  // width: width * 0.8,
                   height: 380,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: AppPadding.p24, horizontal: AppPadding.p16),
+                    padding: const EdgeInsets.symmetric(vertical: AppPadding.p24),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Spacer(),
                         Expanded(
-                          flex: 2,
+                          flex: 3,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -85,7 +86,7 @@ class FooterWidget extends StatelessWidget {
                           ),
                         ),
                         Expanded(
-                          flex: 1,
+                          flex: 2,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -196,7 +197,7 @@ class FooterWidget extends StatelessWidget {
                           ),
                         ),
                         Expanded(
-                          flex: 1,
+                          flex: 2,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -221,7 +222,13 @@ class FooterWidget extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(IconManager.phone, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
+                                    Container(
+                                        padding: EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                            color: Theme.of(context).colorScheme.primary,
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: Icon(Icons.phone, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s18,)),
                                     Space.w8,
                                     Text(
                                       '021-9200-1100',
@@ -240,7 +247,13 @@ class FooterWidget extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(IconManager.mail, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
+                                    Container(
+                                        padding: EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                            color: Theme.of(context).colorScheme.primary,
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: Icon(IconManager.mail, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s18,)),
                                     Space.w8,
                                     Text(
                                       'info@avaair.ir',
@@ -260,7 +273,13 @@ class FooterWidget extends StatelessWidget {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Icon(IconManager.location, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s28,),
+                                    Container(
+                                        padding: EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                            color: Theme.of(context).colorScheme.primary,
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: Icon(IconManager.location, color: Theme.of(context).colorScheme.onSecondary, size: AppSize.s18,)),
                                     Space.w8,
                                     Expanded(
                                       child: Text(
@@ -277,7 +296,7 @@ class FooterWidget extends StatelessWidget {
                           ),
                         ),
                         Expanded(
-                          flex: 2,
+                          flex: 3,
                           child: Padding(
                             padding: const EdgeInsets.all(AppPadding.p16),
                             child: ClipRRect(
@@ -285,7 +304,7 @@ class FooterWidget extends StatelessWidget {
                               child: FlutterMap(
                                 options: MapOptions(
                                   keepAlive: true,
-                                  initialZoom: 15,
+                                  initialZoom: 12,
                                   initialCenter: location,
                                   onMapReady: () {},
                                   onMapEvent: (event) {},
@@ -306,7 +325,7 @@ class FooterWidget extends StatelessWidget {
                                         child: Center(
                                           child: Icon(
                                             Icons.location_city_rounded,
-                                            size: 35,
+                                            size: 16,
                                             color: Theme.of(context).colorScheme.primary,
                                           ),
                                         ),
@@ -318,6 +337,7 @@ class FooterWidget extends StatelessWidget {
                             ),
                           ),
                         ),
+                        Spacer(),
                       ],
                     ),
                   ),
