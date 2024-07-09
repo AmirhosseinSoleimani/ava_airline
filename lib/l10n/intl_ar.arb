@@ -133,6 +133,11 @@
   "firstClass": "فرست کلس",
   "confirm": "ثبت",
   "inn": "في",
-  "passenger": "ركاب"
+  "passenger": "ركاب",
+  "searchResults":"نتائج البحث",
+  "sampleDate": "2  صفر 1446",
+  "sampleTime1": "14:30",
+  "sampleTime2": "18:45",
+  "choose": "اختيار"
 
 }

@@ -1,5 +1,6 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/flight_card.dart';
+import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
@@ -10,7 +11,7 @@ class BookFlightPageMobile extends StatefulWidget {
 }
 
 class _BookFlightPageMobileState extends State<BookFlightPageMobile>
-    with TickerProviderStateMixin, AutomaticKeepAliveClientMixin   {
+    with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   late final TabController _tabController;
 
   @override
@@ -38,7 +39,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
           tabs: [
             Tab(
               child: FittedBox(
-                child: Text(localization.oneWay,maxLines: 1,),
+                child: Text(
+                  localization.oneWay,
+                  maxLines: 1,
+                ),
               ),
             ),
             Tab(
@@ -51,7 +55,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             ),
             Tab(
               child: FittedBox(
-                child: Text(localization.multiCity,maxLines: 1,),
+                child: Text(
+                  localization.multiCity,
+                  maxLines: 1,
+                ),
               ),
             ),
           ],
@@ -84,10 +91,13 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                       child: Text(
                         localization.search,
                         style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                            fontWeight: FontWeight.w500),
+                              color: Theme.of(context).colorScheme.onPrimary,
+                              fontWeight: FontWeight.w500,
+                            ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        context.push('/book-search-result');
+                      },
                     ),
                   ),
                 ],
@@ -98,19 +108,23 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   returnTab(context) {
-    return  Column(
+    return Column(
       children: [
-        SizedBox(height: 16),
-        FlightCard(isSingle: false,),
+        const SizedBox(height: 16),
+        FlightCard(
+          isSingle: false,
+        ),
       ],
     );
   }
 
   oneWayTab(context) {
-    return  Column(
+    return Column(
       children: [
-        SizedBox(height: 16),
-        FlightCard(isSingle: true,),
+        const SizedBox(height: 16),
+        FlightCard(
+          isSingle: true,
+        ),
       ],
     );
   }
@@ -144,8 +158,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   @override
-  void updateKeepAlive() {
-  }
+  void updateKeepAlive() {}
 
   @override
   bool get wantKeepAlive => true;

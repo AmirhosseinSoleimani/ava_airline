@@ -1,3 +1,4 @@
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/search_result_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/passenger_information/passenger_information_widget.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/special_services/special_services_page.dart';
@@ -8,17 +9,18 @@ import 'package:flutter/foundation.dart';
 class Routes {
   static final parentNavigatorKey = GlobalKey<NavigatorState>();
   static final homeTabNavigatorKey =
-  GlobalKey<NavigatorState>(debugLabel: 'homeTabNavigatorKey');
+      GlobalKey<NavigatorState>(debugLabel: 'homeTabNavigatorKey');
   static final profileTabNavigatorKey =
-  GlobalKey<NavigatorState>(debugLabel: 'profileTabNavigatorKey');
+      GlobalKey<NavigatorState>(debugLabel: 'profileTabNavigatorKey');
   static final bookTabNavigatorKey =
-  GlobalKey<NavigatorState>(debugLabel: 'bookTabNavigatorKey');
+      GlobalKey<NavigatorState>(debugLabel: 'bookTabNavigatorKey');
   static final myTripsTabNavigatorKey =
-  GlobalKey<NavigatorState>(debugLabel: 'myTripsTabNavigatorKey');
+      GlobalKey<NavigatorState>(debugLabel: 'myTripsTabNavigatorKey');
 
   static final routes = GoRouter(
       navigatorKey: parentNavigatorKey,
-      initialLocation: kIsWeb? HomePage.homePagePath : SplashPage.splashPagePath,
+      initialLocation:
+          kIsWeb ? HomePage.homePagePath : SplashPage.splashPagePath,
       debugLogDiagnostics: true,
       routes: [
         ///splash
@@ -32,7 +34,7 @@ class Routes {
         GoRoute(
           path: NotificationsPage.notificationsPagePath,
           name: NotificationsPage.notificationsPageName,
-          builder: (context, state) =>  NotificationsPage(),
+          builder: (context, state) => NotificationsPage(),
         ),
 
         ///TABs
@@ -48,13 +50,11 @@ class Routes {
           builder: (context, state) => const PassengerInformationPage(),
         ),
 
-
         GoRoute(
           path: SpecialServicesPage.specialServicesPagePath,
           name: SpecialServicesPage.specialServicesPageName,
           builder: (context, state) => const SpecialServicesPage(),
         ),
-
 
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
@@ -74,7 +74,7 @@ class Routes {
                       transitionDuration: Duration.zero,
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) =>
-                      child,
+                              child,
                       child: const HomePage(),
                     );
                   },
@@ -93,11 +93,16 @@ class Routes {
                       transitionDuration: Duration.zero,
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) =>
-                      child,
+                              child,
                       child: const BookFlightPage(),
                     );
                   },
                 ),
+                GoRoute(
+                  path: '/book-search-result',
+                  name: 'book-search-result',
+                  builder: (context, state) => SearchResultPage(),
+                )
               ],
             ),
             StatefulShellBranch(
@@ -112,7 +117,7 @@ class Routes {
                       transitionDuration: Duration.zero,
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) =>
-                      child,
+                              child,
                       child: const MyTripsPage(),
                     );
                   },
@@ -131,7 +136,7 @@ class Routes {
                       transitionDuration: Duration.zero,
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) =>
-                      child,
+                              child,
                       child: const ProfilePage(),
                     );
                   },

@@ -1399,6 +1399,56 @@ class S {
       args: [count],
     );
   }
+
+  /// `Search Results`
+  String get searchResults {
+    return Intl.message(
+      'Search Results',
+      name: 'searchResults',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tue 9 Jul 24`
+  String get sampleDate {
+    return Intl.message(
+      'Tue 9 Jul 24',
+      name: 'sampleDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `14:30`
+  String get sampleTime1 {
+    return Intl.message(
+      '14:30',
+      name: 'sampleTime1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `18:45`
+  String get sampleTime2 {
+    return Intl.message(
+      '18:45',
+      name: 'sampleTime2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose`
+  String get choose {
+    return Intl.message(
+      'Choose',
+      name: 'choose',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

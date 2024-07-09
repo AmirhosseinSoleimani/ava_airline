@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "buy_ticket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "catering": MessageLookupByLibrary.simpleMessage("پذیرایی"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
+        "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("جستجوی شهر"),
         "comma": MessageLookupByLibrary.simpleMessage("،"),
@@ -150,8 +151,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "roundTrip": MessageLookupByLibrary.simpleMessage("رفت و برگشت"),
         "rulesAndNotices":
             MessageLookupByLibrary.simpleMessage("قوانین و اطلاعیه‌ها"),
+        "sampleDate": MessageLookupByLibrary.simpleMessage("سه‌شنبه 19 تیر 03"),
+        "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
+        "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
         "search": MessageLookupByLibrary.simpleMessage("جستجو"),
         "searchFlights": MessageLookupByLibrary.simpleMessage("جستجوی پروازها"),
+        "searchResults": MessageLookupByLibrary.simpleMessage("نتایج جستجو"),
         "seat_status": MessageLookupByLibrary.simpleMessage("وضعیت صندلی ها"),
         "selectDates":
             MessageLookupByLibrary.simpleMessage("تاریخ‌ها را انتخاب کنید"),

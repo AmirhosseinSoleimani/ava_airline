@@ -133,5 +133,10 @@
   "departureDate": "Departure date",
   "returnDate": "Return Date",
   "hintTextPassenger": "1 passenger",
-  "passengersCount": "Passengers {count}"
+  "passengersCount": "Passengers {count}",
+  "searchResults": "Search Results",
+  "sampleDate": "Tue 9 Jul 24",
+  "sampleTime1": "14:30",
+  "sampleTime2": "18:45",
+  "choose": "Choose"
 }

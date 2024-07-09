@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "children": MessageLookupByLibrary.simpleMessage("الأطفال"),
         "childrenDescription":
             MessageLookupByLibrary.simpleMessage("العمر 2-11"),
+        "choose": MessageLookupByLibrary.simpleMessage("اختيار"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("ابحث عن مدينة"),
         "clas": MessageLookupByLibrary.simpleMessage("طراز"),
@@ -165,8 +166,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "roundTrip": MessageLookupByLibrary.simpleMessage("ذهاب و عودة"),
         "rulesAndNotices":
             MessageLookupByLibrary.simpleMessage("القواعد والإشعارات"),
+        "sampleDate": MessageLookupByLibrary.simpleMessage("2  صفر 1446"),
+        "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
+        "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "searchFlights": MessageLookupByLibrary.simpleMessage("ابحث عن رحلات"),
+        "searchResults": MessageLookupByLibrary.simpleMessage("نتائج البحث"),
         "seat_status": MessageLookupByLibrary.simpleMessage("حالة المقعد"),
         "selectDate": MessageLookupByLibrary.simpleMessage("اختر تاریخ"),
         "selectDates": MessageLookupByLibrary.simpleMessage("اختر التواريخ"),

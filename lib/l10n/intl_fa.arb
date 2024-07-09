@@ -115,5 +115,10 @@
   "returnDate": "تاریخ برگشت",
   "departureDate": "تاریخ رفت",
   "hintTextPassenger": "1 مسافر",
-  "passengersCount": "مسافران {count}"
+  "passengersCount": "مسافران {count}",
+  "searchResults": "نتایج جستجو",
+  "sampleDate": "سه\u200Cشنبه 19 تیر 03",
+  "sampleTime1": "14:30",
+  "sampleTime2": "18:45",
+  "choose": "انتخاب"
 }

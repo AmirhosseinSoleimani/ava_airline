@@ -313,9 +313,7 @@ class _FlightCardState extends State<FlightCard> {
           flightDate = '${picked.start.formatFullDate()} ${S.of(context).toCalender} ${picked.end.formatFullDate()}' ;
         });
       }
-
     }
-
   }
 
   Widget _buildPassengerModal(BuildContext context, updateState) {

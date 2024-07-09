@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_ticket": MessageLookupByLibrary.simpleMessage("Change Ticket"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenDescription": MessageLookupByLibrary.simpleMessage("Age 2-11"),
+        "choose": MessageLookupByLibrary.simpleMessage("Choose"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("Search for a city"),
         "clas": MessageLookupByLibrary.simpleMessage("Class"),
@@ -173,8 +174,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "roundTrip": MessageLookupByLibrary.simpleMessage("Round Trip"),
         "rulesAndNotices":
             MessageLookupByLibrary.simpleMessage("Rules and notices"),
+        "sampleDate": MessageLookupByLibrary.simpleMessage("Tue 9 Jul 24"),
+        "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
+        "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "searchFlights": MessageLookupByLibrary.simpleMessage("Search flights"),
+        "searchResults": MessageLookupByLibrary.simpleMessage("Search Results"),
         "seat_status": MessageLookupByLibrary.simpleMessage("Seat Status"),
         "selectDate": MessageLookupByLibrary.simpleMessage("Select date"),
         "selectDates": MessageLookupByLibrary.simpleMessage("Select dates"),
