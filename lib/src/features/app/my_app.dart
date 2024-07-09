@@ -8,6 +8,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext context, ThemeState state) {
             final provider = context.watch<LocaleProvider>();
             return MaterialApp.router(
+              key: navigatorKey,
               title: 'AVA Airline',
               theme: _lightTheme.materialThemeData,
               darkTheme: _darkTheme.materialThemeData,
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: AppLocalizations.supportedLocales,
-              locale: provider.locale,
+              locale: const Locale('fa'),
               debugShowCheckedModeBanner: false,
               routerConfig: Routes.routes,
             );

@@ -2,8 +2,8 @@ import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation
 import 'package:ava_airline/src/features/features.dart';
 
 class NavbarItems extends StatefulWidget implements PreferredSizeWidget {
-  const NavbarItems({super.key});
-
+  const NavbarItems({super.key, this.color});
+  final Color? color;
   @override
   Size get preferredSize => const Size.fromHeight(AppSize.s60);
 
@@ -12,16 +12,17 @@ class NavbarItems extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class NavbarItemsState extends State<NavbarItems> {
-  final navbarItems = [
-    "رزرو",
-    "اطلاعات سفر",
-    "در طول پرواز",
-    "مقاصد پروازی",
-    "باشگاه مسافران ویژه"
-  ];
 
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
+    final navbarItems = [
+      localization.reserve,
+      localization.travel_info,
+      localization.during_flight,
+      localization.flight_destinations,
+      localization.special_passenger_club
+    ];
     return Row(
       children: navbarItems
           .asMap()
@@ -42,7 +43,7 @@ class NavbarItemsState extends State<NavbarItems> {
             style: Theme.of(context)
                 .textTheme
                 .titleMedium
-                ?.copyWith(color: Theme.of(context).colorScheme.onPrimary)),
+                ?.copyWith(color: widget.color ?? Theme.of(context).colorScheme.onPrimary)),
       ),
     );
   }
@@ -50,53 +51,51 @@ class NavbarItemsState extends State<NavbarItems> {
 
 void showModalFromTop(BuildContext context, int? selectedIndex) {
   final width = MediaQuery.of(context).size.width;
+  final localization = AppLocalizations.of(context)!;
   final navbarItems = <Map<String, List<String>>>[
     {
-      "رزرو": ['خرید بلیط', 'پذیرش آنلاین', 'استرداد بلیط', 'تغییر بلیط']
+      localization.reserve: [localization.buyTicket, localization.online_check_in, localization.refund_ticket, localization.change_ticket]
     },
     {
-      "اطلاعات سفر": [
-        'راهنمای خرید بلیط',
-        'راهنمای مدیریت رزرو',
-        'راهنمای استرداد بلیط',
-        'راهنمای پذیرش مسافر',
-        'مسافر توان خواه',
-        'موارد پزشکی',
-        'کودک بدون همراه',
-        'خوراک ویژه',
-        'خدمات لانج',
-        'شرایط سفر به کشورها',
-        'بار مسافر',
-        'کالاهای ممنوعه',
-        'حیوان زنده',
-        'بار گمشده',
-        'ایمنی و امنیت پرواز'
+      localization.travel_info: [
+        localization.ticket_guide,
+        localization.reservation_management_guide,
+        localization.refund_guide,
+        localization.passenger_guide,
+        localization.disabled_passenger,
+        localization.medical_issues,
+        localization.unaccompanied_child,
+        localization.special_meals,
+        localization.lounge_services,
+        localization.country_travel_conditions,
+        localization.baggage,
+        localization.prohibited_items,
+        localization.live_animals,
+        localization.lost_baggage,
+        localization.flight_safety
       ]
     },
     {
-      "در طول پرواز": [
-        'ناوگان آوا',
-        'وضعیت صندلی ها',
-        'کلاس های پروازی',
-        'کروی پروازی',
-        'پذیرایی',
-        'سرگرمی های داخل پرواز',
-        'مجله پروازی'
+      localization.during_flight: [
+        localization.ava_fleet,
+        localization.seat_status,
+        localization.flight_classes,
+        localization.flight_crew,
+        localization.catering,
+        localization.in_flight_entertainment,
+        localization.in_flight_magazine
       ]
     },
     {
-      "مقاصد پروازی": [
-        'مقاصد داخلی',
-        'مقاصد بین المللی',
-        'گردش با آوا',
+      localization.flight_destinations: [
+        localization.domestic_destinations,
+        localization.international_destinations,
+        localization.ava_tour,
       ]
     },
     {
-      "باشگاه مسافران ویژه": [
-        'خرید بلیط',
-        'پذیرش آنلاین',
-        'استرداد بلیط',
-        'تغییر بلیط'
+      localization.special_passenger_club: [
+        localization.buyTicket,
       ]
     }
   ];
@@ -185,7 +184,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                 AvaInkwellButton(
                                   buttonPadding: AppPadding.p12,
                                   onTap: () {},
-                                  title: 'ورود/ثبت نام',
+                                  title: localization.login_register,
                                   style: Theme.of(context).textTheme.bodyMedium,
                                   borderRadius: AppSize.s8,
                                   backgroundColor:
@@ -215,7 +214,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                 ),
                                 Space.w4,
                                 Text(
-                                  'فا',
+                                  localization.language,
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyMedium

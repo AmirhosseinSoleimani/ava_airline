@@ -5,6 +5,7 @@ class AboutUsHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
       width: width * 0.6,
@@ -19,8 +20,6 @@ class AboutUsHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text('خدمات ویژه', style: Theme.of(context).textTheme.displayMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
-                    Space.w8,
                     Container(
                       width: AppSize.s8,
                       height: AppSize.s16,
@@ -32,11 +31,13 @@ class AboutUsHomePage extends StatelessWidget {
 
                       ),
                     ),
+                    Space.w8,
+                    Text(localization.special_services, style: Theme.of(context).textTheme.displayMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
                   ],
                 ),
                 Space.h16,
                 Text(
-                  'شرکت هواپیمایی آوا در سال 1402 فعالیت خود را آغاز کرده‌است. دفتر مرکزی شرکت هواپیمایی آوا در شهر تهران، خیابان آیت‌الله کاشانی واقع است. چشم‌انداز ما، ایجاد بستری است که بتواند به بهترین شکل ممکن، نیاز مسافرین محترم را برآورده نماید و تجربه‌ای شایسته‌ را برای شما رقم بزند',
+                  localization.special_services_description,
                   style: Theme.of(context).textTheme.titleMedium,
                   textAlign: TextAlign.start,
                 )

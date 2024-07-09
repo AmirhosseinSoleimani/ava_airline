@@ -7,7 +7,7 @@ import '../app_constants.dart';
 
 @singleton
 class LocaleProvider extends ChangeNotifier {
-  Locale? locale = const Locale('fa');
+  Locale? locale = const Locale('en');
   bool canNotify = true;
 
   LocaleProvider() {

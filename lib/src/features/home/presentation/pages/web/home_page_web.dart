@@ -2,7 +2,6 @@ import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
-
 import 'components/special_trips/special_trips_container.dart';
 
 
@@ -15,56 +14,7 @@ class HomePageWeb extends StatefulWidget {
 }
 
 class _HomePageWebState extends State<HomePageWeb> {
-  List<Map<String, List<String>>> navbarItems = <Map<String, List<String>>>[
-    {
-      "رزرو": ['خرید بلیط', 'پذیرش آنلاین', 'استرداد بلیط', 'تغییر بلیط']
-    },
-    {
-      "اطلاعات سفر": [
-        'راهنمای خرید بلیط',
-        'راهنمای مدیریت رزرو',
-        'راهنمای استرداد بلیط',
-        'راهنمای پذیرش مسافر',
-        'مسافر توان خواه',
-        'موارد پزشکی',
-        'کودک بدون همراه',
-        'خوراک ویژه',
-        'خدمات لانج',
-        'شرایط سفر به کشورها',
-        'بار مسافر',
-        'کالاهای ممنوعه',
-        'حیوان زنده',
-        'بار گمشده',
-        'ایمنی و امنیت پرواز'
-      ]
-    },
-    {
-      "در طول پرواز": [
-        'ناوگان آوا',
-        'وضعیت صندلی ها',
-        'کلاس های پروازی',
-        'کروی پروازی',
-        'پذیرایی',
-        'سرگرمی های داخل پرواز',
-        'مجله پروازی'
-      ]
-    },
-    {
-      "مقاصد پروازی": [
-        'مقاصد داخلی',
-        'مقاصد بین المللی',
-        'گردش با آوا',
-      ]
-    },
-    {
-      "باشگاه مسافران ویژه": [
-        'خرید بلیط',
-        'پذیرش آنلاین',
-        'استرداد بلیط',
-        'تغییر بلیط'
-      ]
-    }
-  ];
+  late List<Map<String, List<String>>> navbarItems;
   List<HoverImageCardEntity> hoverImageCardEntity = [
     HoverImageCardEntity(title: 'Montréal', date: '04 Sep 2024 - 09 Sep 2024', price: 'Economy from IRR 1440354050', imageUrl: ImageManager.montreal, isHover: false),
     HoverImageCardEntity(title: 'Paris', date: '09 Nov 2024 - 15 Nov 2024', price: 'Economy from IRR 707678980', imageUrl: ImageManager.paris, isHover: false),
@@ -80,11 +30,67 @@ class _HomePageWebState extends State<HomePageWeb> {
 
   @override
   void initState() {
-    expanded = List.generate(navbarItems.length, (_) => false);
     super.initState();
+    expanded = [];
   }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final localization = AppLocalizations.of(context)!;
+    navbarItems = <Map<String, List<String>>>[
+      {
+        localization.reserve: [localization.buyTicket, localization.online_check_in, localization.refund_ticket, localization.change_ticket]
+      },
+      {
+        localization.travel_info: [
+          localization.ticket_guide,
+          localization.reservation_management_guide,
+          localization.refund_guide,
+          localization.passenger_guide,
+          localization.disabled_passenger,
+          localization.medical_issues,
+          localization.unaccompanied_child,
+          localization.special_meals,
+          localization.lounge_services,
+          localization.country_travel_conditions,
+          localization.baggage,
+          localization.prohibited_items,
+          localization.live_animals,
+          localization.lost_baggage,
+          localization.flight_safety
+        ]
+      },
+      {
+        localization.during_flight: [
+          localization.ava_fleet,
+          localization.seat_status,
+          localization.flight_classes,
+          localization.flight_crew,
+          localization.catering,
+          localization.in_flight_entertainment,
+          localization.in_flight_magazine
+        ]
+      },
+      {
+        localization.flight_destinations: [
+          localization.domestic_destinations,
+          localization.international_destinations,
+          localization.ava_tour,
+        ]
+      },
+      {
+        localization.special_passenger_club: [
+          localization.buyTicket,
+        ]
+      }
+    ];
+    expanded = List.generate(navbarItems.length, (_) => false);
+  }
+
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
@@ -106,7 +112,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                   AvaInkwellButton(
                     buttonPadding: AppPadding.p12,
                     onTap: () {},
-                    title: 'ورود/ثبت نام',
+                    title: localization.login_register,
                     style: Theme.of(context).textTheme.bodyMedium,
                     borderRadius: AppSize.s8,
                     backgroundColor:
@@ -158,7 +164,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('ورژن 1.0', style: Theme.of(context).textTheme.bodyMedium,),
+                    Text(localization.version, style: Theme.of(context).textTheme.bodyMedium,),
                     Row(
                       children: [
                         SvgPicture.asset(
@@ -171,7 +177,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                         ),
                         Space.w8,
                         Text(
-                          'فا',
+                          localization.language,
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium,
@@ -253,7 +259,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('مقصد های ویژه شما', style: Theme.of(context).textTheme.displayLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
+                  Text(localization.special_fares, style: Theme.of(context).textTheme.displayLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: AppSize.s28),),
                   Space.h16,
                   Row(
                     children: [
