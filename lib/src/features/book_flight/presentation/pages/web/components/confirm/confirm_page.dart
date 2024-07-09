@@ -1,8 +1,5 @@
-import 'package:ava_airline/src/features/book_flight/book_flight.dart';
-import 'package:flutter/material.dart';
-
+import '../../../../../../../../generated/l10n.dart';
 import '../../../../../../../shared/footer/footer_widget.dart';
-import '../../../../../../../shared/resources/resources.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
 import '../flight_selection/widgets/stepper_widget.dart';
 
@@ -23,6 +20,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
+    final localization = S.of(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -87,14 +85,14 @@ class _ConfirmPageState extends State<ConfirmPage> {
                 child: StepperWidget(
                   stepperList: [
                     StepperModel(
-                        title: 'جستجو', icon: Icons.fact_check_outlined),
+                        title: localization.search, icon: Icons.fact_check_outlined),
                     StepperModel(
-                        title: 'انتخاب پرواز', icon: IconManager.airplane),
+                        title: localization.selectFlight, icon: IconManager.airplane),
                     StepperModel(
-                        title: 'اطلاعات مسافر', icon: IconManager.people),
-                    StepperModel(title: 'خدمات ویژه', icon: Icons.room_service),
+                        title: localization.passengerInformation, icon: IconManager.people),
+                    StepperModel(title: localization.specialServices, icon: Icons.room_service),
                     StepperModel(
-                        title: 'تائید و پرداخت', icon: Icons.airplane_ticket),
+                        title: localization.confirm_and_pay, icon: Icons.airplane_ticket),
                   ],
                   currentIndex: 4,
                 ),
@@ -123,7 +121,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                         ),
                         Space.w16,
                         Text(
-                          'اطلاعات بلیط',
+                          localization.ticketInfo,
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
@@ -147,7 +145,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                     child: Padding(
                                   padding: const EdgeInsets.all(AppPadding.p8),
                                   child: Text(
-                                    'مبدا',
+                                    localization.origin,
                                     style:
                                         Theme.of(context).textTheme.bodyMedium,
                                   ),
@@ -187,7 +185,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                     child: Padding(
                                   padding: const EdgeInsets.all(AppPadding.p8),
                                   child: Text(
-                                    'مقصد',
+                                    localization.destination,
                                     style:
                                         Theme.of(context).textTheme.bodyMedium,
                                   ),
@@ -227,7 +225,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'شرکت هواپیمایی',
+                                            localization.airlineCompany,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -267,7 +265,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'تاریخ پرواز',
+                                            localization.flightDate,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -307,7 +305,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'شماره پرواز',
+                                            localization.flightNumber,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -347,7 +345,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'کلاس پرواز',
+                                            localization.flightClass,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -387,7 +385,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'مقدار بار مجاز',
+                                            localization.allowedBaggage,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -443,7 +441,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                         ),
                         Space.w16,
                         Text(
-                          'مشخصات مسافران',
+                          localization.passengerDetails,
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
@@ -467,7 +465,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'بازه سنی',
+                                            localization.ageGroup,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -477,7 +475,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'نام و نام خانوادگی',
+                                            localization.name,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -487,7 +485,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'جنسیت',
+                                            localization.gender,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -497,7 +495,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'کدملی',
+                                            localization.national_id,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -507,7 +505,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'تاریخ تولد',
+                                            localization.birth_date,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -517,7 +515,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(AppPadding.p8),
                                           child: Text(
-                                            'ملیت',
+                                            localization.nationality,
                                             style:
                                             Theme.of(context).textTheme.bodyMedium,
                                           ),
@@ -537,7 +535,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                       child: Padding(
                                         padding: const EdgeInsets.all(AppPadding.p8),
                                         child: Text(
-                                          'بزرگسال',
+                                          localization.adult,
                                           style:
                                           Theme.of(context).textTheme.bodyMedium,
                                         ),
@@ -616,7 +614,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'خدمات سفر',
+                      localization.travelServices,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Space.h16,
@@ -625,11 +623,11 @@ class _ConfirmPageState extends State<ConfirmPage> {
                       children: [
                         Container(
                           color: Theme.of(context).colorScheme.surface,
-                          child: const Padding(
-                            padding: EdgeInsets.all(AppPadding.p16),
+                          child: Padding(
+                            padding: const EdgeInsets.all(AppPadding.p16),
                             child: Row(
                               children: [
-                                Text('استرداد عادی')
+                                Text(localization.normalRefund)
                               ],
                             ),
                           ),
@@ -655,7 +653,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'کد تخفیف',
+                      localization.discountCode,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Space.h8,
@@ -669,7 +667,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                             Expanded(
                               flex: 2,
                               child: Text(
-                                'اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید.',
+                                localization.enterDiscountCode,
                                 style: Theme.of(context).textTheme.bodyMedium,
                               ),
                             ),
@@ -677,13 +675,13 @@ class _ConfirmPageState extends State<ConfirmPage> {
                               flex: 1,
                               child: AvaTextFormField(
                                 controller: TextEditingController(),
-                                hintText: 'کد تخفیف',
+                                hintText: localization.discountCode,
                                 borderColor: Theme.of(context).colorScheme.secondary,
                                 suffixIcon: Padding(
                                   padding: const EdgeInsets.all(AppPadding.p8),
                                   child: AvaElevatedButton(
                                     onTap: () {},
-                                    title: 'ثبت',
+                                    title: localization.applyCode,
                                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                                   ),
                                 ),
@@ -701,7 +699,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
             Space.h64,
             Container(
               width: width * 0.6,
-              height: 180,
+              height: 200,
               decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.onSecondary,
                   borderRadius:
@@ -713,7 +711,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'پرداخت',
+                      localization.payment,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Space.h8,
@@ -727,7 +725,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                             Expanded(
                               flex: 2,
                               child: Text(
-                                'هنگام پرداخت با استفاده از موجودی، در صورت استرداد، مبلغ قابل پرداخت به موجودی حساب شما باز خواهد گشت.',
+                                localization.paymentInfo,
                                 style: Theme.of(context).textTheme.bodyMedium,
                               ),
                             ),
@@ -737,7 +735,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'مبلغ قابل پرداخت',
+                                    localization.payable_amount,
                                     style: Theme.of(context).textTheme.bodyMedium,
                                   ),
                                   Space.w12,
@@ -752,9 +750,10 @@ class _ConfirmPageState extends State<ConfirmPage> {
                         ),
                       ),
                     ),
+                    Space.h16,
                     AvaElevatedButton(
                       onTap: () {},
-                      title: 'پرداخت',
+                      title: localization.pay,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                     )
                   ],

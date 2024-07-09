@@ -2,6 +2,7 @@ import 'package:ava_airline/src/features/book_flight/presentation/pages/web/comp
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/passenger_information/passenger_information_widget.dart';
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
 import 'package:date_picker_timeline/date_picker_widget.dart';
+import '../../../../../../../../generated/l10n.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
 class FlightSelectionPage extends StatefulWidget {
   static const  flightSelectionPageName = 'flight-selection-page';
@@ -22,6 +23,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
+    final localization = S.of(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -75,13 +77,13 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: StepperWidget(stepperList: [
                   StepperModel(
-                      title: 'جستجو', icon: Icons.fact_check_outlined),
+                      title: localization.search, icon: Icons.fact_check_outlined),
                   StepperModel(
-                      title: 'انتخاب پرواز', icon: IconManager.airplane),
-                  StepperModel(title: 'اطلاعات مسافر', icon: IconManager.people),
-                  StepperModel(title: 'خدمات ویژه', icon: Icons.room_service),
+                      title: localization.flightSelection, icon: IconManager.airplane),
+                  StepperModel(title: localization.passengerInformation, icon: IconManager.people),
+                  StepperModel(title: localization.specialServices, icon: Icons.room_service),
                   StepperModel(
-                      title: 'تائید و پرداخت', icon: Icons.airplane_ticket),
+                      title: localization.confirmationAndPayment, icon: Icons.airplane_ticket),
                 ], currentIndex: 1,),
               ),
             ),
@@ -100,22 +102,22 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('مبدا', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.origin, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('تهران(مهرآباد)', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(locale.contains('en') ? 'Tehran(Mehrabad)' :'تهران(مهرآباد)', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     ),
                     Space.w24,
                     Transform.rotate(
-                        angle: 180 * 3.1415927 /180,
+                        angle: locale.contains('en') ? 0 : 180 * 3.1415927 /180,
                         child: Icon(IconManager.airplane, size: AppSize.s42, color: ColorLightThemeManager.grey)),
                     Space.w24,
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('قصد', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.destination, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('مشهد(هاشمی نژاد)', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(locale.contains('en') ? 'Mashhad(Hashemi Nejad)' : 'مشهد(هاشمی نژاد)', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     ),
                     Space.w24,
@@ -131,7 +133,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('تاریخ پرواز', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.departureDate, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
                         Text('30 مرداد 1403', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
@@ -149,9 +151,9 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('تعداد مسافر', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.numberOfPassengers, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('1 مسافر', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.passengersCount(1), style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     ),
                     const Spacer(),
@@ -159,7 +161,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                       padding: const EdgeInsets.all(AppPadding.p16),
                       child: AvaElevatedButton(
                         onTap: () {},
-                        title: 'تغییر جستجو',
+                        title: localization.changeSearch,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                       ),
                     )
@@ -179,7 +181,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
                 child: DatePicker(
                   controller: datePickerController,
-                  calendarType: CalendarType.persianDate,
+                  calendarType: locale.contains('en') ? CalendarType.gregorianDate : CalendarType.persianDate,
                   DateTime.now(),
                   initialSelectedDate: DateTime.now(),
                   selectionColor: Colors.black,
@@ -221,9 +223,9 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                             Expanded(
                               child: Row(
                                 children: [
-                                  Text('سیستمی', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey),),
+                                  Text(localization.systemic, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey),),
                                   Space.w12,
-                                  Text('اکونومی', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey))
+                                  Text(localization.economy, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey))
                                 ],
                               ),
                             ),
@@ -231,12 +233,12 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                               flex: 3,
                               child: Row(
                                 children: [
-                                  Text('تهران', style: Theme.of(context).textTheme.titleMedium,),
+                                  Text(locale.contains('en') ? 'Tehran' :'تهران', style: Theme.of(context).textTheme.titleMedium,),
                                   Space.w8,
                                   Text('20:40', style: Theme.of(context).textTheme.titleMedium,),
                                   Space.w16,
                                   Transform.rotate(
-                                      angle: 180 * 3.1415927 /180,
+                                      angle: locale.contains('en') ? 0 : 180 * 3.1415927 /180,
                                       child: Icon(IconManager.airplane, size: AppSize.s16, color: ColorLightThemeManager.grey,)),
                                   Container(
                                     width: width * 0.1,
@@ -256,7 +258,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                                     ),
                                   ),
                                   Space.w16,
-                                  Text('مشهد' ,style: Theme.of(context).textTheme.titleMedium,),
+                                  Text(locale.contains('en') ? 'Mashhad' :'مشهد' ,style: Theme.of(context).textTheme.titleMedium,),
                                   Space.w8,
                                   Text('10:00',  style: Theme.of(context).textTheme.titleMedium,)
                                 ],
@@ -265,9 +267,9 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                             Expanded(
                               child: Row(
                                 children: [
-                                  Text('اطلاعات پرواز', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey),),
+                                  Text(localization.flightInformation, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey),),
                                   Space.w16,
-                                  Text('قوانین استرداد', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey))
+                                  Text(localization.refundPolicies, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorLightThemeManager.grey))
                                 ],
                               ),
                             ),
@@ -288,13 +290,13 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                       children: [
                         Text('13,267,000ریال', style: Theme.of(context).textTheme.titleMedium,),
                         Space.h8,
-                        Text('نرخ رسمی ایرلاین', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.officialAirlineRate, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h16,
                         AvaElevatedButton(
                           onTap: () {
                             context.go(PassengerInformationPage.passengerInformationPagePath);
                           },
-                          title: 'انتخاب پرواز',
+                          title: localization.selectFlight,
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                         )
                       ],

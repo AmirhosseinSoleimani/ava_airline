@@ -1,6 +1,7 @@
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/confirm/confirm_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../../../../generated/l10n.dart';
 import '../../../../../../../shared/footer/footer_widget.dart';
 import '../../../../../../../shared/resources/resources.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
@@ -21,6 +22,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
+    final localization = S.of(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -74,13 +76,13 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: StepperWidget(stepperList: [
                   StepperModel(
-                      title: 'جستجو', icon: Icons.fact_check_outlined),
+                      title: localization.search, icon: Icons.fact_check_outlined),
                   StepperModel(
-                      title: 'انتخاب پرواز', icon: IconManager.airplane),
-                  StepperModel(title: 'اطلاعات مسافر', icon: IconManager.people),
-                  StepperModel(title: 'خدمات ویژه', icon: Icons.room_service),
+                      title: localization.selectFlight, icon: IconManager.airplane),
+                  StepperModel(title: localization.passengerInformation, icon: IconManager.people),
+                  StepperModel(title: localization.specialServices, icon: Icons.room_service),
                   StepperModel(
-                      title: 'تائید و پرداخت', icon: Icons.airplane_ticket),
+                      title: localization.confirm_and_pay, icon: Icons.airplane_ticket),
                 ], currentIndex: 3,),
               ),
             ),
@@ -91,9 +93,9 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('خدمات ویژه', style: Theme.of(context).textTheme.displayLarge?.copyWith(fontSize: AppSize.s28), textAlign: TextAlign.start,),
+                  Text(localization.specialServices, style: Theme.of(context).textTheme.displayLarge?.copyWith(fontSize: AppSize.s28), textAlign: TextAlign.start,),
                   Space.h12,
-                  Text('شما می توانید از خدمات ویژه پرواز بهره مند شوید', style: Theme.of(context).textTheme.bodyMedium),
+                  Text(localization.special_services_description, style: Theme.of(context).textTheme.bodyMedium),
                   Space.h16,
                   Container(
                     height:  400,
@@ -114,8 +116,8 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(child: Text('خدمت', style: Theme.of(context).textTheme.bodyMedium,)),
-                                Expanded(child: Text('تهران به مشهد', style: Theme.of(context).textTheme.bodyMedium,)),
+                                Expanded(child: Text(localization.service, style: Theme.of(context).textTheme.bodyMedium,)),
+                                Expanded(child: Text(localization.flight_route, style: Theme.of(context).textTheme.bodyMedium,)),
                                 const Expanded(child: SizedBox()),
                               ],
                             ),
@@ -129,7 +131,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text('نابینا', style: Theme.of(context).textTheme.bodyMedium,)),
+                                  Expanded(child: Text(localization.blind, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
                                         value: false,
@@ -149,47 +151,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text('ناشنوا', style: Theme.of(context).textTheme.bodyMedium,)),
-                                  Expanded(
-                                    child: Checkbox(
-                                        value: false,
-                                        onChanged: (value) {}),
-                                  ),
-                                  const Expanded(child: SizedBox())
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                          width: double.infinity,
-                          height: AppSize.s48,
-                          color: ColorLightThemeManager.grey,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(child: Text('ویلچر در تمام مراحل', style: Theme.of(context).textTheme.bodyMedium,)),
-                                Expanded(
-                                  child: Checkbox(
-                                      value: false,
-                                      onChanged: (value) {}),
-                                ),
-                                const Expanded(child: SizedBox())
-                              ],
-                            ),
-                          ),
-                        ),
-                          Container(
-                            width: double.infinity,
-                            height: AppSize.s48,
-                            color: Theme.of(context).colorScheme.onSecondary,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(child: Text('بالابر به جای ویلچر', style: Theme.of(context).textTheme.bodyMedium,)),
+                                  Expanded(child: Text(localization.deaf, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
                                         value: false,
@@ -209,7 +171,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(child: Text('ویلچر در تمام مراحل', style: Theme.of(context).textTheme.bodyMedium,)),
+                                Expanded(child: Text(localization.wheelchair_full, style: Theme.of(context).textTheme.bodyMedium,)),
                                 Expanded(
                                   child: Checkbox(
                                       value: false,
@@ -229,7 +191,47 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text('ویلچر در مپ', style: Theme.of(context).textTheme.bodyMedium,)),
+                                  Expanded(child: Text(localization.lift_instead_of_wheelchair, style: Theme.of(context).textTheme.bodyMedium,)),
+                                  Expanded(
+                                    child: Checkbox(
+                                        value: false,
+                                        onChanged: (value) {}),
+                                  ),
+                                  const Expanded(child: SizedBox())
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                          width: double.infinity,
+                          height: AppSize.s48,
+                          color: ColorLightThemeManager.grey,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(child: Text(localization.wheelchair_full, style: Theme.of(context).textTheme.bodyMedium,)),
+                                Expanded(
+                                  child: Checkbox(
+                                      value: false,
+                                      onChanged: (value) {}),
+                                ),
+                                const Expanded(child: SizedBox())
+                              ],
+                            ),
+                          ),
+                        ),
+                          Container(
+                            width: double.infinity,
+                            height: AppSize.s48,
+                            color: Theme.of(context).colorScheme.onSecondary,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Expanded(child: Text(localization.wheelchair_in_map, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
                                         value: false,
@@ -251,7 +253,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                       onTap: () {
                         context.go(ConfirmPage.confirmPagePath);
                       },
-                      title: 'ادامه',
+                      title: localization.next,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                     ),
                   )
