@@ -348,12 +348,12 @@ class FooterWidget extends StatelessWidget {
         ),
         Container(
           width: double.infinity,
-          height: AppSize.s42,
+          height: AppSize.s32,
           color: Theme.of(context).colorScheme.primary,
           child: Center(
             child: Text(
-              'تمامی حقوق وب‌سایت متعلق به بهپردازجهان می‌باشد',
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
+              'تمامی حقوق وب‌سایت متعلق به شرکت بهپردازجهان می‌باشد',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 10,color: Theme.of(context).colorScheme.onSecondary),
             ),
           ),
         )
