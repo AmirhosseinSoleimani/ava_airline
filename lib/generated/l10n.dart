@@ -1449,6 +1449,856 @@ class S {
       args: [],
     );
   }
+
+  /// `AVA Airlines`
+  String get appTitle {
+    return Intl.message(
+      'AVA Airlines',
+      name: 'appTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flight Selection`
+  String get flightSelection {
+    return Intl.message(
+      'Flight Selection',
+      name: 'flightSelection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passenger Information`
+  String get passengerInformation {
+    return Intl.message(
+      'Passenger Information',
+      name: 'passengerInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special Services`
+  String get specialServices {
+    return Intl.message(
+      'Special Services',
+      name: 'specialServices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirmation and Payment`
+  String get confirmationAndPayment {
+    return Intl.message(
+      'Confirmation and Payment',
+      name: 'confirmationAndPayment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number of Passengers`
+  String get numberOfPassengers {
+    return Intl.message(
+      'Number of Passengers',
+      name: 'numberOfPassengers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Search`
+  String get changeSearch {
+    return Intl.message(
+      'Change Search',
+      name: 'changeSearch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Systemic`
+  String get systemic {
+    return Intl.message(
+      'Systemic',
+      name: 'systemic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Economy`
+  String get economy {
+    return Intl.message(
+      'Economy',
+      name: 'economy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flight Information`
+  String get flightInformation {
+    return Intl.message(
+      'Flight Information',
+      name: 'flightInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refund Policies`
+  String get refundPolicies {
+    return Intl.message(
+      'Refund Policies',
+      name: 'refundPolicies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Flight`
+  String get selectFlight {
+    return Intl.message(
+      'Select Flight',
+      name: 'selectFlight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Official Airline Rate`
+  String get officialAirlineRate {
+    return Intl.message(
+      'Official Airline Rate',
+      name: 'officialAirlineRate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rial`
+  String get currency {
+    return Intl.message(
+      'Rial',
+      name: 'currency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ava Airlines started its activity in 2023 with the aim of providing the highest quality flight services. Our goal is to help improve the quality of the country's aviation to enhance the experience of our dear passengers from their flights.`
+  String get company_description {
+    return Intl.message(
+      'Ava Airlines started its activity in 2023 with the aim of providing the highest quality flight services. Our goal is to help improve the quality of the country\'s aviation to enhance the experience of our dear passengers from their flights.',
+      name: 'company_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick Access`
+  String get quick_access {
+    return Intl.message(
+      'Quick Access',
+      name: 'quick_access',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register Complaint`
+  String get register_complaint {
+    return Intl.message(
+      'Register Complaint',
+      name: 'register_complaint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Job Opportunities`
+  String get job_opportunities {
+    return Intl.message(
+      'Job Opportunities',
+      name: 'job_opportunities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rules and Regulations`
+  String get rules_and_regulations {
+    return Intl.message(
+      'Rules and Regulations',
+      name: 'rules_and_regulations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Safety Report & Follow-up`
+  String get safety_report_followup {
+    return Intl.message(
+      'Safety Report & Follow-up',
+      name: 'safety_report_followup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact Us`
+  String get contact_us {
+    return Intl.message(
+      'Contact Us',
+      name: 'contact_us',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `021-9200-1100`
+  String get phone_number {
+    return Intl.message(
+      '021-9200-1100',
+      name: 'phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `info@avaair.ir`
+  String get email {
+    return Intl.message(
+      'info@avaair.ir',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Head Office: Tehran, Ferdows, Ayatollah Kashani Blvd., Saleh Jharomi Crossroad, No. 186, 5th Floor`
+  String get address {
+    return Intl.message(
+      'Head Office: Tehran, Ferdows, Ayatollah Kashani Blvd., Saleh Jharomi Crossroad, No. 186, 5th Floor',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All rights of the website are owned by Behpardaz Jahan Company.`
+  String get all_rights_reserved {
+    return Intl.message(
+      'All rights of the website are owned by Behpardaz Jahan Company.',
+      name: 'all_rights_reserved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get navbar_component_color {
+    return Intl.message(
+      'Color',
+      name: 'navbar_component_color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tehran (Mehrabad)`
+  String get origin_city {
+    return Intl.message(
+      'Tehran (Mehrabad)',
+      name: 'origin_city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mashhad (Hashemi Nejad)`
+  String get destination_city {
+    return Intl.message(
+      'Mashhad (Hashemi Nejad)',
+      name: 'destination_city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flight Date`
+  String get flight_date {
+    return Intl.message(
+      'Flight Date',
+      name: 'flight_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `August 30, 2024`
+  String get flight_date_value {
+    return Intl.message(
+      'August 30, 2024',
+      name: 'flight_date_value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passenger Count`
+  String get passenger_count {
+    return Intl.message(
+      'Passenger Count',
+      name: 'passenger_count',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 Passenger`
+  String get passenger_count_value {
+    return Intl.message(
+      '1 Passenger',
+      name: 'passenger_count_value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payable Amount`
+  String get payable_amount {
+    return Intl.message(
+      'Payable Amount',
+      name: 'payable_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1,365,770 Toman`
+  String get payable_amount_value {
+    return Intl.message(
+      '1,365,770 Toman',
+      name: 'payable_amount_value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passenger Details`
+  String get passenger_details {
+    return Intl.message(
+      'Passenger Details',
+      name: 'passenger_details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latin First Name`
+  String get latin_first_name {
+    return Intl.message(
+      'Latin First Name',
+      name: 'latin_first_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latin Last Name`
+  String get latin_last_name {
+    return Intl.message(
+      'Latin Last Name',
+      name: 'latin_last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `National ID`
+  String get national_id {
+    return Intl.message(
+      'National ID',
+      name: 'national_id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select`
+  String get select {
+    return Intl.message(
+      'Select',
+      name: 'select',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birth Date`
+  String get birth_date {
+    return Intl.message(
+      'Birth Date',
+      name: 'birth_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select`
+  String get select_option {
+    return Intl.message(
+      'Select',
+      name: 'select_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get next {
+    return Intl.message(
+      'Continue',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All website rights belong to Behpajoohan Company`
+  String get footer_text {
+    return Intl.message(
+      'All website rights belong to Behpajoohan Company',
+      name: 'footer_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get gender_male {
+    return Intl.message(
+      'Male',
+      name: 'gender_male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get gender_female {
+    return Intl.message(
+      'Female',
+      name: 'gender_female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unspecified`
+  String get gender_unspecified {
+    return Intl.message(
+      'Unspecified',
+      name: 'gender_unspecified',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special Services Page`
+  String get specialServicesPageName {
+    return Intl.message(
+      'Special Services Page',
+      name: 'specialServicesPageName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `/special-services-page`
+  String get specialServicesPagePath {
+    return Intl.message(
+      '/special-services-page',
+      name: 'specialServicesPagePath',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Flight`
+  String get select_flight {
+    return Intl.message(
+      'Select Flight',
+      name: 'select_flight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passenger Information`
+  String get passenger_information {
+    return Intl.message(
+      'Passenger Information',
+      name: 'passenger_information',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm and Pay`
+  String get confirm_and_pay {
+    return Intl.message(
+      'Confirm and Pay',
+      name: 'confirm_and_pay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service`
+  String get service {
+    return Intl.message(
+      'Service',
+      name: 'service',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tehran to Mashhad`
+  String get flight_route {
+    return Intl.message(
+      'Tehran to Mashhad',
+      name: 'flight_route',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blind`
+  String get blind {
+    return Intl.message(
+      'Blind',
+      name: 'blind',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Deaf`
+  String get deaf {
+    return Intl.message(
+      'Deaf',
+      name: 'deaf',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelchair in all phases`
+  String get wheelchair_full {
+    return Intl.message(
+      'Wheelchair in all phases',
+      name: 'wheelchair_full',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lift instead of wheelchair`
+  String get lift_instead_of_wheelchair {
+    return Intl.message(
+      'Lift instead of wheelchair',
+      name: 'lift_instead_of_wheelchair',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelchair in map`
+  String get wheelchair_in_map {
+    return Intl.message(
+      'Wheelchair in map',
+      name: 'wheelchair_in_map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passenger Information`
+  String get passengerInfo {
+    return Intl.message(
+      'Passenger Information',
+      name: 'passengerInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm and Pay`
+  String get confirmAndPay {
+    return Intl.message(
+      'Confirm and Pay',
+      name: 'confirmAndPay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can avail special flight services`
+  String get specialServicesText {
+    return Intl.message(
+      'You can avail special flight services',
+      name: 'specialServicesText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ticket Information`
+  String get ticketInfo {
+    return Intl.message(
+      'Ticket Information',
+      name: 'ticketInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Airline Company`
+  String get airlineCompany {
+    return Intl.message(
+      'Airline Company',
+      name: 'airlineCompany',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flight Class`
+  String get flightClass {
+    return Intl.message(
+      'Flight Class',
+      name: 'flightClass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allowed Baggage`
+  String get allowedBaggage {
+    return Intl.message(
+      'Allowed Baggage',
+      name: 'allowedBaggage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passenger Details`
+  String get passengerDetails {
+    return Intl.message(
+      'Passenger Details',
+      name: 'passengerDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age Group`
+  String get ageGroup {
+    return Intl.message(
+      'Age Group',
+      name: 'ageGroup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `National ID`
+  String get nationalId {
+    return Intl.message(
+      'National ID',
+      name: 'nationalId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birth Date`
+  String get birthDate {
+    return Intl.message(
+      'Birth Date',
+      name: 'birthDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nationality`
+  String get nationality {
+    return Intl.message(
+      'Nationality',
+      name: 'nationality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adult`
+  String get adult {
+    return Intl.message(
+      'Adult',
+      name: 'adult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Travel Services`
+  String get travelServices {
+    return Intl.message(
+      'Travel Services',
+      name: 'travelServices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Normal Refund`
+  String get normalRefund {
+    return Intl.message(
+      'Normal Refund',
+      name: 'normalRefund',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discount Code`
+  String get discountCode {
+    return Intl.message(
+      'Discount Code',
+      name: 'discountCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you have a discount code, enter it below and click Apply.`
+  String get enterDiscountCode {
+    return Intl.message(
+      'If you have a discount code, enter it below and click Apply.',
+      name: 'enterDiscountCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get applyCode {
+    return Intl.message(
+      'Apply',
+      name: 'applyCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment`
+  String get payment {
+    return Intl.message(
+      'Payment',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance.`
+  String get paymentInfo {
+    return Intl.message(
+      'When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance.',
+      name: 'paymentInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payable Amount`
+  String get payableAmount {
+    return Intl.message(
+      'Payable Amount',
+      name: 'payableAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `13,267,000 Rials`
+  String get payAmount {
+    return Intl.message(
+      '13,267,000 Rials',
+      name: 'payAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay`
+  String get pay {
+    return Intl.message(
+      'Pay',
+      name: 'pay',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

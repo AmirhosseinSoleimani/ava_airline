@@ -1,6 +1,8 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 
+import '../../../../../../../shared/resources/localization/locale_provider.dart';
+
 class NavbarComponent extends StatelessWidget {
   const NavbarComponent({super.key, this.color});
   final Color? color;
@@ -9,6 +11,7 @@ class NavbarComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
+    final localeProvider = context.read<LocaleProvider>();
     const height = AppSize.s100;
     return (width > 1024) ? Align(
       alignment: Alignment.topCenter,
@@ -51,12 +54,31 @@ class NavbarComponent extends StatelessWidget {
                   ),
                 ),
                 Space.w8,
-                SvgPicture.asset(SvgManager.earthSvg,colorFilter: ColorFilter.mode(color ?? Theme.of(context).colorScheme.onPrimary, BlendMode.srcIn), semanticsLabel: 'Ava Airlines', width: AppSize.s42,),
-                Space.w4,
-                Text(
-                  localization.language,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: color ?? Theme.of(context).colorScheme.onPrimary),
-                )
+                PopupMenuButton(
+                  onSelected: (String newValue) {
+                    localeProvider.changeLocale(Locale(newValue.toString() ?? 'fa'));
+                  },
+                  itemBuilder: (BuildContext context) {
+                    return <String>['en', 'fa', 'ar'].map<PopupMenuItem<String>>((String value) {
+                      return PopupMenuItem<String>(
+                        value: value,
+                        child: Text(
+                          value.toUpperCase(),
+                        ),
+                      );
+                    }).toList();
+                  },
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(SvgManager.earthSvg,colorFilter: ColorFilter.mode(color ?? Theme.of(context).colorScheme.onPrimary, BlendMode.srcIn), semanticsLabel: 'Ava Airlines', width: AppSize.s42,),
+                      Space.w4,
+                      Text(
+                        localization.language,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: color ?? Theme.of(context).colorScheme.onPrimary),
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
 

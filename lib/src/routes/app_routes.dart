@@ -1,4 +1,5 @@
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/search_result_page.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/confirm/confirm_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/passenger_information/passenger_information_widget.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/special_services/special_services_page.dart';
@@ -54,6 +55,11 @@ class Routes {
           path: SpecialServicesPage.specialServicesPagePath,
           name: SpecialServicesPage.specialServicesPageName,
           builder: (context, state) => const SpecialServicesPage(),
+        ),
+        GoRoute(
+          path: ConfirmPage.confirmPagePath,
+          name: ConfirmPage.confirmPageName,
+          builder: (context, state) => const ConfirmPage(),
         ),
 
         StatefulShellRoute.indexedStack(
