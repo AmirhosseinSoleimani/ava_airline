@@ -31,5 +31,19 @@
   "rulesAndNotices": "القواعد والإشعارات",
   "economyFrom": "إكونومي من",
   "buyTicket": "اشتري تذاكر",
-  "bookYourFlight": "صوت السماء يناديك؛ احجز رحلتك الآن."
+  "bookYourFlight": "صوت السماء يناديك؛ احجز رحلتك الآن.",
+  "returnS": "عودة",
+  "oneWay": "ذهاب فقط",
+  "multiCity": "مدن متعددة",
+  "searchFlights": "ابحث عن رحلات",
+  "from": "من",
+  "to": "إلى",
+  "selectOrigin": "اختر نقطة الانطلاق",
+  "selectDestination": "اختر الوجهة",
+  "travelDates": "تواريخ السفر",
+  "selectDates": "اختر التواريخ",
+  "passengerAndCabinClass": "الركاب وفئة المقصورة",
+  "adultEconomyClass1": "بالغ إكونومي 1",
+  "search": "بحث",
+  "flight": "رحلة"
 }

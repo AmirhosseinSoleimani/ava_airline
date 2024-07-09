@@ -65,7 +65,7 @@ class CarouselCard extends StatelessWidget {
                     carousel.description,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.end,
+                    textAlign: TextAlign.start,
                     style: Theme.of(context)
                         .textTheme
                         .bodyMedium!
