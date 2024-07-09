@@ -26,11 +26,12 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text(
-          'Splash screen'
-        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Image.asset('assets/image/ava.png'),
+        )
       ),
     );
   }

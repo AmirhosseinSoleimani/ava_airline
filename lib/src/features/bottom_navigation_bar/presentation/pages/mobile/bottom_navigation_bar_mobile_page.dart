@@ -18,7 +18,7 @@ class BottomNavigationBarMobilePage extends StatelessWidget {
       body: navigationShell,
       extendBody: true,
       bottomNavigationBar: NavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         selectedIndex: selectedIndex,
         destinations: [
           NavigationDestination(
