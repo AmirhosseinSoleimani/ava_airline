@@ -18,7 +18,7 @@ class CarouselCard extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child:carousel.assetPath==''? Container(height: 200,):Image.asset(
+                child:carousel.assetPath==''? Container(color:Colors.black, height: 200,width: MediaQuery.of(context).size.width,):Image.asset(
                   carousel.assetPath,
                   height: 200,
                   fit: BoxFit.fitHeight,
