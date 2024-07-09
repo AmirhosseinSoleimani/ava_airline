@@ -1,4 +1,6 @@
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/passenger_information/passenger_information_widget.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/special_services/special_services_page.dart';
 import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
 import 'package:flutter/foundation.dart';
@@ -39,6 +41,21 @@ class Routes {
           name: FlightSelectionPage.flightSelectionPageName,
           builder: (context, state) => const FlightSelectionPage(),
         ),
+
+        GoRoute(
+          path: PassengerInformationPage.passengerInformationPagePath,
+          name: PassengerInformationPage.passengerInformationPageName,
+          builder: (context, state) => const PassengerInformationPage(),
+        ),
+
+
+        GoRoute(
+          path: SpecialServicesPage.specialServicesPagePath,
+          name: SpecialServicesPage.specialServicesPageName,
+          builder: (context, state) => const SpecialServicesPage(),
+        ),
+
+
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
             return BottomNavigationBarPage(navigationShell: navigationShell);

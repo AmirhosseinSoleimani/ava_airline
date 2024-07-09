@@ -1,4 +1,5 @@
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/widgets/stepper_widget.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/passenger_information/passenger_information_widget.dart';
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
@@ -290,7 +291,9 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                         Text('نرخ رسمی ایرلاین', style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h16,
                         AvaElevatedButton(
-                          onTap: () {},
+                          onTap: () {
+                            context.go(PassengerInformationPage.passengerInformationPagePath);
+                          },
                           title: 'انتخاب پرواز',
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                         )
@@ -301,9 +304,6 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
               ),
             ),
             Space.h64,
-            Container(
-              color: Colors.red,
-            ),
             const FooterWidget(),
           ],
         ),

@@ -19,7 +19,8 @@ class AvaTextFormField extends StatelessWidget {
     this.hintStyle,
     this.style,
     this.maxLines,
-    this.validator
+    this.validator,
+    this.onTap
   });
   final TextEditingController controller;
   final FocusNode? focusNode;
@@ -36,10 +37,12 @@ class AvaTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final int? maxLines;
   final Function(String?)? validator;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTap: onTap,
       controller: controller,
       focusNode: focusNode,
       obscureText: isPasswordField ?? false,
