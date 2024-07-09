@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/features.dart';
 
@@ -15,7 +16,7 @@ class NavbarItemsState extends State<NavbarItems> {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     final navbarItems = [
       localization.reserve,
       localization.travel_info,
@@ -51,7 +52,7 @@ class NavbarItemsState extends State<NavbarItems> {
 
 void showModalFromTop(BuildContext context, int? selectedIndex) {
   final width = MediaQuery.of(context).size.width;
-  final localization = AppLocalizations.of(context)!;
+  final localization = S.of(context);
   final navbarItems = <Map<String, List<String>>>[
     {
       localization.reserve: [localization.buyTicket, localization.online_check_in, localization.refund_ticket, localization.change_ticket]

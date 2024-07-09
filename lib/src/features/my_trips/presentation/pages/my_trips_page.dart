@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class MyTripsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(localization.myTrips),

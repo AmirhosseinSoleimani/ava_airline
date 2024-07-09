@@ -94,3 +94,5 @@ flutter:
       fonts:
         - asset: assets/fonts/Lobster-Regular.ttf
           weight: 400
+flutter_intl:
+  enabled: true

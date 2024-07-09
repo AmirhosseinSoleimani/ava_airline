@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 
 class NavbarComponent extends StatelessWidget {
@@ -6,7 +7,7 @@ class NavbarComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
     const height = AppSize.s100;
     return (width > 1024) ? Align(

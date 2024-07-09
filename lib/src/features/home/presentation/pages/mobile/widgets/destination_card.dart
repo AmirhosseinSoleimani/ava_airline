@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/home/domain/entities/city_entity.dart';
 import 'package:ava_airline/src/features/home/domain/entities/destination_entity.dart';
@@ -52,7 +53,7 @@ class DestinationCard extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                         ),
                     children: <TextSpan>[
-                      TextSpan(text: AppLocalizations.of(context)!.economyFrom),
+                      TextSpan(text: S.of(context).economyFrom),
                       TextSpan(text: ' \$${destination.minimumPrice}',style:Theme.of(context).textTheme.bodyLarge!.copyWith(
                         color: Theme.of(context).colorScheme.primary
                       ), ),

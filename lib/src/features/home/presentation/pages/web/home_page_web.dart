@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/home/home.dart';
@@ -37,7 +38,7 @@ class _HomePageWebState extends State<HomePageWeb> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     navbarItems = <Map<String, List<String>>>[
       {
         localization.reserve: [localization.buyTicket, localization.online_check_in, localization.refund_ticket, localization.change_ticket]
@@ -90,7 +91,7 @@ class _HomePageWebState extends State<HomePageWeb> {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(

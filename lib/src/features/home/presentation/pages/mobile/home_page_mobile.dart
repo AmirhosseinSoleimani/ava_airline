@@ -1,4 +1,5 @@
 import 'package:ava_airline/src/features/features.dart';
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/home/domain/entities/carousel_entity.dart';
 import 'package:ava_airline/src/features/home/domain/entities/city_entity.dart';
 import 'package:ava_airline/src/features/home/domain/entities/destination_entity.dart';
@@ -33,7 +34,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     final carousels = [
       Carousel(
         id: 1,
@@ -330,7 +331,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
   }
 
   _buildShimmer(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     return Shimmer.fromColors(
       direction: ShimmerDirection.ltr,
       period: const Duration(milliseconds: 800),

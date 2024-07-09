@@ -1,6 +1,5 @@
-
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:ava_airline/generated/l10n.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/flight_card.dart';
 import 'package:flutter/material.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
@@ -11,7 +10,7 @@ class BookFlightPageMobile extends StatefulWidget {
 }
 
 class _BookFlightPageMobileState extends State<BookFlightPageMobile>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, AutomaticKeepAliveClientMixin   {
   late final TabController _tabController;
 
   @override
@@ -22,7 +21,8 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    super.build(context);
+    final localization = S.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(localization.searchFlights),
@@ -37,13 +37,22 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
           controller: _tabController,
           tabs: [
             Tab(
-              text: localization.returnS,
+              child: FittedBox(
+                child: Text(localization.oneWay,maxLines: 1,),
+              ),
             ),
             Tab(
-              text: localization.oneWay,
+              child: FittedBox(
+                child: Text(
+                  localization.returnS,
+                  maxLines: 1,
+                ),
+              ),
             ),
             Tab(
-              text: localization.multiCity,
+              child: FittedBox(
+                child: Text(localization.multiCity,maxLines: 1,),
+              ),
             ),
           ],
         ),
@@ -51,12 +60,12 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
       body: Column(
         children: [
           Expanded(
-            flex: 3,
+            flex: 4,
             child: TabBarView(
               controller: _tabController,
               children: [
-                returnTab(context),
                 oneWayTab(context),
+                returnTab(context),
                 multiCityTab(context),
               ],
             ),
@@ -75,7 +84,8 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                       child: Text(
                         localization.search,
                         style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w500),
+                            color: Theme.of(context).colorScheme.onPrimary,
+                            fontWeight: FontWeight.w500),
                       ),
                       onPressed: () {},
                     ),
@@ -88,505 +98,55 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   returnTab(context) {
-    final localization = AppLocalizations.of(context)!;
-    return Column(
+    return  Column(
       children: [
-        const SizedBox(height: 16),
-        Container(
-          decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surfaceContainer,
-              borderRadius: BorderRadius.circular(12)),
-          height: MediaQuery.of(context).size.height * 0.3,
-          width: MediaQuery.of(context).size.width * 0.8,
-          child: Column(
-            children: [
-              Expanded(
-                child: Stack(
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(color: Colors.grey.shade300),
-                              ),
-                            ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(localization.from),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    localization.selectOrigin,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.grey[700]),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(color: Colors.grey.shade300),
-                              ),
-                            ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                   Text(localization.to),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    localization.selectDestination,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.grey[700]),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Center(
-                      child: Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300),
-                            color:
-                                Theme.of(context).colorScheme.surfaceContainer,
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Icon(
-                          Icons.compare_arrows_rounded,
-                          color: Theme.of(context).colorScheme.onSurface,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.grey.shade300),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 8),
-                         Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
-                        const SizedBox(height: 4),
-                        Text(
-                          localization.selectDates,
-                          style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              )),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                     Text(localization.passengerAndCabinClass),
-                    const SizedBox(height: 16),
-                    Text(
-                      localization.adultEconomyClass1,
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        SizedBox(height: 16),
+        FlightCard(isSingle: false,),
       ],
     );
   }
 
   oneWayTab(context) {
-    final localization = AppLocalizations.of(context)!;
-    return Column(
+    return  Column(
       children: [
-        const SizedBox(height: 16),
-        Container(
-          decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surfaceContainer,
-              borderRadius: BorderRadius.circular(12)),
-          height: MediaQuery.of(context).size.height * 0.3,
-          width: MediaQuery.of(context).size.width * 0.8,
-          child: Column(
-            children: [
-              Expanded(
-                child: Stack(
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(color: Colors.grey.shade300),
-                              ),
-                            ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(localization.from),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    localization.selectOrigin,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.grey[700]),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(color: Colors.grey.shade300),
-                              ),
-                            ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(localization.to),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    localization.selectDestination,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.grey[700]),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Center(
-                      child: Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300),
-                            color:
-                            Theme.of(context).colorScheme.surfaceContainer,
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Icon(
-                          Icons.compare_arrows_rounded,
-                          color: Theme.of(context).colorScheme.onSurface,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(color: Colors.grey.shade300),
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const SizedBox(height: 8),
-                            Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
-                            const SizedBox(height: 4),
-                            Text(
-                              localization.selectDates,
-                              style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(localization.passengerAndCabinClass),
-                    const SizedBox(height: 16),
-                    Text(
-                      localization.adultEconomyClass1,
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        SizedBox(height: 16),
+        FlightCard(isSingle: true,),
       ],
     );
   }
 
   multiCityTab(context) {
-    final localization = AppLocalizations.of(context)!;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 16),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width * 0.1),
-          child: Text('${localization.flight} 1'),
-        ),
-        const SizedBox(height: 8),
-        Center(
-          child: Container(
-            decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surfaceContainer,
-                borderRadius: BorderRadius.circular(12)),
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width * 0.8,
-            child: Column(
-              children: [
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  bottom: BorderSide(color: Colors.grey.shade300),
-                                ),
-                              ),
-                              child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                     Text(localization.from),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      localization.selectOrigin,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.grey[700]),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
-                          Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  bottom: BorderSide(color: Colors.grey.shade300),
-                                ),
-                              ),
-                              child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                     Text(localization.to),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      localization.selectDestination,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.grey[700]),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Center(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              color:
-                              Theme.of(context).colorScheme.surfaceContainer,
-                              borderRadius: BorderRadius.circular(50)),
-                          child: Icon(
-                            Icons.compare_arrows_rounded,
-                            color: Theme.of(context).colorScheme.onSurface,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(color: Colors.grey.shade300),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const SizedBox(height: 8),
-                              Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
-                              const SizedBox(height: 4),
-                              Text(
-                                localization.selectDates,
-                                style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    )),
-
-              ],
-            ),
+    final localization = S.of(context);
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 16),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * 0.1),
+            child: Text('${localization.flight} 1'),
           ),
-        ),
-        const SizedBox(height: 32),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width * 0.1),
-          child: Text('${localization.flight} 2'),
-        ),
-        const SizedBox(height: 8),
-        Center(
-          child: Container(
-            decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surfaceContainer,
-                borderRadius: BorderRadius.circular(12)),
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width * 0.8,
-            child: Column(
-              children: [
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  bottom: BorderSide(color: Colors.grey.shade300),
-                                ),
-                              ),
-                              child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(localization.from),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      localization.selectOrigin,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.grey[700]),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          VerticalDivider(color: Colors.grey[500],width: 0,thickness: 0.5,),
-                          Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  bottom: BorderSide(color: Colors.grey.shade300),
-                                ),
-                              ),
-                              child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(localization.to),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      localization.selectDestination,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.grey[700]),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Center(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              color:
-                              Theme.of(context).colorScheme.surfaceContainer,
-                              borderRadius: BorderRadius.circular(50)),
-                          child: Icon(
-                            Icons.compare_arrows_rounded,
-                            color: Theme.of(context).colorScheme.onSurface,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(color: Colors.grey.shade300),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const SizedBox(height: 8),
-                              Text(localization.travelDates,style: Theme.of(context).textTheme.bodyLarge,),
-                              const SizedBox(height: 4),
-                              Text(
-                                localization.selectDates,
-                                style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    )),
-
-              ],
-            ),
+          const SizedBox(height: 8),
+          Center(child: FlightCard(isSingle: true)),
+          const SizedBox(height: 32),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * 0.1),
+            child: Text('${localization.flight} 2'),
           ),
-        ),
-      ],
+          const SizedBox(height: 8),
+          Center(child: FlightCard(isSingle: true)),
+          const SizedBox(height: 32),
+        ],
+      ),
     );
   }
+
+  @override
+  void updateKeepAlive() {
+  }
+
+  @override
+  bool get wantKeepAlive => true;
 }

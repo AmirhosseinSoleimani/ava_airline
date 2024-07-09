@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 
 class AboutUsHomePage extends StatelessWidget {
@@ -5,7 +6,7 @@ class AboutUsHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
       // width: width * 0.6,

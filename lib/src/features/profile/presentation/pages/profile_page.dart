@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/shared/resources/localization/locale_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +24,7 @@ class ProfilePage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   DropdownButton(
-                    value: AppLocalizations.of(context)!.currentLanguage,
+                    value: S.of(context).currentLanguage,
                     icon: const Icon(Icons.keyboard_arrow_down),
                     items: const [
                       DropdownMenuItem(value: 'fa',child: Text('fa'),),

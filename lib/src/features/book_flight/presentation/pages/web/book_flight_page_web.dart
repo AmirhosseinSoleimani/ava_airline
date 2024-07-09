@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/app/my_app.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
@@ -66,7 +67,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return Container(
       width: width * 0.6,
@@ -242,7 +243,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
   }
 
   Widget _buildSelectedWidget() {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context)!;
     final locale = Localizations.localeOf(context).languageCode;
     switch (_selectedValue) {
       case 0:

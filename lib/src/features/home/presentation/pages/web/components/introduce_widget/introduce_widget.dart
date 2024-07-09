@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 
 class IntroduceWidget extends StatelessWidget {
@@ -5,7 +6,7 @@ class IntroduceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context)!;
+    final localization = S.of(context)!;
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
       // width: (width < 1415 && width > 1215) ? width * 0.7 : (width <= 1215 && width > 1070) ? width * 0.8 : (width <= 1070 && width > 945) ? width * 0.9 : (width < 945) ? width : width * 0.6,

@@ -1,3 +1,4 @@
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 
 class BottomNavigationBarMobilePage extends StatelessWidget {
@@ -13,7 +14,7 @@ class BottomNavigationBarMobilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textLocalization = AppLocalizations.of(context)!;
+    final textLocalization = S.of(context);
     return Scaffold(
       body: navigationShell,
       extendBody: true,
