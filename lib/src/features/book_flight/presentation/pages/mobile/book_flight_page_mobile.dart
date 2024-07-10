@@ -1,6 +1,7 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/flight_card.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
+import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
 import 'package:flutter/material.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
@@ -25,6 +26,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
     super.build(context);
     final localization = S.of(context);
     return Scaffold(
+      drawer: const DrawerWidget(),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.surface,
         surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
