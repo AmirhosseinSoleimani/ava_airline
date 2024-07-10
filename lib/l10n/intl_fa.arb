@@ -64,6 +64,8 @@
   "disabled_passenger": "مسافر توان خواه",
   "medical_issues": "موارد پزشکی",
   "unaccompanied_child": "کودک بدون همراه",
+  "children": "خردسال",
+  "infant": "نوزاد",
   "special_meals": "خوراک ویژه",
   "lounge_services": "خدمات لانج",
   "country_travel_conditions": "شرایط سفر به کشورها",

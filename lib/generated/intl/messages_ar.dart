@@ -149,7 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "gender_male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "gender_unspecified": MessageLookupByLibrary.simpleMessage("غير محدد"),
-        "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 مسافر"),
+        "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 راكب"),
         "home": MessageLookupByLibrary.simpleMessage("المنزل"),
         "hotels": MessageLookupByLibrary.simpleMessage("فنادق"),
         "in_flight_entertainment":

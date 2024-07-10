@@ -111,7 +111,7 @@
   "origin": "مبدا",
   "destination": "مقصد",
   "returnDate": "تاریخ برگشت",
-  "hintTextPassenger": "1 مسافر",
+  "hintTextPassenger": "1 راكب",
   "passengersCount": "الركاب {count}",
   "departureDate": "تاريخ المغادرة",
   "flight": "رحلة",
