@@ -26,6 +26,8 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
     final localization = S.of(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.searchFlights),
         bottom: TabBar(
           labelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(

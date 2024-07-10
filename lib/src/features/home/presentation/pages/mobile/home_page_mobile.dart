@@ -109,6 +109,8 @@ class _HomePageMobileState extends State<HomePageMobile> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Image.asset(
           'assets/image/ava.png',
           height: AppBar().preferredSize.height - 16,

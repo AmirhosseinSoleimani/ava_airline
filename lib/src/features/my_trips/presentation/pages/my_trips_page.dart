@@ -16,6 +16,8 @@ class MyTripsPage extends StatelessWidget {
     final localization = S.of(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.myTrips),
       ),
       body: Padding(

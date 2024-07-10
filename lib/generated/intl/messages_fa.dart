@@ -158,6 +158,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchFlights": MessageLookupByLibrary.simpleMessage("جستجوی پروازها"),
         "searchResults": MessageLookupByLibrary.simpleMessage("نتایج جستجو"),
         "seat_status": MessageLookupByLibrary.simpleMessage("وضعیت صندلی ها"),
+        "selectDate":
+            MessageLookupByLibrary.simpleMessage("تاریخ را انتخاب کنید"),
         "selectDates":
             MessageLookupByLibrary.simpleMessage("تاریخ‌ها را انتخاب کنید"),
         "selectDestination":
@@ -179,6 +181,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticket_guide":
             MessageLookupByLibrary.simpleMessage("راهنمای خرید بلیط"),
         "to": MessageLookupByLibrary.simpleMessage("به"),
+        "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ‌ سفر"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تاریخ‌های سفر"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("اخبار سفر"),
         "travel_info": MessageLookupByLibrary.simpleMessage("اطلاعات سفر"),
