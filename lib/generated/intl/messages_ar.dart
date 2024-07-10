@@ -50,9 +50,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "ava_with_you": MessageLookupByLibrary.simpleMessage("آفا مع سلامتك"),
         "baggage": MessageLookupByLibrary.simpleMessage("أمتعة"),
         "baggageTracker": MessageLookupByLibrary.simpleMessage("متعقب الأمتعة"),
+        "batteryDescription2": MessageLookupByLibrary.simpleMessage(
+            "يتم نقل الكراسي المتحركة التي تحتوي على بطارية ليثيوم أيون بسعة قصوى تبلغ 300 واط/ساعة أو بطاريتين بسعة قصوى تبلغ 160 واط/ساعة، بعد التعبئة وموافقة ممثل خطوط ماهان الجوية، في مقصورة الركاب فقط."),
+        "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
+            "يتم نقل الكراسي المتحركة أو غيرها من وسائل المساعدة على الحركة التي تحتوي على بطارية رطبة أو جافة في مخزن البضائع بالطائرة مع حماية البطارية من الدوائر القصيرة، وتغليف آمن، وموافقة ممثل خطوط ماهان الجوية. (إذا كانت البطارية قابلة للإزالة، يتم نقل البطارية المنفصلة في عبوة مقاومة في مخزن الطائرة)."),
+        "batteryWheelchairTitle": MessageLookupByLibrary.simpleMessage(
+            "الكراسي المتحركة التي تعمل بالبطارية"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "blind": MessageLookupByLibrary.simpleMessage("كفيف"),
+        "blindDeafDescription": MessageLookupByLibrary.simpleMessage(
+            "لا يحتاج هؤلاء الركاب إلى تقديم شهادة طبية. في حالة السفر الجماعي، يجب تقديم تصريح للتنسيق، ووجود مرافق صحي، قادر، ويتحدث نفس اللغة لهؤلاء الركاب طوال الرحلة. مرافقة هؤلاء الركاب من قبل موظفي خطوط ماهان الجوية ليست خاضعة لرسوم."),
+        "blindDeafTitle":
+            MessageLookupByLibrary.simpleMessage("الركاب المكفوفين والصم"),
         "book": MessageLookupByLibrary.simpleMessage("حجز"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("إحجز رحلة طيران"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
@@ -60,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "businessClass": MessageLookupByLibrary.simpleMessage("بیزینس کلس"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("اشتري تذاكر"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("شراء تذكرة"),
+        "carRental": MessageLookupByLibrary.simpleMessage("تاجير سيارة"),
         "catering": MessageLookupByLibrary.simpleMessage("التموين"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغيير البحث"),
@@ -101,6 +112,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("رمز الخصم"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("وجهات محلية"),
+        "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
+            "رحلة من دبي إلى إيران 150 درهم (مع تسجيل SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("خلال الرحلة"),
         "economy": MessageLookupByLibrary.simpleMessage("اقتصادي"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
@@ -108,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رمز خصم، أدخله أدناه واضغط على تطبيق."),
+        "exemptionsDescription": MessageLookupByLibrary.simpleMessage(
+            "يعفى حاملو بطاقات المحاربين القدامى، والمعاقين، وأسر الشهداء المحترمة، وكذلك ركاب رحلات الحج والعتيبات، ومواطني الاتحاد الأوروبي، والأشخاص الذين تزيد أعمارهم عن 65 عامًا من الدفع."),
         "faq": MessageLookupByLibrary.simpleMessage("الأسئلة الشائعة"),
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "firstClass": MessageLookupByLibrary.simpleMessage("فرست کلس"),
@@ -139,17 +154,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "gender_unspecified": MessageLookupByLibrary.simpleMessage("غير محدد"),
         "gold": MessageLookupByLibrary.simpleMessage("ذهبي"),
-        "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 مسافر"),
+        "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 راكب"),
         "home": MessageLookupByLibrary.simpleMessage("المنزل"),
         "hotels": MessageLookupByLibrary.simpleMessage("فنادق"),
         "in_flight_entertainment":
             MessageLookupByLibrary.simpleMessage("الترفيه على متن الطائرة"),
         "in_flight_magazine":
             MessageLookupByLibrary.simpleMessage("مجلة الطيران"),
+        "incapacitatedPassengerWheelchairPageSubtitle":
+            MessageLookupByLibrary.simpleMessage(
+                "خدمات خاصة لرحلة خالية من المتاعب"),
+        "incapacitatedPassengerWheelchairPageTitle":
+            MessageLookupByLibrary.simpleMessage(
+                "الركاب من ذوي الاحتياجات الخاصة/ الكرسي المتحرك"),
         "infant": MessageLookupByLibrary.simpleMessage("الرضع"),
         "infantDescription":
             MessageLookupByLibrary.simpleMessage("العمر أقل من 2"),
         "inn": MessageLookupByLibrary.simpleMessage("في"),
+        "internationalFlightCost": MessageLookupByLibrary.simpleMessage(
+            "رحلة دولية من إيران 1,000,000 ريال"),
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("وجهات دولية"),
         "iran": MessageLookupByLibrary.simpleMessage("إيران"),
@@ -174,6 +197,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "lounge_services": MessageLookupByLibrary.simpleMessage("خدمات الصالة"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "mashhad": MessageLookupByLibrary.simpleMessage("مشهد"),
+        "mashhad1": MessageLookupByLibrary.simpleMessage(
+            "تعتبر مدينة مشهد وآغا في محافظة خراسان الرضوية إحدى المحافظات التاريخية والدينية في إيران. تستضيف هذه المدينة سنويًا حوالي 27 مليون مسافر محلي وأجنبي يسافرون إلى هذا المكان للحج والاحتفالات الدينية. والسبب الرئيسي لهذا العدد الكبير من المسافرين والسياح هو وجود بلاط الامام الرضا (ع) في مدينة مشهد. هذه المدينة غنية ثقافيا جدا."),
+        "mashhad2": MessageLookupByLibrary.simpleMessage(
+            "ويوجد في هذه المدينة وضواحيها ضريح العديد من عظماء الدين والشعر والأدب مثل الفردوسي الذي كان له تأثير كبير على الثقافة واللغة الإيرانية. كل هذا جعل مشهد تصبح مدينة حديثة في السنوات الأخيرة، بحيث يوجد في مكانها مراكز ترفيهية وسياحية وتجارية متنوعة ومتطورة."),
         "medical_issues": MessageLookupByLibrary.simpleMessage("مشاكل طبية"),
         "message1": MessageLookupByLibrary.simpleMessage(
             "تم تأجيل رحلتك AV123 لمدة 30 دقيقة."),
@@ -203,6 +230,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_delay": MessageLookupByLibrary.simpleMessage("بدون تأخير"),
         "none": MessageLookupByLibrary.simpleMessage("لا أحد"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("استرداد عادي"),
+        "noteDescription": MessageLookupByLibrary.simpleMessage(
+            "في طائرات Embraer ERJ-145، يتم استثناء هذه الخدمات من هذه القاعدة. لا يمكن قبول الركاب من ذوي الاحتياجات الخاصة والنساء الحوامل في مقصورة درجة الأعمال في طائرات بوينغ 747. لذلك، يُرجى التأكد من نوع الطائرة قبل الشراء."),
+        "noteTitle": MessageLookupByLibrary.simpleMessage("ملاحظة"),
         "notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
         "numberOfPassengers":
             MessageLookupByLibrary.simpleMessage("عدد الركاب"),
@@ -331,6 +361,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "title5": MessageLookupByLibrary.simpleMessage("ترويج"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "toCalender": MessageLookupByLibrary.simpleMessage("إلى"),
+        "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
+            "رحلة دولية إلى إيران 40 دولار"),
         "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ السفر"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تواريخ السفر"),
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات السفر"),
@@ -339,6 +371,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("طفل بدون مرافق"),
         "version": MessageLookupByLibrary.simpleMessage("الإصدار 1.0"),
+        "wheelchairDescription": MessageLookupByLibrary.simpleMessage(
+            "وفقًا لأنظمة خطوط ماهان الجوية وقدرة كل طائرة، يُسمح فقط للركاب الذين سجلوا طلب الكرسي المتحرك في الكابينة من خلال نظام الحجز وتم إدراج رمز SSR على تذكرتهم بالقبول في المطار واستخدام الكرسي المتحرك. يجب على الركاب الذين يحتاجون إلى كرسي متحرك دون شهادة طبية تسجيل طلبهم عند حجز تذكرتهم. يمكن للركاب استخدام الكرسي المتحرك الشخصي حتى الصعود إلى الطائرة. من الجدير بالذكر أنه إذا كانت السعة ممتلئة، فلن يكون من الممكن تسجيل طلب الكرسي المتحرك."),
+        "wheelchairServiceCostTitle":
+            MessageLookupByLibrary.simpleMessage("تكلفة خدمة الكرسي المتحرك"),
+        "wheelchairTitle":
+            MessageLookupByLibrary.simpleMessage("الكرسي المتحرك"),
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("كرسي متحرك في جميع المراحل"),
         "wheelchair_in_map":

@@ -224,6 +224,7 @@
   "paymentInfo": "When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance.",
   "payableAmount": "Payable Amount",
   "payAmount": "13,267,000 Rials",
+  "pay": "Pay",
   "title1": "Flight Status Update",
   "message1": "Your flight AV123 has been delayed by 30 minutes.",
   "title2": "Promotion",
@@ -242,7 +243,6 @@
   "chooseGender": "Choose your gender",
   "continuee": "Continue",
   "none": "None",
-  "pay": "Pay",
   "incapacitatedPassengerWheelchairPageTitle": "Passengers with Special Needs/Wheelchair",
   "incapacitatedPassengerWheelchairPageSubtitle": "Special services for a hassle-free trip",
   "blindDeafTitle": "Blind and Deaf Passengers",
@@ -258,5 +258,8 @@
   "internationalFlightCost": "International flight from Iran 1,000,000 IRR",
   "toIranFlightCost": "International flight to Iran 40 USD",
   "dubaiToIranFlightCost": "Dubai to Iran flight 150 AED (with SSR registration)",
-  "exemptionsDescription": "Holders of veterans, disabled, and martyr families cards, as well as passengers on Hajj and Atabat flights, EU citizens, and individuals over 65 years old are exempt from payment."
+  "exemptionsDescription": "Holders of veterans, disabled, and martyr families cards, as well as passengers on Hajj and Atabat flights, EU citizens, and individuals over 65 years old are exempt from payment.",
+  "carRental" : "Car rental",
+  "mashhad1": "The city of Mashhad and Agha in Razavi Khorasan province is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of travelers and tourists is the existence of the court of Imam Reza (a.s.) in the city of Mashhad. This city is culturally very rich. The city of Mashhad and Agha in Razavi Khorasan province is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of travelers and tourists is the existence of the court of Imam Reza (a.s.) in the city of Mashhad. This city is culturally very rich.",
+  "mashhad2" : "The tomb of many religious, poetry and literature greats such as Ferdowsi, who had a significant impact on Iranian culture and language, is located in this city and its suburbs. All these have made Mashhad become a modern city in recent years, so that there are various and advanced entertainment, tourism and commercial centers in its place."
 }

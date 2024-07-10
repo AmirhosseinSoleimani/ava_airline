@@ -7,6 +7,7 @@ import 'package:ava_airline/src/features/book_flight/presentation/pages/web/comp
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/special_services/special_services_page.dart';
 import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
+import 'package:ava_airline/src/features/video/presentation/video_page.dart';
 import 'package:ava_airline/src/features/video_player/presentation/pages/video_player_page.dart';
 import 'package:flutter/foundation.dart';
 
@@ -74,9 +75,12 @@ class Routes {
         ),
 
         GoRoute(
-          path: IncapacitatedPassengerWheelchairPage.incapacitatedPassengerWheelchairPagePath,
-          name: IncapacitatedPassengerWheelchairPage.incapacitatedPassengerWheelchairPageName,
-          builder: (context, state) => const IncapacitatedPassengerWheelchairPage(),
+          path: IncapacitatedPassengerWheelchairPage
+              .incapacitatedPassengerWheelchairPagePath,
+          name: IncapacitatedPassengerWheelchairPage
+              .incapacitatedPassengerWheelchairPageName,
+          builder: (context, state) =>
+              const IncapacitatedPassengerWheelchairPage(),
         ),
 
         StatefulShellRoute.indexedStack(
@@ -89,19 +93,24 @@ class Routes {
               navigatorKey: homeTabNavigatorKey,
               routes: [
                 GoRoute(
-                  path: HomePage.homePagePath,
-                  name: HomePage.homePageName,
-                  pageBuilder: (context, state) {
-                    return CustomTransitionPage(
-                      key: state.pageKey,
-                      transitionDuration: Duration.zero,
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) =>
-                              child,
-                      child: const HomePage(),
-                    );
-                  },
-                ),
+                    path: HomePage.homePagePath,
+                    name: HomePage.homePageName,
+                    pageBuilder: (context, state) {
+                      return CustomTransitionPage(
+                        key: state.pageKey,
+                        transitionDuration: Duration.zero,
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) =>
+                                child,
+                        child: const HomePage(),
+                      );
+                    },
+                    ),
+                GoRoute(
+                  path: VideoPage.pagePath,
+                  name: VideoPage.pageName,
+                  builder: (context, state) => const VideoPage(),
+                )
               ],
             ),
             StatefulShellBranch(

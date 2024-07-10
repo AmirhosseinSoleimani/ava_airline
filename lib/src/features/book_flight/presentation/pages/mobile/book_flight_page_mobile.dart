@@ -98,7 +98,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             ),
                       ),
                       onPressed: () {
-                        context.push('/book-search-result');
+                        context.push(SearchResultPage.pagePath);
                       },
                     ),
                   ),

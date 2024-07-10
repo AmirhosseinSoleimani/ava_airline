@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "businessClass": MessageLookupByLibrary.simpleMessage("Business Class"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("Buy ticket"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("Buy Ticket"),
+        "carRental": MessageLookupByLibrary.simpleMessage("Car rental"),
         "catering": MessageLookupByLibrary.simpleMessage("Catering"),
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Change Language"),
@@ -209,6 +210,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lounge Services"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "mashhad": MessageLookupByLibrary.simpleMessage("Mashhad"),
+        "mashhad1": MessageLookupByLibrary.simpleMessage(
+            "The city of Mashhad and Agha in Razavi Khorasan province is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of travelers and tourists is the existence of the court of Imam Reza (a.s.) in the city of Mashhad. This city is culturally very rich. The city of Mashhad and Agha in Razavi Khorasan province is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of travelers and tourists is the existence of the court of Imam Reza (a.s.) in the city of Mashhad. This city is culturally very rich."),
+        "mashhad2": MessageLookupByLibrary.simpleMessage(
+            "The tomb of many religious, poetry and literature greats such as Ferdowsi, who had a significant impact on Iranian culture and language, is located in this city and its suburbs. All these have made Mashhad become a modern city in recent years, so that there are various and advanced entertainment, tourism and commercial centers in its place."),
         "medical_issues":
             MessageLookupByLibrary.simpleMessage("Medical Issues"),
         "message1": MessageLookupByLibrary.simpleMessage(
