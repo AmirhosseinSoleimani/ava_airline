@@ -37,7 +37,7 @@ class IconManager {
   static const IconData home = CupertinoIcons.house_fill;
   static const IconData book = CupertinoIcons.search;
   static const IconData airplane = CupertinoIcons.airplane;
-  static const IconData person = CupertinoIcons.person;
+  static const IconData person = CupertinoIcons.person_fill;
 
   static const IconData phone = CupertinoIcons.phone_arrow_up_right;
   static const IconData location = CupertinoIcons.location_solid;
