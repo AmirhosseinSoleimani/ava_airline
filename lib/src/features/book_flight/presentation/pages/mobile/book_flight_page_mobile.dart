@@ -112,9 +112,9 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   returnTab(context) {
-    return Column(
+    return const Column(
       children: [
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         FlightCard(
           isSingle: false,
         ),
@@ -123,9 +123,9 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   oneWayTab(context) {
-    return Column(
+    return const Column(
       children: [
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         FlightCard(
           isSingle: true,
         ),
@@ -146,7 +146,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             child: Text('${localization.flight} 1'),
           ),
           const SizedBox(height: 8),
-          Center(child: FlightCard(isSingle: true)),
+          const Center(child: FlightCard(isSingle: true)),
           const SizedBox(height: 32),
           Padding(
             padding: EdgeInsets.symmetric(
@@ -154,7 +154,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             child: Text('${localization.flight} 2'),
           ),
           const SizedBox(height: 8),
-          Center(child: FlightCard(isSingle: true)),
+          const Center(child: FlightCard(isSingle: true)),
           const SizedBox(height: 32),
         ],
       ),

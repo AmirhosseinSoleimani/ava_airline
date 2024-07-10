@@ -60,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "buyTicket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "catering": MessageLookupByLibrary.simpleMessage("پذیرایی"),
+        "changeLanguage": MessageLookupByLibrary.simpleMessage("تغییر زبان"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغییر جستجو"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
         "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
@@ -130,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_female": MessageLookupByLibrary.simpleMessage("زن"),
         "gender_male": MessageLookupByLibrary.simpleMessage("مرد"),
         "gender_unspecified": MessageLookupByLibrary.simpleMessage("غیرمشخص"),
+        "gold": MessageLookupByLibrary.simpleMessage("طلایی"),
         "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 مسافر"),
         "home": MessageLookupByLibrary.simpleMessage("خانه"),
         "hotels": MessageLookupByLibrary.simpleMessage("هتل‌ها"),
@@ -154,6 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("بالابر به جای ویلچر"),
         "live_animals": MessageLookupByLibrary.simpleMessage("حیوان زنده"),
         "login_register": MessageLookupByLibrary.simpleMessage("ورود/ثبت نام"),
+        "logout": MessageLookupByLibrary.simpleMessage("خروج"),
         "lost_baggage": MessageLookupByLibrary.simpleMessage("بار گمشده"),
         "lounge_services": MessageLookupByLibrary.simpleMessage("خدمات لانج"),
         "male": MessageLookupByLibrary.simpleMessage("مرد"),
@@ -169,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "پرواز شما AV789 اکنون در گیت 5 در حال سوار شدن است."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "با 50٪ تخفیف به کلاس بیزینس وارد شوید!"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("مایل پرواز"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تلاش شرکت هواپیمایی آوا، حداقل رساندن زمان تاخیر پروازهاست"),
         "multiCity": MessageLookupByLibrary.simpleMessage("چند شهر"),
@@ -304,6 +308,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticketInfo": MessageLookupByLibrary.simpleMessage("اطلاعات بلیط"),
         "ticket_guide":
             MessageLookupByLibrary.simpleMessage("راهنمای خرید بلیط"),
+        "tier": MessageLookupByLibrary.simpleMessage("رده"),
         "title1": MessageLookupByLibrary.simpleMessage("بروزرسانی وضعیت پرواز"),
         "title2": MessageLookupByLibrary.simpleMessage("تبلیغ"),
         "title3": MessageLookupByLibrary.simpleMessage("یادآوری ورود"),

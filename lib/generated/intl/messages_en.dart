@@ -64,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "buyTicket": MessageLookupByLibrary.simpleMessage("Buy ticket"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("Buy Ticket"),
         "catering": MessageLookupByLibrary.simpleMessage("Catering"),
+        "changeLanguage":
+            MessageLookupByLibrary.simpleMessage("Change Language"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("Change Search"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("Change Ticket"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
@@ -144,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_male": MessageLookupByLibrary.simpleMessage("Male"),
         "gender_unspecified":
             MessageLookupByLibrary.simpleMessage("Unspecified"),
+        "gold": MessageLookupByLibrary.simpleMessage("Gold"),
         "hintTextPassenger":
             MessageLookupByLibrary.simpleMessage("1 passenger"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -175,6 +178,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "live_animals": MessageLookupByLibrary.simpleMessage("Live Animals"),
         "login_register":
             MessageLookupByLibrary.simpleMessage("Login/Register"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "lost_baggage": MessageLookupByLibrary.simpleMessage("Lost Baggage"),
         "lounge_services":
             MessageLookupByLibrary.simpleMessage("Lounge Services"),
@@ -192,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your flight AV789 is now boarding at Gate 5."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "Upgrade to Business Class with a 50% discount!"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("Miles flown"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "Ava Airlines strives to minimize flight delays."),
         "multiCity": MessageLookupByLibrary.simpleMessage("Multi city"),
@@ -335,6 +340,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticketInfo":
             MessageLookupByLibrary.simpleMessage("Ticket Information"),
         "ticket_guide": MessageLookupByLibrary.simpleMessage("Ticket Guide"),
+        "tier": MessageLookupByLibrary.simpleMessage("Tier"),
         "title1": MessageLookupByLibrary.simpleMessage("Flight Status Update"),
         "title2": MessageLookupByLibrary.simpleMessage("Promotion"),
         "title3": MessageLookupByLibrary.simpleMessage("Check-in Reminder"),

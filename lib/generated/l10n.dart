@@ -2399,6 +2399,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Miles flown`
+  String get milesFlown {
+    return Intl.message(
+      'Miles flown',
+      name: 'milesFlown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gold`
+  String get gold {
+    return Intl.message(
+      'Gold',
+      name: 'gold',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tier`
+  String get tier {
+    return Intl.message(
+      'Tier',
+      name: 'tier',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get changeLanguage {
+    return Intl.message(
+      'Change Language',
+      name: 'changeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

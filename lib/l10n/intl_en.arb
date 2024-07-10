@@ -234,5 +234,10 @@
   "title4": "Flight Status Update",
   "message4": "Your flight AV789 is now boarding at Gate 5.",
   "title5": "Promotion",
-  "message5": "Upgrade to Business Class with a 50% discount!"
+  "message5": "Upgrade to Business Class with a 50% discount!",
+  "milesFlown": "Miles flown",
+  "gold": "Gold",
+  "tier" : "Tier",
+  "changeLanguage": "Change Language",
+  "logout": "Logout"
 }

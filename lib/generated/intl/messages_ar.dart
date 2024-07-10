@@ -61,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "buyTicket": MessageLookupByLibrary.simpleMessage("اشتري تذاكر"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("شراء تذكرة"),
         "catering": MessageLookupByLibrary.simpleMessage("التموين"),
+        "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغيير البحث"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغيير التذكرة"),
         "children": MessageLookupByLibrary.simpleMessage("الأطفال"),
@@ -135,6 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "gender_male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "gender_unspecified": MessageLookupByLibrary.simpleMessage("غير محدد"),
+        "gold": MessageLookupByLibrary.simpleMessage("ذهبي"),
         "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 مسافر"),
         "home": MessageLookupByLibrary.simpleMessage("المنزل"),
         "hotels": MessageLookupByLibrary.simpleMessage("فنادق"),
@@ -164,6 +166,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "live_animals": MessageLookupByLibrary.simpleMessage("حيوان حي"),
         "login_register":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول/تسجيل"),
+        "logout": MessageLookupByLibrary.simpleMessage("خروج"),
         "lost_baggage":
             MessageLookupByLibrary.simpleMessage("الأمتعة المفقودة"),
         "lounge_services": MessageLookupByLibrary.simpleMessage("خدمات الصالة"),
@@ -180,6 +183,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "رحلتك AV789 بدأت الآن في الصعود في البوابة 5."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "قم بالترقية إلى الدرجة الأولى بخصم 50٪!"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("الأميال المقطوعة"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تسعى شركة آفا للطيران إلى تقليل تأخيرات الرحلات."),
         "multiCity": MessageLookupByLibrary.simpleMessage("مدن متعددة"),
@@ -316,6 +320,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tehran": MessageLookupByLibrary.simpleMessage("طهران"),
         "ticketInfo": MessageLookupByLibrary.simpleMessage("معلومات التذكرة"),
         "ticket_guide": MessageLookupByLibrary.simpleMessage("دليل التذكرة"),
+        "tier": MessageLookupByLibrary.simpleMessage("المرتبة"),
         "title1": MessageLookupByLibrary.simpleMessage("تحديث حالة الرحلة"),
         "title2": MessageLookupByLibrary.simpleMessage("ترويج"),
         "title3": MessageLookupByLibrary.simpleMessage("تذكير تسجيل الوصول"),
