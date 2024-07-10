@@ -78,7 +78,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغییر زبان"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغییر جستجو"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
-        "children": MessageLookupByLibrary.simpleMessage("کودک"),
         "childrenDescription":
             MessageLookupByLibrary.simpleMessage("2 تا 11 سال"),
         "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
@@ -174,9 +173,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "incapacitatedPassengerWheelchairPageTitle":
             MessageLookupByLibrary.simpleMessage(
                 "مسافران توان خواه/شرایط ویژه"),
-        "infant": MessageLookupByLibrary.simpleMessage("نوزاد"),
         "infantDescription": MessageLookupByLibrary.simpleMessage("زیر 2 سال"),
-        "inn": MessageLookupByLibrary.simpleMessage("in"),
+        "inn": MessageLookupByLibrary.simpleMessage("در"),
         "internationalFlightCost": MessageLookupByLibrary.simpleMessage(
             "پرواز بین المللی از ایران 1,000,000 ریال"),
         "international_destinations":
@@ -204,6 +202,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "mashhad1": MessageLookupByLibrary.simpleMessage(
             "شهر مشهد و اقع در استان خراسان رضوی یکی از استان‌های تاریخی و مذهبی ایران محسوب می‌شود. این شهر سالانه میزبان حدود ۲۷ میلیون نفر از مسافران داخلی و خارجی است که برای زیارت و مراسم‌های مذهبی به این مکان سفر می‌کنند. دلیل اصلی این حجم مسافر و گردشگر وجود بارگاه امام رضا(ع) در شهر مشهد است. این شهر به لحاظ فرهنگی هم بسیار غنی است."),
         "mashhad2": MessageLookupByLibrary.simpleMessage(
+            "آرامگاه خیلی از بزرگان دین، شعر و ادبیات مثل فردوسی که تاثیر بسزایی در فرهنگ و زبان ایرانی‌ها داشته، در این شهر و توابع آن قرار دارد. همه این‌ها باعث شده مشهد در سال‌های اخیر به یک شهر مدرن تبدیل شود، به طوری که در حال حاضر مراکز تفریحی، گردشگری و تجاری متنوع و پیشرفته‌ای در جای‌جای آن وجود دارد."),
+        "mashhadSpecialFaresPageTitle":
+            MessageLookupByLibrary.simpleMessage("سفر زیارتی مشهد"),
+        "mashhadSpecialFaresParagraph1": MessageLookupByLibrary.simpleMessage(
+            "شهر مشهد و اقع در استان خراسان رضوی یکی از استان‌های تاریخی و مذهبی ایران محسوب می‌شود. این شهر سالانه میزبان حدود ۲۷ میلیون نفر از مسافران داخلی و خارجی است که برای زیارت و مراسم‌های مذهبی به این مکان سفر می‌کنند. دلیل اصلی این حجم مسافر و گردشگر وجود بارگاه امام رضا(ع) در شهر مشهد است. این شهر به لحاظ فرهنگی هم بسیار غنی است."),
+        "mashhadSpecialFaresParagraph2": MessageLookupByLibrary.simpleMessage(
             "آرامگاه خیلی از بزرگان دین، شعر و ادبیات مثل فردوسی که تاثیر بسزایی در فرهنگ و زبان ایرانی‌ها داشته، در این شهر و توابع آن قرار دارد. همه این‌ها باعث شده مشهد در سال‌های اخیر به یک شهر مدرن تبدیل شود، به طوری که در حال حاضر مراکز تفریحی، گردشگری و تجاری متنوع و پیشرفته‌ای در جای‌جای آن وجود دارد."),
         "medical_issues": MessageLookupByLibrary.simpleMessage("موارد پزشکی"),
         "message1": MessageLookupByLibrary.simpleMessage(
