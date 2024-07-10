@@ -34,13 +34,86 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
   int infants = 0;
 
 
+  void _updateTotalPassengers() {
+    int total = adults + children + infants;
+    passengerController.text = '$total Passengers';
+  }
+
+
+
   @override
   void initState() {
+    _updateTotalPassengers();
     tabController = TabController(length: 3, vsync: this);
     tabController.addListener(() {
       setState(() {});
     });
     super.initState();
+  }
+
+  void _showPassengerDialog() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _buildPassengerRow('Adults', adults, (val) {
+                setState(() {
+                  adults = val;
+                  _updateTotalPassengers();
+                });
+              }),
+              _buildPassengerRow('Children', children, (val) {
+                setState(() {
+                  children = val;
+                  _updateTotalPassengers();
+                });
+              }),
+              _buildPassengerRow('Infants', infants, (val) {
+                setState(() {
+                  infants = val;
+                  _updateTotalPassengers();
+                });
+              }),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildPassengerRow(String label, int count, Function(int) onCountChanged) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(label),
+          Row(
+            children: [
+              IconButton(
+                icon: Icon(Icons.remove),
+                onPressed: () {
+                  if (count > 0) {
+                    onCountChanged(count - 1);
+                  }
+                },
+              ),
+              Text(count.toString()),
+              IconButton(
+                icon: Icon(Icons.add),
+                onPressed: () {
+                  onCountChanged(count + 1);
+                },
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildRadioButton(int value, String text) {

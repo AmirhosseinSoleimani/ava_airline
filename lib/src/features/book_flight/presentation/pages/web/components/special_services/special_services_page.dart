@@ -1,9 +1,6 @@
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/confirm/confirm_page.dart';
-import 'package:flutter/material.dart';
-
 import '../../../../../../../../generated/l10n.dart';
 import '../../../../../../../shared/footer/footer_widget.dart';
-import '../../../../../../../shared/resources/resources.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
 import '../flight_selection/widgets/stepper_widget.dart';
 

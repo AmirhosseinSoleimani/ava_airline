@@ -3,6 +3,7 @@ import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
+import '../../../../../shared/ui_kits/ava_drawer/ava_drawer.dart';
 import 'components/special_trips/special_trips_container.dart';
 
 
@@ -96,105 +97,7 @@ class _HomePageWebState extends State<HomePageWeb> {
     final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
       key: scaffoldKey,
-      drawer: Drawer(
-        backgroundColor: Theme.of(context).colorScheme.onSecondary,
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(AppPadding.p12),
-                    child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
-                        Theme.of(context).colorScheme.error,
-                        BlendMode.srcIn)),
-                  ),
-                  AvaInkwellButton(
-                    buttonPadding: AppPadding.p12,
-                    onTap: () {},
-                    title: localization.login_register,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    borderRadius: AppSize.s8,
-                    backgroundColor:
-                    ColorDarkThemeManager.transparent,
-                    borderColor:
-                    Theme.of(context).colorScheme.onSurface,
-                  ),
-                  const Divider(),
-                  ExpansionPanelList(
-                    expansionCallback: (int index, bool isExpanded) {
-                      setState(() {
-                        expanded[index] = isExpanded;
-                      });
-                    },
-                    children: navbarItems.asMap().entries.map<ExpansionPanel>((entry) {
-                      int index = entry.key;
-                      String key = entry.value.keys.first;
-                      List<String> values = entry.value.values.first;
-                      return ExpansionPanel(
-                        backgroundColor: Theme.of(context).colorScheme.onSecondary,
-                        headerBuilder: (BuildContext context, bool isExpanded) {
-                          return ListTile(
-                            title: Text(key),
-                          );
-                        },
-                        body: Column(
-                          children: values.map((value) {
-                            return Padding(
-                              padding: const EdgeInsets.all(AppPadding.p8),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(value),
-                                  const Icon(IconManager.chevronRight, size: AppSize.s24,),
-                                ],
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                        isExpanded: expanded[index],
-                      );
-                    }).toList(),
-                  ),
-                ],
-              ),
-              Space.h64,
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(localization.version, style: Theme.of(context).textTheme.bodyMedium,),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          SvgManager.earthSvg,
-                          colorFilter: ColorFilter.mode(
-                              Theme.of(context).colorScheme.onSurface,
-                              BlendMode.srcIn),
-                          semanticsLabel: 'AVA Airlines',
-                          width: AppSize.s42,
-                        ),
-                        Space.w8,
-                        Text(
-                          localization.language,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium,
-                        )
-                      ],
-                    ),
-
-                  ],
-                ),
-              ),
-              Space.h16,
-
-            ],
-          ),
-        ),
-      ),
+      drawer: const AvaDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -212,9 +115,8 @@ class _HomePageWebState extends State<HomePageWeb> {
                   child: Padding(
                     padding: const EdgeInsets.all(AppPadding.p16),
                     child: Row(
-                      mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        if (locale == 'en')
                           InkWell(
                             onTap: () {
                               scaffoldKey.currentState?.openDrawer();
@@ -225,19 +127,8 @@ class _HomePageWebState extends State<HomePageWeb> {
                               color: Theme.of(context).colorScheme.onSecondary,
                             ),
                           ),
-                        SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
                         Space.w16,
-                        if (locale != 'en')
-                          InkWell(
-                            onTap: () {
-                              scaffoldKey.currentState?.openDrawer();
-                            },
-                            child: Icon(
-                              IconManager.density,
-                              size: AppSize.s24,
-                              color: Theme.of(context).colorScheme.onSecondary,
-                            ),
-                          ),
+                        SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
                       ],
                     ),
                   ),
