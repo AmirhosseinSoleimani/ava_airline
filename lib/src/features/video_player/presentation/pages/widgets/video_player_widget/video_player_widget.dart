@@ -10,7 +10,7 @@ class VideoPlayerWidget extends StatefulWidget {
 }
 
 class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
-  final videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('https://aspb34.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImE2MzNiODM4ZWY0NDVhMDRmM2RiMmMxMGNjY2Y2MTRkIiwiZXhwIjoxNzIwNjEzNDUyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.DuUa7NIHvZIOxbCE903PUj9TkZ6pvtpcA9M_51CFw_4'));
+  final videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('https://aspb31.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjhkNzZmZThhZTJmZDg4NmE1ODhiMTQzYzAyYWNmMDg4IiwiZXhwIjoxNzIwNjMyMTc0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.o4o-82Hys50zOw9vdlKxFJIfEJvGv4KQgRYzO4Hvz-s'));
   late VideoPlayerController _videoPlayerController;
   ChewieController? _chewieController;
   int? bufferDelay;
@@ -29,11 +29,11 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   }
 
   List<String> srcs = [
-    'https://aspb34.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImE2MzNiODM4ZWY0NDVhMDRmM2RiMmMxMGNjY2Y2MTRkIiwiZXhwIjoxNzIwNjEzNDUyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.DuUa7NIHvZIOxbCE903PUj9TkZ6pvtpcA9M_51CFw_4'
+    'https://aspb31.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjhkNzZmZThhZTJmZDg4NmE1ODhiMTQzYzAyYWNmMDg4IiwiZXhwIjoxNzIwNjMyMTc0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.o4o-82Hys50zOw9vdlKxFJIfEJvGv4KQgRYzO4Hvz-s'
   ];
 
   Future<void> initializePlayer() async {
-    _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('https://aspb34.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImE2MzNiODM4ZWY0NDVhMDRmM2RiMmMxMGNjY2Y2MTRkIiwiZXhwIjoxNzIwNjEzNDUyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.DuUa7NIHvZIOxbCE903PUj9TkZ6pvtpcA9M_51CFw_4'));
+    _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('https://aspb31.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjhkNzZmZThhZTJmZDg4NmE1ODhiMTQzYzAyYWNmMDg4IiwiZXhwIjoxNzIwNjMyMTc0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.o4o-82Hys50zOw9vdlKxFJIfEJvGv4KQgRYzO4Hvz-s'));
     await Future.wait([
       _videoPlayerController.initialize(),
     ]);
