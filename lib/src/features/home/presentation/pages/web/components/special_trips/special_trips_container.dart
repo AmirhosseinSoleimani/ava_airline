@@ -1,5 +1,6 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/book_flight/book_flight.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/video_player/presentation/pages/video_player_page.dart';
@@ -73,6 +74,7 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                   ),
                   (widget.isSmall ?? false) ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         widget.hoverImageCardEntity.date,
@@ -120,7 +122,7 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                       height: AppSize.s48,
                       child: ElevatedButton(
                         onPressed: () {
-                          context.go(VideoPlayerPage.videoPlayerPagePath);
+                          context.go(FlightSelectionPage.flightSelectionPagePath);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Theme.of(context).colorScheme.primary,
@@ -136,7 +138,9 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                       width: double.infinity,
                       height: AppSize.s48,
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          context.go(VideoPlayerPage.videoPlayerPagePath);
+                        },
                         child: Container(
                           decoration: BoxDecoration(
                               color: ColorLightThemeManager.transparent,

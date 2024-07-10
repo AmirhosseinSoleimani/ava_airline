@@ -209,6 +209,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lounge Services"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "mashhad": MessageLookupByLibrary.simpleMessage("Mashhad"),
+        "mashhadSpecialFaresPageTitle":
+            MessageLookupByLibrary.simpleMessage("Mashhad Pilgrimage Trip"),
+        "mashhadSpecialFaresParagraph1": MessageLookupByLibrary.simpleMessage(
+            "Mashhad city, located in Khorasan Razavi province, is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of passengers and tourists is the shrine of Imam Reza (AS) in Mashhad. This city is also culturally very rich."),
+        "mashhadSpecialFaresParagraph2": MessageLookupByLibrary.simpleMessage(
+            "The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it."),
         "medical_issues":
             MessageLookupByLibrary.simpleMessage("Medical Issues"),
         "message1": MessageLookupByLibrary.simpleMessage(
