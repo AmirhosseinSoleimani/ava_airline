@@ -8,5 +8,4 @@ export 'package:equatable/equatable.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:ava_airline/src/features/bottom_navigation_bar/presentation/bloc/bottom_navigation_bar_cubit.dart';
 export 'package:ava_airline/src/features/bottom_navigation_bar/presentation/pages/bottom_navigation_bar_page.dart';
-export 'package:flutter_gen/gen_l10n/app_localizations.dart';
 export 'package:flutter_svg/flutter_svg.dart';

@@ -10,9 +10,9 @@ import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/feature_card.dart';
+import 'package:ava_airline/src/features/video/presentation/video_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shimmer/shimmer.dart';
 
 class HomePageMobile extends StatefulWidget {
@@ -83,7 +83,8 @@ class _HomePageMobileState extends State<HomePageMobile> {
 
     final features = [
       Feature(title: localization.hotels, assetPath: 'assets/image/hotel.png'),
-      Feature(title: localization.dining, assetPath: 'assets/image/dining.jpg'),
+      Feature(title: localization.carRental,
+          assetPath: 'assets/image/car_rental.jpg'),
       Feature(
           title: localization.flightEntertainment,
           assetPath: 'assets/image/entertainment.jpg'),
@@ -110,8 +111,14 @@ class _HomePageMobileState extends State<HomePageMobile> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
+        backgroundColor: Theme
+            .of(context)
+            .colorScheme
+            .surface,
+        surfaceTintColor: Theme
+            .of(context)
+            .colorScheme
+            .surfaceTint,
         title: Image.asset(
           'assets/image/ava.png',
           height: AppBar().preferredSize.height - 16,
@@ -121,127 +128,163 @@ class _HomePageMobileState extends State<HomePageMobile> {
       body: isLoading
           ? _buildShimmer(context)
           : RefreshIndicator(
-              onRefresh: () async{
-                setState(() {
-                  isLoading = true;
-                });
-                loadPage();
-              },
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CarouselSlider(
-                      carouselController: _controller,
-                      items: carousels
-                          .map(
-                            (e) => CarouselCard(
-                              carousel: e,
-                            ),
-                          )
-                          .toList(),
-                      options: CarouselOptions(
-                          autoPlay: true,
-                          viewportFraction: 1,
-                          height: 200,
-                          onPageChanged: (index, reason) {
-                            setState(() {
-                              _current = index;
-                            });
-                          }),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: carousels.asMap().entries.map((entry) {
-                        return GestureDetector(
-                          onTap: () => _controller.animateToPage(entry.key),
-                          child: Container(
-                            width: 12,
-                            height: 12,
-                            margin: const EdgeInsets.symmetric(
-                                vertical: 8, horizontal: 4),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: (Theme.of(context).colorScheme.primary)
-                                    .withOpacity(
-                                        _current == entry.key ? 1 : 0.4)),
-                          ),
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal:
-                              (MediaQuery.of(context).size.width * 0.025)),
-                      child: Text(
-                        '${localization.destinationsFrom}\n${localization.tehran}${localization.comma} ${localization.iran}',
-                        style: Theme.of(context).textTheme.displayMedium,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Center(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.95,
-                        child: CarouselSlider(
-                          items: destinations
-                              .map((e) => DestinationCard(destination: e))
-                              .toList(),
-                          options: CarouselOptions(
-                              autoPlay: true,
-                              height: 200,
-                              viewportFraction: 0.7),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal:
-                              (MediaQuery.of(context).size.width * 0.025)),
-                      child: Text(
-                        localization.avaFlightExperience,
-                        style: Theme.of(context).textTheme.displayMedium,
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: Column(
-                        children: features
-                            .map((e) => FeatureCard(feature: e))
-                            .toList(),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal:
-                              (MediaQuery.of(context).size.width * 0.025)),
-                      child: Text(
-                        localization.popularDestinations,
-                        style: Theme.of(context).textTheme.displayMedium,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Center(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.95,
-                        child: CarouselSlider(
-                          items: cities.map((e) => CityCard(city: e)).toList(),
-                          options: CarouselOptions(
-                              autoPlay: true,
-                              enlargeCenterPage: true,
-                              enlargeStrategy: CenterPageEnlargeStrategy.zoom,
-                              enlargeFactor: 0.35,
-                              viewportFraction: 0.5),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 100)
-                  ],
+        onRefresh: () async {
+          setState(() {
+            isLoading = true;
+          });
+          loadPage();
+        },
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            CarouselSlider(
+            carouselController: _controller,
+            items: carousels
+                .map(
+                  (e) =>
+                  CarouselCard(
+                    carousel: e,
+                  ),
+            )
+                .toList(),
+            options: CarouselOptions(
+                autoPlay: true,
+                viewportFraction: 1,
+                height: 200,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _current = index;
+                  });
+                }),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: carousels
+                .asMap()
+                .entries
+                .map((entry) {
+              return GestureDetector(
+                onTap: () => _controller.animateToPage(entry.key),
+                child: Container(
+                  width: 12,
+                  height: 12,
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 8, horizontal: 4),
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: (Theme
+                          .of(context)
+                          .colorScheme
+                          .primary)
+                          .withOpacity(
+                          _current == entry.key ? 1 : 0.4)),
                 ),
+              );
+            }).toList(),
+          ),
+          const SizedBox(height: 16),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal:
+                (MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.025)),
+            child: Text(
+              '${localization.destinationsFrom}\n${localization
+                  .tehran}${localization.comma} ${localization.iran}',
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .displayMedium,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Center(
+            child: SizedBox(
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width * 0.95,
+              child: CarouselSlider(
+                items: destinations
+                    .map((e) => DestinationCard(destination: e))
+                    .toList(),
+                options: CarouselOptions(
+                    autoPlay: true,
+                    height: 200,
+                    viewportFraction: 0.7),
               ),
             ),
+          ),
+          const SizedBox(height: 16),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal:
+                (MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.025)),
+            child: Text(
+              localization.avaFlightExperience,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .displayMedium,
+            ),
+          ),
+          SizedBox(
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
+            child: Column(
+              children: features
+                  .map((e) => FeatureCard(feature: e))
+                  .toList(),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal:
+                (MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.025)),
+            child: Text(
+              localization.popularDestinations,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .displayMedium,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Center(
+            child: SizedBox(
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width * 0.95,
+              child: CarouselSlider(
+                  items: cities.map((e) =>
+                      GestureDetector(onTap: () => context.push(VideoPage.pagePath),child: CityCard(city: e))).toList(),
+              options: CarouselOptions(
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  enlargeStrategy: CenterPageEnlargeStrategy.zoom,
+                  enlargeFactor: 0.35,
+                  viewportFraction: 0.5),
+            ),
+          ),
+        ),
+        const SizedBox(height: 100)
+        ],
+      ),
+    ),)
+    ,
     );
   }
 
@@ -261,17 +304,19 @@ class _HomePageMobileState extends State<HomePageMobile> {
               carouselController: _controller,
               items: List.generate(
                 1,
-                (_) => Carousel(
-                    id: -1,
-                    description: localization.bookYourFlight,
-                    title: localization.buyTicket,
-                    assetPath: ''),
+                    (_) =>
+                    Carousel(
+                        id: -1,
+                        description: localization.bookYourFlight,
+                        title: localization.buyTicket,
+                        assetPath: ''),
               )
                   .map(
-                    (e) => CarouselCard(
+                    (e) =>
+                    CarouselCard(
                       carousel: e,
                     ),
-                  )
+              )
                   .toList(),
               options: CarouselOptions(
                   autoPlay: true,
@@ -287,35 +332,50 @@ class _HomePageMobileState extends State<HomePageMobile> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
                 3,
-                (index) => Container(
-                  width: 12,
-                  height: 12,
-                  margin:
+                    (index) =>
+                    Container(
+                      width: 12,
+                      height: 12,
+                      margin:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: (Theme.of(context).colorScheme.primary)),
-                ),
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: (Theme
+                              .of(context)
+                              .colorScheme
+                              .primary)),
+                    ),
               ),
             ),
             const SizedBox(height: 16),
             Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: (MediaQuery.of(context).size.width * 0.025)),
+                  horizontal: (MediaQuery
+                      .of(context)
+                      .size
+                      .width * 0.025)),
               child: Text(
-                '${localization.destinationsFrom}\n${localization.tehran}${localization.comma} ${localization.iran}',
-                style: Theme.of(context).textTheme.displayMedium,
+                '${localization.destinationsFrom}\n${localization
+                    .tehran}${localization.comma} ${localization.iran}',
+                style: Theme
+                    .of(context)
+                    .textTheme
+                    .displayMedium,
               ),
             ),
             const SizedBox(height: 4),
             Center(
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.95,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.95,
                 child: CarouselSlider(
                   disableGesture: true,
                   items: List.generate(
                     3,
-                    (_) => const Destination(
+                        (_) =>
+                    const Destination(
                         id: -1,
                         city: '',
                         country: '',
@@ -333,28 +393,43 @@ class _HomePageMobileState extends State<HomePageMobile> {
             const SizedBox(height: 16),
             Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: (MediaQuery.of(context).size.width * 0.025)),
+                  horizontal: (MediaQuery
+                      .of(context)
+                      .size
+                      .width * 0.025)),
               child: Text(
                 localization.avaFlightExperience,
-                style: Theme.of(context).textTheme.displayMedium,
+                style: Theme
+                    .of(context)
+                    .textTheme
+                    .displayMedium,
               ),
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
               child: Column(
                 children: List.generate(
                   3,
-                  (_) => const Feature(title: '', assetPath: ''),
+                      (_) => const Feature(title: '', assetPath: ''),
                 ).map((e) => FeatureCard(feature: e)).toList(),
               ),
             ),
             const SizedBox(height: 16),
             Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: (MediaQuery.of(context).size.width * 0.025)),
+                  horizontal: (MediaQuery
+                      .of(context)
+                      .size
+                      .width * 0.025)),
               child: Text(
                 localization.popularDestinations,
-                style: Theme.of(context).textTheme.displayMedium,
+                style: Theme
+                    .of(context)
+                    .textTheme
+                    .displayMedium,
               ),
             ),
             const SizedBox(height: 100)

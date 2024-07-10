@@ -70,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "businessClass": MessageLookupByLibrary.simpleMessage("بیزینس کلس"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("اشتري تذاكر"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("شراء تذكرة"),
+        "carRental": MessageLookupByLibrary.simpleMessage("تاجير سيارة"),
         "catering": MessageLookupByLibrary.simpleMessage("التموين"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغيير البحث"),
@@ -196,6 +197,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "lounge_services": MessageLookupByLibrary.simpleMessage("خدمات الصالة"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "mashhad": MessageLookupByLibrary.simpleMessage("مشهد"),
+        "mashhad1": MessageLookupByLibrary.simpleMessage(
+            "تعتبر مدينة مشهد وآغا في محافظة خراسان الرضوية إحدى المحافظات التاريخية والدينية في إيران. تستضيف هذه المدينة سنويًا حوالي 27 مليون مسافر محلي وأجنبي يسافرون إلى هذا المكان للحج والاحتفالات الدينية. والسبب الرئيسي لهذا العدد الكبير من المسافرين والسياح هو وجود بلاط الامام الرضا (ع) في مدينة مشهد. هذه المدينة غنية ثقافيا جدا."),
+        "mashhad2": MessageLookupByLibrary.simpleMessage(
+            "ويوجد في هذه المدينة وضواحيها ضريح العديد من عظماء الدين والشعر والأدب مثل الفردوسي الذي كان له تأثير كبير على الثقافة واللغة الإيرانية. كل هذا جعل مشهد تصبح مدينة حديثة في السنوات الأخيرة، بحيث يوجد في مكانها مراكز ترفيهية وسياحية وتجارية متنوعة ومتطورة."),
         "mashhadSpecialFaresPageTitle":
             MessageLookupByLibrary.simpleMessage("رحلة الحج إلى مشهد"),
         "mashhadSpecialFaresParagraph1": MessageLookupByLibrary.simpleMessage(

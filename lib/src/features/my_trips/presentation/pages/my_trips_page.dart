@@ -1,7 +1,6 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../shared/resources/resources.dart';
