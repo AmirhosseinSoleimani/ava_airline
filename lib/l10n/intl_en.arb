@@ -239,5 +239,8 @@
   "gold": "Gold",
   "tier" : "Tier",
   "changeLanguage": "Change Language",
-  "logout": "Logout"
+  "logout": "Logout",
+  "chooseGender": "Choose your gender",
+  "continuee": "Continue",
+  "none": "None"
 }

@@ -306,7 +306,6 @@ class _FlightCardState extends State<FlightCard> {
       }
     } else {
       JalaliRange? picked = await showPersianDateRangePicker(
-        initialEntryMode: PDatePickerEntryMode.input,
         context: context,
         firstDate: Jalali.now(),
         lastDate: Jalali(1450, 9),

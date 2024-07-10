@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenDescription": MessageLookupByLibrary.simpleMessage("Age 2-11"),
         "choose": MessageLookupByLibrary.simpleMessage("Choose"),
+        "chooseGender":
+            MessageLookupByLibrary.simpleMessage("Choose your gender"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("Search for a city"),
         "clas": MessageLookupByLibrary.simpleMessage("Class"),
@@ -86,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirmation and Payment"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact us"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("Country Travel Conditions"),
         "currency": MessageLookupByLibrary.simpleMessage("Rial"),
@@ -212,6 +215,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "If you have an upcoming trip booked with us, you can add it to your My trips list."),
         "no_delay": MessageLookupByLibrary.simpleMessage("No Delay"),
+        "none": MessageLookupByLibrary.simpleMessage("None"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("Normal Refund"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "numberOfPassengers":

@@ -1,12 +1,14 @@
 import 'package:ava_airline/generated/l10n.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/user_info_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../shared/resources/resources.dart';
-import '../../../../../shared/ui_kits/ava_elevated_button/ava_elevate_button.dart';
 
 class SearchResultPage extends StatefulWidget {
   const SearchResultPage({super.key});
+  static const pageName = 'search-result-page';
+  static const pagePath = '/search-result-page';
 
   @override
   State<SearchResultPage> createState() => _SearchResultPageState();
@@ -53,20 +55,20 @@ class _SearchResultPageState extends State<SearchResultPage> {
                             textAlign: TextAlign.start,
                             style: textTheme.headlineLarge,
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Text(localization.shiraz,
                               textAlign: TextAlign.start,
                               style: textTheme.displayLarge),
                         ],
                       ),
                       AppConstants.language == 'en'
-                          ? Icon(
+                          ? const Icon(
                               IconManager.airplane,
                               size: 40,
                             )
                           : Transform.rotate(
                               angle: 3.1415,
-                              child: Icon(
+                              child: const Icon(
                                 IconManager.airplane,
                                 size: 40,
                               ),
@@ -106,11 +108,11 @@ class _SearchResultPageState extends State<SearchResultPage> {
                               ),
                     ),
                     onPressed: () {
-                      //TODO: IMPLEMENT
+                      context.push(UserInfoPage.pagePath);
                     },
                   ),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
               ],
             ),
           ),
@@ -141,20 +143,20 @@ class _SearchResultPageState extends State<SearchResultPage> {
                             textAlign: TextAlign.start,
                             style: textTheme.headlineLarge,
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Text(localization.shiraz,
                               textAlign: TextAlign.start,
                               style: textTheme.displayLarge),
                         ],
                       ),
                       AppConstants.language == 'en'
-                          ? Icon(
+                          ? const Icon(
                               IconManager.airplane,
                               size: 40,
                             )
                           : Transform.rotate(
                               angle: 3.1415,
-                              child: Icon(
+                              child: const Icon(
                                 IconManager.airplane,
                                 size: 40,
                               ),
@@ -194,11 +196,11 @@ class _SearchResultPageState extends State<SearchResultPage> {
                               ),
                     ),
                     onPressed: () {
-                      //TODO: IMPLEMENT
+                      context.push(UserInfoPage.pagePath);
                     },
                   ),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
               ],
             ),
           ),

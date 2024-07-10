@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "adult": MessageLookupByLibrary.simpleMessage("بزرگسال"),
         "adultEconomyClass1":
             MessageLookupByLibrary.simpleMessage("بزرگسال اکونومی کلاس 1"),
+        "adults": MessageLookupByLibrary.simpleMessage("بزرگسال"),
+        "adultsDescription":
+            MessageLookupByLibrary.simpleMessage("12 سال به بالا"),
         "ageGroup": MessageLookupByLibrary.simpleMessage("بازه سنی"),
         "ahvaz": MessageLookupByLibrary.simpleMessage("اهواز"),
         "airlineCompany":
@@ -57,18 +60,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "bookFlight": MessageLookupByLibrary.simpleMessage("رزرو پرواز"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
             "آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید."),
+        "businessClass": MessageLookupByLibrary.simpleMessage("کلاس بیزینس"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "catering": MessageLookupByLibrary.simpleMessage("پذیرایی"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغییر زبان"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغییر جستجو"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
+        "children": MessageLookupByLibrary.simpleMessage("کودک"),
+        "childrenDescription":
+            MessageLookupByLibrary.simpleMessage("2 تا 11 سال"),
         "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
+        "chooseGender":
+            MessageLookupByLibrary.simpleMessage("جنسیت خود را انتخاب کنید"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("جستجوی شهر"),
+        "clas": MessageLookupByLibrary.simpleMessage("کلاس"),
         "comma": MessageLookupByLibrary.simpleMessage("،"),
         "company_description": MessageLookupByLibrary.simpleMessage(
             "شرکت هواپیمایی آوا با هدف ارائه باکیفیت‌ترین خدمات پروازی فعالیت خود را از سال 1402 آغاز کرده‌است. هدف ما کمک به ارتقای کیفیت هواپیمایی کشور در راستای بهبود تجربه مسافران عزیز از سفرهای پروازی خود است"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تائید"),
         "confirmAndPay": MessageLookupByLibrary.simpleMessage("تائید و پرداخت"),
         "confirm_and_pay":
             MessageLookupByLibrary.simpleMessage("تائید و پرداخت"),
@@ -76,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تایید و پرداخت"),
         "contactUs": MessageLookupByLibrary.simpleMessage("تماس با ما"),
         "contact_us": MessageLookupByLibrary.simpleMessage("ارتباط با ما"),
+        "continuee": MessageLookupByLibrary.simpleMessage("ادامه"),
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شرایط سفر به کشورها"),
         "currency": MessageLookupByLibrary.simpleMessage("ریال"),
@@ -97,12 +109,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مقاصد داخلی"),
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
         "economy": MessageLookupByLibrary.simpleMessage("اکونومی"),
+        "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
         "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از"),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید."),
         "faq": MessageLookupByLibrary.simpleMessage("پرسش‌های متداول"),
         "female": MessageLookupByLibrary.simpleMessage("زن"),
+        "firstClass": MessageLookupByLibrary.simpleMessage("فرست کلس"),
         "flight": MessageLookupByLibrary.simpleMessage("پرواز"),
         "flightClass": MessageLookupByLibrary.simpleMessage("کلاس پرواز"),
         "flightDate": MessageLookupByLibrary.simpleMessage("تاریخ پرواز"),
@@ -139,6 +153,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سرگرمی های داخل پرواز"),
         "in_flight_magazine":
             MessageLookupByLibrary.simpleMessage("مجله پروازی"),
+        "infant": MessageLookupByLibrary.simpleMessage("نوزاد"),
+        "infantDescription": MessageLookupByLibrary.simpleMessage("زیر 2 سال"),
+        "inn": MessageLookupByLibrary.simpleMessage("in"),
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد بین المللی"),
         "iran": MessageLookupByLibrary.simpleMessage("ایران"),
@@ -188,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "اگر سفری در پیش دارید که با ما رزرو کرده‌اید، می‌توانید آن را به فهرست سفرهای من اضافه کنید."),
         "no_delay": MessageLookupByLibrary.simpleMessage("عدم تاخیر"),
+        "none": MessageLookupByLibrary.simpleMessage("هیچکدام"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("استرداد عادی"),
         "notifications": MessageLookupByLibrary.simpleMessage("اطلاعیه ها"),
         "numberOfPassengers":
@@ -200,6 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "online_check_in": MessageLookupByLibrary.simpleMessage("پذیرش آنلاین"),
         "origin": MessageLookupByLibrary.simpleMessage("مبدا"),
         "origin_city": MessageLookupByLibrary.simpleMessage("تهران (مهرآباد)"),
+        "passenger": MessageLookupByLibrary.simpleMessage("مسافر"),
         "passengerAndCabinClass":
             MessageLookupByLibrary.simpleMessage("مسافر و کلاس کابین"),
         "passengerDetails":
@@ -218,6 +237,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("راهنمای پذیرش مسافر"),
         "passenger_information":
             MessageLookupByLibrary.simpleMessage("اطلاعات مسافر"),
+        "passengers": MessageLookupByLibrary.simpleMessage("مسافران"),
         "passengersCount": m0,
         "pay": MessageLookupByLibrary.simpleMessage("پرداخت"),
         "payAmount": MessageLookupByLibrary.simpleMessage("13,267,000 ریال"),
@@ -233,6 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("مقصدهای محبوب"),
+        "premiumEconomy":
+            MessageLookupByLibrary.simpleMessage("پریمیوم اکونومی"),
         "professional_staff":
             MessageLookupByLibrary.simpleMessage("پرسنل حرفه ای"),
         "profile": MessageLookupByLibrary.simpleMessage("پروفایل"),

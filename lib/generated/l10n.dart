@@ -2449,6 +2449,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose your gender`
+  String get chooseGender {
+    return Intl.message(
+      'Choose your gender',
+      name: 'chooseGender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continuee {
+    return Intl.message(
+      'Continue',
+      name: 'continuee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `None`
+  String get none {
+    return Intl.message(
+      'None',
+      name: 'none',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

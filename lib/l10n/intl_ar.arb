@@ -239,5 +239,8 @@
   "gold": "ذهبي",
   "tier": "المرتبة",
   "changeLanguage": "تغيير اللغة",
-  "logout": "خروج"
+  "logout": "خروج",
+  "chooseGender": "اختيار جنسك",
+  "continuee": "التالي",
+  "none": "لا أحد"
 }

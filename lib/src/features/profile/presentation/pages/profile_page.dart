@@ -4,7 +4,6 @@ import 'package:ava_airline/src/shared/resources/localization/locale_provider.da
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProfilePage extends StatelessWidget {
   static const profilePageName = 'profile-page';
@@ -19,8 +18,13 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       drawer: const DrawerWidget(),
       appBar: AppBar(
-        title: const Column(
+        title: const Row(
           children: [
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/image/avatar.png'),
+              maxRadius: 30,
+            ),
+            SizedBox(width: 12),
             Text('Soroush Beigi'),
           ],
         ),
@@ -48,7 +52,7 @@ class ProfilePage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          '35.5',
+                          '2450',
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: 4),

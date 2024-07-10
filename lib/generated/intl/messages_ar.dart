@@ -68,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "childrenDescription":
             MessageLookupByLibrary.simpleMessage("العمر 2-11"),
         "choose": MessageLookupByLibrary.simpleMessage("اختيار"),
+        "chooseGender": MessageLookupByLibrary.simpleMessage("اختيار جنسك"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("ابحث عن مدينة"),
         "clas": MessageLookupByLibrary.simpleMessage("طراز"),
@@ -81,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("التأكيد والدفع"),
         "contactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
         "contact_us": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
+        "continuee": MessageLookupByLibrary.simpleMessage("التالي"),
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شروط السفر إلى الدول"),
         "currency": MessageLookupByLibrary.simpleMessage("ريال"),
@@ -199,6 +201,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رحلة قادمة محجوزة معنا، يمكنك إضافتها إلى قائمة رحلاتي."),
         "no_delay": MessageLookupByLibrary.simpleMessage("بدون تأخير"),
+        "none": MessageLookupByLibrary.simpleMessage("لا أحد"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("استرداد عادي"),
         "notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
         "numberOfPassengers":

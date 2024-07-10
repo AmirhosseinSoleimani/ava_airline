@@ -1,4 +1,6 @@
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/confirm_and_pay.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/search_result_page.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/user_info_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/confirm/confirm_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/flight_selection/flight_selection_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/passenger_information/passenger_information_widget.dart';
@@ -35,7 +37,7 @@ class Routes {
         GoRoute(
           path: NotificationsPage.notificationsPagePath,
           name: NotificationsPage.notificationsPageName,
-          builder: (context, state) => NotificationsPage(),
+          builder: (context, state) => const NotificationsPage(),
         ),
 
         ///TABs
@@ -105,9 +107,19 @@ class Routes {
                   },
                 ),
                 GoRoute(
-                  path: '/book-search-result',
-                  name: 'book-search-result',
-                  builder: (context, state) => SearchResultPage(),
+                  path: SearchResultPage.pagePath,
+                  name: SearchResultPage.pageName,
+                  builder: (context, state) => const SearchResultPage(),
+                ),
+                GoRoute(
+                  path: UserInfoPage.pagePath,
+                  name: UserInfoPage.pageName,
+                  builder: (context, state) => const UserInfoPage(),
+                ),
+                GoRoute(
+                  path: ConfirmAndPay.pagePath,
+                  name: ConfirmAndPay.pageName,
+                  builder: (context, state) => const ConfirmAndPay(),
                 )
               ],
             ),
