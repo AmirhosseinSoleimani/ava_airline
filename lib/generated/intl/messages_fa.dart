@@ -50,9 +50,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("آوا همراه آرامش شمــــــــا"),
         "baggage": MessageLookupByLibrary.simpleMessage("بار مسافر"),
         "baggageTracker": MessageLookupByLibrary.simpleMessage("ردیاب بار"),
+        "batteryDescription2": MessageLookupByLibrary.simpleMessage(
+            "ویلچر دارای باطری لیتیومی یونی با قابلیت جدا شدن و ظرفیت حداکثر 300 W/H یا دو باطری با حداکثر ظرفیت 160 W/H ضمن بسته بندی و تایید نماینده ماهان فقط در کابین مسافری حمل می گردد."),
+        "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
+            "ویلچر یا سایر وسایل کمک حرکتی دارای باتری تر یا خشک ضمن حفاظت باتری در برابر اتصالی الکتریکی، بسته بندی ایمن و تایید نماینده ماهان در قسمت بار هواپیما حمل می‌گردد.(در صورت امکان جدا شدن باتری, باتری جدا شده در بسته بندی مقاوم در انبار هواپیما حمل می گردد)."),
+        "batteryWheelchairTitle":
+            MessageLookupByLibrary.simpleMessage("ویلچرهای باتری دار"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "blind": MessageLookupByLibrary.simpleMessage("نابینا"),
+        "blindDeafDescription": MessageLookupByLibrary.simpleMessage(
+            "این افراد نیازبه ارائه گواهی پزشکی ندارند. درصورت سفر گروهی, ارائه مجوز جهت انجام هماهنگی، وجود همراه سالم، توانا و هم زبان برای این گروه مسافران در تمام مراحل سفر ضروری می باشد. همراهی این گروه مسافران توسط پرسنل هواپیمایی ماهان مشمول پرداخت هزینه نمی ‎گردد."),
+        "blindDeafTitle":
+            MessageLookupByLibrary.simpleMessage("افراد نابینا و ناشنوا"),
         "book": MessageLookupByLibrary.simpleMessage("رزرو"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("رزرو پرواز"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
@@ -94,12 +104,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("کد تخفیف"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد داخلی"),
+        "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
+            "پرواز دبی به ایران 150 درهم (ضمن ثبت SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
         "economy": MessageLookupByLibrary.simpleMessage("اکونومی"),
         "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از"),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید."),
+        "exemptionsDescription": MessageLookupByLibrary.simpleMessage(
+            "دارندگان کارت جانبازان، معلولان، خانواده محترم شهدا و همچنین مسافران پروازهای حج و عتبات, اتحادیه اروپا و افراد بیش از 65 سال از پرداخت هزینه معاف می باشند."),
         "faq": MessageLookupByLibrary.simpleMessage("پرسش‌های متداول"),
         "female": MessageLookupByLibrary.simpleMessage("زن"),
         "flight": MessageLookupByLibrary.simpleMessage("پرواز"),
@@ -137,6 +151,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سرگرمی های داخل پرواز"),
         "in_flight_magazine":
             MessageLookupByLibrary.simpleMessage("مجله پروازی"),
+        "incapacitatedPassengerWheelchairPageSubtitle":
+            MessageLookupByLibrary.simpleMessage(
+                "خدمات ویژه برای سفری بدون دغدغه"),
+        "incapacitatedPassengerWheelchairPageTitle":
+            MessageLookupByLibrary.simpleMessage(
+                "مسافران توان خواه/شرایط ویژه"),
+        "internationalFlightCost": MessageLookupByLibrary.simpleMessage(
+            "پرواز بین المللی از ایران 1,000,000 ریال"),
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد بین المللی"),
         "iran": MessageLookupByLibrary.simpleMessage("ایران"),
@@ -175,6 +197,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "اگر سفری در پیش دارید که با ما رزرو کرده‌اید، می‌توانید آن را به فهرست سفرهای من اضافه کنید."),
         "no_delay": MessageLookupByLibrary.simpleMessage("عدم تاخیر"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("استرداد عادی"),
+        "noteDescription": MessageLookupByLibrary.simpleMessage(
+            "در هواپیماهای Embraer ERJ-145 ارائه این خدمات از این قاعده مستثنی است. پذیرش مسافران توانخواه و خانم‌های باردار در کابین بیزینس کلاس هواپیماهای بویینگ 747 امکان‌پذیر نمی‌باشد. لذا خواهشمند است پیش از اقدام به خرید، از نوع هواپیما اطمینان حاصل فرمایید."),
+        "noteTitle": MessageLookupByLibrary.simpleMessage("نکته"),
         "notifications": MessageLookupByLibrary.simpleMessage("اطلاعیه ها"),
         "numberOfPassengers":
             MessageLookupByLibrary.simpleMessage("تعداد مسافر"),
@@ -293,6 +318,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticket_guide":
             MessageLookupByLibrary.simpleMessage("راهنمای خرید بلیط"),
         "to": MessageLookupByLibrary.simpleMessage("به"),
+        "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
+            "پرواز بین المللی به ایران 40 دلار"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تاریخ‌های سفر"),
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات سفر"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("اخبار سفر"),
@@ -300,6 +327,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("کودک بدون همراه"),
         "version": MessageLookupByLibrary.simpleMessage("ورژن 1.0"),
+        "wheelchairDescription": MessageLookupByLibrary.simpleMessage(
+            "براساس مقررات و دستورالعمل هواپیمایی ماهان و ظرفیت هر هواپیما، فقط مسافرانی که از طریق رزرواسیون درخواست ویلچر کابین خود را ثبت نمودند و کد SSR در بلیط ایشان درج شده، مجاز به پذیرش در فرودگاه و استفاده از ویلچر می باشند. مسافرانی که بدون نیاز به گواهی پزشکی نیاز به استفاده از ویلچر دارند, حتما هنگام تهیه بلیط اعلام درخواست خود را ثبت نمایند. امکان استفاده مسافران از ویلچر شخصی تا زمان سوار شدن به هواپیما برای مسافران توانخواه فراهم است. شایان ذکر است در صورت تکمیل ظرفیت، ثبت درخواست ویلچر امکان پذیر نمی‎ باشد."),
+        "wheelchairServiceCostTitle":
+            MessageLookupByLibrary.simpleMessage("هزینه خدمات ویلچر"),
+        "wheelchairTitle": MessageLookupByLibrary.simpleMessage("ویلچر"),
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("ویلچر در تمام مراحل"),
         "wheelchair_in_map": MessageLookupByLibrary.simpleMessage("ویلچر در مپ")

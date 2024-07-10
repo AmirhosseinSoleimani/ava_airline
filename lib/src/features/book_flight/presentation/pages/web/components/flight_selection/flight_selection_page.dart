@@ -19,13 +19,13 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
 
   DatePickerController datePickerController = DatePickerController();
 
-
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
     final localization = S.of(context);
     return Scaffold(
+      key: scaffoldKey,
       drawer: const AvaDrawer(),
       body: SingleChildScrollView(
         child: Column(

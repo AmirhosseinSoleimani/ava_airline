@@ -1,3 +1,5 @@
+import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
+import 'package:ava_airline/src/features/features.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../generated/l10n.dart';
 import '../../../features/book_flight/book_flight.dart';
@@ -67,8 +69,8 @@ class _AvaDrawerState extends State<AvaDrawer> {
         ]
       },
       {
-        localization.special_passenger_club: [
-          localization.buyTicket,
+        localization.myTrips: [
+          localization.myTrips,
         ]
       }
     ];
@@ -88,9 +90,12 @@ class _AvaDrawerState extends State<AvaDrawer> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(AppPadding.p12),
-                  child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
-                      Theme.of(context).colorScheme.error,
-                      BlendMode.srcIn)),
+                  child: InkWell(
+                    onTap: () => context.go(HomePage.homePagePath),
+                    child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
+                        Theme.of(context).colorScheme.error,
+                        BlendMode.srcIn)),
+                  ),
                 ),
                 AvaInkwellButton(
                   buttonPadding: AppPadding.p12,

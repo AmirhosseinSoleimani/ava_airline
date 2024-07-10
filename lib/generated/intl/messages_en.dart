@@ -53,9 +53,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "baggage": MessageLookupByLibrary.simpleMessage("Baggage"),
         "baggageTracker":
             MessageLookupByLibrary.simpleMessage("Baggage tracker"),
+        "batteryDescription2": MessageLookupByLibrary.simpleMessage(
+            "Wheelchairs with lithium-ion batteries with a maximum capacity of 300 W/H or two batteries with a maximum capacity of 160 W/H, after packaging and approval by Mahan Airlines representative, are only carried in the passenger cabin."),
+        "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
+            "Wheelchairs or other mobility aids with wet or dry batteries are transported in the aircraft\'s cargo hold with the battery protected against short circuits, safely packaged, and approved by Mahan Airlines representative. (If the battery is removable, the detached battery is carried in a resistant package in the aircraft\'s hold)."),
+        "batteryWheelchairTitle":
+            MessageLookupByLibrary.simpleMessage("Battery-Powered Wheelchairs"),
         "birthDate": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "birth_date": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "blind": MessageLookupByLibrary.simpleMessage("Blind"),
+        "blindDeafDescription": MessageLookupByLibrary.simpleMessage(
+            "These passengers do not need to provide a medical certificate. In case of group travel, providing a permit for coordination, the presence of a healthy, capable, and same-language companion for these passengers is necessary throughout the journey. Accompanying these passengers by Mahan Airlines personnel is not subject to a fee."),
+        "blindDeafTitle":
+            MessageLookupByLibrary.simpleMessage("Blind and Deaf Passengers"),
         "book": MessageLookupByLibrary.simpleMessage("Book"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("Book a flight"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
@@ -104,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("Discount Code"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("Domestic Destinations"),
+        "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
+            "Dubai to Iran flight 150 AED (with SSR registration)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("During Flight"),
         "economy": MessageLookupByLibrary.simpleMessage("Economy"),
         "economyClass": MessageLookupByLibrary.simpleMessage("Economy Class"),
@@ -111,6 +123,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "If you have a discount code, enter it below and click Apply."),
+        "exemptionsDescription": MessageLookupByLibrary.simpleMessage(
+            "Holders of veterans, disabled, and martyr families cards, as well as passengers on Hajj and Atabat flights, EU citizens, and individuals over 65 years old are exempt from payment."),
         "faq": MessageLookupByLibrary.simpleMessage("FAQ"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "firstClass": MessageLookupByLibrary.simpleMessage("First Class"),
@@ -152,10 +166,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("In-Flight Entertainment"),
         "in_flight_magazine":
             MessageLookupByLibrary.simpleMessage("In-Flight Magazine"),
+        "incapacitatedPassengerWheelchairPageSubtitle":
+            MessageLookupByLibrary.simpleMessage(
+                "Special services for a hassle-free trip"),
+        "incapacitatedPassengerWheelchairPageTitle":
+            MessageLookupByLibrary.simpleMessage(
+                "Passengers with Special Needs/Wheelchair"),
         "infant": MessageLookupByLibrary.simpleMessage("Infant"),
         "infantDescription":
             MessageLookupByLibrary.simpleMessage("Age under 2"),
         "inn": MessageLookupByLibrary.simpleMessage("in"),
+        "internationalFlightCost": MessageLookupByLibrary.simpleMessage(
+            "International flight from Iran 1,000,000 IRR"),
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("International Destinations"),
         "iran": MessageLookupByLibrary.simpleMessage("Iran"),
@@ -198,6 +220,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "If you have an upcoming trip booked with us, you can add it to your My trips list."),
         "no_delay": MessageLookupByLibrary.simpleMessage("No Delay"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("Normal Refund"),
+        "noteDescription": MessageLookupByLibrary.simpleMessage(
+            "On Embraer ERJ-145 aircraft, these services are exempt from this rule. Accepting passengers with special needs and pregnant women in the business class cabin of Boeing 747 aircraft is not possible. Therefore, please ensure the type of aircraft before purchasing."),
+        "noteTitle": MessageLookupByLibrary.simpleMessage("Note"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "numberOfPassengers":
             MessageLookupByLibrary.simpleMessage("Number of Passengers"),
@@ -327,6 +352,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticket_guide": MessageLookupByLibrary.simpleMessage("Ticket Guide"),
         "to": MessageLookupByLibrary.simpleMessage("TO"),
         "toCalender": MessageLookupByLibrary.simpleMessage("to"),
+        "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
+            "International flight to Iran 40 USD"),
         "travelDate": MessageLookupByLibrary.simpleMessage("Travel date"),
         "travelDates": MessageLookupByLibrary.simpleMessage("Travel dates"),
         "travelServices":
@@ -336,6 +363,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("Unaccompanied Child"),
         "version": MessageLookupByLibrary.simpleMessage("Version 1.0"),
+        "wheelchairDescription": MessageLookupByLibrary.simpleMessage(
+            "According to Mahan Airlines regulations and the capacity of each aircraft, only passengers who have registered their cabin wheelchair request through the reservation system and have the SSR code on their ticket are eligible to be accepted at the airport and use the wheelchair. Passengers who need a wheelchair without a medical certificate must register their request when booking their ticket. Passengers can use their personal wheelchair until boarding the aircraft. It is worth noting that if the capacity is full, registering a wheelchair request is not possible."),
+        "wheelchairServiceCostTitle":
+            MessageLookupByLibrary.simpleMessage("Wheelchair Service Cost"),
+        "wheelchairTitle": MessageLookupByLibrary.simpleMessage("Wheelchair"),
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("Wheelchair in all phases"),
         "wheelchair_in_map":

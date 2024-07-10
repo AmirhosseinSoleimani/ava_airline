@@ -1,6 +1,7 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/features.dart';
+import 'package:ava_airline/src/features/static_contents/presentation/incapacitated-passenger-wheelchair/incapacitated-passenger-wheelchair.dart';
 
 class NavbarItems extends StatefulWidget implements PreferredSizeWidget {
   const NavbarItems({super.key, this.color});
@@ -22,7 +23,7 @@ class NavbarItemsState extends State<NavbarItems> {
       localization.travel_info,
       localization.during_flight,
       localization.flight_destinations,
-      localization.special_passenger_club
+      localization.myTrips
     ];
     return Row(
       children: navbarItems
@@ -95,8 +96,8 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
       ]
     },
     {
-      localization.special_passenger_club: [
-        localization.buyTicket,
+      localization.myTrips: [
+        localization.myTrips,
       ]
     }
   ];
@@ -248,11 +249,18 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                   .length,
                               itemBuilder: (context, index) {
                                 return Center(
-                                  child: Text(
-                                    navbarItems[selectedIndex!]
-                                        .values
-                                        .first[index],
-                                    style: Theme.of(context).textTheme.bodyMedium,
+                                  child: InkWell(
+                                    onTap: () {
+                                      if(index == 4) {
+                                        context.go(IncapacitatedPassengerWheelchairPage.incapacitatedPassengerWheelchairPagePath);
+                                      }
+                                    },
+                                    child: Text(
+                                      navbarItems[selectedIndex!]
+                                          .values
+                                          .first[index],
+                                      style: Theme.of(context).textTheme.bodyMedium,
+                                    ),
                                   ),
                                 );
                               },

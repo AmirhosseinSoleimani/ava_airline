@@ -5,7 +5,10 @@ import 'package:ava_airline/src/features/book_flight/presentation/pages/web/comp
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/special_services/special_services_page.dart';
 import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
+import 'package:ava_airline/src/features/video_player/presentation/pages/video_player_page.dart';
 import 'package:flutter/foundation.dart';
+
+import '../features/static_contents/presentation/incapacitated-passenger-wheelchair/incapacitated-passenger-wheelchair.dart';
 
 class Routes {
   static final parentNavigatorKey = GlobalKey<NavigatorState>();
@@ -60,6 +63,18 @@ class Routes {
           path: ConfirmPage.confirmPagePath,
           name: ConfirmPage.confirmPageName,
           builder: (context, state) => const ConfirmPage(),
+        ),
+
+        GoRoute(
+          path: VideoPlayerPage.videoPlayerPagePath,
+          name: VideoPlayerPage.videoPlayerPageName,
+          builder: (context, state) => const VideoPlayerPage(),
+        ),
+
+        GoRoute(
+          path: IncapacitatedPassengerWheelchairPage.incapacitatedPassengerWheelchairPagePath,
+          name: IncapacitatedPassengerWheelchairPage.incapacitatedPassengerWheelchairPageName,
+          builder: (context, state) => const IncapacitatedPassengerWheelchairPage(),
         ),
 
         StatefulShellRoute.indexedStack(

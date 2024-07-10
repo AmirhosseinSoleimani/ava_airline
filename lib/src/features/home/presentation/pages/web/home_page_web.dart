@@ -4,6 +4,7 @@ import 'package:ava_airline/src/features/home/domain/entities/special_fare_entit
 import 'package:ava_airline/src/features/home/home.dart';
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
 import '../../../../../shared/ui_kits/ava_drawer/ava_drawer.dart';
+import '../../../../app/my_app.dart';
 import 'components/special_trips/special_trips_container.dart';
 
 
@@ -18,16 +19,15 @@ class HomePageWeb extends StatefulWidget {
 class _HomePageWebState extends State<HomePageWeb> {
   late List<Map<String, List<String>>> navbarItems;
   List<HoverImageCardEntity> hoverImageCardEntity = [
-    HoverImageCardEntity(title: 'Montréal', date: '04 Sep 2024 - 09 Sep 2024', price: 'Economy from IRR 1440354050', imageUrl: ImageManager.montreal, isHover: false),
-    HoverImageCardEntity(title: 'Paris', date: '09 Nov 2024 - 15 Nov 2024', price: 'Economy from IRR 707678980', imageUrl: ImageManager.paris, isHover: false),
-    HoverImageCardEntity(title: 'Los Angeles', date: '02 Oct 2024 - 16 Oct 2024', price: 'Economy from IRR 617219010', imageUrl: ImageManager.losAngeles, isHover: false),
-    HoverImageCardEntity(title: 'Frankfurt', date: '17 Oct 2024 - 05 Nov 2024', price: 'Economy from IRR 314096992', imageUrl: ImageManager.frankfurt, isHover: false),
-    HoverImageCardEntity(title: 'Bangkok', date: '08 Jul 2024 - 15 Jul 2024', price: 'Economy from IRR 604017980', imageUrl: ImageManager.bangkok, isHover: false),
-    HoverImageCardEntity(title: 'Milan', date: '03 Aug 2024 - 08 Aug 2024', price: 'Economy from IRR 570211010', imageUrl: ImageManager.milan, isHover: false),
-    HoverImageCardEntity(title: 'Rome', date: '03 Aug 2024 - 08 Aug 2024', price: 'Economy from IRR 583790980', imageUrl: ImageManager.rome, isHover: false),
+    HoverImageCardEntity(title: 'تهران', date: '11 مرداد 1403 - 15 مرداد 1403', price: 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.tehran, isHover: false),
+    HoverImageCardEntity(title: 'مشهد', date: '1 مرداد 1403 - 5 مرداد 1403', price: 'اکونومی از تهران 1,2800,000 ریال', imageUrl: ImageManager.mashhad, isHover: false),
+    HoverImageCardEntity(title: 'کیش', date: '2 مرداد 1403 - 6 مرداد 1403', price: 'اکونومی از تهران 1,720,000 ریال', imageUrl: ImageManager.kish, isHover: false),
+    HoverImageCardEntity(title: 'قشم', date: '19 مرداد 1403 - 22 مرداد 1403', price: 'اکونومی از تهران 1,700,000 ریال', imageUrl: ImageManager.qeshm, isHover: false),
+    HoverImageCardEntity(title: 'اهواز', date: '20 مرداد 1403 - 24 مرداد 1403', price: 'اکونومی از تهران 1,400,000 ریال', imageUrl: ImageManager.ahvaz, isHover: false),
+    HoverImageCardEntity(title: 'شیراز', date: '10 مرداد 1403 - 818 مرداد 1403', price: 'اکونومی از تهران 1,500,000 ریال', imageUrl: ImageManager.shiraz, isHover: false),
+    HoverImageCardEntity(title: 'اصفحان', date: '4 مرداد 1403 - 8 مرداد 1403', price: 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.isfahan, isHover: false),
 
   ];
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   late List<bool> expanded;
 
   @override
@@ -82,8 +82,8 @@ class _HomePageWebState extends State<HomePageWeb> {
         ]
       },
       {
-        localization.special_passenger_club: [
-          localization.buyTicket,
+        localization.myTrips: [
+          localization.myTrips,
         ]
       }
     ];
@@ -94,7 +94,6 @@ class _HomePageWebState extends State<HomePageWeb> {
   Widget build(BuildContext context) {
     final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
-    final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
       key: scaffoldKey,
       drawer: const AvaDrawer(),
@@ -155,7 +154,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                   Space.h16,
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       Expanded(
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[0],),
@@ -166,13 +165,13 @@ class _HomePageWebState extends State<HomePageWeb> {
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[1],),
                       ),
-                      Spacer(),
+                      const Spacer(),
                     ],
                   ),
                   Space.h16,
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       Expanded(
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[2],),
@@ -187,13 +186,13 @@ class _HomePageWebState extends State<HomePageWeb> {
                           ],
                         ),
                       ),
-                      Spacer()
+                      const Spacer()
                     ],
                   ),
                   Space.h16,
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       Expanded(
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[5],),
