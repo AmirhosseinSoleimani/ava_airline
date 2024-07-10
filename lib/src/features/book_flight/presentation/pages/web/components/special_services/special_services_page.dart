@@ -14,6 +14,7 @@ class SpecialServicesPage extends StatefulWidget {
 }
 
 class _SpecialServicesPageState extends State<SpecialServicesPage> {
+  List<bool> specialServiceList = [false, false, false, false, false];
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -35,32 +36,20 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(AppPadding.p16),
                   child: Row(
-                    mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      if (locale == 'en')
-                        InkWell(
-                          onTap: () {
-                            scaffoldKey.currentState?.openDrawer();
-                          },
-                          child: Icon(
-                            IconManager.density,
-                            size: AppSize.s24,
-                            color: Theme.of(context).colorScheme.onSecondary,
-                          ),
+                      InkWell(
+                        onTap: () {
+                          scaffoldKey.currentState?.openDrawer();
+                        },
+                        child: Icon(
+                          IconManager.density,
+                          size: AppSize.s24,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
-                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
+                      ),
                       Space.w16,
-                      if (locale != 'en')
-                        InkWell(
-                          onTap: () {
-                            scaffoldKey.currentState?.openDrawer();
-                          },
-                          child: Icon(
-                            IconManager.density,
-                            size: AppSize.s24,
-                            color: Theme.of(context).colorScheme.onSecondary,
-                          ),
-                        ),
+                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60, colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn)),
                     ],
                   ),
                 ),
@@ -122,7 +111,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                           Container(
                             width: double.infinity,
                             height: AppSize.s48,
-                            color: ColorLightThemeManager.grey,
+                            color: Theme.of(context).colorScheme.surface,
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                               child: Row(
@@ -131,8 +120,11 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                                   Expanded(child: Text(localization.blind, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
-                                        value: false,
-                                        onChanged: (value) {}),
+                                        value: specialServiceList[0],
+                                        onChanged: (value) {
+                                          specialServiceList[0] =! specialServiceList[0];
+                                          setState(() {});
+                                        }),
                                   ),
                                   const Expanded(child: SizedBox())
                                 ],
@@ -151,8 +143,11 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                                   Expanded(child: Text(localization.deaf, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
-                                        value: false,
-                                        onChanged: (value) {}),
+                                        value: specialServiceList[1],
+                                        onChanged: (value) {
+                                          specialServiceList[1] =! specialServiceList[1];
+                                          setState(() {});
+                                        }),
                                   ),
                                   const Expanded(child: SizedBox())
                                 ],
@@ -162,7 +157,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                           Container(
                           width: double.infinity,
                           height: AppSize.s48,
-                          color: ColorLightThemeManager.grey,
+                          color: Theme.of(context).colorScheme.surface,
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                             child: Row(
@@ -171,8 +166,11 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                                 Expanded(child: Text(localization.wheelchair_full, style: Theme.of(context).textTheme.bodyMedium,)),
                                 Expanded(
                                   child: Checkbox(
-                                      value: false,
-                                      onChanged: (value) {}),
+                                      value: specialServiceList[2],
+                                      onChanged: (value) {
+                                        specialServiceList[2] =! specialServiceList[2];
+                                        setState(() {});
+                                      }),
                                 ),
                                 const Expanded(child: SizedBox())
                               ],
@@ -191,8 +189,11 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                                   Expanded(child: Text(localization.lift_instead_of_wheelchair, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
-                                        value: false,
-                                        onChanged: (value) {}),
+                                        value: specialServiceList[3],
+                                        onChanged: (value) {
+                                          specialServiceList[3] =! specialServiceList[3];
+                                          setState(() {});
+                                        }),
                                   ),
                                   const Expanded(child: SizedBox())
                                 ],
@@ -200,29 +201,9 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                             ),
                           ),
                           Container(
-                          width: double.infinity,
-                          height: AppSize.s48,
-                          color: ColorLightThemeManager.grey,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(child: Text(localization.wheelchair_full, style: Theme.of(context).textTheme.bodyMedium,)),
-                                Expanded(
-                                  child: Checkbox(
-                                      value: false,
-                                      onChanged: (value) {}),
-                                ),
-                                const Expanded(child: SizedBox())
-                              ],
-                            ),
-                          ),
-                        ),
-                          Container(
                             width: double.infinity,
                             height: AppSize.s48,
-                            color: Theme.of(context).colorScheme.onSecondary,
+                            color: Theme.of(context).colorScheme.surface,
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                               child: Row(
@@ -231,8 +212,11 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                                   Expanded(child: Text(localization.wheelchair_in_map, style: Theme.of(context).textTheme.bodyMedium,)),
                                   Expanded(
                                     child: Checkbox(
-                                        value: false,
-                                        onChanged: (value) {}),
+                                        value: specialServiceList[4],
+                                        onChanged: (value) {
+                                          specialServiceList[4] =! specialServiceList[4];
+                                          setState(() {});
+                                        }),
                                   ),
                                   const Expanded(child: SizedBox())
                                 ],
