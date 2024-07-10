@@ -20,6 +20,14 @@ class ImageManager {
   static const String montreal = 'assets/image/special_trips/montreal.png';
   static const String paris = 'assets/image/special_trips/paris.jpg';
   static const String rome = 'assets/image/special_trips/rome.jpg';
+  static const String mashhad = 'image/Mashhad.jpg';
+  static const String tehran = 'image/tehran.jpg';
+  static const String qeshm = 'assets/image/3.png';
+  static const String kish = 'image/kish.jpg';
+  static const String ahvaz = 'assets/image/ahvaz.jpg';
+  static const String shiraz = 'assets/image/shiraz.jpg';
+  static const String isfahan = 'assets/image/isfahan.jpg';
+  static const String incapacitatedPassengers = 'image/incapacitated_passengers.jpg';
 }
 
 

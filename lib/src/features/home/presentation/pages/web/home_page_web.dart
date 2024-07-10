@@ -3,6 +3,8 @@ import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/home/home.dart';
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
+import '../../../../../shared/ui_kits/ava_drawer/ava_drawer.dart';
+import '../../../../app/my_app.dart';
 import 'components/special_trips/special_trips_container.dart';
 
 
@@ -17,16 +19,15 @@ class HomePageWeb extends StatefulWidget {
 class _HomePageWebState extends State<HomePageWeb> {
   late List<Map<String, List<String>>> navbarItems;
   List<HoverImageCardEntity> hoverImageCardEntity = [
-    HoverImageCardEntity(title: 'Montréal', date: '04 Sep 2024 - 09 Sep 2024', price: 'Economy from IRR 1440354050', imageUrl: ImageManager.montreal, isHover: false),
-    HoverImageCardEntity(title: 'Paris', date: '09 Nov 2024 - 15 Nov 2024', price: 'Economy from IRR 707678980', imageUrl: ImageManager.paris, isHover: false),
-    HoverImageCardEntity(title: 'Los Angeles', date: '02 Oct 2024 - 16 Oct 2024', price: 'Economy from IRR 617219010', imageUrl: ImageManager.losAngeles, isHover: false),
-    HoverImageCardEntity(title: 'Frankfurt', date: '17 Oct 2024 - 05 Nov 2024', price: 'Economy from IRR 314096992', imageUrl: ImageManager.frankfurt, isHover: false),
-    HoverImageCardEntity(title: 'Bangkok', date: '08 Jul 2024 - 15 Jul 2024', price: 'Economy from IRR 604017980', imageUrl: ImageManager.bangkok, isHover: false),
-    HoverImageCardEntity(title: 'Milan', date: '03 Aug 2024 - 08 Aug 2024', price: 'Economy from IRR 570211010', imageUrl: ImageManager.milan, isHover: false),
-    HoverImageCardEntity(title: 'Rome', date: '03 Aug 2024 - 08 Aug 2024', price: 'Economy from IRR 583790980', imageUrl: ImageManager.rome, isHover: false),
+    HoverImageCardEntity(title: 'تهران', date: '11 مرداد 1403 - 15 مرداد 1403', price: 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.tehran, isHover: false),
+    HoverImageCardEntity(title: 'مشهد', date: '1 مرداد 1403 - 5 مرداد 1403', price: 'اکونومی از تهران 1,2800,000 ریال', imageUrl: ImageManager.mashhad, isHover: false),
+    HoverImageCardEntity(title: 'کیش', date: '2 مرداد 1403 - 6 مرداد 1403', price: 'اکونومی از تهران 1,720,000 ریال', imageUrl: ImageManager.kish, isHover: false),
+    HoverImageCardEntity(title: 'قشم', date: '19 مرداد 1403 - 22 مرداد 1403', price: 'اکونومی از تهران 1,700,000 ریال', imageUrl: ImageManager.qeshm, isHover: false),
+    HoverImageCardEntity(title: 'اهواز', date: '20 مرداد 1403 - 24 مرداد 1403', price: 'اکونومی از تهران 1,400,000 ریال', imageUrl: ImageManager.ahvaz, isHover: false),
+    HoverImageCardEntity(title: 'شیراز', date: '10 مرداد 1403 - 818 مرداد 1403', price: 'اکونومی از تهران 1,500,000 ریال', imageUrl: ImageManager.shiraz, isHover: false),
+    HoverImageCardEntity(title: 'اصفحان', date: '4 مرداد 1403 - 8 مرداد 1403', price: 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.isfahan, isHover: false),
 
   ];
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   late List<bool> expanded;
 
   @override
@@ -81,8 +82,8 @@ class _HomePageWebState extends State<HomePageWeb> {
         ]
       },
       {
-        localization.special_passenger_club: [
-          localization.buyTicket,
+        localization.myTrips: [
+          localization.myTrips,
         ]
       }
     ];
@@ -93,108 +94,9 @@ class _HomePageWebState extends State<HomePageWeb> {
   Widget build(BuildContext context) {
     final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
-    final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
       key: scaffoldKey,
-      drawer: Drawer(
-        backgroundColor: Theme.of(context).colorScheme.onSecondary,
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(AppPadding.p12),
-                    child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
-                        Theme.of(context).colorScheme.error,
-                        BlendMode.srcIn)),
-                  ),
-                  AvaInkwellButton(
-                    buttonPadding: AppPadding.p12,
-                    onTap: () {},
-                    title: localization.login_register,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    borderRadius: AppSize.s8,
-                    backgroundColor:
-                    ColorDarkThemeManager.transparent,
-                    borderColor:
-                    Theme.of(context).colorScheme.onSurface,
-                  ),
-                  const Divider(),
-                  ExpansionPanelList(
-                    expansionCallback: (int index, bool isExpanded) {
-                      setState(() {
-                        expanded[index] = isExpanded;
-                      });
-                    },
-                    children: navbarItems.asMap().entries.map<ExpansionPanel>((entry) {
-                      int index = entry.key;
-                      String key = entry.value.keys.first;
-                      List<String> values = entry.value.values.first;
-                      return ExpansionPanel(
-                        backgroundColor: Theme.of(context).colorScheme.onSecondary,
-                        headerBuilder: (BuildContext context, bool isExpanded) {
-                          return ListTile(
-                            title: Text(key),
-                          );
-                        },
-                        body: Column(
-                          children: values.map((value) {
-                            return Padding(
-                              padding: const EdgeInsets.all(AppPadding.p8),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(value),
-                                  const Icon(IconManager.chevronRight, size: AppSize.s24,),
-                                ],
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                        isExpanded: expanded[index],
-                      );
-                    }).toList(),
-                  ),
-                ],
-              ),
-              Space.h64,
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(localization.version, style: Theme.of(context).textTheme.bodyMedium,),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          SvgManager.earthSvg,
-                          colorFilter: ColorFilter.mode(
-                              Theme.of(context).colorScheme.onSurface,
-                              BlendMode.srcIn),
-                          semanticsLabel: 'AVA Airlines',
-                          width: AppSize.s42,
-                        ),
-                        Space.w8,
-                        Text(
-                          localization.language,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium,
-                        )
-                      ],
-                    ),
-
-                  ],
-                ),
-              ),
-              Space.h16,
-
-            ],
-          ),
-        ),
-      ),
+      drawer: const AvaDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -212,9 +114,8 @@ class _HomePageWebState extends State<HomePageWeb> {
                   child: Padding(
                     padding: const EdgeInsets.all(AppPadding.p16),
                     child: Row(
-                      mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        if (locale == 'en')
                           InkWell(
                             onTap: () {
                               scaffoldKey.currentState?.openDrawer();
@@ -225,19 +126,8 @@ class _HomePageWebState extends State<HomePageWeb> {
                               color: Theme.of(context).colorScheme.onSecondary,
                             ),
                           ),
-                        SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
                         Space.w16,
-                        if (locale != 'en')
-                          InkWell(
-                            onTap: () {
-                              scaffoldKey.currentState?.openDrawer();
-                            },
-                            child: Icon(
-                              IconManager.density,
-                              size: AppSize.s24,
-                              color: Theme.of(context).colorScheme.onSecondary,
-                            ),
-                          ),
+                        SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
                       ],
                     ),
                   ),
@@ -264,7 +154,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                   Space.h16,
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       Expanded(
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[0],),
@@ -275,13 +165,13 @@ class _HomePageWebState extends State<HomePageWeb> {
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[1],),
                       ),
-                      Spacer(),
+                      const Spacer(),
                     ],
                   ),
                   Space.h16,
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       Expanded(
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[2],),
@@ -296,13 +186,13 @@ class _HomePageWebState extends State<HomePageWeb> {
                           ],
                         ),
                       ),
-                      Spacer()
+                      const Spacer()
                     ],
                   ),
                   Space.h16,
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       Expanded(
                         flex: 5,
                         child: SpecialTripsContainer(hoverImageCardEntity: hoverImageCardEntity[5],),

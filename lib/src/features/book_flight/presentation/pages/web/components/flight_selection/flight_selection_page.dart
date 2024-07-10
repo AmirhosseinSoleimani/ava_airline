@@ -3,6 +3,7 @@ import 'package:ava_airline/src/features/book_flight/presentation/pages/web/comp
 import 'package:ava_airline/src/shared/footer/footer_widget.dart';
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import '../../../../../../../../generated/l10n.dart';
+import '../../../../../../../shared/ui_kits/ava_drawer/ava_drawer.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
 class FlightSelectionPage extends StatefulWidget {
   static const  flightSelectionPageName = 'flight-selection-page';
@@ -18,13 +19,14 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
 
   DatePickerController datePickerController = DatePickerController();
 
-
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
     final localization = S.of(context);
     return Scaffold(
+      key: scaffoldKey,
+      drawer: const AvaDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -39,32 +41,20 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(AppPadding.p16),
                   child: Row(
-                    mainAxisAlignment: (locale == 'en') ? MainAxisAlignment.start : MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      if (locale == 'en')
-                        InkWell(
-                          onTap: () {
-                            scaffoldKey.currentState?.openDrawer();
-                          },
-                          child: Icon(
-                            IconManager.density,
-                            size: AppSize.s24,
-                            color: Theme.of(context).colorScheme.onSecondary,
-                          ),
+                      InkWell(
+                        onTap: () {
+                          scaffoldKey.currentState?.openDrawer();
+                        },
+                        child: Icon(
+                          IconManager.density,
+                          size: AppSize.s24,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
-                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
+                      ),
                       Space.w16,
-                      if (locale != 'en')
-                        InkWell(
-                          onTap: () {
-                            scaffoldKey.currentState?.openDrawer();
-                          },
-                          child: Icon(
-                            IconManager.density,
-                            size: AppSize.s24,
-                            color: Theme.of(context).colorScheme.onSecondary,
-                          ),
-                        ),
+                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60, colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn)),
                     ],
                   ),
                 ),

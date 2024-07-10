@@ -27,10 +27,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
     super.build(context);
     final localization = S.of(context);
     return Scaffold(
-      drawer: const DrawerWidget(),
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.searchFlights),
         bottom: TabBar(
           labelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
@@ -101,7 +98,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             ),
                       ),
                       onPressed: () {
-                        context.push(SearchResultPage.pagePath);
+                        context.push('/book-search-result');
                       },
                     ),
                   ),
