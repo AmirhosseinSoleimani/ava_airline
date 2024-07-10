@@ -1,8 +1,7 @@
-import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/web/components/special_services/special_services_page.dart';
-import 'package:flutter/material.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 
+import '../../../../../../../../generated/l10n.dart';
 import '../../../../../../../shared/footer/footer_widget.dart';
 import '../../../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
 import '../flight_selection/widgets/stepper_widget.dart';
@@ -25,6 +24,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final locale = Localizations.localeOf(context).languageCode;
+    final localization = S.of(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -78,13 +78,13 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: StepperWidget(stepperList: [
                   StepperModel(
-                      title: 'جستجو', icon: Icons.fact_check_outlined),
+                      title: localization.search, icon: Icons.fact_check_outlined),
                   StepperModel(
-                      title: 'انتخاب پرواز', icon: IconManager.airplane),
-                  StepperModel(title: 'اطلاعات مسافر', icon: IconManager.people),
-                  StepperModel(title: 'خدمات ویژه', icon: Icons.room_service),
+                      title: localization.flightSelection, icon: IconManager.airplane),
+                  StepperModel(title: localization.passengerInformation, icon: IconManager.people),
+                  StepperModel(title: localization.specialServices, icon: Icons.room_service),
                   StepperModel(
-                      title: 'تائید و پرداخت', icon: Icons.airplane_ticket),
+                      title: localization.confirmationAndPayment, icon: Icons.airplane_ticket),
                 ], currentIndex: 2,),
               ),
             ),
@@ -103,14 +103,14 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('مبدا', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.origin, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('تهران(مهرآباد)', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(locale.contains('en') ? 'Tehran(Mehrabad)' :'تهران(مهرآباد)', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     ),
                     Space.w16,
                     Transform.rotate(
-                        angle: 180 * 3.1415927 /180,
+                        angle: locale.contains('en') ? 0 : 180 * 3.1415927 /180,
                         child: Icon(IconManager.airplane, size: AppSize.s16, color: ColorLightThemeManager.grey,)),
                     Container(
                       width: width * 0.1,
@@ -133,9 +133,9 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('قصد', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.destination, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('مشهد(هاشمی نژاد)', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(locale.contains('en') ? 'Mashhad(Hashemi Nejad)' : 'مشهد(هاشمی نژاد)', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     ),
                     Space.w24,
@@ -151,7 +151,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('تاریخ پرواز', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.flightDate, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
                         Text('30 مرداد 1403', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
@@ -169,18 +169,18 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('تعداد مسافر', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.numberOfPassengers, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('1 مسافر', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.passengersCount(1), style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     ),
                     const Spacer(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('مبلغ قابل پرداخت', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(localization.payable_amount, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h8,
-                        Text('1,365,770 تومان', style: Theme.of(context).textTheme.bodyMedium,),
+                        Text(locale.contains('en') ? '1,365,770 IRR' : '1,365,770 تومان', style: Theme.of(context).textTheme.bodyMedium,),
                       ],
                     )
 
@@ -204,7 +204,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                       children: [
                         Icon(IconManager.people, size: AppSize.s42, color: Theme.of(context).colorScheme.secondary,),
                         Space.w12,
-                        Text('مشخصات مسافران', style: Theme.of(context).textTheme.titleMedium,),
+                        Text(localization.passenger_details, style: Theme.of(context).textTheme.titleMedium,),
                       ],
                     ),
                     Space.h16,
@@ -213,7 +213,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                         Expanded(
                             child: AvaTextFormField(
                               controller: TextEditingController(),
-                              hintText: 'نام لاتین',
+                              hintText: localization.latin_first_name,
                               borderColor: Theme.of(context).colorScheme.secondary,
                             ),
                         ),
@@ -221,7 +221,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                         Expanded(
                             child: AvaTextFormField(
                               controller: TextEditingController(),
-                              hintText: 'نام خانوادگی لاتین',
+                              hintText: localization.latin_last_name,
                               borderColor: Theme.of(context).colorScheme.secondary,
                             ),
                         ),
@@ -229,7 +229,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                         Expanded(
                             child: AvaTextFormField(
                               controller: TextEditingController(),
-                              hintText: 'کد ملی',
+                              hintText: localization.national_id,
                               borderColor: Theme.of(context).colorScheme.secondary,
                             ),
                         ),
@@ -251,7 +251,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                               padding: const EdgeInsets.symmetric(horizontal: AppPadding.p6),
                               child: DropdownButton<String>(
                                 underline: const SizedBox.shrink(),
-                                hint: Text('انتخاب کنید', style: Theme.of(context).textTheme.bodyMedium,),
+                                hint: Text(localization.select_option, style: Theme.of(context).textTheme.bodyMedium,),
                                 value: _selectedGender,
                                 items: _genderOptions.map((String value) {
                                   return DropdownMenuItem<String>(
@@ -280,7 +280,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                           suffixIcon: const Icon(IconManager.date),
                           readOnly: true,
                           controller: TextEditingController(),
-                          hintText: 'تاریخ تولد',
+                          hintText: localization.birth_date,
                           borderColor: Theme.of(context).colorScheme.secondary,
                         ),),
                         Space.w12,
@@ -290,7 +290,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
                               onTap: () {
                                 context.go(SpecialServicesPage.specialServicesPagePath);
                               },
-                              title: 'ادامه',
+                              title: localization.next,
                               style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                             ),
                           ),

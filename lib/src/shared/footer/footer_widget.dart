@@ -5,6 +5,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:latlong2/latlong.dart' as flutter_map_lat_lng;
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../generated/l10n.dart';
+
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
@@ -17,6 +19,7 @@ class FooterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
     flutter_map_lat_lng.LatLng location = const flutter_map_lat_lng.LatLng(
         35.726081031606256,
@@ -42,7 +45,7 @@ class FooterWidget extends StatelessWidget {
                     child: Row(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Spacer(),
+                        const Spacer(),
                         Expanded(
                           flex: 3,
                           child: Column(
@@ -53,7 +56,7 @@ class FooterWidget extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: AppPadding.p24),
                                 child: Text(
-                                  'شرکت هواپیمایی آوا با هدف ارائه باکیفیت‌ترین خدمات پروازی فعالیت خود را از سال 1402 آغاز کرده‌است. هدف ما کمک به ارتقای کیفیت هواپیمایی کشور در راستای بهبود تجربه مسافران عزیز از سفرهای پروازی خود است',
+                                  localization.company_description,
                                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                   textAlign: TextAlign.start,
                                 ),
@@ -130,7 +133,7 @@ class FooterWidget extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'دسترسی سریع',
+                                localization.quick_access,
                                 style: Theme.of(context).textTheme.displayMedium?.copyWith(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
                               ),
                               Space.h16,
@@ -157,7 +160,7 @@ class FooterWidget extends StatelessWidget {
                                   InkWell(
                                     onTap: (){},
                                     child: Text(
-                                      'ثبت شکایت',
+                                      localization.register_complaint,
                                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                     ),
                                   ),
@@ -180,7 +183,7 @@ class FooterWidget extends StatelessWidget {
                                   InkWell(
                                     onTap: (){},
                                     child: Text(
-                                      'فرصت های شغلی',
+                                      localization.job_opportunities,
                                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                     ),
                                   ),
@@ -203,7 +206,7 @@ class FooterWidget extends StatelessWidget {
                                   InkWell(
                                     onTap: (){},
                                     child: Text(
-                                      'قوانین و مقررات',
+                                      localization.rules_and_regulations,
                                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                     ),
                                   ),
@@ -226,7 +229,7 @@ class FooterWidget extends StatelessWidget {
                                   InkWell(
                                     onTap: (){},
                                     child: Text(
-                                      'گزارش ایمنی و پیگیری',
+                                      localization.safety_report_followup,
                                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                     ),
                                   ),
@@ -241,7 +244,7 @@ class FooterWidget extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'ارتباط با ما',
+                                localization.contact_us,
                                 style: Theme.of(context).textTheme.displayMedium?.copyWith(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
                               ),
                               Space.h16,
@@ -262,7 +265,7 @@ class FooterWidget extends StatelessWidget {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Container(
-                                        padding: EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(AppPadding.p8),
                                         decoration: BoxDecoration(
                                             color: Theme.of(context).colorScheme.primary,
                                             shape: BoxShape.circle
@@ -322,7 +325,7 @@ class FooterWidget extends StatelessWidget {
                                     Space.w8,
                                     Expanded(
                                       child: Text(
-                                        'دفتر مرکزی: تهران، فردوس، بلوار آیت الله کاشانی،تقاطع سلیمی جهرمی، پلاک 186 طبقه 5',
+                                        localization.address,
                                         textAlign: TextAlign.start,
                                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                                       ),
@@ -396,7 +399,7 @@ class FooterWidget extends StatelessWidget {
           color: Theme.of(context).colorScheme.primary,
           child: Center(
             child: Text(
-              'تمامی حقوق وب‌سایت متعلق به شرکت بهپردازجهان می‌باشد',
+              localization.all_rights_reserved,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 10,color: Theme.of(context).colorScheme.onSecondary),
             ),
           ),

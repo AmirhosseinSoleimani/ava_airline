@@ -67,7 +67,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
 
   @override
   Widget build(BuildContext context) {
-    final localization = S.of(context)!;
+    final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
     return Container(
       width: width * 0.6,
@@ -243,7 +243,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
   }
 
   Widget _buildSelectedWidget() {
-    final localization = S.of(context)!;
+    final localization = S.of(context);
     final locale = Localizations.localeOf(context).languageCode;
     switch (_selectedValue) {
       case 0:

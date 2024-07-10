@@ -151,6 +151,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "roundTrip": MessageLookupByLibrary.simpleMessage("رفت و برگشت"),
         "rulesAndNotices":
             MessageLookupByLibrary.simpleMessage("قوانین و اطلاعیه‌ها"),
+        "rules_and_regulations":
+            MessageLookupByLibrary.simpleMessage("قوانین و مقررات"),
+        "safety_report_followup":
+            MessageLookupByLibrary.simpleMessage("گزارش ایمنی و پیگیری"),
         "sampleDate": MessageLookupByLibrary.simpleMessage("سه‌شنبه 19 تیر 03"),
         "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
         "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
@@ -158,15 +162,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchFlights": MessageLookupByLibrary.simpleMessage("جستجوی پروازها"),
         "searchResults": MessageLookupByLibrary.simpleMessage("نتایج جستجو"),
         "seat_status": MessageLookupByLibrary.simpleMessage("وضعیت صندلی ها"),
-        "selectDate":
-            MessageLookupByLibrary.simpleMessage("تاریخ را انتخاب کنید"),
+        "select": MessageLookupByLibrary.simpleMessage("انتخاب کنید"),
         "selectDates":
             MessageLookupByLibrary.simpleMessage("تاریخ‌ها را انتخاب کنید"),
         "selectDestination":
             MessageLookupByLibrary.simpleMessage("انتخاب مقصد"),
+        "selectFlight": MessageLookupByLibrary.simpleMessage("انتخاب پرواز"),
         "selectOrigin": MessageLookupByLibrary.simpleMessage("انتخاب مبدا"),
+        "select_flight": MessageLookupByLibrary.simpleMessage("انتخاب پرواز"),
+        "select_option": MessageLookupByLibrary.simpleMessage("انتخاب کنید"),
         "sendFeedback": MessageLookupByLibrary.simpleMessage("ارسال بازخورد"),
+        "service": MessageLookupByLibrary.simpleMessage("خدمت"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شیراز"),
+        "specialServices": MessageLookupByLibrary.simpleMessage("خدمات ویژه"),
+        "specialServicesPageName":
+            MessageLookupByLibrary.simpleMessage("صفحه خدمات ویژه"),
+        "specialServicesPagePath":
+            MessageLookupByLibrary.simpleMessage("/special-services-page"),
+        "specialServicesText": MessageLookupByLibrary.simpleMessage(
+            "شما می توانید از خدمات ویژه پرواز بهره مند شوید"),
         "special_fares":
             MessageLookupByLibrary.simpleMessage("مقصد های ویژه شما"),
         "special_meals": MessageLookupByLibrary.simpleMessage("خوراک ویژه"),
@@ -177,16 +191,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "شرکت هواپیمایی آوا در سال 1402 فعالیت خود را آغاز کرده‌است. دفتر مرکزی شرکت هواپیمایی آوا در شهر تهران، خیابان آیت‌الله کاشانی واقع است. چشم‌انداز ما، ایجاد بستری است که بتواند به بهترین شکل ممکن، نیاز مسافرین محترم را برآورده نماید و تجربه‌ای شایسته‌ را برای شما رقم بزند"),
         "special_trip": MessageLookupByLibrary.simpleMessage(
             "تخصص و تعهد تمام کارکنان شرکت هواپیمایی آوا؛ تجربه یک پرواز آرام را برای شما فراهم کرده‌است"),
+        "systemic": MessageLookupByLibrary.simpleMessage("سیستمی"),
         "tehran": MessageLookupByLibrary.simpleMessage("تهران"),
+        "ticketInfo": MessageLookupByLibrary.simpleMessage("اطلاعات بلیط"),
         "ticket_guide":
             MessageLookupByLibrary.simpleMessage("راهنمای خرید بلیط"),
         "to": MessageLookupByLibrary.simpleMessage("به"),
         "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ‌ سفر"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تاریخ‌های سفر"),
+        "travelServices": MessageLookupByLibrary.simpleMessage("خدمات سفر"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("اخبار سفر"),
         "travel_info": MessageLookupByLibrary.simpleMessage("اطلاعات سفر"),
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("کودک بدون همراه"),
-        "version": MessageLookupByLibrary.simpleMessage("ورژن 1.0")
+        "version": MessageLookupByLibrary.simpleMessage("ورژن 1.0"),
+        "wheelchair_full":
+            MessageLookupByLibrary.simpleMessage("ویلچر در تمام مراحل"),
+        "wheelchair_in_map": MessageLookupByLibrary.simpleMessage("ویلچر در مپ")
       };
 }
