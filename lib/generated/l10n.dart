@@ -2290,6 +2290,196 @@ class S {
     );
   }
 
+  /// `Passengers with Special Needs/Wheelchair`
+  String get incapacitatedPassengerWheelchairPageTitle {
+    return Intl.message(
+      'Passengers with Special Needs/Wheelchair',
+      name: 'incapacitatedPassengerWheelchairPageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special services for a hassle-free trip`
+  String get incapacitatedPassengerWheelchairPageSubtitle {
+    return Intl.message(
+      'Special services for a hassle-free trip',
+      name: 'incapacitatedPassengerWheelchairPageSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blind and Deaf Passengers`
+  String get blindDeafTitle {
+    return Intl.message(
+      'Blind and Deaf Passengers',
+      name: 'blindDeafTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `These passengers do not need to provide a medical certificate. In case of group travel, providing a permit for coordination, the presence of a healthy, capable, and same-language companion for these passengers is necessary throughout the journey. Accompanying these passengers by Mahan Airlines personnel is not subject to a fee.`
+  String get blindDeafDescription {
+    return Intl.message(
+      'These passengers do not need to provide a medical certificate. In case of group travel, providing a permit for coordination, the presence of a healthy, capable, and same-language companion for these passengers is necessary throughout the journey. Accompanying these passengers by Mahan Airlines personnel is not subject to a fee.',
+      name: 'blindDeafDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelchair`
+  String get wheelchairTitle {
+    return Intl.message(
+      'Wheelchair',
+      name: 'wheelchairTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `According to Mahan Airlines regulations and the capacity of each aircraft, only passengers who have registered their cabin wheelchair request through the reservation system and have the SSR code on their ticket are eligible to be accepted at the airport and use the wheelchair. Passengers who need a wheelchair without a medical certificate must register their request when booking their ticket. Passengers can use their personal wheelchair until boarding the aircraft. It is worth noting that if the capacity is full, registering a wheelchair request is not possible.`
+  String get wheelchairDescription {
+    return Intl.message(
+      'According to Mahan Airlines regulations and the capacity of each aircraft, only passengers who have registered their cabin wheelchair request through the reservation system and have the SSR code on their ticket are eligible to be accepted at the airport and use the wheelchair. Passengers who need a wheelchair without a medical certificate must register their request when booking their ticket. Passengers can use their personal wheelchair until boarding the aircraft. It is worth noting that if the capacity is full, registering a wheelchair request is not possible.',
+      name: 'wheelchairDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Note`
+  String get noteTitle {
+    return Intl.message(
+      'Note',
+      name: 'noteTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `On Embraer ERJ-145 aircraft, these services are exempt from this rule. Accepting passengers with special needs and pregnant women in the business class cabin of Boeing 747 aircraft is not possible. Therefore, please ensure the type of aircraft before purchasing.`
+  String get noteDescription {
+    return Intl.message(
+      'On Embraer ERJ-145 aircraft, these services are exempt from this rule. Accepting passengers with special needs and pregnant women in the business class cabin of Boeing 747 aircraft is not possible. Therefore, please ensure the type of aircraft before purchasing.',
+      name: 'noteDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Battery-Powered Wheelchairs`
+  String get batteryWheelchairTitle {
+    return Intl.message(
+      'Battery-Powered Wheelchairs',
+      name: 'batteryWheelchairTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelchairs or other mobility aids with wet or dry batteries are transported in the aircraft's cargo hold with the battery protected against short circuits, safely packaged, and approved by Mahan Airlines representative. (If the battery is removable, the detached battery is carried in a resistant package in the aircraft's hold).`
+  String get batteryWheelchairDescription {
+    return Intl.message(
+      'Wheelchairs or other mobility aids with wet or dry batteries are transported in the aircraft\'s cargo hold with the battery protected against short circuits, safely packaged, and approved by Mahan Airlines representative. (If the battery is removable, the detached battery is carried in a resistant package in the aircraft\'s hold).',
+      name: 'batteryWheelchairDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelchairs with lithium-ion batteries with a maximum capacity of 300 W/H or two batteries with a maximum capacity of 160 W/H, after packaging and approval by Mahan Airlines representative, are only carried in the passenger cabin.`
+  String get batteryDescription2 {
+    return Intl.message(
+      'Wheelchairs with lithium-ion batteries with a maximum capacity of 300 W/H or two batteries with a maximum capacity of 160 W/H, after packaging and approval by Mahan Airlines representative, are only carried in the passenger cabin.',
+      name: 'batteryDescription2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelchair Service Cost`
+  String get wheelchairServiceCostTitle {
+    return Intl.message(
+      'Wheelchair Service Cost',
+      name: 'wheelchairServiceCostTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `International flight from Iran 1,000,000 IRR`
+  String get internationalFlightCost {
+    return Intl.message(
+      'International flight from Iran 1,000,000 IRR',
+      name: 'internationalFlightCost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `International flight to Iran 40 USD`
+  String get toIranFlightCost {
+    return Intl.message(
+      'International flight to Iran 40 USD',
+      name: 'toIranFlightCost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dubai to Iran flight 150 AED (with SSR registration)`
+  String get dubaiToIranFlightCost {
+    return Intl.message(
+      'Dubai to Iran flight 150 AED (with SSR registration)',
+      name: 'dubaiToIranFlightCost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Holders of veterans, disabled, and martyr families cards, as well as passengers on Hajj and Atabat flights, EU citizens, and individuals over 65 years old are exempt from payment.`
+  String get exemptionsDescription {
+    return Intl.message(
+      'Holders of veterans, disabled, and martyr families cards, as well as passengers on Hajj and Atabat flights, EU citizens, and individuals over 65 years old are exempt from payment.',
+      name: 'exemptionsDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mashhad Pilgrimage Trip`
+  String get mashhadSpecialFaresPageTitle {
+    return Intl.message(
+      'Mashhad Pilgrimage Trip',
+      name: 'mashhadSpecialFaresPageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mashhad city, located in Khorasan Razavi province, is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of passengers and tourists is the shrine of Imam Reza (AS) in Mashhad. This city is also culturally very rich.`
+  String get mashhadSpecialFaresParagraph1 {
+    return Intl.message(
+      'Mashhad city, located in Khorasan Razavi province, is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of passengers and tourists is the shrine of Imam Reza (AS) in Mashhad. This city is also culturally very rich.',
+      name: 'mashhadSpecialFaresParagraph1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it.`
+  String get mashhadSpecialFaresParagraph2 {
+    return Intl.message(
+      'The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it.',
+      name: 'mashhadSpecialFaresParagraph2',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Pay`
   String get pay {
     return Intl.message(
