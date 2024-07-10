@@ -19,6 +19,8 @@ class _SearchResultPageState extends State<SearchResultPage> {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.searchResults),
       ),
       body: Column(
