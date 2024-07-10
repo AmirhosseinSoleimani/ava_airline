@@ -1,6 +1,9 @@
 import 'package:ava_airline/generated/l10n.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/search_result_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/flight_card.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
+import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
+import 'package:flutter/material.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
   const BookFlightPageMobile({super.key});
@@ -24,7 +27,10 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
     super.build(context);
     final localization = S.of(context);
     return Scaffold(
+      drawer: const DrawerWidget(),
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.searchFlights),
         bottom: TabBar(
           labelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
@@ -95,7 +101,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                             ),
                       ),
                       onPressed: () {
-                        context.push('/book-search-result');
+                        context.push(SearchResultPage.pagePath);
                       },
                     ),
                   ),
@@ -107,9 +113,9 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   returnTab(context) {
-    return Column(
+    return const Column(
       children: [
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         FlightCard(
           isSingle: false,
         ),
@@ -118,9 +124,9 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
   }
 
   oneWayTab(context) {
-    return Column(
+    return const Column(
       children: [
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         FlightCard(
           isSingle: true,
         ),
@@ -141,7 +147,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             child: Text('${localization.flight} 1'),
           ),
           const SizedBox(height: 8),
-          Center(child: FlightCard(isSingle: true)),
+          const Center(child: FlightCard(isSingle: true)),
           const SizedBox(height: 32),
           Padding(
             padding: EdgeInsets.symmetric(
@@ -149,7 +155,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             child: Text('${localization.flight} 2'),
           ),
           const SizedBox(height: 8),
-          Center(child: FlightCard(isSingle: true)),
+          const Center(child: FlightCard(isSingle: true)),
           const SizedBox(height: 32),
         ],
       ),

@@ -8,7 +8,8 @@ enum Class { economy, premium, business, first }
 
 class FlightCard extends StatefulWidget {
   final bool isSingle;
-  const FlightCard({required this.isSingle,super.key});
+
+  const FlightCard({required this.isSingle, super.key});
 
   @override
   State<FlightCard> createState() => _FlightCardState();
@@ -177,10 +178,10 @@ class _FlightCardState extends State<FlightCard> {
           ),
           Expanded(
               child: Material(
-            color: Theme.of(context).colorScheme.surfaceContainer,
-            child: InkWell(
-              onTap: _pickDate,
-              child: Container(
+                color: Theme.of(context).colorScheme.surfaceContainer,
+                child: InkWell(
+                                onTap: _pickDate,
+                                child: Container(
                 decoration: BoxDecoration(
                   border: Border(
                     bottom: BorderSide(color: Colors.grey.shade300),
@@ -194,12 +195,17 @@ class _FlightCardState extends State<FlightCard> {
                       children: [
                         const SizedBox(height: 8),
                         Text(
-                          widget.isSingle? localization.travelDate : localization.travelDates,
+                          widget.isSingle
+                              ? localization.travelDate
+                              : localization.travelDates,
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          flightDate ?? (widget.isSingle? localization.selectDate : localization.selectDates),
+                          flightDate ??
+                              (widget.isSingle
+                                  ? localization.selectDate
+                                  : localization.selectDates),
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium!
@@ -209,9 +215,9 @@ class _FlightCardState extends State<FlightCard> {
                     ),
                   ],
                 ),
-              ),
-            ),
-          )),
+                                ),
+                              ),
+              )),
           Expanded(
             child: Material(
               color: Theme.of(context).colorScheme.surfaceContainer,
@@ -286,31 +292,28 @@ class _FlightCardState extends State<FlightCard> {
   }
 
   void _pickDate() async {
-
-
-    if(widget.isSingle){
+    if (widget.isSingle) {
       Jalali? picked = await showPersianDatePicker(
         context: context,
         initialDate: Jalali.now(),
         firstDate: Jalali.now(),
         lastDate: Jalali(1450, 9),
       );
-      if(picked!=null){
+      if (picked != null) {
         setState(() {
-          flightDate = picked.formatFullDate() ;
+          flightDate = picked.formatFullDate();
         });
       }
-    } else{
+    } else {
       JalaliRange? picked = await showPersianDateRangePicker(
-        initialEntryMode: PDatePickerEntryMode.input,
         context: context,
-        initialDateRange:JalaliRange(start: Jalali.now(), end: Jalali.now().add(days: 1)) ,
         firstDate: Jalali.now(),
         lastDate: Jalali(1450, 9),
       );
-      if(picked!=null){
+      if (picked != null) {
         setState(() {
-          flightDate = '${picked.start.formatFullDate()} ${S.of(context).toCalender} ${picked.end.formatFullDate()}' ;
+          flightDate =
+              '${picked.start.formatFullDate()} ${S.of(context).toCalender} ${picked.end.formatFullDate()}';
         });
       }
     }

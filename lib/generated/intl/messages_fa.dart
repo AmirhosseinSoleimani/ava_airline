@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "adult": MessageLookupByLibrary.simpleMessage("بزرگسال"),
         "adultEconomyClass1":
             MessageLookupByLibrary.simpleMessage("بزرگسال اکونومی کلاس 1"),
+        "adults": MessageLookupByLibrary.simpleMessage("بزرگسال"),
+        "adultsDescription":
+            MessageLookupByLibrary.simpleMessage("12 سال به بالا"),
         "ageGroup": MessageLookupByLibrary.simpleMessage("بازه سنی"),
         "ahvaz": MessageLookupByLibrary.simpleMessage("اهواز"),
         "airlineCompany":
@@ -50,35 +53,33 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("آوا همراه آرامش شمــــــــا"),
         "baggage": MessageLookupByLibrary.simpleMessage("بار مسافر"),
         "baggageTracker": MessageLookupByLibrary.simpleMessage("ردیاب بار"),
-        "batteryDescription2": MessageLookupByLibrary.simpleMessage(
-            "ویلچر دارای باطری لیتیومی یونی با قابلیت جدا شدن و ظرفیت حداکثر 300 W/H یا دو باطری با حداکثر ظرفیت 160 W/H ضمن بسته بندی و تایید نماینده ماهان فقط در کابین مسافری حمل می گردد."),
-        "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
-            "ویلچر یا سایر وسایل کمک حرکتی دارای باتری تر یا خشک ضمن حفاظت باتری در برابر اتصالی الکتریکی، بسته بندی ایمن و تایید نماینده ماهان در قسمت بار هواپیما حمل می‌گردد.(در صورت امکان جدا شدن باتری, باتری جدا شده در بسته بندی مقاوم در انبار هواپیما حمل می گردد)."),
-        "batteryWheelchairTitle":
-            MessageLookupByLibrary.simpleMessage("ویلچرهای باتری دار"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "blind": MessageLookupByLibrary.simpleMessage("نابینا"),
-        "blindDeafDescription": MessageLookupByLibrary.simpleMessage(
-            "این افراد نیازبه ارائه گواهی پزشکی ندارند. درصورت سفر گروهی, ارائه مجوز جهت انجام هماهنگی، وجود همراه سالم، توانا و هم زبان برای این گروه مسافران در تمام مراحل سفر ضروری می باشد. همراهی این گروه مسافران توسط پرسنل هواپیمایی ماهان مشمول پرداخت هزینه نمی ‎گردد."),
-        "blindDeafTitle":
-            MessageLookupByLibrary.simpleMessage("افراد نابینا و ناشنوا"),
         "book": MessageLookupByLibrary.simpleMessage("رزرو"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("رزرو پرواز"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
             "آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید."),
+        "businessClass": MessageLookupByLibrary.simpleMessage("کلاس بیزینس"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "catering": MessageLookupByLibrary.simpleMessage("پذیرایی"),
+        "changeLanguage": MessageLookupByLibrary.simpleMessage("تغییر زبان"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغییر جستجو"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
-        "children": MessageLookupByLibrary.simpleMessage("خردسال"),
+        "children": MessageLookupByLibrary.simpleMessage("کودک"),
+        "childrenDescription":
+            MessageLookupByLibrary.simpleMessage("2 تا 11 سال"),
         "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
+        "chooseGender":
+            MessageLookupByLibrary.simpleMessage("جنسیت خود را انتخاب کنید"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("جستجوی شهر"),
+        "clas": MessageLookupByLibrary.simpleMessage("کلاس"),
         "comma": MessageLookupByLibrary.simpleMessage("،"),
         "company_description": MessageLookupByLibrary.simpleMessage(
             "شرکت هواپیمایی آوا با هدف ارائه باکیفیت‌ترین خدمات پروازی فعالیت خود را از سال 1402 آغاز کرده‌است. هدف ما کمک به ارتقای کیفیت هواپیمایی کشور در راستای بهبود تجربه مسافران عزیز از سفرهای پروازی خود است"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تائید"),
         "confirmAndPay": MessageLookupByLibrary.simpleMessage("تائید و پرداخت"),
         "confirm_and_pay":
             MessageLookupByLibrary.simpleMessage("تائید و پرداخت"),
@@ -86,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تایید و پرداخت"),
         "contactUs": MessageLookupByLibrary.simpleMessage("تماس با ما"),
         "contact_us": MessageLookupByLibrary.simpleMessage("ارتباط با ما"),
+        "continuee": MessageLookupByLibrary.simpleMessage("ادامه"),
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شرایط سفر به کشورها"),
         "currency": MessageLookupByLibrary.simpleMessage("ریال"),
@@ -105,18 +107,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("کد تخفیف"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد داخلی"),
-        "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
-            "پرواز دبی به ایران 150 درهم (ضمن ثبت SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
         "economy": MessageLookupByLibrary.simpleMessage("اکونومی"),
+        "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
         "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از"),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید."),
-        "exemptionsDescription": MessageLookupByLibrary.simpleMessage(
-            "دارندگان کارت جانبازان، معلولان، خانواده محترم شهدا و همچنین مسافران پروازهای حج و عتبات, اتحادیه اروپا و افراد بیش از 65 سال از پرداخت هزینه معاف می باشند."),
         "faq": MessageLookupByLibrary.simpleMessage("پرسش‌های متداول"),
         "female": MessageLookupByLibrary.simpleMessage("زن"),
+        "firstClass": MessageLookupByLibrary.simpleMessage("فرست کلس"),
         "flight": MessageLookupByLibrary.simpleMessage("پرواز"),
         "flightClass": MessageLookupByLibrary.simpleMessage("کلاس پرواز"),
         "flightDate": MessageLookupByLibrary.simpleMessage("تاریخ پرواز"),
@@ -145,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_female": MessageLookupByLibrary.simpleMessage("زن"),
         "gender_male": MessageLookupByLibrary.simpleMessage("مرد"),
         "gender_unspecified": MessageLookupByLibrary.simpleMessage("غیرمشخص"),
+        "gold": MessageLookupByLibrary.simpleMessage("طلایی"),
         "hintTextPassenger": MessageLookupByLibrary.simpleMessage("1 مسافر"),
         "home": MessageLookupByLibrary.simpleMessage("خانه"),
         "hotels": MessageLookupByLibrary.simpleMessage("هتل‌ها"),
@@ -152,15 +153,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سرگرمی های داخل پرواز"),
         "in_flight_magazine":
             MessageLookupByLibrary.simpleMessage("مجله پروازی"),
-        "incapacitatedPassengerWheelchairPageSubtitle":
-            MessageLookupByLibrary.simpleMessage(
-                "خدمات ویژه برای سفری بدون دغدغه"),
-        "incapacitatedPassengerWheelchairPageTitle":
-            MessageLookupByLibrary.simpleMessage(
-                "مسافران توان خواه/شرایط ویژه"),
         "infant": MessageLookupByLibrary.simpleMessage("نوزاد"),
-        "internationalFlightCost": MessageLookupByLibrary.simpleMessage(
-            "پرواز بین المللی از ایران 1,000,000 ریال"),
+        "infantDescription": MessageLookupByLibrary.simpleMessage("زیر 2 سال"),
+        "inn": MessageLookupByLibrary.simpleMessage("in"),
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد بین المللی"),
         "iran": MessageLookupByLibrary.simpleMessage("ایران"),
@@ -178,17 +173,23 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("بالابر به جای ویلچر"),
         "live_animals": MessageLookupByLibrary.simpleMessage("حیوان زنده"),
         "login_register": MessageLookupByLibrary.simpleMessage("ورود/ثبت نام"),
+        "logout": MessageLookupByLibrary.simpleMessage("خروج"),
         "lost_baggage": MessageLookupByLibrary.simpleMessage("بار گمشده"),
         "lounge_services": MessageLookupByLibrary.simpleMessage("خدمات لانج"),
         "male": MessageLookupByLibrary.simpleMessage("مرد"),
         "mashhad": MessageLookupByLibrary.simpleMessage("مشهد"),
-        "mashhadSpecialFaresPageTitle":
-            MessageLookupByLibrary.simpleMessage("سفر زیارتی مشهد"),
-        "mashhadSpecialFaresParagraph1": MessageLookupByLibrary.simpleMessage(
-            "شهر مشهد و اقع در استان خراسان رضوی یکی از استان‌های تاریخی و مذهبی ایران محسوب می‌شود. این شهر سالانه میزبان حدود ۲۷ میلیون نفر از مسافران داخلی و خارجی است که برای زیارت و مراسم‌های مذهبی به این مکان سفر می‌کنند. دلیل اصلی این حجم مسافر و گردشگر وجود بارگاه امام رضا(ع) در شهر مشهد است. این شهر به لحاظ فرهنگی هم بسیار غنی است."),
-        "mashhadSpecialFaresParagraph2": MessageLookupByLibrary.simpleMessage(
-            "آرامگاه خیلی از بزرگان دین، شعر و ادبیات مثل فردوسی که تاثیر بسزایی در فرهنگ و زبان ایرانی‌ها داشته، در این شهر و توابع آن قرار دارد. همه این‌ها باعث شده مشهد در سال‌های اخیر به یک شهر مدرن تبدیل شود، به طوری که در حال حاضر مراکز تفریحی، گردشگری و تجاری متنوع و پیشرفته‌ای در جای‌جای آن وجود دارد."),
         "medical_issues": MessageLookupByLibrary.simpleMessage("موارد پزشکی"),
+        "message1": MessageLookupByLibrary.simpleMessage(
+            "پرواز شما AV123 به مدت 30 دقیقه تأخیر دارد."),
+        "message2": MessageLookupByLibrary.simpleMessage(
+            "در رزرو پرواز بعدی خود 20٪ تخفیف بگیرید!"),
+        "message3": MessageLookupByLibrary.simpleMessage(
+            "ورود برای پرواز شما AV456 اکنون باز است."),
+        "message4": MessageLookupByLibrary.simpleMessage(
+            "پرواز شما AV789 اکنون در گیت 5 در حال سوار شدن است."),
+        "message5": MessageLookupByLibrary.simpleMessage(
+            "با 50٪ تخفیف به کلاس بیزینس وارد شوید!"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("مایل پرواز"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تلاش شرکت هواپیمایی آوا، حداقل رساندن زمان تاخیر پروازهاست"),
         "multiCity": MessageLookupByLibrary.simpleMessage("چند شهر"),
@@ -204,10 +205,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "اگر سفری در پیش دارید که با ما رزرو کرده‌اید، می‌توانید آن را به فهرست سفرهای من اضافه کنید."),
         "no_delay": MessageLookupByLibrary.simpleMessage("عدم تاخیر"),
+        "none": MessageLookupByLibrary.simpleMessage("هیچکدام"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("استرداد عادی"),
-        "noteDescription": MessageLookupByLibrary.simpleMessage(
-            "در هواپیماهای Embraer ERJ-145 ارائه این خدمات از این قاعده مستثنی است. پذیرش مسافران توانخواه و خانم‌های باردار در کابین بیزینس کلاس هواپیماهای بویینگ 747 امکان‌پذیر نمی‌باشد. لذا خواهشمند است پیش از اقدام به خرید، از نوع هواپیما اطمینان حاصل فرمایید."),
-        "noteTitle": MessageLookupByLibrary.simpleMessage("نکته"),
         "notifications": MessageLookupByLibrary.simpleMessage("اطلاعیه ها"),
         "numberOfPassengers":
             MessageLookupByLibrary.simpleMessage("تعداد مسافر"),
@@ -219,6 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "online_check_in": MessageLookupByLibrary.simpleMessage("پذیرش آنلاین"),
         "origin": MessageLookupByLibrary.simpleMessage("مبدا"),
         "origin_city": MessageLookupByLibrary.simpleMessage("تهران (مهرآباد)"),
+        "passenger": MessageLookupByLibrary.simpleMessage("مسافر"),
         "passengerAndCabinClass":
             MessageLookupByLibrary.simpleMessage("مسافر و کلاس کابین"),
         "passengerDetails":
@@ -237,6 +237,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("راهنمای پذیرش مسافر"),
         "passenger_information":
             MessageLookupByLibrary.simpleMessage("اطلاعات مسافر"),
+        "passengers": MessageLookupByLibrary.simpleMessage("مسافران"),
         "passengersCount": m0,
         "pay": MessageLookupByLibrary.simpleMessage("پرداخت"),
         "payAmount": MessageLookupByLibrary.simpleMessage("13,267,000 ریال"),
@@ -252,6 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("مقصدهای محبوب"),
+        "premiumEconomy":
+            MessageLookupByLibrary.simpleMessage("پریمیوم اکونومی"),
         "professional_staff":
             MessageLookupByLibrary.simpleMessage("پرسنل حرفه ای"),
         "profile": MessageLookupByLibrary.simpleMessage("پروفایل"),
@@ -292,6 +295,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchResults": MessageLookupByLibrary.simpleMessage("نتایج جستجو"),
         "seat_status": MessageLookupByLibrary.simpleMessage("وضعیت صندلی ها"),
         "select": MessageLookupByLibrary.simpleMessage("انتخاب کنید"),
+        "selectDate":
+            MessageLookupByLibrary.simpleMessage("تاریخ را انتخاب کنید"),
         "selectDates":
             MessageLookupByLibrary.simpleMessage("تاریخ‌ها را انتخاب کنید"),
         "selectDestination":
@@ -325,9 +330,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticketInfo": MessageLookupByLibrary.simpleMessage("اطلاعات بلیط"),
         "ticket_guide":
             MessageLookupByLibrary.simpleMessage("راهنمای خرید بلیط"),
+        "tier": MessageLookupByLibrary.simpleMessage("رده"),
+        "title1": MessageLookupByLibrary.simpleMessage("بروزرسانی وضعیت پرواز"),
+        "title2": MessageLookupByLibrary.simpleMessage("تبلیغ"),
+        "title3": MessageLookupByLibrary.simpleMessage("یادآوری ورود"),
+        "title4": MessageLookupByLibrary.simpleMessage("بروزرسانی وضعیت پرواز"),
+        "title5": MessageLookupByLibrary.simpleMessage("تبلیغ"),
         "to": MessageLookupByLibrary.simpleMessage("به"),
-        "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
-            "پرواز بین المللی به ایران 40 دلار"),
+        "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ‌ سفر"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تاریخ‌های سفر"),
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات سفر"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("اخبار سفر"),
@@ -335,11 +345,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("کودک بدون همراه"),
         "version": MessageLookupByLibrary.simpleMessage("ورژن 1.0"),
-        "wheelchairDescription": MessageLookupByLibrary.simpleMessage(
-            "براساس مقررات و دستورالعمل هواپیمایی ماهان و ظرفیت هر هواپیما، فقط مسافرانی که از طریق رزرواسیون درخواست ویلچر کابین خود را ثبت نمودند و کد SSR در بلیط ایشان درج شده، مجاز به پذیرش در فرودگاه و استفاده از ویلچر می باشند. مسافرانی که بدون نیاز به گواهی پزشکی نیاز به استفاده از ویلچر دارند, حتما هنگام تهیه بلیط اعلام درخواست خود را ثبت نمایند. امکان استفاده مسافران از ویلچر شخصی تا زمان سوار شدن به هواپیما برای مسافران توانخواه فراهم است. شایان ذکر است در صورت تکمیل ظرفیت، ثبت درخواست ویلچر امکان پذیر نمی‎ باشد."),
-        "wheelchairServiceCostTitle":
-            MessageLookupByLibrary.simpleMessage("هزینه خدمات ویلچر"),
-        "wheelchairTitle": MessageLookupByLibrary.simpleMessage("ویلچر"),
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("ویلچر در تمام مراحل"),
         "wheelchair_in_map": MessageLookupByLibrary.simpleMessage("ویلچر در مپ")

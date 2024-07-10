@@ -10,6 +10,7 @@
 
 
 
+import 'package:ava_airline/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -28,47 +29,17 @@ class NotificationModel {
   });
 }
 
-List<NotificationModel> demoNotifications = [
-  NotificationModel(
-    title: "Flight Status Update",
-    message: "Your flight AV123 has been delayed by 30 minutes.",
-    time: DateTime.now().subtract(Duration(minutes: 10)),
-    type: "flight_status",
-  ),
-  NotificationModel(
-    title: "Promotion",
-    message: "Get 20% off on your next flight booking!",
-    time: DateTime.now().subtract(Duration(hours: 2)),
-    type: "promotion",
-  ),
-  NotificationModel(
-    title: "Check-in Reminder",
-    message: "Check-in is now open for your flight AV456.",
-    time: DateTime.now().subtract(Duration(days: 1)),
-    type: "check_in",
-  ),
-  NotificationModel(
-    title: "Flight Status Update",
-    message: "Your flight AV789 is now boarding at Gate 5.",
-    time: DateTime.now().subtract(Duration(minutes: 30)),
-    type: "flight_status",
-  ),
-  NotificationModel(
-    title: "Promotion",
-    message: "Upgrade to Business Class with a 50% discount!",
-    time: DateTime.now().subtract(Duration(days: 3)),
-    type: "promotion",
-  ),
-];
+
 
 
 class NotificationCard extends StatelessWidget {
   final NotificationModel notification;
 
-  NotificationCard({required this.notification});
+  NotificationCard({super.key, required this.notification});
 
   @override
   Widget build(BuildContext context) {
+
     return Card(
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: Padding(
@@ -98,13 +69,50 @@ class NotificationsPage extends StatelessWidget {
 
   static const notificationsPageName = 'notifications-page';
   static const notificationsPagePath = '/notifications-page';
+  const NotificationsPage({super.key});
 
 
   @override
   Widget build(BuildContext context) {
+
+    final localization = S.of(context);
+    List<NotificationModel> demoNotifications = [
+      NotificationModel(
+        title: localization.title1,
+        message: localization.message1,
+        time: DateTime.now().subtract(Duration(minutes: 10)),
+        type: "flight_status",
+      ),
+      NotificationModel(
+        title: localization.title2,
+        message: localization.message2,
+        time: DateTime.now().subtract(Duration(hours: 2)),
+        type: "promotion",
+      ),
+      NotificationModel(
+        title: localization.title3,
+        message: localization.message3,
+        time: DateTime.now().subtract(Duration(days: 1)),
+        type: "check_in",
+      ),
+      NotificationModel(
+        title: localization.title4,
+        message: localization.message4,
+        time: DateTime.now().subtract(Duration(minutes: 30)),
+        type: "flight_status",
+      ),
+      NotificationModel(
+        title: localization.title5,
+        message: localization.message5,
+        time: DateTime.now().subtract(Duration(days: 3)),
+        type: "promotion",
+      ),
+    ];
     return Scaffold(
       appBar: AppBar(
-        title: Text("Notifications"),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
+        title: Text(localization.notifications),
       ),
       body: ListView.builder(
         itemCount: demoNotifications.length,

@@ -74,11 +74,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "buyTicket": MessageLookupByLibrary.simpleMessage("Buy ticket"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("Buy Ticket"),
         "catering": MessageLookupByLibrary.simpleMessage("Catering"),
+        "changeLanguage":
+            MessageLookupByLibrary.simpleMessage("Change Language"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("Change Search"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("Change Ticket"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenDescription": MessageLookupByLibrary.simpleMessage("Age 2-11"),
         "choose": MessageLookupByLibrary.simpleMessage("Choose"),
+        "chooseGender":
+            MessageLookupByLibrary.simpleMessage("Choose your gender"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("Search for a city"),
         "clas": MessageLookupByLibrary.simpleMessage("Class"),
@@ -94,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirmation and Payment"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact us"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("Country Travel Conditions"),
         "currency": MessageLookupByLibrary.simpleMessage("Rial"),
@@ -158,6 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gender_male": MessageLookupByLibrary.simpleMessage("Male"),
         "gender_unspecified":
             MessageLookupByLibrary.simpleMessage("Unspecified"),
+        "gold": MessageLookupByLibrary.simpleMessage("Gold"),
         "hintTextPassenger":
             MessageLookupByLibrary.simpleMessage("1 passenger"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -197,6 +203,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "live_animals": MessageLookupByLibrary.simpleMessage("Live Animals"),
         "login_register":
             MessageLookupByLibrary.simpleMessage("Login/Register"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "lost_baggage": MessageLookupByLibrary.simpleMessage("Lost Baggage"),
         "lounge_services":
             MessageLookupByLibrary.simpleMessage("Lounge Services"),
@@ -210,6 +217,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it."),
         "medical_issues":
             MessageLookupByLibrary.simpleMessage("Medical Issues"),
+        "message1": MessageLookupByLibrary.simpleMessage(
+            "Your flight AV123 has been delayed by 30 minutes."),
+        "message2": MessageLookupByLibrary.simpleMessage(
+            "Get 20% off on your next flight booking!"),
+        "message3": MessageLookupByLibrary.simpleMessage(
+            "Check-in is now open for your flight AV456."),
+        "message4": MessageLookupByLibrary.simpleMessage(
+            "Your flight AV789 is now boarding at Gate 5."),
+        "message5": MessageLookupByLibrary.simpleMessage(
+            "Upgrade to Business Class with a 50% discount!"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("Miles flown"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "Ava Airlines strives to minimize flight delays."),
         "multiCity": MessageLookupByLibrary.simpleMessage("Multi city"),
@@ -225,6 +243,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "If you have an upcoming trip booked with us, you can add it to your My trips list."),
         "no_delay": MessageLookupByLibrary.simpleMessage("No Delay"),
+        "none": MessageLookupByLibrary.simpleMessage("None"),
         "normalRefund": MessageLookupByLibrary.simpleMessage("Normal Refund"),
         "noteDescription": MessageLookupByLibrary.simpleMessage(
             "On Embraer ERJ-145 aircraft, these services are exempt from this rule. Accepting passengers with special needs and pregnant women in the business class cabin of Boeing 747 aircraft is not possible. Therefore, please ensure the type of aircraft before purchasing."),
@@ -356,6 +375,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticketInfo":
             MessageLookupByLibrary.simpleMessage("Ticket Information"),
         "ticket_guide": MessageLookupByLibrary.simpleMessage("Ticket Guide"),
+        "tier": MessageLookupByLibrary.simpleMessage("Tier"),
+        "title1": MessageLookupByLibrary.simpleMessage("Flight Status Update"),
+        "title2": MessageLookupByLibrary.simpleMessage("Promotion"),
+        "title3": MessageLookupByLibrary.simpleMessage("Check-in Reminder"),
+        "title4": MessageLookupByLibrary.simpleMessage("Flight Status Update"),
+        "title5": MessageLookupByLibrary.simpleMessage("Promotion"),
         "to": MessageLookupByLibrary.simpleMessage("TO"),
         "toCalender": MessageLookupByLibrary.simpleMessage("to"),
         "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
