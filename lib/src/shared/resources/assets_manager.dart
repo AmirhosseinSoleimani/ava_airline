@@ -24,7 +24,7 @@ class ImageManager {
   static const String tehran = 'assets/image/tehran.jpg';
   static const String qeshm = 'assets/image/3.png';
   static const String kish = 'assets/image/kish.jpg';
-  static const String ahvaz = 'assets/assets/image/ahvaz.jpg';
+  static const String ahvaz = 'assets/image/ahvaz.jpg';
   static const String shiraz = 'assets/image/shiraz.jpg';
   static const String isfahan = 'assets/image/isfahan.jpg';
   static const String incapacitatedPassengers = 'assets/image/incapacitated_passengers.jpg';
