@@ -2299,6 +2299,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Flight Status Update`
+  String get title1 {
+    return Intl.message(
+      'Flight Status Update',
+      name: 'title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your flight AV123 has been delayed by 30 minutes.`
+  String get message1 {
+    return Intl.message(
+      'Your flight AV123 has been delayed by 30 minutes.',
+      name: 'message1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Promotion`
+  String get title2 {
+    return Intl.message(
+      'Promotion',
+      name: 'title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get 20% off on your next flight booking!`
+  String get message2 {
+    return Intl.message(
+      'Get 20% off on your next flight booking!',
+      name: 'message2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check-in Reminder`
+  String get title3 {
+    return Intl.message(
+      'Check-in Reminder',
+      name: 'title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check-in is now open for your flight AV456.`
+  String get message3 {
+    return Intl.message(
+      'Check-in is now open for your flight AV456.',
+      name: 'message3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flight Status Update`
+  String get title4 {
+    return Intl.message(
+      'Flight Status Update',
+      name: 'title4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your flight AV789 is now boarding at Gate 5.`
+  String get message4 {
+    return Intl.message(
+      'Your flight AV789 is now boarding at Gate 5.',
+      name: 'message4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Promotion`
+  String get title5 {
+    return Intl.message(
+      'Promotion',
+      name: 'title5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upgrade to Business Class with a 50% discount!`
+  String get message5 {
+    return Intl.message(
+      'Upgrade to Business Class with a 50% discount!',
+      name: 'message5',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

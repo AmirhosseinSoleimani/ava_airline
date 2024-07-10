@@ -170,6 +170,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "mashhad": MessageLookupByLibrary.simpleMessage("مشهد"),
         "medical_issues": MessageLookupByLibrary.simpleMessage("مشاكل طبية"),
+        "message1": MessageLookupByLibrary.simpleMessage(
+            "تم تأجيل رحلتك AV123 لمدة 30 دقيقة."),
+        "message2": MessageLookupByLibrary.simpleMessage(
+            "احصل على خصم 20٪ على حجز رحلتك القادمة!"),
+        "message3": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الوصول مفتوح الآن لرحلتك AV456."),
+        "message4": MessageLookupByLibrary.simpleMessage(
+            "رحلتك AV789 بدأت الآن في الصعود في البوابة 5."),
+        "message5": MessageLookupByLibrary.simpleMessage(
+            "قم بالترقية إلى الدرجة الأولى بخصم 50٪!"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تسعى شركة آفا للطيران إلى تقليل تأخيرات الرحلات."),
         "multiCity": MessageLookupByLibrary.simpleMessage("مدن متعددة"),
@@ -306,6 +316,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "tehran": MessageLookupByLibrary.simpleMessage("طهران"),
         "ticketInfo": MessageLookupByLibrary.simpleMessage("معلومات التذكرة"),
         "ticket_guide": MessageLookupByLibrary.simpleMessage("دليل التذكرة"),
+        "title1": MessageLookupByLibrary.simpleMessage("تحديث حالة الرحلة"),
+        "title2": MessageLookupByLibrary.simpleMessage("ترويج"),
+        "title3": MessageLookupByLibrary.simpleMessage("تذكير تسجيل الوصول"),
+        "title4": MessageLookupByLibrary.simpleMessage("تحديث حالة الرحلة"),
+        "title5": MessageLookupByLibrary.simpleMessage("ترويج"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "toCalender": MessageLookupByLibrary.simpleMessage("إلى"),
         "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ السفر"),

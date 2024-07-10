@@ -150,7 +150,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
               title: Text(localization.notifications),
               leading: const Icon(Icons.notifications),
               onTap: () {
-                context.go(NotificationsPage.notificationsPagePath);
+                context.push(NotificationsPage.notificationsPagePath);
               },
             ),
             ListTile(

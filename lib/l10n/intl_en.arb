@@ -224,5 +224,15 @@
   "paymentInfo": "When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance.",
   "payableAmount": "Payable Amount",
   "payAmount": "13,267,000 Rials",
-  "pay": "Pay"
+  "pay": "Pay",
+  "title1": "Flight Status Update",
+  "message1": "Your flight AV123 has been delayed by 30 minutes.",
+  "title2": "Promotion",
+  "message2": "Get 20% off on your next flight booking!",
+  "title3": "Check-in Reminder",
+  "message3": "Check-in is now open for your flight AV456.",
+  "title4": "Flight Status Update",
+  "message4": "Your flight AV789 is now boarding at Gate 5.",
+  "title5": "Promotion",
+  "message5": "Upgrade to Business Class with a 50% discount!"
 }

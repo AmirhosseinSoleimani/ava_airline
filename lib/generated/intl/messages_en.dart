@@ -182,6 +182,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "mashhad": MessageLookupByLibrary.simpleMessage("Mashhad"),
         "medical_issues":
             MessageLookupByLibrary.simpleMessage("Medical Issues"),
+        "message1": MessageLookupByLibrary.simpleMessage(
+            "Your flight AV123 has been delayed by 30 minutes."),
+        "message2": MessageLookupByLibrary.simpleMessage(
+            "Get 20% off on your next flight booking!"),
+        "message3": MessageLookupByLibrary.simpleMessage(
+            "Check-in is now open for your flight AV456."),
+        "message4": MessageLookupByLibrary.simpleMessage(
+            "Your flight AV789 is now boarding at Gate 5."),
+        "message5": MessageLookupByLibrary.simpleMessage(
+            "Upgrade to Business Class with a 50% discount!"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "Ava Airlines strives to minimize flight delays."),
         "multiCity": MessageLookupByLibrary.simpleMessage("Multi city"),
@@ -325,6 +335,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "ticketInfo":
             MessageLookupByLibrary.simpleMessage("Ticket Information"),
         "ticket_guide": MessageLookupByLibrary.simpleMessage("Ticket Guide"),
+        "title1": MessageLookupByLibrary.simpleMessage("Flight Status Update"),
+        "title2": MessageLookupByLibrary.simpleMessage("Promotion"),
+        "title3": MessageLookupByLibrary.simpleMessage("Check-in Reminder"),
+        "title4": MessageLookupByLibrary.simpleMessage("Flight Status Update"),
+        "title5": MessageLookupByLibrary.simpleMessage("Promotion"),
         "to": MessageLookupByLibrary.simpleMessage("TO"),
         "toCalender": MessageLookupByLibrary.simpleMessage("to"),
         "travelDate": MessageLookupByLibrary.simpleMessage("Travel date"),
