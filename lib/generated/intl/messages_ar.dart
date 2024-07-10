@@ -191,6 +191,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lounge_services": MessageLookupByLibrary.simpleMessage("خدمات الصالة"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "mashhad": MessageLookupByLibrary.simpleMessage("مشهد"),
+        "mashhadSpecialFaresPageTitle":
+            MessageLookupByLibrary.simpleMessage("رحلة الحج إلى مشهد"),
+        "mashhadSpecialFaresParagraph1": MessageLookupByLibrary.simpleMessage(
+            "مدينة مشهد الواقعة في محافظة خراسان رضوي تعتبر واحدة من المحافظات التاريخية والدينية في إيران. تستضيف هذه المدينة سنويًا حوالي 27 مليون مسافر محلي وأجنبي يسافرون إلى هذا المكان لأداء الحج والمناسبات الدينية. السبب الرئيسي لهذا العدد الكبير من الركاب والسياح هو ضريح الإمام الرضا (ع) في مشهد. هذه المدينة غنية جدًا ثقافيًا أيضًا."),
+        "mashhadSpecialFaresParagraph2": MessageLookupByLibrary.simpleMessage(
+            "قبر العديد من كبار الدين والشعر والأدب مثل الفردوسي الذي كان له تأثير كبير على ثقافة ولغة الإيرانيين يقع في هذه المدينة وضواحيها. كل هذا جعل من مشهد مدينة حديثة في السنوات الأخيرة، حيث توجد الآن مراكز ترفيهية وسياحية وتجارية متنوعة ومتقدمة في كل مكان فيها."),
         "medical_issues": MessageLookupByLibrary.simpleMessage("مشاكل طبية"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تسعى شركة آفا للطيران إلى تقليل تأخيرات الرحلات."),

@@ -54,7 +54,7 @@ class VideoPlayerPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('سفر زیارتی مشهد', style: Theme.of(context).textTheme.displayLarge?.copyWith(fontSize: AppSize.s28, fontWeight: FontWeight.bold),),
+                  Text(localization.mashhadSpecialFaresPageTitle, style: Theme.of(context).textTheme.displayLarge?.copyWith(fontSize: AppSize.s28, fontWeight: FontWeight.bold),),
                   Space.h16,
                   Center(
                     child: SizedBox(
@@ -65,7 +65,7 @@ class VideoPlayerPage extends StatelessWidget {
                   Space.h16,
                   Center(
                     child: Text(
-                      'شهر مشهد و اقع در استان خراسان رضوی یکی از استان‌های تاریخی و مذهبی ایران محسوب می‌شود. این شهر سالانه میزبان حدود ۲۷ میلیون نفر از مسافران داخلی و خارجی است که برای زیارت و مراسم‌های مذهبی به این مکان سفر می‌کنند. دلیل اصلی این حجم مسافر و گردشگر وجود بارگاه امام رضا(ع) در شهر مشهد است. این شهر به لحاظ فرهنگی هم بسیار غنی است.',
+                      localization.mashhadSpecialFaresParagraph1,
                       style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.start,
                     ),
@@ -73,7 +73,7 @@ class VideoPlayerPage extends StatelessWidget {
                   Space.h16,
                   Center(
                     child: Text(
-                      'آرامگاه خیلی از بزرگان دین، شعر و ادبیات مثل فردوسی که تاثیر بسزایی در فرهنگ و زبان ایرانی‌ها داشته، در این شهر و توابع آن قرار دارد. همه این‌ها باعث شده مشهد در سال‌های اخیر به یک شهر مدرن تبدیل شود، به طوری که در حال حاضر مراکز تفریحی، گردشگری و تجاری متنوع و پیشرفته‌ای در جای‌جای آن وجود دارد.',
+                      localization.mashhadSpecialFaresParagraph2,
                       style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.start,
                     ),

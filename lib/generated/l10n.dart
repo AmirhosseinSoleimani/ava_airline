@@ -2459,6 +2459,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Mashhad Pilgrimage Trip`
+  String get mashhadSpecialFaresPageTitle {
+    return Intl.message(
+      'Mashhad Pilgrimage Trip',
+      name: 'mashhadSpecialFaresPageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mashhad city, located in Khorasan Razavi province, is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of passengers and tourists is the shrine of Imam Reza (AS) in Mashhad. This city is also culturally very rich.`
+  String get mashhadSpecialFaresParagraph1 {
+    return Intl.message(
+      'Mashhad city, located in Khorasan Razavi province, is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of passengers and tourists is the shrine of Imam Reza (AS) in Mashhad. This city is also culturally very rich.',
+      name: 'mashhadSpecialFaresParagraph1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it.`
+  String get mashhadSpecialFaresParagraph2 {
+    return Intl.message(
+      'The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it.',
+      name: 'mashhadSpecialFaresParagraph2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

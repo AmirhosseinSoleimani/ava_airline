@@ -18,16 +18,6 @@ class HomePageWeb extends StatefulWidget {
 
 class _HomePageWebState extends State<HomePageWeb> {
   late List<Map<String, List<String>>> navbarItems;
-  List<HoverImageCardEntity> hoverImageCardEntity = [
-    HoverImageCardEntity(title: 'تهران', date: '11 مرداد 1403 - 15 مرداد 1403', price: 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.tehran, isHover: false),
-    HoverImageCardEntity(title: 'مشهد', date: '1 مرداد 1403 - 5 مرداد 1403', price: 'اکونومی از تهران 1,2800,000 ریال', imageUrl: ImageManager.mashhad, isHover: false),
-    HoverImageCardEntity(title: 'کیش', date: '2 مرداد 1403 - 6 مرداد 1403', price: 'اکونومی از تهران 1,720,000 ریال', imageUrl: ImageManager.kish, isHover: false),
-    HoverImageCardEntity(title: 'قشم', date: '19 مرداد 1403 - 22 مرداد 1403', price: 'اکونومی از تهران 1,700,000 ریال', imageUrl: ImageManager.qeshm, isHover: false),
-    HoverImageCardEntity(title: 'اهواز', date: '20 مرداد 1403 - 24 مرداد 1403', price: 'اکونومی از تهران 1,400,000 ریال', imageUrl: ImageManager.ahvaz, isHover: false),
-    HoverImageCardEntity(title: 'شیراز', date: '10 مرداد 1403 - 818 مرداد 1403', price: 'اکونومی از تهران 1,500,000 ریال', imageUrl: ImageManager.shiraz, isHover: false),
-    HoverImageCardEntity(title: 'اصفحان', date: '4 مرداد 1403 - 8 مرداد 1403', price: 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.isfahan, isHover: false),
-
-  ];
   late List<bool> expanded;
 
   @override
@@ -94,6 +84,16 @@ class _HomePageWebState extends State<HomePageWeb> {
   Widget build(BuildContext context) {
     final localization = S.of(context);
     final width = MediaQuery.of(context).size.width;
+    final locale = Localizations.localeOf(context).languageCode;
+    List<HoverImageCardEntity> hoverImageCardEntity = [
+      HoverImageCardEntity(title: locale.contains('en') ? 'Tehran' : 'تهران', date: locale.contains('en') ? '24 Oct 2024 - 29 Oct 2024' : '11 مرداد 1403 - 15 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,300,000 IRR' : 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.tehran, isHover: false),
+      HoverImageCardEntity(title: locale.contains('en') ? 'Mashhad' : 'مشهد', date: locale.contains('en') ? '11 Jul 2024 - 17 Jul 2024' : '1 مرداد 1403 - 5 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,280,000 IRR' : 'اکونومی از تهران 1,2800,000 ریال', imageUrl: ImageManager.mashhad, isHover: false),
+      HoverImageCardEntity(title: locale.contains('en') ? 'Kish' : 'کیش', date: locale.contains('en') ? '24 Dec 2024 - 22 Jan 2025' : '2 مرداد 1403 - 6 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,720,00. IRR' : 'اکونومی از تهران 1,720,000 ریال', imageUrl: ImageManager.kish, isHover: false),
+      HoverImageCardEntity(title: locale.contains('en') ? 'Qeshm' : 'قشم', date: locale.contains('en') ? '10 Sep 2024 - 10 Oct 2024' : '19 مرداد 1403 - 22 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,700,000 IRR' : 'اکونومی از تهران 1,700,000 ریال', imageUrl: ImageManager.qeshm, isHover: false),
+      HoverImageCardEntity(title: locale.contains('en') ? 'Ahvaz' : 'اهواز', date: locale.contains('en') ? '11 Jul 2024 - 16 Jul 2024' : '20 مرداد 1403 - 24 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,400,000 IRR' : 'اکونومی از تهران 1,400,000 ریال', imageUrl: ImageManager.ahvaz, isHover: false),
+      HoverImageCardEntity(title: locale.contains('en') ? 'Shiraz' : 'شیراز', date: locale.contains('en') ? '17 Sep 2024 - 22 Sep 2024' : '10 مرداد 1403 - 818 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,500,000 IRR' : 'اکونومی از تهران 1,500,000 ریال', imageUrl: ImageManager.shiraz, isHover: false),
+      HoverImageCardEntity(title: locale.contains('en') ? 'Isfahan' : 'اصفحان', date: locale.contains('en') ? '29 Aug 2024 - 03 Sep 2024' : '4 مرداد 1403 - 8 مرداد 1403', price: locale.contains('en') ? 'Economy from Tehran 1,300,000 IRR' : 'اکونومی از تهران 1,300,000 ریال', imageUrl: ImageManager.isfahan, isHover: false),
+    ];
     return Scaffold(
       key: scaffoldKey,
       drawer: const AvaDrawer(),
