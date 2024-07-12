@@ -63,7 +63,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           city: localization.ahvaz,
           country: localization.iran,
           assetPath: 'assets/image/ahvaz.jpg',
-          minimumPrice: 500,
+          minimumPrice: 200,
           originCity: localization.tehran,
           persianPrice: '1,720,000 ریال'
       ),
@@ -72,7 +72,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           city: localization.shiraz,
           country: localization.iran,
           assetPath: 'assets/image/shiraz.jpg',
-          minimumPrice: 400,
+          minimumPrice: 100,
           originCity: localization.tehran,
           persianPrice: '1,900,000 ریال'
       ),
@@ -81,10 +81,44 @@ class _HomePageMobileState extends State<HomePageMobile> {
           city: localization.isfahan,
           country: localization.iran,
           assetPath: 'assets/image/isfahan.jpg',
-          minimumPrice: 350,
+          minimumPrice: 250,
           originCity: localization.tehran,
           persianPrice: '1,330,000 ریال'
       ),
+
+
+      ///foreign flights
+      Destination(
+          id: 2,
+          city: localization.baghdad,
+          country: localization.iraq,
+          assetPath: 'assets/image/baghdad.jpg',
+          minimumPrice: 400,
+          originCity: localization.tehran,
+          persianPrice: '2,520,000 ریال'
+      ),
+
+      Destination(
+          id: 3,
+          city: localization.dubai,
+          country: localization.uae,
+          assetPath: 'assets/image/dubai.jpg',
+          minimumPrice: 450,
+          originCity: localization.tehran,
+          persianPrice: '6,710,000 ریال'
+      ),
+
+      Destination(
+          id: 4,
+          city: localization.istanbul,
+          country: localization.turkey,
+          assetPath: 'assets/image/istanbul.jpg',
+          minimumPrice: 500,
+          originCity: localization.tehran,
+          persianPrice: '4,900,000 ریال'
+      ),
+
+
     ];
 
     final features = [

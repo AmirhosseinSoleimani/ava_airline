@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ava_with_you": MessageLookupByLibrary.simpleMessage("آفا مع سلامتك"),
         "baggage": MessageLookupByLibrary.simpleMessage("أمتعة"),
         "baggageTracker": MessageLookupByLibrary.simpleMessage("متعقب الأمتعة"),
+        "baghdad": MessageLookupByLibrary.simpleMessage("بغداد"),
         "batteryDescription2": MessageLookupByLibrary.simpleMessage(
             "يتم نقل الكراسي المتحركة التي تحتوي على بطارية ليثيوم أيون بسعة قصوى تبلغ 300 واط/ساعة أو بطاريتين بسعة قصوى تبلغ 160 واط/ساعة، بعد التعبئة وموافقة ممثل خطوط ماهان الجوية، في مقصورة الركاب فقط."),
         "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
@@ -114,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("رمز الخصم"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("وجهات محلية"),
+        "dubai": MessageLookupByLibrary.simpleMessage("دبي"),
         "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "رحلة من دبي إلى إيران 150 درهم (مع تسجيل SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("خلال الرحلة"),
@@ -178,7 +180,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("وجهات دولية"),
         "iran": MessageLookupByLibrary.simpleMessage("إيران"),
+        "iraq": MessageLookupByLibrary.simpleMessage("العراق"),
         "isfahan": MessageLookupByLibrary.simpleMessage("أصفهان"),
+        "istanbul": MessageLookupByLibrary.simpleMessage("اسطنبول"),
         "job_opportunities": MessageLookupByLibrary.simpleMessage("فرص عمل"),
         "kish": MessageLookupByLibrary.simpleMessage("كيش"),
         "labelText": MessageLookupByLibrary.simpleMessage("تسمية"),
@@ -376,6 +380,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات السفر"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("تحديثات السفر"),
         "travel_info": MessageLookupByLibrary.simpleMessage("معلومات السفر"),
+        "turkey": MessageLookupByLibrary.simpleMessage("تركيا"),
+        "uae": MessageLookupByLibrary.simpleMessage("الإمارات العربية المتحدة"),
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("طفل بدون مرافق"),
         "version": MessageLookupByLibrary.simpleMessage("الإصدار 1.0"),

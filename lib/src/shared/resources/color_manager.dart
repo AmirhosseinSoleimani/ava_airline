@@ -10,7 +10,7 @@ class ColorLightThemeManager {
   static Color black = Colors.black;
   static Color grey = HexColor.fromHex('#949494');
   static Color transparent = Colors.transparent;
-  static const Color gold = Color(0xFFFFD700);
+  static const Color gold = Color(0xFFC6B113);
 
 }
 
@@ -22,6 +22,6 @@ class ColorDarkThemeManager {
   static Color tealColor = HexColor.fromHex('#3C9773');
   static Color darkPurpleColor = HexColor.fromHex('#2e0336');
   static Color transparent = Colors.transparent;
-  static const Color gold = Color(0xFFFFD700); // Gold color
+  static const Color gold = Color(0xFFC6B113);
 
 }

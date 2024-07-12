@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "baggage": MessageLookupByLibrary.simpleMessage("Baggage"),
         "baggageTracker":
             MessageLookupByLibrary.simpleMessage("Baggage tracker"),
+        "baghdad": MessageLookupByLibrary.simpleMessage("Baghdad"),
         "batteryDescription2": MessageLookupByLibrary.simpleMessage(
             "Wheelchairs with lithium-ion batteries with a maximum capacity of 300 W/H or two batteries with a maximum capacity of 160 W/H, after packaging and approval by Mahan Airlines representative, are only carried in the passenger cabin."),
         "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
@@ -122,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("Discount Code"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("Domestic Destinations"),
+        "dubai": MessageLookupByLibrary.simpleMessage("Dubai"),
         "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "Dubai to Iran flight 150 AED (with SSR registration)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("During Flight"),
@@ -190,7 +192,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("International Destinations"),
         "iran": MessageLookupByLibrary.simpleMessage("Iran"),
+        "iraq": MessageLookupByLibrary.simpleMessage("Iraq"),
         "isfahan": MessageLookupByLibrary.simpleMessage("Isfahan"),
+        "istanbul": MessageLookupByLibrary.simpleMessage("Istanbul"),
         "job_opportunities":
             MessageLookupByLibrary.simpleMessage("Job Opportunities"),
         "kish": MessageLookupByLibrary.simpleMessage("Kish"),
@@ -398,6 +402,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Travel Services"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("Travel updates"),
         "travel_info": MessageLookupByLibrary.simpleMessage("Travel Info"),
+        "turkey": MessageLookupByLibrary.simpleMessage("Turkey"),
+        "uae": MessageLookupByLibrary.simpleMessage("UAE"),
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("Unaccompanied Child"),
         "version": MessageLookupByLibrary.simpleMessage("Version 1.0"),
