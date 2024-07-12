@@ -32,8 +32,8 @@ dependencies:
   url_launcher: ^6.3.0
   date_picker_timeline: ^1.2.6
   video_player_web_hls: ^1.2.1
-  video_player: ^2.9.1
-  chewie: ^1.8.1
+#  video_player: ^2.9.1
+#  chewie: ^1.8.1
 
 
 dev_dependencies:

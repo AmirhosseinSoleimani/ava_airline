@@ -45,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "applyCode": MessageLookupByLibrary.simpleMessage("تطبيق"),
         "avaFlightExperience":
             MessageLookupByLibrary.simpleMessage("تجربة طيران آوا"),
+        "avaSideServices":
+            MessageLookupByLibrary.simpleMessage("خدمات آوا الجانبية"),
         "ava_fleet": MessageLookupByLibrary.simpleMessage("أسطول آفا"),
         "ava_tour": MessageLookupByLibrary.simpleMessage("جولة آفا"),
         "ava_with_you": MessageLookupByLibrary.simpleMessage("آفا مع سلامتك"),

@@ -11,6 +11,8 @@ class DestinationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = Localizations.localeOf(context).languageCode;
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
@@ -54,9 +56,18 @@ class DestinationCard extends StatelessWidget {
                         ),
                     children: <TextSpan>[
                       TextSpan(text: S.of(context).economyFrom),
-                      TextSpan(text: ' \$${destination.minimumPrice}',style:Theme.of(context).textTheme.bodyLarge!.copyWith(
+                      locale == 'fa'?
+
+                      TextSpan(text: ' ${destination.persianPrice}',style:Theme.of(context).textTheme.bodyLarge!.copyWith(
                         color: Theme.of(context).colorScheme.primary
+                      ), )
+
+                          :
+
+                      TextSpan(text: ' \$${destination.minimumPrice}',style:Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          color: Theme.of(context).colorScheme.primary
                       ), ),
+
                     ]
                   ),
                 ),

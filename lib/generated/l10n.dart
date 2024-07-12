@@ -140,10 +140,10 @@ class S {
     );
   }
 
-  /// `Popular destinations`
+  /// `Popular Destinations`
   String get popularDestinations {
     return Intl.message(
-      'Popular destinations',
+      'Popular Destinations',
       name: 'popularDestinations',
       desc: '',
       args: [],
@@ -155,6 +155,16 @@ class S {
     return Intl.message(
       'AVA FLIGHT EXPERIENCE',
       name: 'avaFlightExperience',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ava Side Services`
+  String get avaSideServices {
+    return Intl.message(
+      'Ava Side Services',
+      name: 'avaSideServices',
       desc: '',
       args: [],
     );

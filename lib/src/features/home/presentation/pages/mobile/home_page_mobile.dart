@@ -64,21 +64,27 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.iran,
           assetPath: 'assets/image/ahvaz.jpg',
           minimumPrice: 500,
-          originCity: localization.tehran),
+          originCity: localization.tehran,
+          persianPrice: '1,720,000 ریال'
+      ),
       Destination(
           id: 1,
           city: localization.shiraz,
           country: localization.iran,
           assetPath: 'assets/image/shiraz.jpg',
           minimumPrice: 400,
-          originCity: localization.tehran),
+          originCity: localization.tehran,
+          persianPrice: '1,900,000 ریال'
+      ),
       Destination(
           id: 1,
           city: localization.isfahan,
           country: localization.iran,
           assetPath: 'assets/image/isfahan.jpg',
           minimumPrice: 350,
-          originCity: localization.tehran),
+          originCity: localization.tehran,
+          persianPrice: '1,330,000 ریال'
+      ),
     ];
 
     final features = [
@@ -123,6 +129,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           'assets/image/ava.png',
           height: AppBar().preferredSize.height - 16,
         ),
+        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
       ),
       drawer: const DrawerWidget(),
       body: isLoading
@@ -227,7 +234,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                     .size
                     .width * 0.025)),
             child: Text(
-              localization.avaFlightExperience,
+              localization.avaSideServices,
               style: Theme
                   .of(context)
                   .textTheme
@@ -381,7 +388,9 @@ class _HomePageMobileState extends State<HomePageMobile> {
                         country: '',
                         assetPath: '',
                         minimumPrice: 0,
-                        originCity: ''),
+                        originCity: '',
+                        persianPrice: ''
+                    ),
                   ).map((e) => DestinationCard(destination: e)).toList(),
                   options: CarouselOptions(
                     height: 200,
@@ -398,7 +407,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                       .size
                       .width * 0.025)),
               child: Text(
-                localization.avaFlightExperience,
+                localization.avaSideServices,
                 style: Theme
                     .of(context)
                     .textTheme

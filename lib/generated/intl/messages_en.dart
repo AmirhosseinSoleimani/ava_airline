@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "applyCode": MessageLookupByLibrary.simpleMessage("Apply"),
         "avaFlightExperience":
             MessageLookupByLibrary.simpleMessage("AVA FLIGHT EXPERIENCE"),
+        "avaSideServices":
+            MessageLookupByLibrary.simpleMessage("Ava Side Services"),
         "ava_fleet": MessageLookupByLibrary.simpleMessage("Ava Fleet"),
         "ava_tour": MessageLookupByLibrary.simpleMessage("Ava Tour"),
         "ava_with_you":
@@ -301,7 +303,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
         "popularDestinations":
-            MessageLookupByLibrary.simpleMessage("Popular destinations"),
+            MessageLookupByLibrary.simpleMessage("Popular Destinations"),
         "premiumEconomy":
             MessageLookupByLibrary.simpleMessage("Premium Economy"),
         "professional_staff":

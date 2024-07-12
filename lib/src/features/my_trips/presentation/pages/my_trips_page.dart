@@ -19,6 +19,8 @@ class MyTripsPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.surface,
         surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.myTrips),
+        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
+
       ),
       drawer: const DrawerWidget(),
       body: Padding(

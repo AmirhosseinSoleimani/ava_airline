@@ -43,7 +43,7 @@ class _VideoPageState extends State<VideoPage> {
                     borderRadius:
                     BorderRadius.circular(AppSize.s12),
                   ),
-                  child: VideoPlayerWidget(),
+                  // child: VideoPlayerWidget(),
 
                 ),
               ),

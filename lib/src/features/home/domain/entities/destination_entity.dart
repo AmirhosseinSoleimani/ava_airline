@@ -5,6 +5,7 @@ class Destination {
   final String assetPath;
   final String originCity;
   final int minimumPrice;
+  final String persianPrice;
 
   const Destination({
     required this.id,
@@ -13,5 +14,6 @@ class Destination {
     required this.assetPath,
     required this.minimumPrice,
     required this.originCity,
+    required this.persianPrice,
   });
 }
