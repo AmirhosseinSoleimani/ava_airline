@@ -37,45 +37,47 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             .colorScheme
             .surfaceTint,
         title: Text(localization.searchFlights),
-        bottom: TabBar(
-          labelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
-              color: Theme.of(context).colorScheme.primary,
-              fontWeight: FontWeight.bold),
-          unselectedLabelStyle: Theme.of(context)
-              .textTheme
-              .titleMedium!
-              .copyWith(fontWeight: FontWeight.w500),
-          controller: _tabController,
-          tabs: [
-            Tab(
-              child: FittedBox(
-                child: Text(
-                  localization.oneWay,
-                  maxLines: 1,
-                ),
-              ),
-            ),
-            Tab(
-              child: FittedBox(
-                child: Text(
-                  localization.returnS,
-                  maxLines: 1,
-                ),
-              ),
-            ),
-            Tab(
-              child: FittedBox(
-                child: Text(
-                  localization.multiCity,
-                  maxLines: 1,
-                ),
-              ),
-            ),
-          ],
-        ),
+        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
       ),
       body: Column(
         children: [
+          TabBar(
+            labelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
+                color: Theme.of(context).colorScheme.primary,
+                fontWeight: FontWeight.bold),
+            unselectedLabelStyle: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .copyWith(fontWeight: FontWeight.w500),
+            controller: _tabController,
+            tabs: [
+              Tab(
+                child: FittedBox(
+                  child: Text(
+                    localization.oneWay,
+                    maxLines: 1,
+                  ),
+                ),
+              ),
+              Tab(
+                child: FittedBox(
+                  child: Text(
+                    localization.returnS,
+                    maxLines: 1,
+                  ),
+                ),
+              ),
+              Tab(
+                child: FittedBox(
+                  child: Text(
+                    localization.multiCity,
+                    maxLines: 1,
+                  ),
+                ),
+              ),
+            ],
+          ),
+
           Expanded(
             flex: 4,
             child: TabBarView(
