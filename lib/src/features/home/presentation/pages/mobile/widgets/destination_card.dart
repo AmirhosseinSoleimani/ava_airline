@@ -1,13 +1,13 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
-import 'package:ava_airline/src/features/home/domain/entities/city_entity.dart';
 import 'package:ava_airline/src/features/home/domain/entities/destination_entity.dart';
 import 'package:flutter/material.dart';
 
 class DestinationCard extends StatelessWidget {
   final Destination destination;
+  final bool? isOffer;
 
-  const DestinationCard({required this.destination, super.key});
+  const DestinationCard({required this.destination, this.isOffer, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,13 @@ class DestinationCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-            child: destination.assetPath==''? Container(height: 125, width: MediaQuery.of(context).size.width): Image.asset(destination.assetPath,
-                height: 125,
-                fit: BoxFit.cover,
-                width: MediaQuery.of(context).size.width),
+            child: destination.assetPath == ''
+                ? Container(
+                    height: 125, width: MediaQuery.of(context).size.width)
+                : Image.asset(destination.assetPath,
+                    height: 125,
+                    fit: BoxFit.cover,
+                    width: MediaQuery.of(context).size.width),
           ),
           const SizedBox(height: 8),
           Padding(
@@ -49,26 +52,39 @@ class DestinationCard extends StatelessWidget {
                       .displayMedium!
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
-                RichText(
-                  text: TextSpan(
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          fontWeight: FontWeight.w400,
-                        ),
-                    children: <TextSpan>[
-                      TextSpan(text: S.of(context).economyFrom),
-                      locale == 'fa'?
-
-                      TextSpan(text: ' ${destination.persianPrice}',style:Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.primary
-                      ), )
-
-                          :
-
-                      TextSpan(text: ' \$${destination.minimumPrice}',style:Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          color: Theme.of(context).colorScheme.primary
-                      ), ),
-
-                    ]
+                FittedBox(
+                  child: RichText(
+                    text: TextSpan(
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                              fontWeight: FontWeight.w400,
+                            ),
+                        children: <TextSpan>[
+                          TextSpan(text: S.of(context).economyFrom),
+                         TextSpan(
+                                  text: locale == 'fa'?' ${destination.persianPrice}':'\$${destination.minimumPrice}',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge!
+                                      .copyWith(
+                                    decoration: isOffer==true? TextDecoration.lineThrough: TextDecoration.none,
+                                      decorationColor: Theme.of(context)
+                                          .colorScheme
+                                          .primary,
+                                          decorationThickness: 3,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .primary),
+                                ),
+                          if(isOffer==true) TextSpan(  text: locale == 'fa'?' ${destination.persianPriceLow}':' \$${destination.minimumPriceLow}', style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .primary),)
+                  
+                  
+                        ]),
                   ),
                 ),
               ],

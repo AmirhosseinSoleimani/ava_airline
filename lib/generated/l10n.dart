@@ -420,10 +420,10 @@ class S {
     );
   }
 
-  /// `Economy from`
+  /// `Economy from `
   String get economyFrom {
     return Intl.message(
-      'Economy from',
+      'Economy from ',
       name: 'economyFrom',
       desc: '',
       args: [],
@@ -2500,10 +2500,10 @@ class S {
     );
   }
 
-  /// `Miles flown`
+  /// `Hamava Score`
   String get milesFlown {
     return Intl.message(
-      'Miles flown',
+      'Hamava Score',
       name: 'milesFlown',
       desc: '',
       args: [],
@@ -2795,6 +2795,166 @@ class S {
     return Intl.message(
       'The tomb of many religious, poetry and literature greats such as Ferdowsi, who had a significant impact on Iranian culture and language, is located in this city and its suburbs. All these have made Mashhad become a modern city in recent years, so that there are various and advanced entertainment, tourism and commercial centers in its place.',
       name: 'mashhad2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Participation in lottery`
+  String get benefit1 {
+    return Intl.message(
+      'Participation in lottery',
+      name: 'benefit1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free in-flight internet`
+  String get benefit2 {
+    return Intl.message(
+      'Free in-flight internet',
+      name: 'benefit2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Travel insurance`
+  String get benefit3 {
+    return Intl.message(
+      'Travel insurance',
+      name: 'benefit3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Priority seat selection`
+  String get benefit4 {
+    return Intl.message(
+      'Priority seat selection',
+      name: 'benefit4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Extra baggage allowance`
+  String get benefit5 {
+    return Intl.message(
+      'Extra baggage allowance',
+      name: 'benefit5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Travel consultation`
+  String get benefit6 {
+    return Intl.message(
+      'Travel consultation',
+      name: 'benefit6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Travel class upgrade`
+  String get benefit7 {
+    return Intl.message(
+      'Travel class upgrade',
+      name: 'benefit7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ticket and hotel discount`
+  String get benefit8 {
+    return Intl.message(
+      'Ticket and hotel discount',
+      name: 'benefit8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current benefits`
+  String get currentBenefits {
+    return Intl.message(
+      'Current benefits',
+      name: 'currentBenefits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next tier benefits`
+  String get nextBenefits {
+    return Intl.message(
+      'Next tier benefits',
+      name: 'nextBenefits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ All blue tier benefits`
+  String get plusBlue {
+    return Intl.message(
+      '+ All blue tier benefits',
+      name: 'plusBlue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ All bronze tier benefits`
+  String get plusBronze {
+    return Intl.message(
+      '+ All bronze tier benefits',
+      name: 'plusBronze',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ All silver tier benefits`
+  String get plusSilver {
+    return Intl.message(
+      '+ All silver tier benefits',
+      name: 'plusSilver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your offers`
+  String get yourOffers {
+    return Intl.message(
+      'Your offers',
+      name: 'yourOffers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current\nTier`
+  String get currentTier {
+    return Intl.message(
+      'Current\nTier',
+      name: 'currentTier',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next\nTier`
+  String get nextTier {
+    return Intl.message(
+      'Next\nTier',
+      name: 'nextTier',
       desc: '',
       args: [],
     );

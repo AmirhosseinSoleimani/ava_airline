@@ -62,6 +62,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "ویلچر یا سایر وسایل کمک حرکتی دارای باتری تر یا خشک ضمن حفاظت باتری در برابر اتصالی الکتریکی، بسته بندی ایمن و تایید نماینده ماهان در قسمت بار هواپیما حمل می‌گردد.(در صورت امکان جدا شدن باتری, باتری جدا شده در بسته بندی مقاوم در انبار هواپیما حمل می گردد)."),
         "batteryWheelchairTitle":
             MessageLookupByLibrary.simpleMessage("ویلچرهای باتری دار"),
+        "benefit1": MessageLookupByLibrary.simpleMessage("شرکت در قرعه‌کشی"),
+        "benefit2":
+            MessageLookupByLibrary.simpleMessage("اینترنت رایگان حین پرواز"),
+        "benefit3": MessageLookupByLibrary.simpleMessage("بیمه سفر"),
+        "benefit4": MessageLookupByLibrary.simpleMessage("اولویت انتخاب صندلی"),
+        "benefit5": MessageLookupByLibrary.simpleMessage("مجوز بار اضافی"),
+        "benefit6": MessageLookupByLibrary.simpleMessage("مشاوره سفر"),
+        "benefit7": MessageLookupByLibrary.simpleMessage("ارتقا کلاس سفر"),
+        "benefit8": MessageLookupByLibrary.simpleMessage("تخفیف بلیط و هتل"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "blind": MessageLookupByLibrary.simpleMessage("نابینا"),
@@ -106,7 +115,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شرایط سفر به کشورها"),
         "currency": MessageLookupByLibrary.simpleMessage("ریال"),
+        "currentBenefits": MessageLookupByLibrary.simpleMessage("مزایای فعلی"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("fa"),
+        "currentTier": MessageLookupByLibrary.simpleMessage("رده\nفعلی"),
         "deaf": MessageLookupByLibrary.simpleMessage("ناشنوا"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاریخ رفت"),
         "destination": MessageLookupByLibrary.simpleMessage("مقصد"),
@@ -128,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
         "economy": MessageLookupByLibrary.simpleMessage("اکونومی"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از"),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید."),
@@ -228,7 +239,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "پرواز شما AV789 اکنون در گیت 5 در حال سوار شدن است."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "با 50٪ تخفیف به کلاس بیزینس وارد شوید!"),
-        "milesFlown": MessageLookupByLibrary.simpleMessage("مایل پرواز"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("امتیاز هم‌آوایی"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تلاش شرکت هواپیمایی آوا، حداقل رساندن زمان تاخیر پروازهاست"),
         "multiCity": MessageLookupByLibrary.simpleMessage("چند شهر"),
@@ -240,6 +251,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nationality": MessageLookupByLibrary.simpleMessage("ملیت"),
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("رنگ"),
         "next": MessageLookupByLibrary.simpleMessage("ادامه"),
+        "nextBenefits": MessageLookupByLibrary.simpleMessage("مزایای رده بعدی"),
+        "nextTier": MessageLookupByLibrary.simpleMessage("رده\nبعدی"),
         "noTrips": MessageLookupByLibrary.simpleMessage("سفری یافت نشد"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "اگر سفری در پیش دارید که با ما رزرو کرده‌اید، می‌توانید آن را به فهرست سفرهای من اضافه کنید."),
@@ -293,6 +306,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "هنگام پرداخت با استفاده از موجودی، در صورت استرداد، مبلغ قابل پرداخت به موجودی حساب شما باز خواهد گشت."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
+        "plusBlue":
+            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده آبی"),
+        "plusBronze":
+            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده برنز"),
+        "plusSilver":
+            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده نقره"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("مقصدهای محبوب"),
         "premiumEconomy":
@@ -399,6 +418,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "wheelchairTitle": MessageLookupByLibrary.simpleMessage("ویلچر"),
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("ویلچر در تمام مراحل"),
-        "wheelchair_in_map": MessageLookupByLibrary.simpleMessage("ویلچر در مپ")
+        "wheelchair_in_map":
+            MessageLookupByLibrary.simpleMessage("ویلچر در مپ"),
+        "yourOffers": MessageLookupByLibrary.simpleMessage("تخفیف‌های شما")
       };
 }

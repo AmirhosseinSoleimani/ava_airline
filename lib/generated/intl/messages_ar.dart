@@ -59,6 +59,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "يتم نقل الكراسي المتحركة أو غيرها من وسائل المساعدة على الحركة التي تحتوي على بطارية رطبة أو جافة في مخزن البضائع بالطائرة مع حماية البطارية من الدوائر القصيرة، وتغليف آمن، وموافقة ممثل خطوط ماهان الجوية. (إذا كانت البطارية قابلة للإزالة، يتم نقل البطارية المنفصلة في عبوة مقاومة في مخزن الطائرة)."),
         "batteryWheelchairTitle": MessageLookupByLibrary.simpleMessage(
             "الكراسي المتحركة التي تعمل بالبطارية"),
+        "benefit1": MessageLookupByLibrary.simpleMessage("المشاركة في السحب"),
+        "benefit2": MessageLookupByLibrary.simpleMessage(
+            "الإنترنت المجاني أثناء الرحلة"),
+        "benefit3": MessageLookupByLibrary.simpleMessage("تأمين السفر"),
+        "benefit4":
+            MessageLookupByLibrary.simpleMessage("أولوية اختيار المقعد"),
+        "benefit5":
+            MessageLookupByLibrary.simpleMessage("السماح بوزن إضافي للأمتعة"),
+        "benefit6": MessageLookupByLibrary.simpleMessage("استشارة السفر"),
+        "benefit7": MessageLookupByLibrary.simpleMessage("ترقية درجة السفر"),
+        "benefit8":
+            MessageLookupByLibrary.simpleMessage("خصم على التذاكر والفنادق"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "blind": MessageLookupByLibrary.simpleMessage("كفيف"),
@@ -102,7 +114,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شروط السفر إلى الدول"),
         "currency": MessageLookupByLibrary.simpleMessage("ريال"),
+        "currentBenefits":
+            MessageLookupByLibrary.simpleMessage("الفوائد الحالية"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("ar"),
+        "currentTier": MessageLookupByLibrary.simpleMessage("الفئة\nالحالية"),
         "deaf": MessageLookupByLibrary.simpleMessage("أصم"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاريخ المغادرة"),
         "destination": MessageLookupByLibrary.simpleMessage("مقصد"),
@@ -123,7 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "during_flight": MessageLookupByLibrary.simpleMessage("خلال الرحلة"),
         "economy": MessageLookupByLibrary.simpleMessage("اقتصادي"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("إكونومي من"),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("إكونومي من "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رمز خصم، أدخله أدناه واضغط على تطبيق."),
@@ -226,7 +241,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "رحلتك AV789 بدأت الآن في الصعود في البوابة 5."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "قم بالترقية إلى الدرجة الأولى بخصم 50٪!"),
-        "milesFlown": MessageLookupByLibrary.simpleMessage("الأميال المقطوعة"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("نتيجة هم‌آوا"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تسعى شركة آفا للطيران إلى تقليل تأخيرات الرحلات."),
         "multiCity": MessageLookupByLibrary.simpleMessage("مدن متعددة"),
@@ -238,6 +253,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "nationality": MessageLookupByLibrary.simpleMessage("الجنسية"),
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("اللون"),
         "next": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "nextBenefits":
+            MessageLookupByLibrary.simpleMessage("فوائد المستوى التالي"),
+        "nextTier": MessageLookupByLibrary.simpleMessage("الفئة\nالتالية"),
         "noTrips": MessageLookupByLibrary.simpleMessage("لا توجد رحلات قادمة"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رحلة قادمة محجوزة معنا، يمكنك إضافتها إلى قائمة رحلاتي."),
@@ -291,6 +309,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "عند الدفع باستخدام الرصيد، في حالة الاسترداد، سيتم إعادة المبلغ المسترد إلى رصيد حسابك."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
+        "plusBlue":
+            MessageLookupByLibrary.simpleMessage("+ جميع مزايا الفئة الزرقاء"),
+        "plusBronze": MessageLookupByLibrary.simpleMessage(
+            "+ جميع مزايا الفئة البرونزية"),
+        "plusSilver":
+            MessageLookupByLibrary.simpleMessage("+ جميع مزايا الفئة الفضية"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("وجهات شعبية"),
         "premiumEconomy":
@@ -397,6 +421,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("كرسي متحرك في جميع المراحل"),
         "wheelchair_in_map":
-            MessageLookupByLibrary.simpleMessage("كرسي متحرك في الخريطة")
+            MessageLookupByLibrary.simpleMessage("كرسي متحرك في الخريطة"),
+        "yourOffers": MessageLookupByLibrary.simpleMessage("عروضك")
       };
 }

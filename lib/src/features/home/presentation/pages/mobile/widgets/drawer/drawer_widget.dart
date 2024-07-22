@@ -1,6 +1,8 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
+import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -16,10 +18,10 @@ class DrawerWidget extends StatelessWidget {
           Container(
             height: 150,
             padding: const EdgeInsets.only(top: 36, right: 16, left: 16),
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  'assets/image/gold.jpg',
+                  context.read<ThemeCubit>().tier.path,
                 ),
                 fit: BoxFit.cover,
               ),

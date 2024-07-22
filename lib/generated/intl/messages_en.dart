@@ -62,6 +62,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "Wheelchairs or other mobility aids with wet or dry batteries are transported in the aircraft\'s cargo hold with the battery protected against short circuits, safely packaged, and approved by Mahan Airlines representative. (If the battery is removable, the detached battery is carried in a resistant package in the aircraft\'s hold)."),
         "batteryWheelchairTitle":
             MessageLookupByLibrary.simpleMessage("Battery-Powered Wheelchairs"),
+        "benefit1":
+            MessageLookupByLibrary.simpleMessage("Participation in lottery"),
+        "benefit2":
+            MessageLookupByLibrary.simpleMessage("Free in-flight internet"),
+        "benefit3": MessageLookupByLibrary.simpleMessage("Travel insurance"),
+        "benefit4":
+            MessageLookupByLibrary.simpleMessage("Priority seat selection"),
+        "benefit5":
+            MessageLookupByLibrary.simpleMessage("Extra baggage allowance"),
+        "benefit6": MessageLookupByLibrary.simpleMessage("Travel consultation"),
+        "benefit7":
+            MessageLookupByLibrary.simpleMessage("Travel class upgrade"),
+        "benefit8":
+            MessageLookupByLibrary.simpleMessage("Ticket and hotel discount"),
         "birthDate": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "birth_date": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "blind": MessageLookupByLibrary.simpleMessage("Blind"),
@@ -108,7 +122,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("Country Travel Conditions"),
         "currency": MessageLookupByLibrary.simpleMessage("Rial"),
+        "currentBenefits":
+            MessageLookupByLibrary.simpleMessage("Current benefits"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("en"),
+        "currentTier": MessageLookupByLibrary.simpleMessage("Current\nTier"),
         "deaf": MessageLookupByLibrary.simpleMessage("Deaf"),
         "departureDate": MessageLookupByLibrary.simpleMessage("Departure date"),
         "destination": MessageLookupByLibrary.simpleMessage("Destination"),
@@ -131,7 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "during_flight": MessageLookupByLibrary.simpleMessage("During Flight"),
         "economy": MessageLookupByLibrary.simpleMessage("Economy"),
         "economyClass": MessageLookupByLibrary.simpleMessage("Economy Class"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("Economy from"),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("Economy from "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "If you have a discount code, enter it below and click Apply."),
@@ -240,7 +257,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your flight AV789 is now boarding at Gate 5."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "Upgrade to Business Class with a 50% discount!"),
-        "milesFlown": MessageLookupByLibrary.simpleMessage("Miles flown"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("Hamava Score"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "Ava Airlines strives to minimize flight delays."),
         "multiCity": MessageLookupByLibrary.simpleMessage("Multi city"),
@@ -252,6 +269,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "nationality": MessageLookupByLibrary.simpleMessage("Nationality"),
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("Color"),
         "next": MessageLookupByLibrary.simpleMessage("Continue"),
+        "nextBenefits":
+            MessageLookupByLibrary.simpleMessage("Next tier benefits"),
+        "nextTier": MessageLookupByLibrary.simpleMessage("Next\nTier"),
         "noTrips": MessageLookupByLibrary.simpleMessage("No upcoming trips"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "If you have an upcoming trip booked with us, you can add it to your My trips list."),
@@ -308,6 +328,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
+        "plusBlue":
+            MessageLookupByLibrary.simpleMessage("+ All blue tier benefits"),
+        "plusBronze":
+            MessageLookupByLibrary.simpleMessage("+ All bronze tier benefits"),
+        "plusSilver":
+            MessageLookupByLibrary.simpleMessage("+ All silver tier benefits"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("Popular Destinations"),
         "premiumEconomy":
@@ -418,6 +444,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("Wheelchair in all phases"),
         "wheelchair_in_map":
-            MessageLookupByLibrary.simpleMessage("Wheelchair in map")
+            MessageLookupByLibrary.simpleMessage("Wheelchair in map"),
+        "yourOffers": MessageLookupByLibrary.simpleMessage("Your offers")
       };
 }

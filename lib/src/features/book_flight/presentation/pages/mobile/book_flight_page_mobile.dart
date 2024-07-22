@@ -2,6 +2,7 @@ import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/search_result_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/flight_card.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
+import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
   const BookFlightPageMobile({super.key});
@@ -35,7 +36,7 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
             .colorScheme
             .surfaceTint,
         title: Text(localization.searchFlights),
-        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
+        bottom: PreferredSize(preferredSize: const Size(double.maxFinite, 10), child: Container(color:  context.read<ThemeCubit>().tier.color, height: 20,)),
       ),
       body: Column(
         children: [
