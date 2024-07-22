@@ -11,6 +11,7 @@ import 'package:ava_airline/src/features/video/presentation/video_page.dart';
 import 'package:ava_airline/src/features/video_player/presentation/pages/video_player_page.dart';
 import 'package:flutter/foundation.dart';
 
+import '../features/ham_ava/presentation/screens/ham_ava_screens.dart';
 import '../features/static_contents/presentation/incapacitated-passenger-wheelchair/incapacitated-passenger-wheelchair.dart';
 
 class Routes {
@@ -35,6 +36,12 @@ class Routes {
           path: SplashPage.splashPagePath,
           name: SplashPage.splashPageName,
           builder: (context, state) => const SplashPage(),
+        ),
+
+        GoRoute(
+          path: HamAvaScreens.hamAvaPagePath,
+          name: HamAvaScreens.hamAvaPageName,
+          builder: (context, state) => const HamAvaScreens(),
         ),
 
         ///notificdations

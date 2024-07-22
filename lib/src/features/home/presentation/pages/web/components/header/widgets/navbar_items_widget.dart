@@ -1,6 +1,7 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/features.dart';
+import 'package:ava_airline/src/features/ham_ava/presentation/screens/ham_ava_screens.dart';
 import 'package:ava_airline/src/features/static_contents/presentation/incapacitated-passenger-wheelchair/incapacitated-passenger-wheelchair.dart';
 
 class NavbarItems extends StatefulWidget implements PreferredSizeWidget {
@@ -37,7 +38,11 @@ class NavbarItemsState extends State<NavbarItems> {
   Widget _buildMenuItem(BuildContext context, String title, int index) {
     return InkWell(
       onTap: () {
-        showModalFromTop(context, index);
+        if(index == 4) {
+          context.go(HamAvaScreens.hamAvaPagePath);
+        } else {
+          showModalFromTop(context, index);
+        }
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
