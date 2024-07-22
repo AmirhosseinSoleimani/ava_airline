@@ -7,10 +7,11 @@ import 'package:ava_airline/src/features/video_player/presentation/pages/video_p
 
 
 class SpecialTripsContainer extends StatefulWidget {
-  const SpecialTripsContainer({super.key, required this.hoverImageCardEntity, this.isSmall = false});
+  const SpecialTripsContainer({super.key, required this.hoverImageCardEntity, this.isSmall = false, this.isOff = false              });
 
   final HoverImageCardEntity hoverImageCardEntity;
   final bool? isSmall;
+  final bool? isOff;
 
   @override
   State<SpecialTripsContainer> createState() => _SpecialTripsContainerState();
@@ -81,6 +82,36 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
                       ),
                       Space.h12,
+                      (widget.isOff ?? false) ?
+                      Column(
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              text: '${widget.hoverImageCardEntity.typeFlight} ',
+                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                              children: [
+                                TextSpan(
+                                  text: widget.hoverImageCardEntity.price,
+                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary, decoration: TextDecoration.lineThrough),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Space.h8,
+                          RichText(
+                            text: TextSpan(
+                              text: '${widget.hoverImageCardEntity.typeFlight} ',
+                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                              children: [
+                                TextSpan(
+                                  text: widget.hoverImageCardEntity.offPrice ?? widget.hoverImageCardEntity.price,
+                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ) :
                       Text(
                         widget.hoverImageCardEntity.price,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
