@@ -24,7 +24,7 @@ class NavbarItemsState extends State<NavbarItems> {
       localization.travel_info,
       localization.during_flight,
       localization.flight_destinations,
-      localization.myTrips
+      localization.profile
     ];
     return Row(
       children: navbarItems
@@ -101,8 +101,8 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
       ]
     },
     {
-      localization.myTrips: [
-        localization.myTrips,
+      localization.profile: [
+        localization.profile,
       ]
     }
   ];
