@@ -380,7 +380,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sliderDesc2": MessageLookupByLibrary.simpleMessage(
             "با هر اقامت امتیاز هم‌آوا کسب کنید"),
         "sliderDesc3": MessageLookupByLibrary.simpleMessage(
-            "تجربه پرواز بعدی خود با آوا ارتقا دهید"),
+            "تجربه پرواز بعدی خود با آوا را ارتقا دهید"),
         "sliderTitle1": MessageLookupByLibrary.simpleMessage(
             "سریع‌تر از جوایز خود لذت ببرید"),
         "sliderTitle2": MessageLookupByLibrary.simpleMessage("هتل‌های آوا"),

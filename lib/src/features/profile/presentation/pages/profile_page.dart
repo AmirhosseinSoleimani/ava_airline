@@ -15,7 +15,6 @@ import '../../../home/domain/entities/destination_entity.dart';
 class ProfilePage extends StatefulWidget {
   static const profilePageName = 'profile-page';
   static const profilePagePath = '/profile-page';
-
   const ProfilePage({super.key});
 
   @override
@@ -24,6 +23,9 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   int tierIndex = 0;
+
+  int _current = 0;
+  final CarouselController _controller = CarouselController();
 
   @override
   Widget build(BuildContext context) {
@@ -398,9 +400,33 @@ class _ProfilePageState extends State<ProfilePage> {
                   options: CarouselOptions(
                       autoPlay: true,
                       viewportFraction: 1,
-                      height: 200,
-                      onPageChanged: (index, reason) {}),
+                      height: 300,
+                      onPageChanged: (index, reason) {
+                        setState(() {
+                          _current=index;
+                        });
+                      }),
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(3, (index) => GestureDetector(
+                  onTap: () => _controller.animateToPage(index),
+                  child: Container(
+                    width: 12,
+                    height: 12,
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 8, horizontal: 4),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: (Theme
+                            .of(context)
+                            .colorScheme
+                            .primary)
+                            .withOpacity(
+                            _current == index ? 1 : 0.4)),
+                  ),
+                ),)
               ),
 
               const SizedBox(height: 100),
@@ -419,41 +445,41 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  Stack carouselItem(String imagePath, String title, String desc) => Stack(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.asset(imagePath,
-                  fit: BoxFit.cover, width: MediaQuery.of(context).size.width)),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.black.withOpacity(0.5),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleMedium!
-                        .copyWith(color: Colors.white),
-                  ),
-                  Text(
-                    desc,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: Colors.white),
-                  ),
-                ],
+  Widget carouselItem(String imagePath, String title, String desc) => Padding(padding: const EdgeInsets.symmetric(horizontal: 6,vertical: 12),child: Stack(
+    children: [
+      ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(imagePath,
+            fit: BoxFit.cover, width: MediaQuery.of(context).size.width,height: 300,)),
+      Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.black.withOpacity(0.5),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                title,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(color: Colors.white),
               ),
-            ),
+              Text(
+                desc,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall!
+                    .copyWith(color: Colors.white),
+              ),
+            ],
           ),
-        ],
-      );
+        ),
+      ),
+    ],
+  ),);
 }
