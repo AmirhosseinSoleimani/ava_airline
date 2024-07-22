@@ -51,9 +51,9 @@ class BottomNavigationBarMobilePage extends StatelessWidget {
           ),
           NavigationDestination(
             label: textLocalization.profile,
-            icon: const Icon(IconManager.person, size: AppSize.s24),
+            icon: const Icon(IconManager.heart, size: AppSize.s24),
             selectedIcon:  Icon(
-              IconManager.person,
+              IconManager.heart,
               size: AppSize.s24,
               color: Theme.of(context).colorScheme.primary,
             ),

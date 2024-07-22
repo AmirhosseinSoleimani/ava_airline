@@ -28,7 +28,7 @@ class NavbarComponent extends StatelessWidget {
                   padding: const EdgeInsets.all(AppPadding.p12),
                   child: InkWell(
                       onTap: () => context.go(HomePage.homePagePath),
-                      child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg, colorFilter: ColorFilter.mode(color ?? Theme.of(context).colorScheme.onPrimary, BlendMode.srcIn), semanticsLabel: 'Ava Airlines', width: AppSize.s100,)),
+                      child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,  semanticsLabel: 'Ava Airlines', width: AppSize.s100,)),
                 ),
                 NavbarItems(color: color,),
               ],

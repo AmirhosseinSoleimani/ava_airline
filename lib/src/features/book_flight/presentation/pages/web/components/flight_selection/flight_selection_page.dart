@@ -54,7 +54,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                         ),
                       ),
                       Space.w16,
-                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60, colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn)),
+                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
                     ],
                   ),
                 ),
@@ -201,9 +201,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(AppPadding.p12),
-                          child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
-                              Theme.of(context).colorScheme.error,
-                              BlendMode.srcIn)),
+                          child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100,),
                         ),
                         Space.w64,
                         Column(

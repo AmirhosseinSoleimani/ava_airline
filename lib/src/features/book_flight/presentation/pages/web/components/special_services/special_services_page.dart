@@ -49,7 +49,7 @@ class _SpecialServicesPageState extends State<SpecialServicesPage> {
                         ),
                       ),
                       Space.w16,
-                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60, colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn)),
+                      SvgPicture.asset(SvgManager.avaAirLineLogoSvg, width: AppSize.s60, height: AppSize.s60,),
                     ],
                   ),
                 ),

@@ -12,7 +12,6 @@ class AvaDrawer extends StatefulWidget {
 }
 
 class _AvaDrawerState extends State<AvaDrawer> {
-
   late List<Map<String, List<String>>> navbarItems;
 
   late List<bool> expanded;
@@ -92,9 +91,11 @@ class _AvaDrawerState extends State<AvaDrawer> {
                   padding: const EdgeInsets.all(AppPadding.p12),
                   child: InkWell(
                     onTap: () => context.go(HomePage.homePagePath),
-                    child: SvgPicture.asset(SvgManager.avaAirLineLogoSvg,semanticsLabel: 'AVA Airlines', width: AppSize.s100, colorFilter: ColorFilter.mode(
-                        Theme.of(context).colorScheme.error,
-                        BlendMode.srcIn)),
+                    child: SvgPicture.asset(
+                      SvgManager.avaAirLineLogoSvg,
+                      semanticsLabel: 'AVA Airlines',
+                      width: AppSize.s100,
+                    ),
                   ),
                 ),
                 AvaInkwellButton(
@@ -103,10 +104,8 @@ class _AvaDrawerState extends State<AvaDrawer> {
                   title: localization.login_register,
                   style: Theme.of(context).textTheme.bodyMedium,
                   borderRadius: AppSize.s8,
-                  backgroundColor:
-                  ColorDarkThemeManager.transparent,
-                  borderColor:
-                  Theme.of(context).colorScheme.onSurface,
+                  backgroundColor: ColorDarkThemeManager.transparent,
+                  borderColor: Theme.of(context).colorScheme.onSurface,
                 ),
                 const Divider(),
                 ExpansionPanelList(
@@ -134,7 +133,10 @@ class _AvaDrawerState extends State<AvaDrawer> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(value),
-                                const Icon(IconManager.chevronRight, size: AppSize.s24,),
+                                const Icon(
+                                  IconManager.chevronRight,
+                                  size: AppSize.s24,
+                                ),
                               ],
                             ),
                           );
@@ -152,32 +154,29 @@ class _AvaDrawerState extends State<AvaDrawer> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(localization.version, style: Theme.of(context).textTheme.bodyMedium,),
+                  Text(
+                    localization.version,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                   Row(
                     children: [
                       SvgPicture.asset(
                         SvgManager.earthSvg,
-                        colorFilter: ColorFilter.mode(
-                            Theme.of(context).colorScheme.onSurface,
-                            BlendMode.srcIn),
+                        colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                         semanticsLabel: 'AVA Airlines',
                         width: AppSize.s42,
                       ),
                       Space.w8,
                       Text(
                         localization.language,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium,
+                        style: Theme.of(context).textTheme.bodyMedium,
                       )
                     ],
                   ),
-
                 ],
               ),
             ),
             Space.h16,
-
           ],
         ),
       ),

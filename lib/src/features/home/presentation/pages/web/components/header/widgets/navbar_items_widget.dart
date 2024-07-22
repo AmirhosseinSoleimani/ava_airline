@@ -139,9 +139,7 @@ void showModalFromTop(BuildContext context, int? selectedIndex) {
                                       SvgManager.avaAirLineLogoSvg,
                                       semanticsLabel: 'AVA Airlines',
                                       width: AppSize.s100,
-                                      colorFilter: ColorFilter.mode(
-                                          Theme.of(context).colorScheme.primary,
-                                          BlendMode.srcIn)),
+                                     ),
                                 ),
                                 Row(
                                   children: navbarItems.asMap().entries.map((element) {

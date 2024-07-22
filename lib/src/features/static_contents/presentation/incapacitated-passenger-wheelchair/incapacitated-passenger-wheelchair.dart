@@ -48,9 +48,7 @@ class IncapacitatedPassengerWheelchairPage extends StatelessWidget {
                             SvgPicture.asset(SvgManager.avaAirLineLogoSvg,
                                 width: AppSize.s60,
                                 height: AppSize.s60,
-                                colorFilter: ColorFilter.mode(
-                                    Theme.of(context).colorScheme.onSurface,
-                                    BlendMode.srcIn)),
+                               ),
                           ],
                         ),
                       ),

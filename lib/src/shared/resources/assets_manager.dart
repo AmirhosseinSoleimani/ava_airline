@@ -39,6 +39,8 @@ class IconManager {
   static const IconData airplane = CupertinoIcons.airplane;
   static const IconData person = CupertinoIcons.person_fill;
 
+  static const IconData heart = CupertinoIcons.heart_fill;
+
   static const IconData phone = CupertinoIcons.phone_arrow_up_right;
   static const IconData location = CupertinoIcons.location_solid;
   static const IconData mail = CupertinoIcons.mail;
