@@ -1,15 +1,31 @@
 import 'package:ava_airline/generated/l10n.dart';
+import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
+import 'package:ava_airline/src/features/profile/tier_entity.dart';
 import 'package:ava_airline/src/shared/resources/localization/locale_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   static const profilePageName = 'profile-page';
   static const profilePagePath = '/profile-page';
 
   const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  List<Tier> tierList = [
+    Tier(path: 'assets/image/blue.jpg', name: S.current.blue, minMile: 0),
+    Tier(path: 'assets/image/bronze.jpg', name: S.current.bronze, minMile: 1000),
+    Tier(path: 'assets/image/silver.jpg', name: S.current.silver, minMile: 2000),
+    Tier(path: 'assets/image/gold.jpg', name: S.current.gold, minMile: 5000),
+  ];
+
+  int tierIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +34,25 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       drawer: const DrawerWidget(),
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           children: [
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/image/avatar.png'),
-              maxRadius: 30,
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (tierIndex == 3) {
+                    tierIndex = 0;
+                  } else {
+                    tierIndex++;
+                  }
+                });
+              },
+              child: const CircleAvatar(
+                backgroundImage: AssetImage('assets/image/avatar.png'),
+                maxRadius: 30,
+              ),
             ),
-            SizedBox(width: 12),
-            Text('Soroush Beigi'),
+            const SizedBox(width: 12),
+            const Text('Soroush Beigi'),
           ],
         ),
         backgroundColor: Theme.of(context).colorScheme.surface,
@@ -33,7 +60,7 @@ class ProfilePage extends StatelessWidget {
         toolbarHeight: 120,
         flexibleSpace: FlexibleSpaceBar(
           background: Image.asset(
-            'assets/image/gold.jpg',
+            tierList[tierIndex].path,
             fit: BoxFit.cover,
           ),
         ),
@@ -71,7 +98,7 @@ class ProfilePage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          localization.gold,
+                          tierList[tierIndex].name,
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: 4),
@@ -130,7 +157,8 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             GestureDetector(
-              onTap: () =>  SystemChannels.platform.invokeMethod('SystemNavigator.pop'),
+              onTap: () =>
+                  SystemChannels.platform.invokeMethod('SystemNavigator.pop'),
               child: SizedBox(
                 height: 60,
                 child: Card(
