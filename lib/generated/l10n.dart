@@ -420,10 +420,10 @@ class S {
     );
   }
 
-  /// `Economy from`
+  /// `Economy from `
   String get economyFrom {
     return Intl.message(
-      'Economy from',
+      'Economy from ',
       name: 'economyFrom',
       desc: '',
       args: [],
@@ -2875,6 +2875,66 @@ class S {
     return Intl.message(
       'Ticket and hotel discount',
       name: 'benefit8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current benefits`
+  String get currentBenefits {
+    return Intl.message(
+      'Current benefits',
+      name: 'currentBenefits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next tier benefits`
+  String get nextBenefits {
+    return Intl.message(
+      'Next tier benefits',
+      name: 'nextBenefits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ All blue tier benefits`
+  String get plusBlue {
+    return Intl.message(
+      '+ All blue tier benefits',
+      name: 'plusBlue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ All bronze tier benefits`
+  String get plusBronze {
+    return Intl.message(
+      '+ All bronze tier benefits',
+      name: 'plusBronze',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ All silver tier benefits`
+  String get plusSilver {
+    return Intl.message(
+      '+ All silver tier benefits',
+      name: 'plusSilver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your offers`
+  String get yourOffers {
+    return Intl.message(
+      'Your offers',
+      name: 'yourOffers',
       desc: '',
       args: [],
     );

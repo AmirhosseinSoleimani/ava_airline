@@ -36,7 +36,7 @@
   "sendFeedback": "ارسال بازخورد",
   "legal": "قانونی",
   "rulesAndNotices": "قوانین و اطلاعیه‌ها",
-  "economyFrom": "اکونومی از",
+  "economyFrom": "اکونومی از ",
   "buyTicket": "خرید بلیط",
   "bookYourFlight": "آوای آسمان شما را فرا می\u200Cخواند؛ همین\u200Cحالا پروازتان را رزرو کنید.",
   "returnS": "بازگشت",
@@ -279,6 +279,12 @@
   "benefit5": "مجوز بار اضافی",
   "benefit6": "مشاوره سفر",
   "benefit7": "ارتقا کلاس سفر",
-  "benefit8": "تخفیف بلیط و هتل"
+  "benefit8": "تخفیف بلیط و هتل",
+  "currentBenefits": "مزایای فعلی",
+  "nextBenefits": "مزایای رده بعدی",
+  "plusBlue": "+ تمام مزایای رده آبی",
+  "plusBronze": "+ تمام مزایای رده برنز",
+  "plusSilver": "+ تمام مزایای رده نقره",
+  "yourOffers": "تخفیف\u200Cهای شما"
 
 }

@@ -114,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شروط السفر إلى الدول"),
         "currency": MessageLookupByLibrary.simpleMessage("ريال"),
+        "currentBenefits":
+            MessageLookupByLibrary.simpleMessage("الفوائد الحالية"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("ar"),
         "deaf": MessageLookupByLibrary.simpleMessage("أصم"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاريخ المغادرة"),
@@ -135,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "during_flight": MessageLookupByLibrary.simpleMessage("خلال الرحلة"),
         "economy": MessageLookupByLibrary.simpleMessage("اقتصادي"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("إكونومي من"),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("إكونومي من "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رمز خصم، أدخله أدناه واضغط على تطبيق."),
@@ -250,6 +252,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nationality": MessageLookupByLibrary.simpleMessage("الجنسية"),
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("اللون"),
         "next": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "nextBenefits":
+            MessageLookupByLibrary.simpleMessage("فوائد المستوى التالي"),
         "noTrips": MessageLookupByLibrary.simpleMessage("لا توجد رحلات قادمة"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رحلة قادمة محجوزة معنا، يمكنك إضافتها إلى قائمة رحلاتي."),
@@ -303,6 +307,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "عند الدفع باستخدام الرصيد، في حالة الاسترداد، سيتم إعادة المبلغ المسترد إلى رصيد حسابك."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
+        "plusBlue":
+            MessageLookupByLibrary.simpleMessage("+ جميع مزايا الفئة الزرقاء"),
+        "plusBronze": MessageLookupByLibrary.simpleMessage(
+            "+ جميع مزايا الفئة البرونزية"),
+        "plusSilver":
+            MessageLookupByLibrary.simpleMessage("+ جميع مزايا الفئة الفضية"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("وجهات شعبية"),
         "premiumEconomy":
@@ -409,6 +419,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("كرسي متحرك في جميع المراحل"),
         "wheelchair_in_map":
-            MessageLookupByLibrary.simpleMessage("كرسي متحرك في الخريطة")
+            MessageLookupByLibrary.simpleMessage("كرسي متحرك في الخريطة"),
+        "yourOffers": MessageLookupByLibrary.simpleMessage("عروضك")
       };
 }

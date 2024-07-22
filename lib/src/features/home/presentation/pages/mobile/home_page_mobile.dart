@@ -8,7 +8,6 @@ import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/city_card.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/destination_card.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
-import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/feature_card.dart';
 import 'package:ava_airline/src/features/video/presentation/video_page.dart';
 import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
@@ -65,8 +64,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.iran,
           assetPath: 'assets/image/ahvaz.jpg',
           minimumPrice: 200,
+          minimumPriceLow: 150,
           originCity: localization.tehran,
-          persianPrice: '1,720,000 ریال'
+          persianPrice: '1,720,000 ریال',
+        persianPriceLow: '1,600,000 ریال',
       ),
       Destination(
           id: 1,
@@ -74,8 +75,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.iran,
           assetPath: 'assets/image/shiraz.jpg',
           minimumPrice: 100,
+          minimumPriceLow: 80,
           originCity: localization.tehran,
-          persianPrice: '1,900,000 ریال'
+          persianPrice: '1,900,000 ریال',
+        persianPriceLow: '1,750,000 ریال',
       ),
       Destination(
           id: 1,
@@ -83,8 +86,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.iran,
           assetPath: 'assets/image/isfahan.jpg',
           minimumPrice: 250,
+          minimumPriceLow: 220,
           originCity: localization.tehran,
-          persianPrice: '1,330,000 ریال'
+          persianPrice: '1,330,000 ریال',
+        persianPriceLow: '1,100,000 ریال',
       ),
 
 
@@ -95,8 +100,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.iraq,
           assetPath: 'assets/image/baghdad.jpg',
           minimumPrice: 400,
+          minimumPriceLow: 320,
           originCity: localization.tehran,
-          persianPrice: '2,520,000 ریال'
+          persianPrice: '2,520,000 ریال',
+        persianPriceLow: '2,130,000 ریال',
       ),
 
       Destination(
@@ -105,8 +112,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.uae,
           assetPath: 'assets/image/dubai.jpg',
           minimumPrice: 450,
+          minimumPriceLow: 410,
           originCity: localization.tehran,
-          persianPrice: '6,710,000 ریال'
+          persianPrice: '6,710,000 ریال',
+        persianPriceLow: '6,220,000 ریال',
       ),
 
       Destination(
@@ -115,8 +124,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
           country: localization.turkey,
           assetPath: 'assets/image/istanbul.jpg',
           minimumPrice: 500,
+          minimumPriceLow: 400,
           originCity: localization.tehran,
-          persianPrice: '4,900,000 ریال'
+          persianPrice: '4,900,000 ریال',
+          persianPriceLow: '4,200,000 ریال'
       ),
 
 
@@ -423,8 +434,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
                         country: '',
                         assetPath: '',
                         minimumPrice: 0,
+                        minimumPriceLow: 0,
                         originCity: '',
-                        persianPrice: ''
+                        persianPrice: '',
+                        persianPriceLow: '',
                     ),
                   ).map((e) => DestinationCard(destination: e)).toList(),
                   options: CarouselOptions(

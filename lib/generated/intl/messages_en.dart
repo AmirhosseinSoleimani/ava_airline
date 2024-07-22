@@ -122,6 +122,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("Country Travel Conditions"),
         "currency": MessageLookupByLibrary.simpleMessage("Rial"),
+        "currentBenefits":
+            MessageLookupByLibrary.simpleMessage("Current benefits"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("en"),
         "deaf": MessageLookupByLibrary.simpleMessage("Deaf"),
         "departureDate": MessageLookupByLibrary.simpleMessage("Departure date"),
@@ -145,7 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "during_flight": MessageLookupByLibrary.simpleMessage("During Flight"),
         "economy": MessageLookupByLibrary.simpleMessage("Economy"),
         "economyClass": MessageLookupByLibrary.simpleMessage("Economy Class"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("Economy from"),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("Economy from "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "If you have a discount code, enter it below and click Apply."),
@@ -266,6 +268,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nationality": MessageLookupByLibrary.simpleMessage("Nationality"),
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("Color"),
         "next": MessageLookupByLibrary.simpleMessage("Continue"),
+        "nextBenefits":
+            MessageLookupByLibrary.simpleMessage("Next tier benefits"),
         "noTrips": MessageLookupByLibrary.simpleMessage("No upcoming trips"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "If you have an upcoming trip booked with us, you can add it to your My trips list."),
@@ -322,6 +326,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
+        "plusBlue":
+            MessageLookupByLibrary.simpleMessage("+ All blue tier benefits"),
+        "plusBronze":
+            MessageLookupByLibrary.simpleMessage("+ All bronze tier benefits"),
+        "plusSilver":
+            MessageLookupByLibrary.simpleMessage("+ All silver tier benefits"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("Popular Destinations"),
         "premiumEconomy":
@@ -432,6 +442,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("Wheelchair in all phases"),
         "wheelchair_in_map":
-            MessageLookupByLibrary.simpleMessage("Wheelchair in map")
+            MessageLookupByLibrary.simpleMessage("Wheelchair in map"),
+        "yourOffers": MessageLookupByLibrary.simpleMessage("Your offers")
       };
 }

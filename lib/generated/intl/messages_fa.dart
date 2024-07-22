@@ -115,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شرایط سفر به کشورها"),
         "currency": MessageLookupByLibrary.simpleMessage("ریال"),
+        "currentBenefits": MessageLookupByLibrary.simpleMessage("مزایای فعلی"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("fa"),
         "deaf": MessageLookupByLibrary.simpleMessage("ناشنوا"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاریخ رفت"),
@@ -137,7 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
         "economy": MessageLookupByLibrary.simpleMessage("اکونومی"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از"),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید."),
@@ -249,6 +250,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nationality": MessageLookupByLibrary.simpleMessage("ملیت"),
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("رنگ"),
         "next": MessageLookupByLibrary.simpleMessage("ادامه"),
+        "nextBenefits": MessageLookupByLibrary.simpleMessage("مزایای رده بعدی"),
         "noTrips": MessageLookupByLibrary.simpleMessage("سفری یافت نشد"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "اگر سفری در پیش دارید که با ما رزرو کرده‌اید، می‌توانید آن را به فهرست سفرهای من اضافه کنید."),
@@ -302,6 +304,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "هنگام پرداخت با استفاده از موجودی، در صورت استرداد، مبلغ قابل پرداخت به موجودی حساب شما باز خواهد گشت."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
+        "plusBlue":
+            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده آبی"),
+        "plusBronze":
+            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده برنز"),
+        "plusSilver":
+            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده نقره"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("مقصدهای محبوب"),
         "premiumEconomy":
@@ -408,6 +416,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "wheelchairTitle": MessageLookupByLibrary.simpleMessage("ویلچر"),
         "wheelchair_full":
             MessageLookupByLibrary.simpleMessage("ویلچر در تمام مراحل"),
-        "wheelchair_in_map": MessageLookupByLibrary.simpleMessage("ویلچر در مپ")
+        "wheelchair_in_map":
+            MessageLookupByLibrary.simpleMessage("ویلچر در مپ"),
+        "yourOffers": MessageLookupByLibrary.simpleMessage("تخفیف‌های شما")
       };
 }

@@ -10,29 +10,38 @@ class ThemeCubit extends Cubit<ThemeState> {
           tier: Tier(
               path: 'assets/image/bronze.jpg',
               minMile: 1000,
-              color: const Color.fromRGBO(205, 127, 50, 1)),
+              color: const Color.fromRGBO(205, 127, 50, 1),
+              name: 'Blue'),
         ));
 
   List<Tier> tiers = [
     Tier(
-        path: 'assets/image/blue.jpg', minMile: 0, color: Colors.blue.shade700),
+        path: 'assets/image/blue.jpg',
+        minMile: 0,
+        color: Colors.blue.shade700,
+        name: 'Blue'),
     Tier(
         path: 'assets/image/bronze.jpg',
         minMile: 1000,
-        color: const Color.fromRGBO(205, 127, 50, 1)),
+        color: const Color.fromRGBO(205, 127, 50, 1),
+        name: 'Bronze'),
     Tier(
         path: 'assets/image/silver.jpg',
         minMile: 2000,
-        color: const Color.fromRGBO(192, 192, 192, 1)),
+        color: const Color.fromRGBO(192, 192, 192, 1),
+        name: 'Silver'),
     Tier(
         path: 'assets/image/gold.jpg',
         minMile: 5000,
-        color: const Color.fromRGBO(201, 171, 4, 1.0)),
+        color: const Color.fromRGBO(201, 171, 4, 1.0),
+        name: 'Gold'),
   ];
 
   int tierIndex = 0;
 
   Tier get tier => tiers[tierIndex];
+
+  Tier get nextTier => tiers[_nextTier(tierIndex)];
 
   bool _isDark = false;
 
@@ -57,6 +66,14 @@ class ThemeCubit extends Cubit<ThemeState> {
       emit(ThemeDark(tier: tiers[tierIndex]));
     } else {
       emit(ThemeLight(tier: tiers[tierIndex]));
+    }
+  }
+
+  int _nextTier(int tier) {
+    if (tier == 3) {
+      return 0;
+    } else {
+      return tier + 1;
     }
   }
 }
