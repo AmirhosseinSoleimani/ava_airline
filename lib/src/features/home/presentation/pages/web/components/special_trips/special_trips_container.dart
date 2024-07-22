@@ -5,9 +5,12 @@ import 'package:ava_airline/src/features/features.dart';
 import 'package:ava_airline/src/features/home/domain/entities/special_fare_entity.dart';
 import 'package:ava_airline/src/features/video_player/presentation/pages/video_player_page.dart';
 
-
 class SpecialTripsContainer extends StatefulWidget {
-  const SpecialTripsContainer({super.key, required this.hoverImageCardEntity, this.isSmall = false, this.isOff = false              });
+  const SpecialTripsContainer(
+      {super.key,
+      required this.hoverImageCardEntity,
+      this.isSmall = false,
+      this.isOff = false});
 
   final HoverImageCardEntity hoverImageCardEntity;
   final bool? isSmall;
@@ -40,12 +43,15 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                 child: Stack(
                   children: [
                     Transform.scale(
-                      scale: (widget.hoverImageCardEntity.isHover ?? false) ? 1.18 : 1.0,
+                      scale: (widget.hoverImageCardEntity.isHover ?? false)
+                          ? 1.18
+                          : 1.0,
                       child: Container(
                         height: 400,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(widget.hoverImageCardEntity.imageUrl),
+                            image: AssetImage(
+                                widget.hoverImageCardEntity.imageUrl),
                             fit: BoxFit.cover,
                           ),
                           boxShadow: [
@@ -55,6 +61,20 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                               offset: const Offset(0, 5),
                             ),
                           ],
+                        ),
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.black.withOpacity(0.6),
+                              Colors.transparent,
+                            ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                          ),
                         ),
                       ),
                     ),
@@ -72,68 +92,127 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                 children: [
                   Text(
                     widget.hoverImageCardEntity.title,
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: Theme.of(context).colorScheme.onPrimary),
                   ),
-                  (widget.isSmall ?? false) ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.hoverImageCardEntity.date,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
-                      ),
-                      Space.h12,
-                      (widget.isOff ?? false) ?
-                      Column(
-                        children: [
-                          RichText(
-                            text: TextSpan(
-                              text: '${widget.hoverImageCardEntity.typeFlight} ',
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
-                              children: [
-                                TextSpan(
-                                  text: widget.hoverImageCardEntity.price,
-                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary, decoration: TextDecoration.lineThrough),
-                                ),
-                              ],
+                  (widget.isSmall ?? false)
+                      ? Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              widget.hoverImageCardEntity.date,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onPrimary),
                             ),
-                          ),
-                          Space.h8,
-                          RichText(
-                            text: TextSpan(
-                              text: '${widget.hoverImageCardEntity.typeFlight} ',
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
-                              children: [
-                                TextSpan(
-                                  text: widget.hoverImageCardEntity.offPrice ?? widget.hoverImageCardEntity.price,
-                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
-                                ),
-                              ],
+                            Space.h12,
+                            (widget.isOff ?? false)
+                                ? Column(
+                                    children: [
+                                      RichText(
+                                        text: TextSpan(
+                                          text:
+                                              '${widget.hoverImageCardEntity.typeFlight} ',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onPrimary),
+                                          children: [
+                                            TextSpan(
+                                              text: widget
+                                                  .hoverImageCardEntity.price,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyMedium
+                                                  ?.copyWith(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .onPrimary,
+                                                      decoration: TextDecoration
+                                                          .lineThrough),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Space.h8,
+                                      RichText(
+                                        text: TextSpan(
+                                          text:
+                                              '${widget.hoverImageCardEntity.typeFlight} ',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onPrimary),
+                                          children: [
+                                            TextSpan(
+                                              text: widget.hoverImageCardEntity
+                                                      .offPrice ??
+                                                  widget.hoverImageCardEntity
+                                                      .price,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyMedium
+                                                  ?.copyWith(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .onPrimary),
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                : Text(
+                                    widget.hoverImageCardEntity.price,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onPrimary),
+                                  ),
+                          ],
+                        )
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                widget.hoverImageCardEntity.date,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.copyWith(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onPrimary),
+                              ),
                             ),
-                          )
-                        ],
-                      ) :
-                      Text(
-                        widget.hoverImageCardEntity.price,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
-                      ),
-                    ],
-                  ) : Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Flexible(
-                        child: Text(
-                          widget.hoverImageCardEntity.date,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                            Flexible(
+                              child: Text(
+                                widget.hoverImageCardEntity.price,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.copyWith(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onPrimary),
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      Flexible(
-                        child: Text(
-                          widget.hoverImageCardEntity.price,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),
@@ -143,8 +222,9 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
               left: 20,
               right: 20,
               child: AnimatedOpacity(
-                duration: const Duration(milliseconds:  DurationConstant.d500),
-                opacity: (widget.hoverImageCardEntity.isHover ?? false) ? 1.0 : 0.0,
+                duration: const Duration(milliseconds: DurationConstant.d500),
+                opacity:
+                    (widget.hoverImageCardEntity.isHover ?? false) ? 1.0 : 0.0,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -153,15 +233,25 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                       height: AppSize.s48,
                       child: ElevatedButton(
                         onPressed: () {
-                          context.go(FlightSelectionPage.flightSelectionPagePath);
+                          context
+                              .go(FlightSelectionPage.flightSelectionPagePath);
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).colorScheme.primary,
+                          backgroundColor:
+                              Theme.of(context).colorScheme.primary,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(AppSize.s8),
                           ),
                         ),
-                        child: Text(localization.reserve, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),),
+                        child: Text(
+                          localization.reserve,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary),
+                        ),
                       ),
                     ),
                     Space.h16,
@@ -175,14 +265,22 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                         child: Container(
                           decoration: BoxDecoration(
                               color: ColorLightThemeManager.transparent,
-                              borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+                              borderRadius: const BorderRadius.all(
+                                  Radius.circular(AppSize.s8)),
                               border: Border.all(
                                   width: AppSize.s1,
-                                  color: Theme.of(context).colorScheme.onPrimary
-                              )
-                          ),
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary)),
                           child: Center(
-                            child: Text(localization.details, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary,),
+                            child: Text(
+                              localization.details,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                  ),
                             ),
                           ),
                         ),
