@@ -44,7 +44,7 @@ class _VideoPageState extends State<VideoPage> {
                     BorderRadius.circular(AppSize.s12),
                   ),
                   child: VideoPlayerWidget(),
-
+          
                 ),
               ),
               const SizedBox(height: 24),
@@ -64,10 +64,11 @@ class _VideoPageState extends State<VideoPage> {
                       style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.start,
                     ),
-                  )
+                  ),
+              
                 ],
               ),
-
+              const SizedBox(height: 100),
             ],
           ),
         ),

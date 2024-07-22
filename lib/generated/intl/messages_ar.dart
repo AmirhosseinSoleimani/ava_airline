@@ -60,6 +60,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "batteryWheelchairTitle": MessageLookupByLibrary.simpleMessage(
             "الكراسي المتحركة التي تعمل بالبطارية"),
         "benefit1": MessageLookupByLibrary.simpleMessage("المشاركة في السحب"),
+        "benefit10": MessageLookupByLibrary.simpleMessage("دخول الصالة"),
+        "benefit11": MessageLookupByLibrary.simpleMessage("تسجيل وصول شخصي"),
+        "benefit12": MessageLookupByLibrary.simpleMessage("نقل بسائق"),
         "benefit2": MessageLookupByLibrary.simpleMessage(
             "الإنترنت المجاني أثناء الرحلة"),
         "benefit3": MessageLookupByLibrary.simpleMessage("تأمين السفر"),
@@ -71,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "benefit7": MessageLookupByLibrary.simpleMessage("ترقية درجة السفر"),
         "benefit8":
             MessageLookupByLibrary.simpleMessage("خصم على التذاكر والفنادق"),
+        "benefit9": MessageLookupByLibrary.simpleMessage("وجبات خفيفة مجانية"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "blind": MessageLookupByLibrary.simpleMessage("كفيف"),
@@ -310,11 +314,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "عند الدفع باستخدام الرصيد، في حالة الاسترداد، سيتم إعادة المبلغ المسترد إلى رصيد حسابك."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
         "plusBlue":
-            MessageLookupByLibrary.simpleMessage("+ جميع مزايا الفئة الزرقاء"),
-        "plusBronze": MessageLookupByLibrary.simpleMessage(
-            "+ جميع مزايا الفئة البرونزية"),
+            MessageLookupByLibrary.simpleMessage("جميع مزايا الفئة الزرقاء"),
+        "plusBronze":
+            MessageLookupByLibrary.simpleMessage("جميع مزايا الفئة البرونزية"),
         "plusSilver":
-            MessageLookupByLibrary.simpleMessage("+ جميع مزايا الفئة الفضية"),
+            MessageLookupByLibrary.simpleMessage("جميع مزايا الفئة الفضية"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("وجهات شعبية"),
         "premiumEconomy":
@@ -372,6 +376,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "service": MessageLookupByLibrary.simpleMessage("خدمة"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شيراز"),
         "silver": MessageLookupByLibrary.simpleMessage("فضي"),
+        "sliderDesc1": MessageLookupByLibrary.simpleMessage(
+            "اشترِ، واهدِ، وحوِّل نقاط حمافا الخاصة بك"),
+        "sliderDesc2":
+            MessageLookupByLibrary.simpleMessage("اكسب نقاط حمافا مع كل إقامة"),
+        "sliderDesc3": MessageLookupByLibrary.simpleMessage(
+            "ارفع تجربتك القادمة مع طيران آفا"),
+        "sliderTitle1":
+            MessageLookupByLibrary.simpleMessage("استمتع بمكافآتك أسرع"),
+        "sliderTitle2": MessageLookupByLibrary.simpleMessage("فنادق آفا"),
+        "sliderTitle3": MessageLookupByLibrary.simpleMessage(
+            "استمتع بمستوى جديد من الراحة"),
         "specialServices": MessageLookupByLibrary.simpleMessage("خدمات خاصة"),
         "specialServicesPageName":
             MessageLookupByLibrary.simpleMessage("صفحة الخدمات الخاصة"),
