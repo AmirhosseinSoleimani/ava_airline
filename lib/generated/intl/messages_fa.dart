@@ -47,12 +47,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "applyCode": MessageLookupByLibrary.simpleMessage("ثبت"),
         "avaFlightExperience":
             MessageLookupByLibrary.simpleMessage("تجربه پرواز آوا"),
+        "avaSideServices":
+            MessageLookupByLibrary.simpleMessage("خدمات جانبی آوا"),
         "ava_fleet": MessageLookupByLibrary.simpleMessage("ناوگان آوا"),
         "ava_tour": MessageLookupByLibrary.simpleMessage("گردش با آوا"),
         "ava_with_you":
             MessageLookupByLibrary.simpleMessage("آوا همراه آرامش شمــــــــا"),
         "baggage": MessageLookupByLibrary.simpleMessage("بار مسافر"),
         "baggageTracker": MessageLookupByLibrary.simpleMessage("ردیاب بار"),
+        "baghdad": MessageLookupByLibrary.simpleMessage("بغداد"),
         "batteryDescription2": MessageLookupByLibrary.simpleMessage(
             "ویلچر دارای باطری لیتیومی یونی با قابلیت جدا شدن و ظرفیت حداکثر 300 W/H یا دو باطری با حداکثر ظرفیت 160 W/H ضمن بسته بندی و تایید نماینده ماهان فقط در کابین مسافری حمل می گردد."),
         "batteryWheelchairDescription": MessageLookupByLibrary.simpleMessage(
@@ -119,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "discountCode": MessageLookupByLibrary.simpleMessage("کد تخفیف"),
         "domestic_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد داخلی"),
+        "dubai": MessageLookupByLibrary.simpleMessage("دبی"),
         "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "پرواز دبی به ایران 150 درهم (ضمن ثبت SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
@@ -182,7 +186,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "international_destinations":
             MessageLookupByLibrary.simpleMessage("مقاصد بین المللی"),
         "iran": MessageLookupByLibrary.simpleMessage("ایران"),
+        "iraq": MessageLookupByLibrary.simpleMessage("عراق"),
         "isfahan": MessageLookupByLibrary.simpleMessage("اصفهان"),
+        "istanbul": MessageLookupByLibrary.simpleMessage("استانبول"),
         "job_opportunities":
             MessageLookupByLibrary.simpleMessage("فرصت های شغلی"),
         "kish": MessageLookupByLibrary.simpleMessage("کیش"),
@@ -381,6 +387,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات سفر"),
         "travelUpdates": MessageLookupByLibrary.simpleMessage("اخبار سفر"),
         "travel_info": MessageLookupByLibrary.simpleMessage("اطلاعات سفر"),
+        "turkey": MessageLookupByLibrary.simpleMessage("ترکیه"),
+        "uae": MessageLookupByLibrary.simpleMessage("امارات متحده عربی"),
         "unaccompanied_child":
             MessageLookupByLibrary.simpleMessage("کودک بدون همراه"),
         "version": MessageLookupByLibrary.simpleMessage("ورژن 1.0"),

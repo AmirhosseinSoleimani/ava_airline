@@ -29,11 +29,11 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   }
 
   List<String> srcs = [
-    'https://aspb31.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjhkNzZmZThhZTJmZDg4NmE1ODhiMTQzYzAyYWNmMDg4IiwiZXhwIjoxNzIwNjMyMTc0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.o4o-82Hys50zOw9vdlKxFJIfEJvGv4KQgRYzO4Hvz-s'
+    'http://46.209.222.131//hls/videos/1720780482/index.m3u8'
   ];
 
   Future<void> initializePlayer() async {
-    _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('https://aspb31.asset.aparat.com/aparat-video/0cd38e251083ae2fa5396b25d509fc2b37005159-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjhkNzZmZThhZTJmZDg4NmE1ODhiMTQzYzAyYWNmMDg4IiwiZXhwIjoxNzIwNjMyMTc0LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.o4o-82Hys50zOw9vdlKxFJIfEJvGv4KQgRYzO4Hvz-s'));
+    _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(srcs[0]));
     await Future.wait([
       _videoPlayerController.initialize(),
     ]);
@@ -68,6 +68,7 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
       children: <Widget>[
         Expanded(
           child: Center(
+          // child:  _videoPlayerController != null ? VideoPlayer(_videoPlayerController)
             child: _chewieController != null &&
                 _chewieController!.videoPlayerController.value.isInitialized
                 ? Chewie(

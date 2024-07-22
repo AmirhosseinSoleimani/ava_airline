@@ -60,7 +60,8 @@ class VideoPlayerPage extends StatelessWidget {
                     child: SizedBox(
                         width: width * 0.6,
                         height: 380,
-                        child: const VideoPlayerWidget()),
+                        child: const VideoPlayerWidget()
+                    ),
                   ),
                   Space.h16,
                   Center(

@@ -31,24 +31,19 @@ class AvaElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        ElevatedButton(
-          onPressed: onTap,
-          style: ElevatedButton.styleFrom(
-            elevation: elevation,
-            backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.primary,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 0),
-              ),
-            padding: EdgeInsets.all(buttonPadding ?? AppPadding.p12)
-            ),
-          child: showLoading ?? false
-              ? _buildLoadingIndicator(context)
-              : _buildButtonContent(context),
+    return ElevatedButton(
+      onPressed: onTap,
+      style: ElevatedButton.styleFrom(
+        elevation: elevation,
+        backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.primary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius ?? 0),
+          ),
+        padding: EdgeInsets.all(buttonPadding ?? AppPadding.p12)
         ),
-      ],
+      child: showLoading ?? false
+          ? _buildLoadingIndicator(context)
+          : _buildButtonContent(context),
     );
   }
   Widget _buildLoadingIndicator(BuildContext context) {

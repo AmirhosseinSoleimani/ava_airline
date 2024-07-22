@@ -63,22 +63,62 @@ class _HomePageMobileState extends State<HomePageMobile> {
           city: localization.ahvaz,
           country: localization.iran,
           assetPath: 'assets/image/ahvaz.jpg',
-          minimumPrice: 500,
-          originCity: localization.tehran),
+          minimumPrice: 200,
+          originCity: localization.tehran,
+          persianPrice: '1,720,000 ریال'
+      ),
       Destination(
           id: 1,
           city: localization.shiraz,
           country: localization.iran,
           assetPath: 'assets/image/shiraz.jpg',
-          minimumPrice: 400,
-          originCity: localization.tehran),
+          minimumPrice: 100,
+          originCity: localization.tehran,
+          persianPrice: '1,900,000 ریال'
+      ),
       Destination(
           id: 1,
           city: localization.isfahan,
           country: localization.iran,
           assetPath: 'assets/image/isfahan.jpg',
-          minimumPrice: 350,
-          originCity: localization.tehran),
+          minimumPrice: 250,
+          originCity: localization.tehran,
+          persianPrice: '1,330,000 ریال'
+      ),
+
+
+      ///foreign flights
+      Destination(
+          id: 2,
+          city: localization.baghdad,
+          country: localization.iraq,
+          assetPath: 'assets/image/baghdad.jpg',
+          minimumPrice: 400,
+          originCity: localization.tehran,
+          persianPrice: '2,520,000 ریال'
+      ),
+
+      Destination(
+          id: 3,
+          city: localization.dubai,
+          country: localization.uae,
+          assetPath: 'assets/image/dubai.jpg',
+          minimumPrice: 450,
+          originCity: localization.tehran,
+          persianPrice: '6,710,000 ریال'
+      ),
+
+      Destination(
+          id: 4,
+          city: localization.istanbul,
+          country: localization.turkey,
+          assetPath: 'assets/image/istanbul.jpg',
+          minimumPrice: 500,
+          originCity: localization.tehran,
+          persianPrice: '4,900,000 ریال'
+      ),
+
+
     ];
 
     final features = [
@@ -123,6 +163,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           'assets/image/ava.png',
           height: AppBar().preferredSize.height - 16,
         ),
+        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
       ),
       drawer: const DrawerWidget(),
       body: isLoading
@@ -227,7 +268,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                     .size
                     .width * 0.025)),
             child: Text(
-              localization.avaFlightExperience,
+              localization.avaSideServices,
               style: Theme
                   .of(context)
                   .textTheme
@@ -381,7 +422,9 @@ class _HomePageMobileState extends State<HomePageMobile> {
                         country: '',
                         assetPath: '',
                         minimumPrice: 0,
-                        originCity: ''),
+                        originCity: '',
+                        persianPrice: ''
+                    ),
                   ).map((e) => DestinationCard(destination: e)).toList(),
                   options: CarouselOptions(
                     height: 200,
@@ -398,7 +441,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                       .size
                       .width * 0.025)),
               child: Text(
-                localization.avaFlightExperience,
+                localization.avaSideServices,
                 style: Theme
                     .of(context)
                     .textTheme

@@ -37,6 +37,10 @@ class _FlightCardState extends State<FlightCard> {
       S.current.ahvaz,
       S.current.isfahan,
       S.current.shiraz,
+      S.current.istanbul,
+      S.current.dubai,
+      S.current.baghdad,
+
     ];
     return Container(
       decoration: BoxDecoration(
@@ -265,28 +269,30 @@ class _FlightCardState extends State<FlightCard> {
       BuildContext context, bool isFrom, List<String> cities) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 100),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: cities
-            .map(
-              (e) => ListTile(
-                title: Text(
-                  e,
-                  textAlign: TextAlign.center,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: cities
+              .map(
+                (e) => ListTile(
+                  title: Text(
+                    e,
+                    textAlign: TextAlign.center,
+                  ),
+                  onTap: () {
+                    setState(() {
+                      if (isFrom) {
+                        selectOrigin = e;
+                      } else {
+                        selectDestination = e;
+                      }
+                      Navigator.pop(context);
+                    });
+                  },
                 ),
-                onTap: () {
-                  setState(() {
-                    if (isFrom) {
-                      selectOrigin = e;
-                    } else {
-                      selectDestination = e;
-                    }
-                    Navigator.pop(context);
-                  });
-                },
-              ),
-            )
-            .toList(),
+              )
+              .toList(),
+        ),
       ),
     );
   }

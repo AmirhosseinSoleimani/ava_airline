@@ -140,10 +140,70 @@ class S {
     );
   }
 
-  /// `Popular destinations`
+  /// `Iraq`
+  String get iraq {
+    return Intl.message(
+      'Iraq',
+      name: 'iraq',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Baghdad`
+  String get baghdad {
+    return Intl.message(
+      'Baghdad',
+      name: 'baghdad',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `UAE`
+  String get uae {
+    return Intl.message(
+      'UAE',
+      name: 'uae',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dubai`
+  String get dubai {
+    return Intl.message(
+      'Dubai',
+      name: 'dubai',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Turkey`
+  String get turkey {
+    return Intl.message(
+      'Turkey',
+      name: 'turkey',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Istanbul`
+  String get istanbul {
+    return Intl.message(
+      'Istanbul',
+      name: 'istanbul',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Popular Destinations`
   String get popularDestinations {
     return Intl.message(
-      'Popular destinations',
+      'Popular Destinations',
       name: 'popularDestinations',
       desc: '',
       args: [],
@@ -155,6 +215,16 @@ class S {
     return Intl.message(
       'AVA FLIGHT EXPERIENCE',
       name: 'avaFlightExperience',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ava Side Services`
+  String get avaSideServices {
+    return Intl.message(
+      'Ava Side Services',
+      name: 'avaSideServices',
       desc: '',
       args: [],
     );
