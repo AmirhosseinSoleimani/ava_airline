@@ -1,6 +1,7 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
+import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../shared/resources/resources.dart';
@@ -19,7 +20,7 @@ class MyTripsPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.surface,
         surfaceTintColor: Theme.of(context).colorScheme.surfaceTint,
         title: Text(localization.myTrips),
-        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
+        bottom: PreferredSize(preferredSize: const Size(double.maxFinite, 10), child: Container(color:  context.read<ThemeCubit>().tier.color, height: 20,)),
 
       ),
       drawer: const DrawerWidget(),

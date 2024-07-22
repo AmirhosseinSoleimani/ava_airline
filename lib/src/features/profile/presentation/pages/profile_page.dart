@@ -3,6 +3,7 @@ import 'package:ava_airline/src/features/book_flight/book_flight.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
 import 'package:ava_airline/src/features/profile/tier_entity.dart';
 import 'package:ava_airline/src/shared/resources/localization/locale_provider.dart';
+import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -18,17 +19,20 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  List<Tier> tierList = [
-    Tier(path: 'assets/image/blue.jpg', name: S.current.blue, minMile: 0),
-    Tier(path: 'assets/image/bronze.jpg', name: S.current.bronze, minMile: 1000),
-    Tier(path: 'assets/image/silver.jpg', name: S.current.silver, minMile: 2000),
-    Tier(path: 'assets/image/gold.jpg', name: S.current.gold, minMile: 5000),
-  ];
+
 
   int tierIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    List<Tier> tierList = [
+      Tier(path: 'assets/image/blue.jpg', name: S.of(context).blue, minMile: 0,benefits: [
+
+      ]),
+      Tier(path: 'assets/image/bronze.jpg', name: S.of(context).bronze, minMile: 1000),
+      Tier(path: 'assets/image/silver.jpg', name: S.of(context).silver, minMile: 2000),
+      Tier(path: 'assets/image/gold.jpg', name: S.of(context).gold, minMile: 5000),
+    ];
     final localeProvider = context.read<LocaleProvider>();
     final localization = S.of(context);
     return Scaffold(
@@ -39,6 +43,7 @@ class _ProfilePageState extends State<ProfilePage> {
             GestureDetector(
               onTap: () {
                 setState(() {
+                  context.read<ThemeCubit>().toggleTier();
                   if (tierIndex == 3) {
                     tierIndex = 0;
                   } else {
@@ -98,7 +103,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Column(
                       children: [
                         Text(
-                          tierList[tierIndex].name,
+                          tierList[tierIndex].name ?? '',
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: 4),
@@ -179,4 +184,5 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     );
   }
+
 }

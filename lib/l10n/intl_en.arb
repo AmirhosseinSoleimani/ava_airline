@@ -245,7 +245,7 @@
   "message4": "Your flight AV789 is now boarding at Gate 5.",
   "title5": "Promotion",
   "message5": "Upgrade to Business Class with a 50% discount!",
-  "milesFlown": "Miles flown",
+  "milesFlown": "Hamava Score",
   "gold": "Gold",
   "silver": "Silver",
   "bronze": "Bronze",
@@ -274,5 +274,13 @@
   "exemptionsDescription": "Holders of veterans, disabled, and martyr families cards, as well as passengers on Hajj and Atabat flights, EU citizens, and individuals over 65 years old are exempt from payment.",
   "carRental" : "Car rental",
   "mashhad1": "The city of Mashhad and Agha in Razavi Khorasan province is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of travelers and tourists is the existence of the court of Imam Reza (a.s.) in the city of Mashhad. This city is culturally very rich. The city of Mashhad and Agha in Razavi Khorasan province is considered one of the historical and religious provinces of Iran. This city annually hosts about 27 million domestic and foreign travelers who travel to this place for pilgrimage and religious ceremonies. The main reason for this volume of travelers and tourists is the existence of the court of Imam Reza (a.s.) in the city of Mashhad. This city is culturally very rich.",
-  "mashhad2" : "The tomb of many religious, poetry and literature greats such as Ferdowsi, who had a significant impact on Iranian culture and language, is located in this city and its suburbs. All these have made Mashhad become a modern city in recent years, so that there are various and advanced entertainment, tourism and commercial centers in its place."
+  "mashhad2" : "The tomb of many religious, poetry and literature greats such as Ferdowsi, who had a significant impact on Iranian culture and language, is located in this city and its suburbs. All these have made Mashhad become a modern city in recent years, so that there are various and advanced entertainment, tourism and commercial centers in its place.",
+  "benefit1": "Participation in lottery",
+  "benefit2": "Free in-flight internet",
+  "benefit3": "Travel insurance",
+  "benefit4": "Priority seat selection",
+  "benefit5": "Extra baggage allowance",
+  "benefit6": "Travel consultation",
+  "benefit7": "Travel class upgrade",
+  "benefit8": "Ticket and hotel discount"
 }

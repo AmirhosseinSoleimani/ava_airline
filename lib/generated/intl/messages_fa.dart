@@ -62,6 +62,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "ویلچر یا سایر وسایل کمک حرکتی دارای باتری تر یا خشک ضمن حفاظت باتری در برابر اتصالی الکتریکی، بسته بندی ایمن و تایید نماینده ماهان در قسمت بار هواپیما حمل می‌گردد.(در صورت امکان جدا شدن باتری, باتری جدا شده در بسته بندی مقاوم در انبار هواپیما حمل می گردد)."),
         "batteryWheelchairTitle":
             MessageLookupByLibrary.simpleMessage("ویلچرهای باتری دار"),
+        "benefit1": MessageLookupByLibrary.simpleMessage("شرکت در قرعه‌کشی"),
+        "benefit2":
+            MessageLookupByLibrary.simpleMessage("اینترنت رایگان حین پرواز"),
+        "benefit3": MessageLookupByLibrary.simpleMessage("بیمه سفر"),
+        "benefit4": MessageLookupByLibrary.simpleMessage("اولویت انتخاب صندلی"),
+        "benefit5": MessageLookupByLibrary.simpleMessage("مجوز بار اضافی"),
+        "benefit6": MessageLookupByLibrary.simpleMessage("مشاوره سفر"),
+        "benefit7": MessageLookupByLibrary.simpleMessage("ارتقا کلاس سفر"),
+        "benefit8": MessageLookupByLibrary.simpleMessage("تخفیف بلیط و هتل"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "blind": MessageLookupByLibrary.simpleMessage("نابینا"),
@@ -228,7 +237,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "پرواز شما AV789 اکنون در گیت 5 در حال سوار شدن است."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "با 50٪ تخفیف به کلاس بیزینس وارد شوید!"),
-        "milesFlown": MessageLookupByLibrary.simpleMessage("مایل پرواز"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("امتیاز هم‌آوایی"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تلاش شرکت هواپیمایی آوا، حداقل رساندن زمان تاخیر پروازهاست"),
         "multiCity": MessageLookupByLibrary.simpleMessage("چند شهر"),

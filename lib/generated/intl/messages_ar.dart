@@ -59,6 +59,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "يتم نقل الكراسي المتحركة أو غيرها من وسائل المساعدة على الحركة التي تحتوي على بطارية رطبة أو جافة في مخزن البضائع بالطائرة مع حماية البطارية من الدوائر القصيرة، وتغليف آمن، وموافقة ممثل خطوط ماهان الجوية. (إذا كانت البطارية قابلة للإزالة، يتم نقل البطارية المنفصلة في عبوة مقاومة في مخزن الطائرة)."),
         "batteryWheelchairTitle": MessageLookupByLibrary.simpleMessage(
             "الكراسي المتحركة التي تعمل بالبطارية"),
+        "benefit1": MessageLookupByLibrary.simpleMessage("المشاركة في السحب"),
+        "benefit2": MessageLookupByLibrary.simpleMessage(
+            "الإنترنت المجاني أثناء الرحلة"),
+        "benefit3": MessageLookupByLibrary.simpleMessage("تأمين السفر"),
+        "benefit4":
+            MessageLookupByLibrary.simpleMessage("أولوية اختيار المقعد"),
+        "benefit5":
+            MessageLookupByLibrary.simpleMessage("السماح بوزن إضافي للأمتعة"),
+        "benefit6": MessageLookupByLibrary.simpleMessage("استشارة السفر"),
+        "benefit7": MessageLookupByLibrary.simpleMessage("ترقية درجة السفر"),
+        "benefit8":
+            MessageLookupByLibrary.simpleMessage("خصم على التذاكر والفنادق"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "blind": MessageLookupByLibrary.simpleMessage("كفيف"),
@@ -226,7 +238,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "رحلتك AV789 بدأت الآن في الصعود في البوابة 5."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "قم بالترقية إلى الدرجة الأولى بخصم 50٪!"),
-        "milesFlown": MessageLookupByLibrary.simpleMessage("الأميال المقطوعة"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("نتيجة هم‌آوا"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تسعى شركة آفا للطيران إلى تقليل تأخيرات الرحلات."),
         "multiCity": MessageLookupByLibrary.simpleMessage("مدن متعددة"),

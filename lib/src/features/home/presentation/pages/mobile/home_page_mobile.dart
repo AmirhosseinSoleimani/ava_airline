@@ -11,6 +11,7 @@ import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/notifications.dart';
 import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/feature_card.dart';
 import 'package:ava_airline/src/features/video/presentation/video_page.dart';
+import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -163,7 +164,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           'assets/image/ava.png',
           height: AppBar().preferredSize.height - 16,
         ),
-        bottom: PreferredSize(preferredSize: Size(double.maxFinite, 10), child: Container(color: ColorLightThemeManager.gold, height: 20,)),
+        bottom: PreferredSize(preferredSize: const Size(double.maxFinite, 10), child: Container(color:  context.read<ThemeCubit>().tier.color, height: 20,)),
       ),
       drawer: const DrawerWidget(),
       body: isLoading

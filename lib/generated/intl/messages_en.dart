@@ -62,6 +62,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "Wheelchairs or other mobility aids with wet or dry batteries are transported in the aircraft\'s cargo hold with the battery protected against short circuits, safely packaged, and approved by Mahan Airlines representative. (If the battery is removable, the detached battery is carried in a resistant package in the aircraft\'s hold)."),
         "batteryWheelchairTitle":
             MessageLookupByLibrary.simpleMessage("Battery-Powered Wheelchairs"),
+        "benefit1":
+            MessageLookupByLibrary.simpleMessage("Participation in lottery"),
+        "benefit2":
+            MessageLookupByLibrary.simpleMessage("Free in-flight internet"),
+        "benefit3": MessageLookupByLibrary.simpleMessage("Travel insurance"),
+        "benefit4":
+            MessageLookupByLibrary.simpleMessage("Priority seat selection"),
+        "benefit5":
+            MessageLookupByLibrary.simpleMessage("Extra baggage allowance"),
+        "benefit6": MessageLookupByLibrary.simpleMessage("Travel consultation"),
+        "benefit7":
+            MessageLookupByLibrary.simpleMessage("Travel class upgrade"),
+        "benefit8":
+            MessageLookupByLibrary.simpleMessage("Ticket and hotel discount"),
         "birthDate": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "birth_date": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "blind": MessageLookupByLibrary.simpleMessage("Blind"),
@@ -240,7 +254,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your flight AV789 is now boarding at Gate 5."),
         "message5": MessageLookupByLibrary.simpleMessage(
             "Upgrade to Business Class with a 50% discount!"),
-        "milesFlown": MessageLookupByLibrary.simpleMessage("Miles flown"),
+        "milesFlown": MessageLookupByLibrary.simpleMessage("Hamava Score"),
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "Ava Airlines strives to minimize flight delays."),
         "multiCity": MessageLookupByLibrary.simpleMessage("Multi city"),
