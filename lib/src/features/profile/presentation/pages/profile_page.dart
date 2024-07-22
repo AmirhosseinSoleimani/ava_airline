@@ -61,7 +61,8 @@ class _ProfilePageState extends State<ProfilePage> {
         originCity: localization.tehran,
         persianPrice: '1,330,000 ریال',
         persianPriceLow: '1,100,000 ریال',
-      ),];
+      ),
+    ];
     List<Tier> tierList = [
       Tier(
         path: 'assets/image/blue.jpg',
@@ -154,7 +155,11 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: Column(
                         children: [
                           Text(
-                            '2450',
+                            context
+                                .read<ThemeCubit>()
+                                .tier
+                                .currentMile
+                                .toString(),
                             style: Theme.of(context).textTheme.headlineSmall,
                           ),
                           const SizedBox(height: 4),
@@ -188,10 +193,26 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.grey,
                 thickness: 0.5,
               ),
+             if(context.read<ThemeCubit>().tier.name!='Gold') Row(
+                children: [
+                  Text(localization.currentTier,textAlign: TextAlign.center,),
+                  const SizedBox(width: 4),
+                  Expanded(
+                    child: LinearProgressIndicator(
+                      value: context.read<ThemeCubit>().tier.currentMile! /
+                          context.read<ThemeCubit>().nextTier.minMile,
+                      backgroundColor: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Text(localization.nextTier,textAlign: TextAlign.center,),
+                ],
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height*0.24,
+                  height: MediaQuery.of(context).size.height * 0.24,
                   child: Row(
                     children: [
                       Expanded(
@@ -199,15 +220,21 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
-                              color: context.read<ThemeCubit>().tier.color!.withOpacity(0.4),
+                              color: context
+                                  .read<ThemeCubit>()
+                                  .tier
+                                  .color!
+                                  .withOpacity(0.4),
                             ),
-                            padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 16, horizontal: 8),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   localization.currentBenefits,
-                                  style: Theme.of(context).textTheme.displayLarge,
+                                  style:
+                                      Theme.of(context).textTheme.displayLarge,
                                   textAlign: TextAlign.center,
                                 ),
                                 const SizedBox(height: 8),
@@ -217,7 +244,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                       .benefits!
                                       .map(
                                         (e) => Padding(
-                                          padding: const EdgeInsets.symmetric(vertical: 4),
+                                          padding: const EdgeInsets.symmetric(
+                                              vertical: 4),
                                           child: Text(e),
                                         ),
                                       )
@@ -229,60 +257,72 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                       ),
                       Expanded(
-                        child:context.read<ThemeCubit>().tier.name=='Gold'? const SizedBox():  Card(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: context.read<ThemeCubit>().nextTier.color!.withOpacity(0.4),
-                            ),
-                            padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  localization.nextBenefits,
-                                  style: Theme.of(context).textTheme.displayLarge,
+                        child: context.read<ThemeCubit>().tier.name == 'Gold'
+                            ? const SizedBox()
+                            : Card(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(12),
+                                    color: context
+                                        .read<ThemeCubit>()
+                                        .nextTier
+                                        .color!
+                                        .withOpacity(0.4),
+                                  ),
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 16, horizontal: 8),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        localization.nextBenefits,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .displayLarge,
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: tierList[nextTier(tierIndex)]
+                                            .benefits!
+                                            .map(
+                                              (e) => Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 4),
+                                                child: Text(e),
+                                              ),
+                                            )
+                                            .toList(),
+                                      )
+                                    ],
+                                  ),
                                 ),
-                                const SizedBox(height: 8),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: tierList[nextTier(tierIndex)]
-                                      .benefits!
-                                      .map(
-                                        (e) => Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 4),
-                                      child: Text(e),
-                                    ),
-                                  )
-                                      .toList(),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
+                              ),
                       ),
                     ],
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical:8.0),
-                child: Text(localization.yourOffers,style: Theme.of(context).textTheme.titleLarge,),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: Text(
+                  localization.yourOffers,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
               ),
               Center(
                 child: SizedBox(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.95,
+                  width: MediaQuery.of(context).size.width * 0.95,
                   child: CarouselSlider(
                     items: destinations
-                        .map((e) => DestinationCard(destination: e,isOffer:true))
+                        .map((e) =>
+                            DestinationCard(destination: e, isOffer: true))
                         .toList(),
                     options: CarouselOptions(
-                        autoPlay: true,
-                        height: 200,
-                        viewportFraction: 0.7),
+                        autoPlay: true, height: 200, viewportFraction: 0.7),
                   ),
                 ),
               ),
@@ -354,11 +394,12 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     );
   }
-  int nextTier(int tier){
-    if(tier==3){
+
+  int nextTier(int tier) {
+    if (tier == 3) {
       return 0;
-    }else{
-      return tier+1;
+    } else {
+      return tier + 1;
     }
   }
 }

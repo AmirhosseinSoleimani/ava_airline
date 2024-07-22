@@ -288,5 +288,7 @@
   "plusBlue": "+ All blue tier benefits",
   "plusBronze": "+ All bronze tier benefits",
   "plusSilver": "+ All silver tier benefits",
-  "yourOffers" : "Your offers"
+  "yourOffers" : "Your offers",
+  "currentTier": "Current\nTier",
+  "nextTier": "Next\nTier"
 }

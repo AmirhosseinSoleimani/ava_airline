@@ -125,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentBenefits":
             MessageLookupByLibrary.simpleMessage("Current benefits"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("en"),
+        "currentTier": MessageLookupByLibrary.simpleMessage("Current\nTier"),
         "deaf": MessageLookupByLibrary.simpleMessage("Deaf"),
         "departureDate": MessageLookupByLibrary.simpleMessage("Departure date"),
         "destination": MessageLookupByLibrary.simpleMessage("Destination"),
@@ -270,6 +271,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Continue"),
         "nextBenefits":
             MessageLookupByLibrary.simpleMessage("Next tier benefits"),
+        "nextTier": MessageLookupByLibrary.simpleMessage("Next\nTier"),
         "noTrips": MessageLookupByLibrary.simpleMessage("No upcoming trips"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "If you have an upcoming trip booked with us, you can add it to your My trips list."),

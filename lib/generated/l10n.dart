@@ -2939,6 +2939,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Current\nTier`
+  String get currentTier {
+    return Intl.message(
+      'Current\nTier',
+      name: 'currentTier',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next\nTier`
+  String get nextTier {
+    return Intl.message(
+      'Next\nTier',
+      name: 'nextTier',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

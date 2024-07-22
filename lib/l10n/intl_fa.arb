@@ -285,6 +285,8 @@
   "plusBlue": "+ تمام مزایای رده آبی",
   "plusBronze": "+ تمام مزایای رده برنز",
   "plusSilver": "+ تمام مزایای رده نقره",
-  "yourOffers": "تخفیف\u200Cهای شما"
+  "yourOffers": "تخفیف\u200Cهای شما",
+  "currentTier": "رده\nفعلی",
+  "nextTier": "رده\nبعدی"
 
 }

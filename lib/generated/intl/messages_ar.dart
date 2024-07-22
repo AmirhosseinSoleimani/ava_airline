@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentBenefits":
             MessageLookupByLibrary.simpleMessage("الفوائد الحالية"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("ar"),
+        "currentTier": MessageLookupByLibrary.simpleMessage("الفئة\nالحالية"),
         "deaf": MessageLookupByLibrary.simpleMessage("أصم"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاريخ المغادرة"),
         "destination": MessageLookupByLibrary.simpleMessage("مقصد"),
@@ -254,6 +255,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("متابعة"),
         "nextBenefits":
             MessageLookupByLibrary.simpleMessage("فوائد المستوى التالي"),
+        "nextTier": MessageLookupByLibrary.simpleMessage("الفئة\nالتالية"),
         "noTrips": MessageLookupByLibrary.simpleMessage("لا توجد رحلات قادمة"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رحلة قادمة محجوزة معنا، يمكنك إضافتها إلى قائمة رحلاتي."),

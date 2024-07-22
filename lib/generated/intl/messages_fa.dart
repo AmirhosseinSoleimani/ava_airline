@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currency": MessageLookupByLibrary.simpleMessage("ریال"),
         "currentBenefits": MessageLookupByLibrary.simpleMessage("مزایای فعلی"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("fa"),
+        "currentTier": MessageLookupByLibrary.simpleMessage("رده\nفعلی"),
         "deaf": MessageLookupByLibrary.simpleMessage("ناشنوا"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاریخ رفت"),
         "destination": MessageLookupByLibrary.simpleMessage("مقصد"),
@@ -251,6 +252,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "navbar_component_color": MessageLookupByLibrary.simpleMessage("رنگ"),
         "next": MessageLookupByLibrary.simpleMessage("ادامه"),
         "nextBenefits": MessageLookupByLibrary.simpleMessage("مزایای رده بعدی"),
+        "nextTier": MessageLookupByLibrary.simpleMessage("رده\nبعدی"),
         "noTrips": MessageLookupByLibrary.simpleMessage("سفری یافت نشد"),
         "noTripsDescription": MessageLookupByLibrary.simpleMessage(
             "اگر سفری در پیش دارید که با ما رزرو کرده‌اید، می‌توانید آن را به فهرست سفرهای من اضافه کنید."),

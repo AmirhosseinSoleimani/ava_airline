@@ -19,22 +19,26 @@ class ThemeCubit extends Cubit<ThemeState> {
         path: 'assets/image/blue.jpg',
         minMile: 0,
         color: Colors.blue.shade700,
-        name: 'Blue'),
+        name: 'Blue',
+    currentMile: 600),
     Tier(
         path: 'assets/image/bronze.jpg',
         minMile: 1000,
         color: const Color.fromRGBO(205, 127, 50, 1),
-        name: 'Bronze'),
+        name: 'Bronze',
+    currentMile: 1850,),
     Tier(
         path: 'assets/image/silver.jpg',
         minMile: 2000,
         color: const Color.fromRGBO(192, 192, 192, 1),
-        name: 'Silver'),
+        name: 'Silver',
+      currentMile: 2550,),
     Tier(
         path: 'assets/image/gold.jpg',
         minMile: 5000,
         color: const Color.fromRGBO(201, 171, 4, 1.0),
-        name: 'Gold'),
+        name: 'Gold',
+      currentMile: 5650,),
   ];
 
   int tierIndex = 0;
