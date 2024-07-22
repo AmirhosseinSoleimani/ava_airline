@@ -173,7 +173,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 30),
                   ],
                 ),
                 SizedBox(
@@ -315,7 +315,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
           ),
         ),
         Positioned(
-          top: MediaQuery.of(context).size.height*0.6,
+          top: MediaQuery.of(context).size.height*0.65,
           left: MediaQuery.of(context).size.width*0.125,
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.75,

@@ -69,10 +69,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "این افراد نیازبه ارائه گواهی پزشکی ندارند. درصورت سفر گروهی, ارائه مجوز جهت انجام هماهنگی، وجود همراه سالم، توانا و هم زبان برای این گروه مسافران در تمام مراحل سفر ضروری می باشد. همراهی این گروه مسافران توسط پرسنل هواپیمایی ماهان مشمول پرداخت هزینه نمی ‎گردد."),
         "blindDeafTitle":
             MessageLookupByLibrary.simpleMessage("افراد نابینا و ناشنوا"),
+        "blue": MessageLookupByLibrary.simpleMessage("آبی"),
         "book": MessageLookupByLibrary.simpleMessage("رزرو"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("رزرو پرواز"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
             "آوای آسمان شما را فرا می‌خواند؛ همین‌حالا پروازتان را رزرو کنید."),
+        "bronze": MessageLookupByLibrary.simpleMessage("برنزی"),
         "businessClass": MessageLookupByLibrary.simpleMessage("کلاس بیزینس"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("خرید بلیط"),
@@ -230,7 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تلاش شرکت هواپیمایی آوا، حداقل رساندن زمان تاخیر پروازهاست"),
         "multiCity": MessageLookupByLibrary.simpleMessage("چند شهر"),
-        "myTrips": MessageLookupByLibrary.simpleMessage("هم‌آوا"),
+        "myTrips": MessageLookupByLibrary.simpleMessage("سفرها"),
         "my_travels": MessageLookupByLibrary.simpleMessage("سفرهای من"),
         "name": MessageLookupByLibrary.simpleMessage("نام و نام خانوادگی"),
         "nationalId": MessageLookupByLibrary.simpleMessage("کدملی"),
@@ -297,7 +299,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("پریمیوم اکونومی"),
         "professional_staff":
             MessageLookupByLibrary.simpleMessage("پرسنل حرفه ای"),
-        "profile": MessageLookupByLibrary.simpleMessage("پروفایل"),
+        "profile": MessageLookupByLibrary.simpleMessage("هم‌آوا"),
         "prohibited_items":
             MessageLookupByLibrary.simpleMessage("کالاهای ممنوعه"),
         "qeshm": MessageLookupByLibrary.simpleMessage("قشم"),
@@ -348,6 +350,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendFeedback": MessageLookupByLibrary.simpleMessage("ارسال بازخورد"),
         "service": MessageLookupByLibrary.simpleMessage("خدمت"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شیراز"),
+        "silver": MessageLookupByLibrary.simpleMessage("نقره‌ای"),
         "specialServices": MessageLookupByLibrary.simpleMessage("خدمات ویژه"),
         "specialServicesPageName":
             MessageLookupByLibrary.simpleMessage("صفحه خدمات ویژه"),

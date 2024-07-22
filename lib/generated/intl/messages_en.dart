@@ -69,10 +69,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "These passengers do not need to provide a medical certificate. In case of group travel, providing a permit for coordination, the presence of a healthy, capable, and same-language companion for these passengers is necessary throughout the journey. Accompanying these passengers by Mahan Airlines personnel is not subject to a fee."),
         "blindDeafTitle":
             MessageLookupByLibrary.simpleMessage("Blind and Deaf Passengers"),
+        "blue": MessageLookupByLibrary.simpleMessage("Blue"),
         "book": MessageLookupByLibrary.simpleMessage("Book"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("Book a flight"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
             "The voice of the sky calls you; Book your flight now."),
+        "bronze": MessageLookupByLibrary.simpleMessage("Bronze"),
         "businessClass": MessageLookupByLibrary.simpleMessage("Business Class"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("Buy ticket"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("Buy Ticket"),
@@ -242,7 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "Ava Airlines strives to minimize flight delays."),
         "multiCity": MessageLookupByLibrary.simpleMessage("Multi city"),
-        "myTrips": MessageLookupByLibrary.simpleMessage("Hamava"),
+        "myTrips": MessageLookupByLibrary.simpleMessage("My Trips"),
         "my_travels": MessageLookupByLibrary.simpleMessage("My Travels"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nationalId": MessageLookupByLibrary.simpleMessage("National ID"),
@@ -312,7 +314,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Premium Economy"),
         "professional_staff":
             MessageLookupByLibrary.simpleMessage("Professional Staff"),
-        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "profile": MessageLookupByLibrary.simpleMessage("Hamava"),
         "prohibited_items":
             MessageLookupByLibrary.simpleMessage("Prohibited Items"),
         "qeshm": MessageLookupByLibrary.simpleMessage("Qeshm"),
@@ -362,6 +364,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendFeedback": MessageLookupByLibrary.simpleMessage("Send feedback"),
         "service": MessageLookupByLibrary.simpleMessage("Service"),
         "shiraz": MessageLookupByLibrary.simpleMessage("Shiraz"),
+        "silver": MessageLookupByLibrary.simpleMessage("Silver"),
         "specialServices":
             MessageLookupByLibrary.simpleMessage("Special Services"),
         "specialServicesPageName":

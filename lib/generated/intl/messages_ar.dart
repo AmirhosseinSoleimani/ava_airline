@@ -66,10 +66,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يحتاج هؤلاء الركاب إلى تقديم شهادة طبية. في حالة السفر الجماعي، يجب تقديم تصريح للتنسيق، ووجود مرافق صحي، قادر، ويتحدث نفس اللغة لهؤلاء الركاب طوال الرحلة. مرافقة هؤلاء الركاب من قبل موظفي خطوط ماهان الجوية ليست خاضعة لرسوم."),
         "blindDeafTitle":
             MessageLookupByLibrary.simpleMessage("الركاب المكفوفين والصم"),
+        "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
         "book": MessageLookupByLibrary.simpleMessage("حجز"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("إحجز رحلة طيران"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
             "صوت السماء يناديك؛ احجز رحلتك الآن."),
+        "bronze": MessageLookupByLibrary.simpleMessage("برونزي"),
         "businessClass": MessageLookupByLibrary.simpleMessage("بیزینس کلس"),
         "buyTicket": MessageLookupByLibrary.simpleMessage("اشتري تذاكر"),
         "buy_ticket": MessageLookupByLibrary.simpleMessage("شراء تذكرة"),
@@ -228,7 +230,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "minimize_delay": MessageLookupByLibrary.simpleMessage(
             "تسعى شركة آفا للطيران إلى تقليل تأخيرات الرحلات."),
         "multiCity": MessageLookupByLibrary.simpleMessage("مدن متعددة"),
-        "myTrips": MessageLookupByLibrary.simpleMessage("هم‌آوا"),
+        "myTrips": MessageLookupByLibrary.simpleMessage("رحلاتي"),
         "my_travels": MessageLookupByLibrary.simpleMessage("رحلاتي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "nationalId": MessageLookupByLibrary.simpleMessage("الهوية الوطنية"),
@@ -295,7 +297,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("بريميوم اکونومی"),
         "professional_staff":
             MessageLookupByLibrary.simpleMessage("طاقم محترف"),
-        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "profile": MessageLookupByLibrary.simpleMessage("هم‌آوا"),
         "prohibited_items": MessageLookupByLibrary.simpleMessage("مواد محظورة"),
         "qeshm": MessageLookupByLibrary.simpleMessage("قشم"),
         "quick_access": MessageLookupByLibrary.simpleMessage("الوصول السريع"),
@@ -345,6 +347,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendFeedback": MessageLookupByLibrary.simpleMessage("إرسال ملاحظات"),
         "service": MessageLookupByLibrary.simpleMessage("خدمة"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شيراز"),
+        "silver": MessageLookupByLibrary.simpleMessage("فضي"),
         "specialServices": MessageLookupByLibrary.simpleMessage("خدمات خاصة"),
         "specialServicesPageName":
             MessageLookupByLibrary.simpleMessage("صفحة الخدمات الخاصة"),

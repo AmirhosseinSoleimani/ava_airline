@@ -2,8 +2,6 @@ import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/search_result_page.dart';
 import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/flight_card.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
-import 'package:ava_airline/src/features/home/presentation/pages/mobile/widgets/drawer/drawer_widget.dart';
-import 'package:flutter/material.dart';
 
 class BookFlightPageMobile extends StatefulWidget {
   const BookFlightPageMobile({super.key});
@@ -113,7 +111,8 @@ class _BookFlightPageMobileState extends State<BookFlightPageMobile>
                     ),
                   ),
                 ],
-              ))
+              )),
+          const SizedBox(height: 30,),
         ],
       ),
     );

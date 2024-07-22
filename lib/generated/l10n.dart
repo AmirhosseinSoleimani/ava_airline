@@ -90,20 +90,20 @@ class S {
     );
   }
 
-  /// `Hamava`
+  /// `My Trips`
   String get myTrips {
     return Intl.message(
-      'Hamava',
+      'My Trips',
       name: 'myTrips',
       desc: '',
       args: [],
     );
   }
 
-  /// `Profile`
+  /// `Hamava`
   String get profile {
     return Intl.message(
-      'Profile',
+      'Hamava',
       name: 'profile',
       desc: '',
       args: [],
@@ -2515,6 +2515,36 @@ class S {
     return Intl.message(
       'Gold',
       name: 'gold',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Silver`
+  String get silver {
+    return Intl.message(
+      'Silver',
+      name: 'silver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bronze`
+  String get bronze {
+    return Intl.message(
+      'Bronze',
+      name: 'bronze',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blue`
+  String get blue {
+    return Intl.message(
+      'Blue',
+      name: 'blue',
       desc: '',
       args: [],
     );

@@ -16,7 +16,6 @@ class ConfirmAndPay extends StatefulWidget {
 class _ConfirmAndPayState extends State<ConfirmAndPay> {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     final localization = S.of(context);
     return Scaffold(
       appBar: AppBar(
@@ -625,6 +624,7 @@ class _ConfirmAndPayState extends State<ConfirmAndPay> {
                 ],
               ),
             ),
+            const SizedBox(height: 100,)
 
           ],
         ),
