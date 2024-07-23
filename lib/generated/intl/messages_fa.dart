@@ -63,6 +63,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "batteryWheelchairTitle":
             MessageLookupByLibrary.simpleMessage("ویلچرهای باتری دار"),
         "benefit1": MessageLookupByLibrary.simpleMessage("شرکت در قرعه‌کشی"),
+        "benefit10":
+            MessageLookupByLibrary.simpleMessage("دسترسی به سالن استراحت"),
+        "benefit11": MessageLookupByLibrary.simpleMessage("چک‌این شخصی"),
+        "benefit12": MessageLookupByLibrary.simpleMessage("ترانسفر راننده"),
         "benefit2":
             MessageLookupByLibrary.simpleMessage("اینترنت رایگان حین پرواز"),
         "benefit3": MessageLookupByLibrary.simpleMessage("بیمه سفر"),
@@ -71,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "benefit6": MessageLookupByLibrary.simpleMessage("مشاوره سفر"),
         "benefit7": MessageLookupByLibrary.simpleMessage("ارتقا کلاس سفر"),
         "benefit8": MessageLookupByLibrary.simpleMessage("تخفیف بلیط و هتل"),
+        "benefit9": MessageLookupByLibrary.simpleMessage("میان‌وعده‌ رایگان"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "birth_date": MessageLookupByLibrary.simpleMessage("تاریخ تولد"),
         "blind": MessageLookupByLibrary.simpleMessage("نابینا"),
@@ -115,7 +120,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "country_travel_conditions":
             MessageLookupByLibrary.simpleMessage("شرایط سفر به کشورها"),
         "currency": MessageLookupByLibrary.simpleMessage("ریال"),
-        "currentBenefits": MessageLookupByLibrary.simpleMessage("مزایای فعلی"),
+        "currentBenefits":
+            MessageLookupByLibrary.simpleMessage("مزایای رده فعلی"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("fa"),
         "currentTier": MessageLookupByLibrary.simpleMessage("رده\nفعلی"),
         "deaf": MessageLookupByLibrary.simpleMessage("ناشنوا"),
@@ -219,7 +225,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "male": MessageLookupByLibrary.simpleMessage("مرد"),
         "mashhad": MessageLookupByLibrary.simpleMessage("مشهد"),
         "mashhad1": MessageLookupByLibrary.simpleMessage(
-            "شهر مشهد و اقع در استان خراسان رضوی یکی از استان‌های تاریخی و مذهبی ایران محسوب می‌شود. این شهر سالانه میزبان حدود ۲۷ میلیون نفر از مسافران داخلی و خارجی است که برای زیارت و مراسم‌های مذهبی به این مکان سفر می‌کنند. دلیل اصلی این حجم مسافر و گردشگر وجود بارگاه امام رضا(ع) در شهر مشهد است. این شهر به لحاظ فرهنگی هم بسیار غنی است."),
+            "شهر مشهد واقع در استان خراسان رضوی یکی از استان‌های تاریخی و مذهبی ایران محسوب می‌شود. این شهر سالانه میزبان حدود ۲۷ میلیون نفر از مسافران داخلی و خارجی است که برای زیارت و مراسم‌های مذهبی به این مکان سفر می‌کنند. دلیل اصلی این حجم مسافر و گردشگر وجود بارگاه امام رضا(ع) در شهر مشهد است. این شهر به لحاظ فرهنگی هم بسیار غنی است."),
         "mashhad2": MessageLookupByLibrary.simpleMessage(
             "آرامگاه خیلی از بزرگان دین، شعر و ادبیات مثل فردوسی که تاثیر بسزایی در فرهنگ و زبان ایرانی‌ها داشته، در این شهر و توابع آن قرار دارد. همه این‌ها باعث شده مشهد در سال‌های اخیر به یک شهر مدرن تبدیل شود، به طوری که در حال حاضر مراکز تفریحی، گردشگری و تجاری متنوع و پیشرفته‌ای در جای‌جای آن وجود دارد."),
         "mashhadSpecialFaresPageTitle":
@@ -306,12 +312,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentInfo": MessageLookupByLibrary.simpleMessage(
             "هنگام پرداخت با استفاده از موجودی، در صورت استرداد، مبلغ قابل پرداخت به موجودی حساب شما باز خواهد گشت."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
-        "plusBlue":
-            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده آبی"),
+        "plusBlue": MessageLookupByLibrary.simpleMessage("تمام مزایای رده آبی"),
         "plusBronze":
-            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده برنز"),
+            MessageLookupByLibrary.simpleMessage("تمام مزایای رده برنز"),
         "plusSilver":
-            MessageLookupByLibrary.simpleMessage("+ تمام مزایای رده نقره"),
+            MessageLookupByLibrary.simpleMessage("تمام مزایای رده نقره"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("مقصدهای محبوب"),
         "premiumEconomy":
@@ -370,6 +375,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "service": MessageLookupByLibrary.simpleMessage("خدمت"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شیراز"),
         "silver": MessageLookupByLibrary.simpleMessage("نقره‌ای"),
+        "sliderDesc1": MessageLookupByLibrary.simpleMessage(
+            "امتیاز هم‌آوا بخرید، هدیه دهید و انتقال دهید"),
+        "sliderDesc2": MessageLookupByLibrary.simpleMessage(
+            "با هر اقامت امتیاز هم‌آوا کسب کنید"),
+        "sliderDesc3": MessageLookupByLibrary.simpleMessage(
+            "تجربه پرواز بعدی خود با آوا را ارتقا دهید"),
+        "sliderTitle1": MessageLookupByLibrary.simpleMessage(
+            "سریع‌تر از جوایز خود لذت ببرید"),
+        "sliderTitle2": MessageLookupByLibrary.simpleMessage("هتل‌های آوا"),
+        "sliderTitle3": MessageLookupByLibrary.simpleMessage(
+            "از سطح جدیدی از راحتی لذت ببرید"),
         "specialServices": MessageLookupByLibrary.simpleMessage("خدمات ویژه"),
         "specialServicesPageName":
             MessageLookupByLibrary.simpleMessage("صفحه خدمات ویژه"),

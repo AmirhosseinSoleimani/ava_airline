@@ -15,7 +15,6 @@ import '../../../home/domain/entities/destination_entity.dart';
 class ProfilePage extends StatefulWidget {
   static const profilePageName = 'profile-page';
   static const profilePagePath = '/profile-page';
-
   const ProfilePage({super.key});
 
   @override
@@ -24,6 +23,9 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   int tierIndex = 0;
+
+  int _current = 0;
+  final CarouselController _controller = CarouselController();
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +73,7 @@ class _ProfilePageState extends State<ProfilePage> {
         benefits: [
           S.of(context).benefit1,
           S.of(context).benefit2,
+          S.of(context).benefit9,
         ],
       ),
       Tier(
@@ -78,9 +81,10 @@ class _ProfilePageState extends State<ProfilePage> {
         name: S.of(context).bronze,
         minMile: 1000,
         benefits: [
+          S.of(context).plusBlue,
           S.of(context).benefit3,
           S.of(context).benefit4,
-          S.of(context).plusBlue,
+          S.of(context).benefit10,
         ],
       ),
       Tier(
@@ -88,9 +92,10 @@ class _ProfilePageState extends State<ProfilePage> {
         name: S.of(context).silver,
         minMile: 2000,
         benefits: [
+          S.of(context).plusBronze,
           S.of(context).benefit5,
           S.of(context).benefit6,
-          S.of(context).plusBronze,
+          S.of(context).benefit11,
         ],
       ),
       Tier(
@@ -98,13 +103,13 @@ class _ProfilePageState extends State<ProfilePage> {
         name: S.of(context).gold,
         minMile: 5000,
         benefits: [
+          S.of(context).plusSilver,
           S.of(context).benefit7,
           S.of(context).benefit8,
-          S.of(context).plusSilver,
+          S.of(context).benefit12,
         ],
       ),
     ];
-    final localeProvider = context.read<LocaleProvider>();
     return Scaffold(
       drawer: const DrawerWidget(),
       appBar: AppBar(
@@ -193,26 +198,27 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.grey,
                 thickness: 0.5,
               ),
-             if(context.read<ThemeCubit>().tier.name!='Gold') Row(
-                children: [
-                  Text(localization.currentTier,textAlign: TextAlign.center,),
-                  const SizedBox(width: 4),
-                  Expanded(
-                    child: LinearProgressIndicator(
-                      value: context.read<ThemeCubit>().tier.currentMile! /
-                          context.read<ThemeCubit>().nextTier.minMile,
-                      backgroundColor: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  const SizedBox(width: 4),
-                  Text(localization.nextTier,textAlign: TextAlign.center,),
-                ],
-              ),
+              // if(context.read<ThemeCubit>().tier.name!='Gold') Row(
+              //    children: [
+              //      Text(localization.currentTier,textAlign: TextAlign.center,),
+              //      const SizedBox(width: 4),
+              //      Expanded(
+              //        child: LinearProgressIndicator(
+              //          minHeight: 30,
+              //          value: context.read<ThemeCubit>().tier.currentMile! /
+              //              context.read<ThemeCubit>().nextTier.minMile,
+              //          backgroundColor: Colors.white,
+              //          borderRadius: BorderRadius.circular(12),
+              //        ),
+              //      ),
+              //      const SizedBox(width: 4),
+              //      Text(localization.nextTier,textAlign: TextAlign.center,),
+              //    ],
+              //  ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.24,
+                  height: MediaQuery.of(context).size.height * 0.28,
                   child: Row(
                     children: [
                       Expanded(
@@ -246,7 +252,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         (e) => Padding(
                                           padding: const EdgeInsets.symmetric(
                                               vertical: 4),
-                                          child: Text(e),
+                                          child: FittedBox(child: Text(e)),
                                         ),
                                       )
                                       .toList(),
@@ -326,67 +332,103 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.all(4),
-                height: 60,
-                child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          S.of(context).changeLanguage,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: DropdownButton(
-                            value: S.of(context).currentLanguage,
-                            icon: const Icon(Icons.keyboard_arrow_down),
-                            items: const [
-                              DropdownMenuItem(
-                                value: 'fa',
-                                child: Text('fa'),
-                              ),
-                              DropdownMenuItem(
-                                value: 'en',
-                                child: Text('en'),
-                              ),
-                              DropdownMenuItem(
-                                value: 'ar',
-                                child: Text('ar'),
-                              ),
-                            ],
-                            onChanged: (newValue) {
-                              localeProvider.changeLocale(
-                                  Locale(newValue?.toString() ?? 'fa'));
-                            },
-                          ),
-                        ),
-                      ],
+              // Container(
+              //   margin: const EdgeInsets.all(4),
+              //   height: 60,
+              //   child: Card(
+              //     child: Padding(
+              //       padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              //       child: Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //         children: [
+              //           Text(
+              //             S.of(context).changeLanguage,
+              //           ),
+              //           Padding(
+              //             padding: const EdgeInsets.symmetric(horizontal: 16),
+              //             child: DropdownButton(
+              //               value: S.of(context).currentLanguage,
+              //               icon: const Icon(Icons.keyboard_arrow_down),
+              //               items: const [
+              //                 DropdownMenuItem(
+              //                   value: 'fa',
+              //                   child: Text('fa'),
+              //                 ),
+              //                 DropdownMenuItem(
+              //                   value: 'en',
+              //                   child: Text('en'),
+              //                 ),
+              //                 DropdownMenuItem(
+              //                   value: 'ar',
+              //                   child: Text('ar'),
+              //                 ),
+              //               ],
+              //               onChanged: (newValue) {
+              //                 localeProvider.changeLocale(
+              //                     Locale(newValue?.toString() ?? 'fa'));
+              //               },
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(
+                height: 16,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: CarouselSlider(
+                  items: [
+                    carouselItem(
+                      'assets/image/slider1.jpg',
+                      localization.sliderTitle1,
+                      localization.sliderDesc1,
                     ),
-                  ),
+                    carouselItem(
+                      'assets/image/hotel.png',
+                      localization.sliderTitle2,
+                      localization.sliderDesc2,
+                    ),
+                    carouselItem(
+                      'assets/image/slider3.jpg',
+                      localization.sliderTitle3,
+                      localization.sliderDesc3,
+                    ),
+                  ],
+                  options: CarouselOptions(
+                      autoPlay: true,
+                      viewportFraction: 1,
+                      height: 300,
+                      onPageChanged: (index, reason) {
+                        setState(() {
+                          _current=index;
+                        });
+                      }),
                 ),
               ),
-              const SizedBox(height: 8),
-              GestureDetector(
-                onTap: () =>
-                    SystemChannels.platform.invokeMethod('SystemNavigator.pop'),
-                child: SizedBox(
-                  height: 60,
-                  child: Card(
-                    color: Theme.of(context).colorScheme.primary,
-                    child: Center(
-                        child: Text(
-                      localization.logout,
-                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                            fontWeight: FontWeight.w500,
-                          ),
-                    )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(3, (index) => GestureDetector(
+                  onTap: () => _controller.animateToPage(index),
+                  child: Container(
+                    width: 12,
+                    height: 12,
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 8, horizontal: 4),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: (Theme
+                            .of(context)
+                            .colorScheme
+                            .primary)
+                            .withOpacity(
+                            _current == index ? 1 : 0.4)),
                   ),
-                ),
+                ),)
               ),
+
               const SizedBox(height: 100),
             ],
           ),
@@ -402,4 +444,42 @@ class _ProfilePageState extends State<ProfilePage> {
       return tier + 1;
     }
   }
+
+  Widget carouselItem(String imagePath, String title, String desc) => Padding(padding: const EdgeInsets.symmetric(horizontal: 6,vertical: 12),child: Stack(
+    children: [
+      ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(imagePath,
+            fit: BoxFit.cover, width: MediaQuery.of(context).size.width,height: 300,)),
+      Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.black.withOpacity(0.5),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                title,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(color: Colors.white),
+              ),
+              Text(
+                desc,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall!
+                    .copyWith(color: Colors.white),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ],
+  ),);
 }

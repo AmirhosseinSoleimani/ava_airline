@@ -2880,10 +2880,50 @@ class S {
     );
   }
 
-  /// `Current benefits`
+  /// `Free snacks`
+  String get benefit9 {
+    return Intl.message(
+      'Free snacks',
+      name: 'benefit9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lounge access`
+  String get benefit10 {
+    return Intl.message(
+      'Lounge access',
+      name: 'benefit10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personal check-in`
+  String get benefit11 {
+    return Intl.message(
+      'Personal check-in',
+      name: 'benefit11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chauffeur transfer`
+  String get benefit12 {
+    return Intl.message(
+      'Chauffeur transfer',
+      name: 'benefit12',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current tier benefits`
   String get currentBenefits {
     return Intl.message(
-      'Current benefits',
+      'Current tier benefits',
       name: 'currentBenefits',
       desc: '',
       args: [],
@@ -2900,30 +2940,30 @@ class S {
     );
   }
 
-  /// `+ All blue tier benefits`
+  /// `All blue tier benefits`
   String get plusBlue {
     return Intl.message(
-      '+ All blue tier benefits',
+      'All blue tier benefits',
       name: 'plusBlue',
       desc: '',
       args: [],
     );
   }
 
-  /// `+ All bronze tier benefits`
+  /// `All bronze tier benefits`
   String get plusBronze {
     return Intl.message(
-      '+ All bronze tier benefits',
+      'All bronze tier benefits',
       name: 'plusBronze',
       desc: '',
       args: [],
     );
   }
 
-  /// `+ All silver tier benefits`
+  /// `All silver tier benefits`
   String get plusSilver {
     return Intl.message(
-      '+ All silver tier benefits',
+      'All silver tier benefits',
       name: 'plusSilver',
       desc: '',
       args: [],
@@ -2955,6 +2995,66 @@ class S {
     return Intl.message(
       'Next\nTier',
       name: 'nextTier',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy your rewards faster`
+  String get sliderTitle1 {
+    return Intl.message(
+      'Enjoy your rewards faster',
+      name: 'sliderTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ava Hotels`
+  String get sliderTitle2 {
+    return Intl.message(
+      'Ava Hotels',
+      name: 'sliderTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy a new level of comfort`
+  String get sliderTitle3 {
+    return Intl.message(
+      'Enjoy a new level of comfort',
+      name: 'sliderTitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Buy, gift and transfer your Hamava score`
+  String get sliderDesc1 {
+    return Intl.message(
+      'Buy, gift and transfer your Hamava score',
+      name: 'sliderDesc1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Earn Hamava scores with each stay`
+  String get sliderDesc2 {
+    return Intl.message(
+      'Earn Hamava scores with each stay',
+      name: 'sliderDesc2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upgrade your next Ava flight experience`
+  String get sliderDesc3 {
+    return Intl.message(
+      'Upgrade your next Ava flight experience',
+      name: 'sliderDesc3',
       desc: '',
       args: [],
     );

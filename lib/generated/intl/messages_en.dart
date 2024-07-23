@@ -64,6 +64,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Battery-Powered Wheelchairs"),
         "benefit1":
             MessageLookupByLibrary.simpleMessage("Participation in lottery"),
+        "benefit10": MessageLookupByLibrary.simpleMessage("Lounge access"),
+        "benefit11": MessageLookupByLibrary.simpleMessage("Personal check-in"),
+        "benefit12": MessageLookupByLibrary.simpleMessage("Chauffeur transfer"),
         "benefit2":
             MessageLookupByLibrary.simpleMessage("Free in-flight internet"),
         "benefit3": MessageLookupByLibrary.simpleMessage("Travel insurance"),
@@ -76,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Travel class upgrade"),
         "benefit8":
             MessageLookupByLibrary.simpleMessage("Ticket and hotel discount"),
+        "benefit9": MessageLookupByLibrary.simpleMessage("Free snacks"),
         "birthDate": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "birth_date": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "blind": MessageLookupByLibrary.simpleMessage("Blind"),
@@ -123,7 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Country Travel Conditions"),
         "currency": MessageLookupByLibrary.simpleMessage("Rial"),
         "currentBenefits":
-            MessageLookupByLibrary.simpleMessage("Current benefits"),
+            MessageLookupByLibrary.simpleMessage("Current tier benefits"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("en"),
         "currentTier": MessageLookupByLibrary.simpleMessage("Current\nTier"),
         "deaf": MessageLookupByLibrary.simpleMessage("Deaf"),
@@ -329,11 +333,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "When paying using your balance, in case of a refund, the refundable amount will be returned to your account balance."),
         "phone_number": MessageLookupByLibrary.simpleMessage("021-9200-1100"),
         "plusBlue":
-            MessageLookupByLibrary.simpleMessage("+ All blue tier benefits"),
+            MessageLookupByLibrary.simpleMessage("All blue tier benefits"),
         "plusBronze":
-            MessageLookupByLibrary.simpleMessage("+ All bronze tier benefits"),
+            MessageLookupByLibrary.simpleMessage("All bronze tier benefits"),
         "plusSilver":
-            MessageLookupByLibrary.simpleMessage("+ All silver tier benefits"),
+            MessageLookupByLibrary.simpleMessage("All silver tier benefits"),
         "popularDestinations":
             MessageLookupByLibrary.simpleMessage("Popular Destinations"),
         "premiumEconomy":
@@ -391,6 +395,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "service": MessageLookupByLibrary.simpleMessage("Service"),
         "shiraz": MessageLookupByLibrary.simpleMessage("Shiraz"),
         "silver": MessageLookupByLibrary.simpleMessage("Silver"),
+        "sliderDesc1": MessageLookupByLibrary.simpleMessage(
+            "Buy, gift and transfer your Hamava score"),
+        "sliderDesc2": MessageLookupByLibrary.simpleMessage(
+            "Earn Hamava scores with each stay"),
+        "sliderDesc3": MessageLookupByLibrary.simpleMessage(
+            "Upgrade your next Ava flight experience"),
+        "sliderTitle1":
+            MessageLookupByLibrary.simpleMessage("Enjoy your rewards faster"),
+        "sliderTitle2": MessageLookupByLibrary.simpleMessage("Ava Hotels"),
+        "sliderTitle3": MessageLookupByLibrary.simpleMessage(
+            "Enjoy a new level of comfort"),
         "specialServices":
             MessageLookupByLibrary.simpleMessage("Special Services"),
         "specialServicesPageName":
