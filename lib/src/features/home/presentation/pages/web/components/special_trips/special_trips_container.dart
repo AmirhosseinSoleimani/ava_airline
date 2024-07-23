@@ -290,6 +290,23 @@ class _SpecialTripsContainerState extends State<SpecialTripsContainer> {
                 ),
               ),
             ),
+            if(widget.isOff ?? false)Padding(
+              padding: const EdgeInsets.only(top: AppPadding.p12, left: AppPadding.p12),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Theme.of(context).colorScheme.primary
+                  ),
+                  child: Center(
+                    child: Text('10%-', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.onSecondary),),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
