@@ -73,7 +73,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
             ),
             Space.h64,
             SizedBox(
-              width: width * 0.6,
+              width: width * 0.7,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: StepperWidget(stepperList: [
@@ -90,7 +90,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
             ),
             Space.h64,
             Container(
-              width: width * 0.6,
+              width: width * 0.7,
               height: 180,
               decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.onPrimary,
@@ -190,7 +190,7 @@ class _PassengerInformationPageState extends State<PassengerInformationPage> {
             ),
             Space.h64,
             Container(
-              width: width * 0.6,
+              width: width * 0.7,
               height: 250,
               decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.onPrimary,

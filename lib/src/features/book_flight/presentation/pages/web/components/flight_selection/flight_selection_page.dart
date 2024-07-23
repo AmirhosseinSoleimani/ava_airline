@@ -62,7 +62,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
             ),
             Space.h64,
             SizedBox(
-              width: width * 0.6,
+              width: width * 0.7,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: StepperWidget(stepperList: [
@@ -79,7 +79,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
             ),
             Space.h16,
             Container(
-              width: width * 0.6,
+              width: width * 0.7,
               height: 120,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.onPrimary,
@@ -161,7 +161,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
             ),
             Space.h16,
             Container(
-              width: width * 0.6,
+              width: width * 0.7,
               height: AppSize.s120,
               decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.onPrimary,
@@ -186,7 +186,7 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
             ),
             Space.h64,
             Container(
-              width: width * 0.6,
+              width: width * 0.7,
               height: 180,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.onPrimary,
@@ -280,12 +280,15 @@ class _FlightSelectionPageState extends State<FlightSelectionPage> {
                         Space.h8,
                         Text(localization.officialAirlineRate, style: Theme.of(context).textTheme.bodyMedium,),
                         Space.h16,
-                        AvaElevatedButton(
-                          onTap: () {
-                            context.go(PassengerInformationPage.passengerInformationPagePath);
-                          },
-                          title: localization.selectFlight,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: AvaElevatedButton(
+                            onTap: () {
+                              context.go(PassengerInformationPage.passengerInformationPagePath);
+                            },
+                            title: localization.selectFlight,
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+                          ),
                         )
                       ],
                     ),

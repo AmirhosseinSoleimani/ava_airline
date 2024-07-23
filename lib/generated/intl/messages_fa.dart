@@ -97,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغییر زبان"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغییر جستجو"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
+        "children": MessageLookupByLibrary.simpleMessage("کودک"),
         "childrenDescription":
             MessageLookupByLibrary.simpleMessage("2 تا 11 سال"),
         "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
@@ -196,6 +197,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "incapacitatedPassengerWheelchairPageTitle":
             MessageLookupByLibrary.simpleMessage(
                 "مسافران توان خواه/شرایط ویژه"),
+        "infant": MessageLookupByLibrary.simpleMessage("نوزاد"),
         "infantDescription": MessageLookupByLibrary.simpleMessage("زیر 2 سال"),
         "inn": MessageLookupByLibrary.simpleMessage("در"),
         "internationalFlightCost": MessageLookupByLibrary.simpleMessage(

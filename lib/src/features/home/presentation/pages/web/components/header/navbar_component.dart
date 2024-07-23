@@ -16,10 +16,10 @@ class NavbarComponent extends StatelessWidget {
     return (width > 1024) ? Align(
       alignment: Alignment.topCenter,
       child: SizedBox(
-        width: (width <= 1530 && width > 1312) ? width * 0.7 : (width <= 1312 && width > 1150) ? width * 0.8 : (width <= 1150) ? width * 0.9 : width * 0.6,
+        width: (width <= 1530 && width > 1312) ? width * 0.75 : (width <= 1312 && width > 1150) ? width * 0.85 : (width <= 1150) ? width * 0.95 : width * 0.75,
         height: height,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Row(
               mainAxisSize: MainAxisSize.min,

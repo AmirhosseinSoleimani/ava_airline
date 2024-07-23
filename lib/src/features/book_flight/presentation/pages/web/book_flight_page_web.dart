@@ -61,10 +61,20 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
+                              Space.h8,
+
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(localization.adult, style: Theme.of(context).textTheme.titleMedium),
+                                  Column(
+                                    children: [
+                                      Text(localization.adult, style: Theme.of(context).textTheme.titleMedium),
+                                      Text(
+                                        localization.adultsDescription,
+                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey[700], fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
                                   Row(
                                     children: [
                                       IconButton(
@@ -92,10 +102,20 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                   ),
                                 ],
                               ),
+
+                              Space.h8,
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(localization.children, style: Theme.of(context).textTheme.titleMedium),
+                                  Column(
+                                    children: [
+                                      Text(localization.children, style: Theme.of(context).textTheme.titleMedium),
+                                      Text(
+                                        localization.childrenDescription,
+                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey[700], fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
                                   Row(
                                     children: [
                                       IconButton(
@@ -123,10 +143,20 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                   ),
                                 ],
                               ),
+                              Space.h8,
+
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(localization.infant, style: Theme.of(context).textTheme.titleMedium),
+                                  Column(
+                                    children: [
+                                      Text(localization.infant, style: Theme.of(context).textTheme.titleMedium),
+                                      Text(
+                                        localization.infantDescription,
+                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey[700], fontSize: 10),
+                                        ),
+                                    ],
+                                  ),
                                   Row(
                                     children: [
                                       IconButton(
@@ -156,6 +186,7 @@ class _BookFlightPageWebState extends State<BookFlightPageWeb>
                                   ),
                                 ],
                               ),
+                              Space.h8
                             ],
                           ),
                         ),

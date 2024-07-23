@@ -257,6 +257,8 @@
   "passengers": "مسافران",
   "adults": "بزرگسال",
   "adultsDescription": "12 سال به بالا",
+  "children": "کودک",
+  "infant": "نوزاد",
   "childrenDescription": "2 تا 11 سال",
   "infantDescription": "زیر 2 سال",
   "clas": "کلاس",
