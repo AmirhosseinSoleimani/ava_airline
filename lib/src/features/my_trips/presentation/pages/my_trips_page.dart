@@ -115,7 +115,9 @@ class _MyTripsPageState extends State<MyTripsPage> {
                                 ),
 
                               ],
-                            )
+                            ),
+                        const SizedBox(height: 8),
+                        const Divider(color: Colors.grey,
                           ],
                         ),
                       ),

@@ -1,6 +1,7 @@
 import 'package:ava_airline/generated/l10n.dart';
 import 'package:ava_airline/src/features/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:ava_airline/src/features/home/domain/entities/destination_entity.dart';
+import 'package:ava_airline/src/shared/resources/theme/bloc/theme_cubit.dart';
 import 'package:flutter/material.dart';
 
 class DestinationCard extends StatelessWidget {
@@ -114,16 +115,21 @@ class DestinationCard extends StatelessWidget {
               height: 35,
               width: 35,
               decoration: BoxDecoration(
-                color: Colors.red.shade600,
-                borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: Colors.white,width: 1)
-              ),
-              child: const FittedBox(
+                  color: Colors.red.shade600,
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(color: Colors.white, width: 1)),
+              child: FittedBox(
                   child: Text(
-                '-10%',
+                context.read<ThemeCubit>().tier.name == 'Gold'
+                    ? '-25%'
+                    : context.read<ThemeCubit>().tier.name == 'Silver'
+                        ? '-20%'
+                        : context.read<ThemeCubit>().tier.name == 'Bronze'
+                            ? '-15%'
+                            : '-10%',
                 textDirection: TextDirection.ltr,
                 style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                    const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               )),
             ),
           )
