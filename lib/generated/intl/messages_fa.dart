@@ -97,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغییر زبان"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("تغییر جستجو"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("تغییر بلیط"),
+        "checkIn": MessageLookupByLibrary.simpleMessage("پذیرش"),
         "children": MessageLookupByLibrary.simpleMessage("کودک"),
         "childrenDescription":
             MessageLookupByLibrary.simpleMessage("2 تا 11 سال"),

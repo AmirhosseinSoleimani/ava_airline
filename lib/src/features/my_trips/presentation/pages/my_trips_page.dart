@@ -117,7 +117,29 @@ class _MyTripsPageState extends State<MyTripsPage> {
                               ],
                             ),
                         const SizedBox(height: 8),
-                        const Divider(color: Colors.grey,
+                            const Divider(color: Colors.grey,
+                              thickness: 0.5,
+                            ),
+                            const SizedBox(height: 8),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.65,
+                              height: 40,
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: WidgetStatePropertyAll(
+                                        Theme.of(context).colorScheme.primary)),
+                                child: Text(
+                                  localization.checkIn,
+                                  style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                                    color: Theme.of(context).colorScheme.onPrimary,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                onPressed: () {
+
+                                },
+                              ),
+                            ),
                           ],
                         ),
                       ),

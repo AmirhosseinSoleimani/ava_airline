@@ -102,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Change Language"),
         "changeSearch": MessageLookupByLibrary.simpleMessage("Change Search"),
         "change_ticket": MessageLookupByLibrary.simpleMessage("Change Ticket"),
+        "checkIn": MessageLookupByLibrary.simpleMessage("Check In"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "childrenDescription": MessageLookupByLibrary.simpleMessage("Age 2-11"),
         "choose": MessageLookupByLibrary.simpleMessage("Choose"),

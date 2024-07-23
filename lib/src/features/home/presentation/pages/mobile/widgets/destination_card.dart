@@ -121,12 +121,12 @@ class DestinationCard extends StatelessWidget {
               child: FittedBox(
                   child: Text(
                 context.read<ThemeCubit>().tier.name == 'Gold'
-                    ? '-25%'
+                    ? '-20%'
                     : context.read<ThemeCubit>().tier.name == 'Silver'
-                        ? '-20%'
+                        ? '-15%'
                         : context.read<ThemeCubit>().tier.name == 'Bronze'
-                            ? '-15%'
-                            : '-10%',
+                            ? '-10%'
+                            : '-5%',
                 textDirection: TextDirection.ltr,
                 style:
                     const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
