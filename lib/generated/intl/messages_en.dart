@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Head Office: Tehran, Ferdows, Ayatollah Kashani Blvd., Saleh Jharomi Crossroad, No. 186, 5th Floor"),
         "adult": MessageLookupByLibrary.simpleMessage("Adult"),
         "adultEconomyClass1":
-            MessageLookupByLibrary.simpleMessage("1 Adult in economy class"),
+            MessageLookupByLibrary.simpleMessage("1 Adult in business class"),
         "adults": MessageLookupByLibrary.simpleMessage("Adults"),
         "adultsDescription": MessageLookupByLibrary.simpleMessage("Age 12+"),
         "ageGroup": MessageLookupByLibrary.simpleMessage("Age Group"),
@@ -150,9 +150,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "Dubai to Iran flight 150 AED (with SSR registration)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("During Flight"),
-        "economy": MessageLookupByLibrary.simpleMessage("Economy"),
+        "economy": MessageLookupByLibrary.simpleMessage("Business"),
         "economyClass": MessageLookupByLibrary.simpleMessage("Economy Class"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("Economy from "),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("Business from "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "If you have a discount code, enter it below and click Apply."),

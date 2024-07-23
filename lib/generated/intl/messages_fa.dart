@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "دفتر مرکزی: تهران، فردوس، بلوار آیت الله کاشانی،تقاطع سلیمی جهرمی، پلاک 186 طبقه 5"),
         "adult": MessageLookupByLibrary.simpleMessage("بزرگسال"),
         "adultEconomyClass1":
-            MessageLookupByLibrary.simpleMessage("بزرگسال اکونومی کلاس 1"),
+            MessageLookupByLibrary.simpleMessage("1 بزرگسال در کلاس بیزینس"),
         "adults": MessageLookupByLibrary.simpleMessage("بزرگسال"),
         "adultsDescription":
             MessageLookupByLibrary.simpleMessage("12 سال به بالا"),
@@ -144,9 +144,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "پرواز دبی به ایران 150 درهم (ضمن ثبت SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("در طول پرواز"),
-        "economy": MessageLookupByLibrary.simpleMessage("اکونومی"),
+        "economy": MessageLookupByLibrary.simpleMessage("بیزینس"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("اکونومی از "),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("بیزینس از "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "اگر کد تخفیف دارید،‌ آن را در بخش زیر وارد کنید و دکمه اعمال کد را بزنید."),

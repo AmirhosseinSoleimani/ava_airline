@@ -329,165 +329,168 @@ class _FlightCardState extends State<FlightCard> {
     final localization = S.of(context);
     return SizedBox(
       width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  localization.passengers,
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
-                IconButton(
-                    onPressed: () => Navigator.pop(context),
-                    icon: Icon(
-                      Icons.cancel_outlined,
-                      color: Colors.red.shade800,
-                    ))
-              ],
-            ),
-            const SizedBox(height: 16),
-            _buildCountRow(
-              localization.adults,
-              localization.adultsDescription,
-              adultCount,
-              () {
-                if (adultCount > 1) {
-                  if (infantCount == adultCount) infantCount--;
-                  adultCount--;
-
-                  updateState(() {});
-                }
-              },
-              () {
-                if (adultCount < 9) {
-                  adultCount++;
-                  updateState(() {});
-                }
-              },
-            ),
-            _buildCountRow(
-              localization.children,
-              localization.childrenDescription,
-              childrenCount,
-              () {
-                if (childrenCount > 0) {
-                  childrenCount--;
-                  updateState(() {});
-                }
-              },
-              () {
-                if (childrenCount < 9) {
-                  childrenCount++;
-                  updateState(() {});
-                }
-              },
-            ),
-            _buildCountRow(
-              localization.infant,
-              localization.infantDescription,
-              infantCount,
-              () {
-                if (infantCount > 0) {
-                  infantCount--;
-                  updateState(() {});
-                }
-              },
-              () {
-                if (infantCount < adultCount) {
-                  infantCount++;
-                  updateState(() {});
-                }
-              },
-            ),
-            const Divider(
-              thickness: 0.5,
-              color: Colors.grey,
-            ),
-            const SizedBox(height: 16),
-            Text(
-              localization.clas,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(localization.economyClass),
-              leading: Radio<Class>(
-                value: Class.economy,
-                groupValue: selectedClass,
-                onChanged: (value) {
-                  updateState(() {
-                    selectedClass = value ?? Class.economy;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(localization.premiumEconomy),
-              leading: Radio<Class>(
-                value: Class.premium,
-                groupValue: selectedClass,
-                onChanged: (value) {
-                  updateState(() {
-                    selectedClass = value ?? Class.economy;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(localization.businessClass),
-              leading: Radio<Class>(
-                value: Class.business,
-                groupValue: selectedClass,
-                onChanged: (value) {
-                  updateState(() {
-                    selectedClass = value ?? Class.economy;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(localization.firstClass),
-              leading: Radio<Class>(
-                value: Class.first,
-                groupValue: selectedClass,
-                onChanged: (value) {
-                  updateState(() {
-                    selectedClass = value ?? Class.economy;
-                  });
-                },
-              ),
-            ),
-            const SizedBox(height: 24),
-            Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.75,
-                height: 50,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll(
-                          Theme.of(context).colorScheme.primary)),
-                  child: Text(
-                    localization.confirm,
-                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: Theme.of(context).colorScheme.onPrimary,
-                        fontWeight: FontWeight.w500),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    localization.passengers,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
-                  onPressed: () {
-                    updatePassengerStatus(context);
-                    Navigator.pop(context);
+                  IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: Icon(
+                        Icons.cancel_outlined,
+                        color: Colors.red.shade800,
+                      ))
+                ],
+              ),
+              const SizedBox(height: 16),
+              _buildCountRow(
+                localization.adults,
+                localization.adultsDescription,
+                adultCount,
+                () {
+                  if (adultCount > 1) {
+                    if (infantCount == adultCount) infantCount--;
+                    adultCount--;
+          
+                    updateState(() {});
+                  }
+                },
+                () {
+                  if (adultCount < 9) {
+                    adultCount++;
+                    updateState(() {});
+                  }
+                },
+              ),
+              _buildCountRow(
+                localization.children,
+                localization.childrenDescription,
+                childrenCount,
+                () {
+                  if (childrenCount > 0) {
+                    childrenCount--;
+                    updateState(() {});
+                  }
+                },
+                () {
+                  if (childrenCount < 9) {
+                    childrenCount++;
+                    updateState(() {});
+                  }
+                },
+              ),
+              _buildCountRow(
+                localization.infant,
+                localization.infantDescription,
+                infantCount,
+                () {
+                  if (infantCount > 0) {
+                    infantCount--;
+                    updateState(() {});
+                  }
+                },
+                () {
+                  if (infantCount < adultCount) {
+                    infantCount++;
+                    updateState(() {});
+                  }
+                },
+              ),
+              const Divider(
+                thickness: 0.5,
+                color: Colors.grey,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                localization.clas,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              // ListTile(
+              //   contentPadding: EdgeInsets.zero,
+              //   title: Text(localization.economyClass),
+              //   leading: Radio<Class>(
+              //     value: Class.economy,
+              //     groupValue: selectedClass,
+              //     onChanged: (value) {
+              //       updateState(() {
+              //         selectedClass = value ?? Class.economy;
+              //       });
+              //     },
+              //   ),
+              // ),
+              // ListTile(
+              //   contentPadding: EdgeInsets.zero,
+              //   title: Text(localization.premiumEconomy),
+              //   leading: Radio<Class>(
+              //     value: Class.premium,
+              //     groupValue: selectedClass,
+              //     onChanged: (value) {
+              //       updateState(() {
+              //         selectedClass = value ?? Class.economy;
+              //       });
+              //     },
+              //   ),
+              // ),
+              ListTile(
+                contentPadding: EdgeInsets.zero,
+                title: Text(localization.businessClass),
+                leading: Radio<Class>(
+                  value: Class.business,
+                  groupValue: selectedClass,
+                  onChanged: (value) {
+                    updateState(() {
+                      selectedClass = value ?? Class.economy;
+                    });
                   },
                 ),
               ),
-            ),
-          ],
+              ListTile(
+                contentPadding: EdgeInsets.zero,
+                title: Text(localization.firstClass),
+                leading: Radio<Class>(
+                  value: Class.first,
+                  groupValue: selectedClass,
+                  onChanged: (value) {
+                    updateState(() {
+                      selectedClass = value ?? Class.economy;
+                    });
+                  },
+                ),
+              ),
+              const SizedBox(height: 24),
+              Center(
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.75,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(
+                            Theme.of(context).colorScheme.primary)),
+                    child: Text(
+                      localization.confirm,
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                          color: Theme.of(context).colorScheme.onPrimary,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    onPressed: () {
+                      updatePassengerStatus(context);
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

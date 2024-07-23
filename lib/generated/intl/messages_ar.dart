@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "المكتب الرئيسي: طهران، فردوس، بلوار آية الله كاشاني، تقاطع سليمي جهارومي، رقم 186، الطابق الخامس"),
         "adult": MessageLookupByLibrary.simpleMessage("بالغ"),
         "adultEconomyClass1":
-            MessageLookupByLibrary.simpleMessage("1 بالغ في إكونومي کلاس"),
+            MessageLookupByLibrary.simpleMessage("1 بالغ في بیزینس کلاس"),
         "adults": MessageLookupByLibrary.simpleMessage("البالغون"),
         "adultsDescription": MessageLookupByLibrary.simpleMessage("العمر 12+"),
         "ageGroup": MessageLookupByLibrary.simpleMessage("الفئة العمرية"),
@@ -140,9 +140,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "dubaiToIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "رحلة من دبي إلى إيران 150 درهم (مع تسجيل SSR)"),
         "during_flight": MessageLookupByLibrary.simpleMessage("خلال الرحلة"),
-        "economy": MessageLookupByLibrary.simpleMessage("اقتصادي"),
+        "economy": MessageLookupByLibrary.simpleMessage("بیزینس"),
         "economyClass": MessageLookupByLibrary.simpleMessage("کلاس اکونومی"),
-        "economyFrom": MessageLookupByLibrary.simpleMessage("إكونومي من "),
+        "economyFrom": MessageLookupByLibrary.simpleMessage("بیزینس من "),
         "email": MessageLookupByLibrary.simpleMessage("info@avaair.ir"),
         "enterDiscountCode": MessageLookupByLibrary.simpleMessage(
             "إذا كان لديك رمز خصم، أدخله أدناه واضغط على تطبيق."),

@@ -420,10 +420,10 @@ class S {
     );
   }
 
-  /// `Economy from `
+  /// `Business from `
   String get economyFrom {
     return Intl.message(
-      'Economy from ',
+      'Business from ',
       name: 'economyFrom',
       desc: '',
       args: [],
@@ -590,10 +590,10 @@ class S {
     );
   }
 
-  /// `1 Adult in economy class`
+  /// `1 Adult in business class`
   String get adultEconomyClass1 {
     return Intl.message(
-      '1 Adult in economy class',
+      '1 Adult in business class',
       name: 'adultEconomyClass1',
       desc: '',
       args: [],
@@ -1600,10 +1600,10 @@ class S {
     );
   }
 
-  /// `Economy`
+  /// `Business`
   String get economy {
     return Intl.message(
-      'Economy',
+      'Business',
       name: 'economy',
       desc: '',
       args: [],
