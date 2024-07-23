@@ -306,5 +306,14 @@
   "dateTime": "Date & Time",
   "dateTimeMock1": "23 Jul 2024\n23:55",
   "dateTimeMock2": "24 Jul 2024\n 01:10",
-  "checkIn": "Check In"
+  "checkIn": "Check In",
+  "chooseSeat": "Choose seat",
+  "seat": "Seat",
+  "totalPrice": "Total Price",
+  "totalPriceMock": "$170",
+  "flightNo": "Flight no",
+  "boardingTime": "Boarding time",
+  "boardingPass": "Boarding pass",
+  "gate": "Gate",
+  "sampleDateTicket": "May 19"
 }

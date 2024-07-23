@@ -1,4 +1,5 @@
 import 'package:ava_airline/generated/l10n.dart';
+import 'package:ava_airline/src/features/book_flight/presentation/pages/mobile/widgets/seat_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../bottom_navigation_bar/bottom_navigation_bar.dart';
@@ -624,7 +625,55 @@ class _ConfirmAndPayState extends State<ConfirmAndPay> {
                 ],
               ),
             ),
-            const SizedBox(height: 100,)
+            const SizedBox(height: 20,),
+            Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.75,
+                height: 45,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(
+                          Theme.of(context).colorScheme.primary)),
+                  child: Text(
+                    localization.chooseSeat,
+                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  onPressed: () {
+                 showModalBottomSheet(context: context, builder: (context) => const SeatScreen(),  isScrollControlled: true);
+                  },
+                ),
+              ),
+            ),
+            const SizedBox(height: 8,),
+            Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.75,
+                height: 45,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(
+                          Theme.of(context).colorScheme.primary)),
+                  child: Text(
+                    localization.payment,
+                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      context.pop();
+                      context.pop();
+                      context.pop();
+                    });
+                  },
+                ),
+              ),
+            ),
+            const SizedBox(height: 100,),
 
           ],
         ),

@@ -306,5 +306,14 @@
   "dateTime": "تاریخ و زمان",
   "dateTimeMock1": "1 مرداد 1403\n 23:55",
   "dateTimeMock2": "2 مرداد 1403\n 01:10",
-  "checkIn": "الاستقبال"
+  "checkIn": "الاستقبال",
+  "chooseSeat": "اختیار کرسی",
+  "seat": "کرسی",
+  "totalPrice": "السعر الکلي",
+  "totalPriceMock": "$170",
+  "flightNo": "رقم الرحله",
+  "boardingTime": "وقت الصعود",
+  "boardingPass": "بطاقه الصعود",
+  "gate": "بوابه",
+  "sampleDateTicket": "May 19"
 }

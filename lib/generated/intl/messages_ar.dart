@@ -83,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "blindDeafTitle":
             MessageLookupByLibrary.simpleMessage("الركاب المكفوفين والصم"),
         "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
+        "boardingPass": MessageLookupByLibrary.simpleMessage("بطاقه الصعود"),
+        "boardingTime": MessageLookupByLibrary.simpleMessage("وقت الصعود"),
         "book": MessageLookupByLibrary.simpleMessage("حجز"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("إحجز رحلة طيران"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
@@ -102,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("العمر 2-11"),
         "choose": MessageLookupByLibrary.simpleMessage("اختيار"),
         "chooseGender": MessageLookupByLibrary.simpleMessage("اختيار جنسك"),
+        "chooseSeat": MessageLookupByLibrary.simpleMessage("اختیار کرسی"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("ابحث عن مدينة"),
         "clas": MessageLookupByLibrary.simpleMessage("طراز"),
@@ -164,6 +167,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ترفيه الطيران"),
         "flightInformation":
             MessageLookupByLibrary.simpleMessage("معلومات الرحلة"),
+        "flightNo": MessageLookupByLibrary.simpleMessage("رقم الرحله"),
         "flightNumber": MessageLookupByLibrary.simpleMessage("رقم الرحلة"),
         "flightSelection":
             MessageLookupByLibrary.simpleMessage("اختيار الرحلة"),
@@ -180,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "footer_text": MessageLookupByLibrary.simpleMessage(
             "جميع حقوق الموقع تعود إلى شركة بهپردازجهان"),
         "from": MessageLookupByLibrary.simpleMessage("من"),
+        "gate": MessageLookupByLibrary.simpleMessage("بوابه"),
         "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
         "gender_female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "gender_male": MessageLookupByLibrary.simpleMessage("ذكر"),
@@ -363,11 +368,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "safety_report_followup":
             MessageLookupByLibrary.simpleMessage("تقرير السلامة والمتابعة"),
         "sampleDate": MessageLookupByLibrary.simpleMessage("2  صفر 1446"),
+        "sampleDateTicket": MessageLookupByLibrary.simpleMessage("May 19"),
         "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
         "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "searchFlights": MessageLookupByLibrary.simpleMessage("ابحث عن رحلات"),
         "searchResults": MessageLookupByLibrary.simpleMessage("نتائج البحث"),
+        "seat": MessageLookupByLibrary.simpleMessage("کرسی"),
         "seat_status": MessageLookupByLibrary.simpleMessage("حالة المقعد"),
         "select": MessageLookupByLibrary.simpleMessage("اختر"),
         "selectDate": MessageLookupByLibrary.simpleMessage("اختر تاریخ"),
@@ -425,6 +432,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "toCalender": MessageLookupByLibrary.simpleMessage("إلى"),
         "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "رحلة دولية إلى إيران 40 دولار"),
+        "totalPrice": MessageLookupByLibrary.simpleMessage("السعر الکلي"),
+        "totalPriceMock": MessageLookupByLibrary.simpleMessage("\$170"),
         "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ السفر"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تواريخ السفر"),
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات السفر"),

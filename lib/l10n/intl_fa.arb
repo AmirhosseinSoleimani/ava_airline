@@ -305,6 +305,14 @@
   "dateTime": "تاریخ و زمان",
   "dateTimeMock1": "1 مرداد 1403\n 23:55",
   "dateTimeMock2": "2 مرداد 1403\n 01:10",
-  "checkIn": "پذیرش"
-
+  "checkIn": "پذیرش",
+  "chooseSeat": "انتخاب صندلی",
+  "seat": "صندلی",
+  "totalPrice": "قیمت نهایی",
+  "totalPriceMock": "40,000,000 ریال",
+  "flightNo": "شماره پرواز",
+  "boardingTime": "زمان سوارشدن",
+  "boardingPass": "کارت پرواز",
+  "gate": "گیت",
+  "sampleDateTicket": "1 مرداد"
 }

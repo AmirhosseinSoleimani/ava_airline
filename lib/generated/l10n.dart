@@ -3119,6 +3119,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose seat`
+  String get chooseSeat {
+    return Intl.message(
+      'Choose seat',
+      name: 'chooseSeat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seat`
+  String get seat {
+    return Intl.message(
+      'Seat',
+      name: 'seat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Price`
+  String get totalPrice {
+    return Intl.message(
+      'Total Price',
+      name: 'totalPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$170`
+  String get totalPriceMock {
+    return Intl.message(
+      '\$170',
+      name: 'totalPriceMock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flight no`
+  String get flightNo {
+    return Intl.message(
+      'Flight no',
+      name: 'flightNo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Boarding time`
+  String get boardingTime {
+    return Intl.message(
+      'Boarding time',
+      name: 'boardingTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Boarding pass`
+  String get boardingPass {
+    return Intl.message(
+      'Boarding pass',
+      name: 'boardingPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gate`
+  String get gate {
+    return Intl.message(
+      'Gate',
+      name: 'gate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `May 19`
+  String get sampleDateTicket {
+    return Intl.message(
+      'May 19',
+      name: 'sampleDateTicket',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

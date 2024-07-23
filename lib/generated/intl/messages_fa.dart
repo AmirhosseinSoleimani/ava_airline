@@ -84,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "blindDeafTitle":
             MessageLookupByLibrary.simpleMessage("افراد نابینا و ناشنوا"),
         "blue": MessageLookupByLibrary.simpleMessage("آبی"),
+        "boardingPass": MessageLookupByLibrary.simpleMessage("کارت پرواز"),
+        "boardingTime": MessageLookupByLibrary.simpleMessage("زمان سوارشدن"),
         "book": MessageLookupByLibrary.simpleMessage("رزرو"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("رزرو پرواز"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
@@ -104,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choose": MessageLookupByLibrary.simpleMessage("انتخاب"),
         "chooseGender":
             MessageLookupByLibrary.simpleMessage("جنسیت خود را انتخاب کنید"),
+        "chooseSeat": MessageLookupByLibrary.simpleMessage("انتخاب صندلی"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("جستجوی شهر"),
         "clas": MessageLookupByLibrary.simpleMessage("کلاس"),
@@ -168,6 +171,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سرگرمی‌های پرواز"),
         "flightInformation":
             MessageLookupByLibrary.simpleMessage("اطلاعات پرواز"),
+        "flightNo": MessageLookupByLibrary.simpleMessage("شماره پرواز"),
         "flightNumber": MessageLookupByLibrary.simpleMessage("شماره پرواز"),
         "flightSelection": MessageLookupByLibrary.simpleMessage("انتخاب پرواز"),
         "flightStatus": MessageLookupByLibrary.simpleMessage("وضعیت پرواز"),
@@ -185,6 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "footer_text": MessageLookupByLibrary.simpleMessage(
             "تمامی حقوق وب‌سایت متعلق به شرکت بهپردازجهان می‌باشد"),
         "from": MessageLookupByLibrary.simpleMessage("از"),
+        "gate": MessageLookupByLibrary.simpleMessage("گیت"),
         "gender": MessageLookupByLibrary.simpleMessage("جنسیت"),
         "gender_female": MessageLookupByLibrary.simpleMessage("زن"),
         "gender_male": MessageLookupByLibrary.simpleMessage("مرد"),
@@ -363,11 +368,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "safety_report_followup":
             MessageLookupByLibrary.simpleMessage("گزارش ایمنی و پیگیری"),
         "sampleDate": MessageLookupByLibrary.simpleMessage("سه‌شنبه 19 تیر 03"),
+        "sampleDateTicket": MessageLookupByLibrary.simpleMessage("1 مرداد"),
         "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
         "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
         "search": MessageLookupByLibrary.simpleMessage("جستجو"),
         "searchFlights": MessageLookupByLibrary.simpleMessage("جستجوی پروازها"),
         "searchResults": MessageLookupByLibrary.simpleMessage("نتایج جستجو"),
+        "seat": MessageLookupByLibrary.simpleMessage("صندلی"),
         "seat_status": MessageLookupByLibrary.simpleMessage("وضعیت صندلی ها"),
         "select": MessageLookupByLibrary.simpleMessage("انتخاب کنید"),
         "selectDate":
@@ -427,6 +434,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "to": MessageLookupByLibrary.simpleMessage("به"),
         "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "پرواز بین المللی به ایران 40 دلار"),
+        "totalPrice": MessageLookupByLibrary.simpleMessage("قیمت نهایی"),
+        "totalPriceMock":
+            MessageLookupByLibrary.simpleMessage("40,000,000 ریال"),
         "travelDate": MessageLookupByLibrary.simpleMessage("تاریخ‌ سفر"),
         "travelDates": MessageLookupByLibrary.simpleMessage("تاریخ‌های سفر"),
         "travelServices": MessageLookupByLibrary.simpleMessage("خدمات سفر"),

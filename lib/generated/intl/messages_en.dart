@@ -88,6 +88,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "blindDeafTitle":
             MessageLookupByLibrary.simpleMessage("Blind and Deaf Passengers"),
         "blue": MessageLookupByLibrary.simpleMessage("Blue"),
+        "boardingPass": MessageLookupByLibrary.simpleMessage("Boarding pass"),
+        "boardingTime": MessageLookupByLibrary.simpleMessage("Boarding time"),
         "book": MessageLookupByLibrary.simpleMessage("Book"),
         "bookFlight": MessageLookupByLibrary.simpleMessage("Book a flight"),
         "bookYourFlight": MessageLookupByLibrary.simpleMessage(
@@ -108,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choose": MessageLookupByLibrary.simpleMessage("Choose"),
         "chooseGender":
             MessageLookupByLibrary.simpleMessage("Choose your gender"),
+        "chooseSeat": MessageLookupByLibrary.simpleMessage("Choose seat"),
         "citySearchPlaceholder":
             MessageLookupByLibrary.simpleMessage("Search for a city"),
         "clas": MessageLookupByLibrary.simpleMessage("Class"),
@@ -174,6 +177,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flight entertainment"),
         "flightInformation":
             MessageLookupByLibrary.simpleMessage("Flight Information"),
+        "flightNo": MessageLookupByLibrary.simpleMessage("Flight no"),
         "flightNumber": MessageLookupByLibrary.simpleMessage("Flight number"),
         "flightSelection":
             MessageLookupByLibrary.simpleMessage("Flight Selection"),
@@ -192,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "footer_text": MessageLookupByLibrary.simpleMessage(
             "All website rights belong to Behpajoohan Company"),
         "from": MessageLookupByLibrary.simpleMessage("FROM"),
+        "gate": MessageLookupByLibrary.simpleMessage("Gate"),
         "gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "gender_female": MessageLookupByLibrary.simpleMessage("Female"),
         "gender_male": MessageLookupByLibrary.simpleMessage("Male"),
@@ -383,11 +388,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "safety_report_followup":
             MessageLookupByLibrary.simpleMessage("Safety Report & Follow-up"),
         "sampleDate": MessageLookupByLibrary.simpleMessage("Tue 9 Jul 24"),
+        "sampleDateTicket": MessageLookupByLibrary.simpleMessage("May 19"),
         "sampleTime1": MessageLookupByLibrary.simpleMessage("14:30"),
         "sampleTime2": MessageLookupByLibrary.simpleMessage("18:45"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "searchFlights": MessageLookupByLibrary.simpleMessage("Search flights"),
         "searchResults": MessageLookupByLibrary.simpleMessage("Search Results"),
+        "seat": MessageLookupByLibrary.simpleMessage("Seat"),
         "seat_status": MessageLookupByLibrary.simpleMessage("Seat Status"),
         "select": MessageLookupByLibrary.simpleMessage("Select"),
         "selectDate": MessageLookupByLibrary.simpleMessage("Select date"),
@@ -448,6 +455,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "toCalender": MessageLookupByLibrary.simpleMessage("to"),
         "toIranFlightCost": MessageLookupByLibrary.simpleMessage(
             "International flight to Iran 40 USD"),
+        "totalPrice": MessageLookupByLibrary.simpleMessage("Total Price"),
+        "totalPriceMock": MessageLookupByLibrary.simpleMessage("\$170"),
         "travelDate": MessageLookupByLibrary.simpleMessage("Travel date"),
         "travelDates": MessageLookupByLibrary.simpleMessage("Travel dates"),
         "travelServices":
