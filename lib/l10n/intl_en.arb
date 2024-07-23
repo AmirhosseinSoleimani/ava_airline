@@ -19,6 +19,8 @@
   "avaSideServices": "Ava Side Services",
   "ahvaz": "Ahvaz",
   "shiraz": "Shiraz",
+  "shirazApt": "Shiraz APT",
+  "mehrabad": "Mehrabad",
   "isfahan": "Isfahan",
   "kish": "Kish",
   "qeshm": "Qeshm",
@@ -300,5 +302,8 @@
   "sliderTitle3": "Enjoy a new level of comfort",
   "sliderDesc1": "Buy, gift and transfer your Hamava score",
   "sliderDesc2": "Earn Hamava scores with each stay",
-  "sliderDesc3": "Upgrade your next Ava flight experience"
+  "sliderDesc3": "Upgrade your next Ava flight experience",
+  "dateTime": "Date & Time",
+  "dateTimeMock1": "23 Jul 2024\n23:55",
+  "dateTimeMock2": "24 Jul 2024\n 01:10"
 }

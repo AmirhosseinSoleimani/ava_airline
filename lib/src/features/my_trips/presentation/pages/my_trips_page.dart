@@ -22,6 +22,7 @@ class _MyTripsPageState extends State<MyTripsPage> {
   @override
   Widget build(BuildContext context) {
     final localization = S.of(context);
+    final locale = Localizations.localeOf(context).languageCode;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.surface,
@@ -47,7 +48,76 @@ class _MyTripsPageState extends State<MyTripsPage> {
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         margin: const EdgeInsets.all(8),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Align(
+                                    alignment:locale.contains('en')? Alignment.centerLeft:Alignment.centerRight,
+                                    child: Column(
+                                      children: [
+                                        Text(localization.shiraz,style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700),),
+                                        const SizedBox(height: 4),
+                                        Text(localization.shirazApt,style: Theme.of(context).textTheme.titleLarge,),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Transform.rotate(
+                                    angle: locale.contains('en') ? 0 : 180 * 3.1415927 /180,
+                                    child: const Icon(IconManager.airplane)),
+                                Expanded(
+                                  child: Align(
+                                    alignment:locale.contains('en')? Alignment.centerRight:Alignment.centerLeft,
+                                    child: Column(
+                                      children: [
+                                        Text(localization.tehran,style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700),),
+                                        const SizedBox(height: 4),
+                                        Text(localization.mehrabad,style: Theme.of(context).textTheme.titleLarge,),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            const Divider(color: Colors.grey,
+                            thickness: 0.5,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Align(
+                                    alignment:locale.contains('en')? Alignment.centerLeft:Alignment.centerRight,
+                                    child: Column(
+                                      children: [
+                                        Text(localization.dateTime,style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700),textAlign: TextAlign.center),
+                                        const SizedBox(height: 4),
+                                        Text(localization.dateTimeMock1,style: Theme.of(context).textTheme.titleLarge,textAlign: TextAlign.center),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment:locale.contains('en')? Alignment.centerRight:Alignment.centerLeft,
+                                    child: Column(
+                                      children: [
+                                        Text(localization.dateTime,style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade700),textAlign: TextAlign.center,),
+                                        const SizedBox(height: 4),
+                                        Text(localization.dateTimeMock2,style: Theme.of(context).textTheme.titleLarge,textAlign: TextAlign.center),
+                                      ],
+                                    ),
+                                  ),
+                                ),
 
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ]

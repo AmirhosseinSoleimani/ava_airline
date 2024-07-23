@@ -125,6 +125,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مزایای رده فعلی"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("fa"),
         "currentTier": MessageLookupByLibrary.simpleMessage("رده\nفعلی"),
+        "dateTime": MessageLookupByLibrary.simpleMessage("تاریخ و زمان"),
+        "dateTimeMock1":
+            MessageLookupByLibrary.simpleMessage("1 مرداد 1403\n 23:55"),
+        "dateTimeMock2":
+            MessageLookupByLibrary.simpleMessage("2 مرداد 1403\n 01:10"),
         "deaf": MessageLookupByLibrary.simpleMessage("ناشنوا"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاریخ رفت"),
         "destination": MessageLookupByLibrary.simpleMessage("مقصد"),
@@ -237,6 +242,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mashhadSpecialFaresParagraph2": MessageLookupByLibrary.simpleMessage(
             "آرامگاه خیلی از بزرگان دین، شعر و ادبیات مثل فردوسی که تاثیر بسزایی در فرهنگ و زبان ایرانی‌ها داشته، در این شهر و توابع آن قرار دارد. همه این‌ها باعث شده مشهد در سال‌های اخیر به یک شهر مدرن تبدیل شود، به طوری که در حال حاضر مراکز تفریحی، گردشگری و تجاری متنوع و پیشرفته‌ای در جای‌جای آن وجود دارد."),
         "medical_issues": MessageLookupByLibrary.simpleMessage("موارد پزشکی"),
+        "mehrabad": MessageLookupByLibrary.simpleMessage("مهرآباد"),
         "message1": MessageLookupByLibrary.simpleMessage(
             "پرواز شما AV123 به مدت 30 دقیقه تأخیر دارد."),
         "message2": MessageLookupByLibrary.simpleMessage(
@@ -376,6 +382,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendFeedback": MessageLookupByLibrary.simpleMessage("ارسال بازخورد"),
         "service": MessageLookupByLibrary.simpleMessage("خدمت"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شیراز"),
+        "shirazApt": MessageLookupByLibrary.simpleMessage("فرودگاه شیراز"),
         "silver": MessageLookupByLibrary.simpleMessage("نقره‌ای"),
         "sliderDesc1": MessageLookupByLibrary.simpleMessage(
             "امتیاز هم‌آوا بخرید، هدیه دهید و انتقال دهید"),

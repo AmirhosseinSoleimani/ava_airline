@@ -250,6 +250,26 @@ class S {
     );
   }
 
+  /// `Shiraz APT`
+  String get shirazApt {
+    return Intl.message(
+      'Shiraz APT',
+      name: 'shirazApt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mehrabad`
+  String get mehrabad {
+    return Intl.message(
+      'Mehrabad',
+      name: 'mehrabad',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Isfahan`
   String get isfahan {
     return Intl.message(
@@ -3055,6 +3075,36 @@ class S {
     return Intl.message(
       'Upgrade your next Ava flight experience',
       name: 'sliderDesc3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date & Time`
+  String get dateTime {
+    return Intl.message(
+      'Date & Time',
+      name: 'dateTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `23 Jul 2024\n23:55`
+  String get dateTimeMock1 {
+    return Intl.message(
+      '23 Jul 2024\n23:55',
+      name: 'dateTimeMock1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `24 Jul 2024\n 01:10`
+  String get dateTimeMock2 {
+    return Intl.message(
+      '24 Jul 2024\n 01:10',
+      name: 'dateTimeMock2',
       desc: '',
       args: [],
     );

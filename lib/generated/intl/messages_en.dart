@@ -130,6 +130,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Current tier benefits"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("en"),
         "currentTier": MessageLookupByLibrary.simpleMessage("Current\nTier"),
+        "dateTime": MessageLookupByLibrary.simpleMessage("Date & Time"),
+        "dateTimeMock1":
+            MessageLookupByLibrary.simpleMessage("23 Jul 2024\n23:55"),
+        "dateTimeMock2":
+            MessageLookupByLibrary.simpleMessage("24 Jul 2024\n 01:10"),
         "deaf": MessageLookupByLibrary.simpleMessage("Deaf"),
         "departureDate": MessageLookupByLibrary.simpleMessage("Departure date"),
         "destination": MessageLookupByLibrary.simpleMessage("Destination"),
@@ -251,6 +256,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "The tomb of many great religious, poetic and literary figures such as Ferdowsi, who has had a significant impact on the culture and language of Iranians, is located in this city and its suburbs. All of these have made Mashhad a modern city in recent years, so much so that diverse and advanced recreational, tourism and commercial centers are now found everywhere in it."),
         "medical_issues":
             MessageLookupByLibrary.simpleMessage("Medical Issues"),
+        "mehrabad": MessageLookupByLibrary.simpleMessage("Mehrabad"),
         "message1": MessageLookupByLibrary.simpleMessage(
             "Your flight AV123 has been delayed by 30 minutes."),
         "message2": MessageLookupByLibrary.simpleMessage(
@@ -394,6 +400,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendFeedback": MessageLookupByLibrary.simpleMessage("Send feedback"),
         "service": MessageLookupByLibrary.simpleMessage("Service"),
         "shiraz": MessageLookupByLibrary.simpleMessage("Shiraz"),
+        "shirazApt": MessageLookupByLibrary.simpleMessage("Shiraz APT"),
         "silver": MessageLookupByLibrary.simpleMessage("Silver"),
         "sliderDesc1": MessageLookupByLibrary.simpleMessage(
             "Buy, gift and transfer your Hamava score"),

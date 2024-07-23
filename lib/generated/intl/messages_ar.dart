@@ -122,6 +122,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الفوائد الحالية"),
         "currentLanguage": MessageLookupByLibrary.simpleMessage("ar"),
         "currentTier": MessageLookupByLibrary.simpleMessage("الفئة\nالحالية"),
+        "dateTime": MessageLookupByLibrary.simpleMessage("تاریخ و زمان"),
+        "dateTimeMock1":
+            MessageLookupByLibrary.simpleMessage("1 مرداد 1403\n 23:55"),
+        "dateTimeMock2":
+            MessageLookupByLibrary.simpleMessage("2 مرداد 1403\n 01:10"),
         "deaf": MessageLookupByLibrary.simpleMessage("أصم"),
         "departureDate": MessageLookupByLibrary.simpleMessage("تاريخ المغادرة"),
         "destination": MessageLookupByLibrary.simpleMessage("مقصد"),
@@ -235,6 +240,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mashhadSpecialFaresParagraph2": MessageLookupByLibrary.simpleMessage(
             "قبر العديد من كبار الدين والشعر والأدب مثل الفردوسي الذي كان له تأثير كبير على ثقافة ولغة الإيرانيين يقع في هذه المدينة وضواحيها. كل هذا جعل من مشهد مدينة حديثة في السنوات الأخيرة، حيث توجد الآن مراكز ترفيهية وسياحية وتجارية متنوعة ومتقدمة في كل مكان فيها."),
         "medical_issues": MessageLookupByLibrary.simpleMessage("مشاكل طبية"),
+        "mehrabad": MessageLookupByLibrary.simpleMessage("مهرآباد"),
         "message1": MessageLookupByLibrary.simpleMessage(
             "تم تأجيل رحلتك AV123 لمدة 30 دقيقة."),
         "message2": MessageLookupByLibrary.simpleMessage(
@@ -375,6 +381,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendFeedback": MessageLookupByLibrary.simpleMessage("إرسال ملاحظات"),
         "service": MessageLookupByLibrary.simpleMessage("خدمة"),
         "shiraz": MessageLookupByLibrary.simpleMessage("شيراز"),
+        "shirazApt": MessageLookupByLibrary.simpleMessage("مطار شیراز"),
         "silver": MessageLookupByLibrary.simpleMessage("فضي"),
         "sliderDesc1": MessageLookupByLibrary.simpleMessage(
             "اشترِ، واهدِ، وحوِّل نقاط حمافا الخاصة بك"),
